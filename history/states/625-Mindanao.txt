@@ -1,0 +1,42 @@
+state = {
+	id = 625
+	name = "STATE_625"
+	manpower = 1862869 
+
+	state_category = rural
+
+	resources = {
+		coal = 2 
+	}
+
+	history = {
+		owner = USA
+		
+		buildings = {
+			infrastructure = 2
+
+			4241 = {
+				naval_base = 2
+			}
+			1421 = {
+				naval_base = 1
+			}
+		}
+
+		victory_points = {
+			4241 5 # Davao
+		}
+		victory_points = {
+			1421 2 # Zamboanga
+		}
+		victory_points = {
+			10243 1 # Cagayan de Oro
+		}
+	}
+
+	provinces = {
+		1234 1407 4241 4266 7284 7445 10328 12116 12158 1421 4399 7360 7389 7417 10184 1293 1379 4427 10214 10243 10300 12160 12188 12217 12245 12273
+	}
+
+	local_supplies = 0.0 
+}

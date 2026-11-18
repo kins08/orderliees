@@ -1,0 +1,36 @@
+﻿
+
+###### OOB ######
+units = {			
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SPR"
+		}
+		requested_factories = 2
+		progress = 0.42
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SPR"
+		}
+		requested_factories = 1
+		progress = 0.24
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "SPR"
+		}
+		requested_factories = 1
+		progress = 0.24
+		efficiency = 100
+	}
+}

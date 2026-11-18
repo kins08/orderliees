@@ -1,0 +1,54 @@
+# Pacific War mechanic triggers
+
+# State control check for Japan side (Scope: State)
+check_is_state_controlled_by_japan_side = {
+	OR = {
+		is_controlled_by = JAP
+		controller = {
+			OR = {
+				tag = JAP
+				is_in_faction_with = JAP
+				is_subject_of = JAP
+			}
+		}
+	}
+}
+
+# State control check for Allies side (Scope: State)
+check_is_state_controlled_by_allies_side = {
+	NOT = { check_is_state_controlled_by_japan_side = yes }
+}
+
+# 11 active bases:
+pacific_state_336_is_jap = { 336 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_336_is_ally = { 336 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_335_is_jap = { 335 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_335_is_ally = { 335 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_327_is_jap = { 327 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_327_is_ally = { 327 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_975_is_jap = { 975 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_975_is_ally = { 975 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_439_is_jap = { 439 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_439_is_ally = { 439 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_285_is_jap = { 285 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_285_is_ally = { 285 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_626_is_jap = { 626 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_626_is_ally = { 626 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_628_is_jap = { 628 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_628_is_ally = { 628 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_524_is_jap = { 524 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_524_is_ally = { 524 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_526_is_jap = { 526 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_526_is_ally = { 526 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }
+
+pacific_state_642_is_jap = { 642 = { check_is_state_controlled_by_japan_side = yes } }
+pacific_state_642_is_ally = { 642 = { NOT = { check_is_state_controlled_by_japan_side = yes } } }

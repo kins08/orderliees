@@ -1,0 +1,198 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_USA_navy_strong_country"
+		texturefile = "gfx/interface/ideas/idea_USA_navy_strong_country.dds"
+	}
+	spriteType = {
+		name = "GFX_us_officer"
+		texturefile = "gfx/interface/ideas/us_officer.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_usa_no_commi_general"
+		texturefile = "gfx/interface/traits/personal/trait_usa_no_commi_general.dds"
+	}
+	spriteType = {
+		name = "GFX_singleplayer_button"
+		texturefile = "gfx/interface/singleplayer_button.dds"
+	}
+	spriteType = {
+		name = "GFX_rulles_button"
+		texturefile = "gfx/interface/rules_mod.dds"
+	}
+	spriteType = {
+		name = "GFX_well_well"
+		texturefile = "gfx/interface/well_well.dds"
+	}
+	spriteType = {
+		name = "GFX_main_menu"
+		texturefile = "gfx/interface/main_menu.dds"
+	}
+	spriteType = {
+		name = "GFX_serv"
+		texturefile = "gfx/interface/serv.dds"
+	}
+	spriteType = {
+		name = "GFX_discord"
+		texturefile = "gfx/interface/menu_discord_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_back_overlay"
+		texturefile = "gfx/interface/back.dds"
+	}
+	spriteType = {
+		name = "GFX_back_sisikal"
+		texturefile = "gfx/interface/back_sisikal.dds"
+	}
+	###Кастом юса гены
+	spriteType = {
+	    name = "GFX_portrait_USA_creighton_abrams"
+	    texturefile = "gfx/leaders/USA/portrait_USA_creighton_abrams.png"
+    }
+	spriteType = {
+		name = "GFX_portrait_USA_creighton_abrams_small"
+		texturefile = "gfx/interface/ideas/new/advisor_USA_creighton_abrams.png"
+	}
+	
+	spriteType = {
+	    name = "GFX_portrait_USA_anthony_mcauliffe"
+	    texturefile = "gfx/leaders/USA/portrait_USA_anthony_mcauliffe.png"
+    }
+	spriteType = {
+		name = "GFX_portrait_USA_anthony_mcauliffe_small"
+		texturefile = "gfx/interface/ideas/new/advisor_USA_anthony_mcauliffe.png"
+	}
+	
+	spriteType = {
+	    name = "GFX_portrait_USA_jacob_devers"
+	    texturefile = "gfx/leaders/USA/portrait_USA_jacob_devers.png"
+    }
+	spriteType = {
+		name = "GFX_portrait_USA_jacob_devers_small"
+		texturefile = "gfx/interface/ideas/new/advisor_USA_jacob_devers.png"
+	}
+	
+	spriteType = {
+	    name = "GFX_portrait_USA_james_van_fleet"
+	    texturefile = "gfx/leaders/USA/portrait_USA_james_van_fleet.png"
+    }
+	spriteType = {
+		name = "GFX_portrait_USA_james_van_fleet_small"
+		texturefile = "gfx/interface/ideas/new/advisor_USA_james_van_fleet.png"
+	}
+
+	###Кастов иконки(фазе говно)
+	
+	SpriteType = {
+		name = "GFX_idea_usa_republic_aviation"
+		texturefile = "gfx/interface/ideas/idea_usa_republic_aviation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_usa_american_locomotive_company"
+		texturefile = "gfx/interface/ideas/idea_usa_american_locomotive_company.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_USA_statue_of_liberty"
+		texturefile = "gfx/interface/ideas/idea_USA_statue_of_liberty.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_USA_contact_gov"
+		texturefile = "gfx/event_pictures/news_event_USA_contact_gov.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_zoloto"
+		texturefile = "gfx/interface/ideas/idea_zoloto.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_USA_arsenal_of_democracy"
+		texturefile = "gfx/interface/ideas/idea_USA_arsenal_of_democracy.dds"
+	}
+	
+	###USA GUI###
+	spriteType = {
+		name = "GFX_FRA_EU_ALLY_GUI"
+		texturefile = "gfx/interface/USA_gui/FRA_EU_ALLY_GUI.dds"
+	}
+	spriteType = {
+		name = "GFX_FRA_not_available_GUI"
+		texturefile = "gfx/interface/USA_gui/FRA_not_available_GUI.dds"
+	}
+	spriteType = {
+		name = "GFX_GER_EU_gui"
+		texturefile = "gfx/interface/USA_gui/GER_EU_gui.dds"
+	}
+	spriteType = {
+		name = "GFX_bel_not_available_GUI"
+		texturefile = "gfx/interface/USA_gui/bel_not_available_gui.dds"
+	}
+	spriteType = {
+		name = "GFX_UK_EU_gui"
+		texturefile = "gfx/interface/USA_gui/UK_EU_gui.dds"
+	}
+	spriteType = {
+		name = "GFX_UK_not_available_gui"
+		texturefile = "gfx/interface/USA_gui/UK_not_available_gui.dds"
+	}
+	spriteType = {
+		name = "GFX_clear_all_gui"
+		texturefile = "gfx/interface/USA_gui/clear_all_gui.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_corruption_faze"
+		texturefile = "gfx/interface/ideas/corruption_faze.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mod_cool"
+		texturefile = "gfx/interface/ideas/idea_mod_cool.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEL_steal_gold_faze_loxl"
+		texturefile = "gfx/interface/ideas/idea_BEL_steal_gold_faze_lox.dds"
+	}
+	spriteType = {
+		name = "GFX_armiya_sha"
+		texturefile = "gfx/interface/ideas/armiya_sha.dds"
+	}
+	spriteType = {
+		name = "GFX_aviaciya_USA"
+		texturefile = "gfx/interface/ideas/aviaciya_USA.dds"
+	}
+	spriteType = {
+		name = "GFX_SAF_army"
+		texturefile = "gfx/interface/ideas/SAF_army.dds"
+	}     
+
+	###USA GUI###
+	
+	###New England leader###
+	spriteType = {
+		name = "GFX_portrait_ENG_max_horton"
+		texturefile = "gfx/leaders/ENG/portrait_ENG_max_horton.png"
+	}
+	###New England leader###
+	
+	###Старый новый лидер неигровой страны NEG###
+	spriteType = {
+		name = "GFX_portrait_BRA_mascarenhas_de_morais_1"
+		texturefile = "gfx/leaders/NEG/portrait_BRA_mascarenhas_de_morais_1.dds"
+	}
+	###Land Cruiser###
+	spriteType = {
+		name = "GFX_JAP_land_cruiser_armor_medium"
+		texturefile = "gfx/interface/archetypes/archetype_super_heavy_tank_equipment.dds"
+	}
+}
+
+#####КАСТОМ ШРИФТ НЕ ТРОГАТЬ !!!#####
+bitmapfonts = {	
+	bitmapfont = {
+		name = "final_font"
+		path = "gfx/fonts/final_font"
+		color = 0xffffffff
+	}
+}

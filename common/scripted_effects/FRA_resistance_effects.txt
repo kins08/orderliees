@@ -1,0 +1,734 @@
+# French Resistance & Evacuation Scripted Effects
+
+FRA_lock_colonial_construction = {
+	every_owned_state = {
+		limit = {
+			NOT = { is_on_continent = europe }
+		}
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = FRA_colonial_construction_locked_modifier } }
+			}
+			add_dynamic_modifier = {
+				modifier = FRA_colonial_construction_locked_modifier
+			}
+		}
+	}
+}
+
+FRA_unlock_colonial_construction = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = FRA_colonial_slots_unlocked }
+		}
+		set_country_flag = FRA_colonial_slots_unlocked
+		every_owned_state = {
+			limit = {
+				NOT = { is_on_continent = europe }
+			}
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = FRA_colonial_construction_locked_modifier }
+				}
+				remove_dynamic_modifier = {
+					modifier = FRA_colonial_construction_locked_modifier
+				}
+			}
+		}
+
+		# Expand the 4 destination colony states to large_town (6-7 base slots)
+		557 = {
+			if = {
+				limit = {
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				set_state_category = large_town
+			}
+		}
+		539 = {
+			if = {
+				limit = {
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				set_state_category = large_town
+			}
+		}
+		543 = {
+			if = {
+				limit = {
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				set_state_category = large_town
+			}
+		}
+		310 = {
+			if = {
+				limit = {
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				set_state_category = large_town
+			}
+		}
+	}
+}
+
+
+FRA_enable_free_france_african_construction = {
+	FRA_unlock_colonial_construction = yes
+	every_controlled_state = {
+		limit = {
+			OR = {
+				is_on_continent = africa
+				state = 310
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = FRA_colonial_construction_locked_modifier }
+			}
+			remove_dynamic_modifier = { modifier = FRA_colonial_construction_locked_modifier }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_state_category = enclave
+					has_state_category = tiny_island
+					has_state_category = pastoral
+					has_state_category = rural
+					has_state_category = town
+				}
+			}
+			set_state_category = large_town
+		}
+		add_extra_state_shared_building_slots = 6
+	}
+	every_owned_state = {
+		limit = {
+			OR = {
+				is_on_continent = africa
+				state = 310
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = FRA_colonial_construction_locked_modifier }
+			}
+			remove_dynamic_modifier = { modifier = FRA_colonial_construction_locked_modifier }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_state_category = enclave
+					has_state_category = tiny_island
+					has_state_category = pastoral
+					has_state_category = rural
+					has_state_category = town
+				}
+			}
+			set_state_category = large_town
+		}
+		add_extra_state_shared_building_slots = 6
+	}
+}
+
+FRA_resistance_war_start = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = FRA_resistance_war_started }
+		}
+		set_country_flag = FRA_resistance_war_started
+		set_variable = { FRA_days_held = 0 }
+		set_variable = { FRA_mil_evacuated = 0 }
+		set_variable = { FRA_civ_evacuated = 0 }
+		set_variable = { FRA_evac_rotor = 0 }
+		set_variable = { FRA_evac_target_id = 1 }
+		set_variable = { FRA_active_port_id = 1 }
+		set_variable = { FRA_last_evac_type = 1 }
+		set_variable = { FRA_last_evac_source_state_id = 16 }
+		set_variable = { FRA_evac_aof_count = 0 }
+		set_variable = { FRA_evac_aef_count = 0 }
+		set_variable = { FRA_evac_madagascar_count = 0 }
+		set_variable = { FRA_evac_guiana_count = 0 }
+		set_variable = { FRA_ger_losses_tier = 0 }
+		set_variable = { FRA_exhaustion_attack_var = 0 }
+		set_variable = { FRA_exhaustion_defense_var = 0 }
+		set_variable = { FRA_exhaustion_morale_var = 0 }
+		set_variable = { FRA_free_france_conscription_var = 0 }
+		set_variable = { FRA_free_france_ic_var = 0 }
+		set_variable = { FRA_free_france_eff_var = 0 }
+		set_variable = { FRA_free_france_buff_days_left = 0 }
+
+		# Base fallback caps (guaranteed > 0)
+		set_variable = { FRA_max_mil_evacuable = 40 }
+		set_variable = { FRA_max_civ_evacuable = 20 }
+
+		# Snapshot factories in mainland France (European core states)
+		set_temp_variable = { temp_total_mil = 0 }
+		set_temp_variable = { temp_total_civ = 0 }
+		every_controlled_state = {
+			limit = {
+				is_core_of = FRA
+				is_on_continent = europe
+			}
+			set_temp_variable = { s_mil = arms_factory_level }
+			set_temp_variable = { s_civ = industrial_complex_level }
+			ROOT = {
+				add_to_temp_variable = { temp_total_mil = s_mil }
+				add_to_temp_variable = { temp_total_civ = s_civ }
+			}
+		}
+
+		# Set caps based on measured factories (capped at 40 / 20)
+		if = {
+			limit = { check_variable = { var = temp_total_mil value = 0 compare = greater_than } }
+			set_variable = { FRA_max_mil_evacuable = temp_total_mil }
+			if = {
+				limit = { check_variable = { var = FRA_max_mil_evacuable value = 40 compare = greater_than } }
+				set_variable = { FRA_max_mil_evacuable = 40 }
+			}
+		}
+		if = {
+			limit = { check_variable = { var = temp_total_civ value = 0 compare = greater_than } }
+			set_variable = { FRA_max_civ_evacuable = temp_total_civ }
+			if = {
+				limit = { check_variable = { var = FRA_max_civ_evacuable value = 20 compare = greater_than } }
+				set_variable = { FRA_max_civ_evacuable = 20 }
+			}
+		}
+
+		# Unlock colony construction for evacuation
+		FRA_unlock_colonial_construction = yes
+
+		# Add single dynamic modifier with icon (no duplicate dummy idea!)
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = FRA_resistance_dynamic_modifier } } }
+			add_dynamic_modifier = { modifier = FRA_resistance_dynamic_modifier }
+		}
+	}
+}
+
+FRA_resistance_init = {
+	FRA_resistance_war_start = yes
+}
+
+FRA_resistance_daily_update = {
+	# Ensure initialized on war
+	if = {
+		limit = { NOT = { has_country_flag = FRA_resistance_war_started } }
+		FRA_resistance_war_start = yes
+	}
+
+	# 1. Update German casualty tier inflicted by France
+	GER = {
+		if = {
+			limit = { casualties_inflicted_by = { opponent = FRA thousands > 1000 } }
+			ROOT = { set_variable = { FRA_ger_losses_tier = 5 } }
+		}
+		else_if = {
+			limit = { casualties_inflicted_by = { opponent = FRA thousands > 700 } }
+			ROOT = { set_variable = { FRA_ger_losses_tier = 4 } }
+		}
+		else_if = {
+			limit = { casualties_inflicted_by = { opponent = FRA thousands > 450 } }
+			ROOT = { set_variable = { FRA_ger_losses_tier = 3 } }
+		}
+		else_if = {
+			limit = { casualties_inflicted_by = { opponent = FRA thousands > 250 } }
+			ROOT = { set_variable = { FRA_ger_losses_tier = 2 } }
+		}
+		else_if = {
+			limit = { casualties_inflicted_by = { opponent = FRA thousands > 100 } }
+			ROOT = { set_variable = { FRA_ger_losses_tier = 1 } }
+		}
+		else = {
+			ROOT = { set_variable = { FRA_ger_losses_tier = 0 } }
+		}
+	}
+
+	# 2. Check if mainland France is holding
+	if = {
+		limit = {
+			has_war_with = GER
+			has_capitulated = no
+			surrender_progress < 0.80
+			controls_state = 16
+		}
+
+		add_to_variable = { FRA_days_held = 1 }
+
+		# Calculate mainland base exhaustion step (0 to 5)
+		# Step scales every 30 days (-5% per step, up to -25%)
+		set_temp_variable = { temp_step = 0 }
+		if = {
+			limit = { check_variable = { var = FRA_days_held value = 149 compare = greater_than } }
+			set_temp_variable = { temp_step = 5 }
+		}
+		else_if = {
+			limit = { check_variable = { var = FRA_days_held value = 119 compare = greater_than } }
+			set_temp_variable = { temp_step = 4 }
+		}
+		else_if = {
+			limit = { check_variable = { var = FRA_days_held value = 89 compare = greater_than } }
+			set_temp_variable = { temp_step = 3 }
+		}
+		else_if = {
+			limit = { check_variable = { var = FRA_days_held value = 59 compare = greater_than } }
+			set_temp_variable = { temp_step = 2 }
+		}
+		else_if = {
+			limit = { check_variable = { var = FRA_days_held value = 29 compare = greater_than } }
+			set_temp_variable = { temp_step = 1 }
+		}
+
+		# Base debuff: temp_base = temp_step * -0.05
+		set_temp_variable = { temp_base = temp_step }
+		multiply_temp_variable = { temp_base = -0.05 }
+
+		# German casualties mitigate up to half (50%) of the debuff:
+		set_temp_variable = { temp_mitig = FRA_ger_losses_tier }
+		multiply_temp_variable = { temp_mitig = 0.10 }
+		set_temp_variable = { temp_factor = 1.0 }
+		subtract_from_temp_variable = { temp_factor = temp_mitig }
+		multiply_temp_variable = { temp_base = temp_factor }
+
+		set_variable = { FRA_exhaustion_attack_var = temp_base }
+		set_variable = { FRA_exhaustion_defense_var = temp_base }
+		set_variable = { FRA_exhaustion_morale_var = temp_base }
+
+		# Update active carousel target ID from rotor:
+		# Rotor 0, 2, 5 -> 1 (AOF - 37.5%)
+		# Rotor 1, 3, 6 -> 2 (AEF - 37.5%)
+		# Rotor 4       -> 3 (Madagascar - 12.5%)
+		# Rotor 7       -> 4 (French Guiana - 12.5%)
+		if = {
+			limit = {
+				OR = {
+					check_variable = { var = FRA_evac_rotor value = 0 compare = equals }
+					check_variable = { var = FRA_evac_rotor value = 2 compare = equals }
+					check_variable = { var = FRA_evac_rotor value = 5 compare = equals }
+				}
+			}
+			set_variable = { FRA_evac_target_id = 1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					check_variable = { var = FRA_evac_rotor value = 1 compare = equals }
+					check_variable = { var = FRA_evac_rotor value = 3 compare = equals }
+					check_variable = { var = FRA_evac_rotor value = 6 compare = equals }
+				}
+			}
+			set_variable = { FRA_evac_target_id = 2 }
+		}
+		else_if = {
+			limit = { check_variable = { var = FRA_evac_rotor value = 4 compare = equals } }
+			set_variable = { FRA_evac_target_id = 3 }
+		}
+		else = {
+			set_variable = { FRA_evac_target_id = 4 }
+		}
+
+		# Evacuation Shipment every 2 days
+		set_temp_variable = { temp_mod = FRA_days_held }
+		modulo_temp_variable = { temp_mod = 2 }
+
+		if = {
+			limit = {
+				check_variable = { var = temp_mod value = 0 compare = equals }
+				OR = {
+					check_variable = { var = FRA_mil_evacuated value = FRA_max_mil_evacuable compare = less_than }
+					check_variable = { var = FRA_civ_evacuated value = FRA_max_civ_evacuable compare = less_than }
+				}
+			}
+			
+			# Determine preferred factory type (1: MIL, 0: CIV)
+			# Days 1-80: Military preferred (up to max)
+			# Days 81-120: Civilian preferred (up to max)
+			# Days 121+: Alternating / whichever remains
+			set_temp_variable = { is_mil = 1 }
+			if = {
+				limit = {
+					check_variable = { var = FRA_days_held value = 80 compare = greater_than }
+					check_variable = { var = FRA_days_held value = 121 compare = less_than }
+				}
+				set_temp_variable = { is_mil = 0 }
+			}
+			else_if = {
+				limit = { check_variable = { var = FRA_days_held value = 120 compare = greater_than } }
+				set_temp_variable = { temp_alt = FRA_mil_evacuated }
+				add_to_temp_variable = { temp_alt = FRA_civ_evacuated }
+				modulo_temp_variable = { temp_alt = 2 }
+				if = {
+					limit = { check_variable = { var = temp_alt value = 1 compare = equals } }
+					set_temp_variable = { is_mil = 0 }
+				}
+			}
+
+			# Fallback checks: do not attempt type if cap reached or no mainland factory of that type
+			if = {
+				limit = {
+					check_variable = { var = is_mil value = 1 compare = equals }
+					OR = {
+						check_variable = { var = FRA_mil_evacuated value = FRA_max_mil_evacuable compare = greater_than_or_equals }
+						NOT = {
+							any_controlled_state = {
+								is_core_of = FRA
+								is_on_continent = europe
+								arms_factory > 0
+							}
+						}
+					}
+					check_variable = { var = FRA_civ_evacuated value = FRA_max_civ_evacuable compare = less_than }
+					any_controlled_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						industrial_complex > 0
+					}
+				}
+				set_temp_variable = { is_mil = 0 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { var = is_mil value = 0 compare = equals }
+					OR = {
+						check_variable = { var = FRA_civ_evacuated value = FRA_max_civ_evacuable compare = greater_than_or_equals }
+						NOT = {
+							any_controlled_state = {
+								is_core_of = FRA
+								is_on_continent = europe
+								industrial_complex > 0
+							}
+						}
+					}
+					check_variable = { var = FRA_mil_evacuated value = FRA_max_mil_evacuable compare = less_than }
+					any_controlled_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						arms_factory > 0
+					}
+				}
+				set_temp_variable = { is_mil = 1 }
+			}
+
+			# Genuine transfer: remove from mainland Europe, build in destination colony (NO DUPING)
+			set_temp_variable = { evac_success = 0 }
+
+			if = {
+				limit = {
+					check_variable = { var = is_mil value = 1 compare = equals }
+					check_variable = { var = FRA_mil_evacuated value = FRA_max_mil_evacuable compare = less_than }
+					any_controlled_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						arms_factory > 0
+					}
+				}
+				# Dismantle 1 arms factory from mainland France & capture source state
+				random_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						arms_factory > 0
+					}
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+					ROOT = {
+						set_variable = { var = FRA_last_evac_source_state_id value = PREV.id }
+					}
+				}
+				set_temp_variable = { evac_success = 1 }
+				add_to_variable = { FRA_mil_evacuated = 1 }
+				set_variable = { FRA_last_evac_type = 1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { var = is_mil value = 0 compare = equals }
+					check_variable = { var = FRA_civ_evacuated value = FRA_max_civ_evacuable compare = less_than }
+					any_controlled_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						industrial_complex > 0
+					}
+				}
+				# Dismantle 1 civilian factory from mainland France & capture source state
+				random_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						industrial_complex > 0
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+					ROOT = {
+						set_variable = { var = FRA_last_evac_source_state_id value = PREV.id }
+					}
+				}
+				set_temp_variable = { evac_success = 1 }
+				add_to_variable = { FRA_civ_evacuated = 1 }
+				set_variable = { FRA_last_evac_type = 2 }
+			}
+
+			# If successfully dismantled from mainland, build in destination colony!
+			if = {
+				limit = { check_variable = { var = evac_success value = 1 compare = equals } }
+
+				# Cycle embarkation port (1: Brest, 2: Bordeaux, 3: Marseille)
+				add_to_variable = { FRA_active_port_id = 1 }
+				if = {
+					limit = { check_variable = { var = FRA_active_port_id value = 3 compare = greater_than } }
+					set_variable = { FRA_active_port_id = 1 }
+				}
+
+				# Deliver to target colony (with automatic slot expansion to PREVENT ANY OVERFLOW/DELETION):
+				if = {
+					limit = { check_variable = { var = FRA_evac_target_id value = 1 compare = equals } }
+					# 1. AOF - Dakar (State 557)
+					557 = {
+						if = {
+							limit = {
+								OR = {
+									has_state_category = pastoral
+									has_state_category = rural
+									has_state_category = town
+								}
+							}
+							set_state_category = large_town
+						}
+						if = {
+							limit = { arms_factory > 5 }
+							set_state_category = city
+						}
+						if = {
+							limit = { arms_factory > 9 }
+							set_state_category = large_city
+						}
+						add_extra_state_shared_building_slots = 2
+						if = {
+							limit = { check_variable = { var = is_mil value = 1 compare = equals } }
+							add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+						}
+						else = {
+							add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+						}
+					}
+					add_to_variable = { FRA_evac_aof_count = 1 }
+				}
+				else_if = {
+					limit = { check_variable = { var = FRA_evac_target_id value = 2 compare = equals } }
+					# 2. AEF - Gabon (State 539)
+					539 = {
+						if = {
+							limit = {
+								OR = {
+									has_state_category = pastoral
+									has_state_category = rural
+									has_state_category = town
+								}
+							}
+							set_state_category = large_town
+						}
+						if = {
+							limit = { arms_factory > 5 }
+							set_state_category = city
+						}
+						if = {
+							limit = { arms_factory > 9 }
+							set_state_category = large_city
+						}
+						add_extra_state_shared_building_slots = 2
+						if = {
+							limit = { check_variable = { var = is_mil value = 1 compare = equals } }
+							add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+						}
+						else = {
+							add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+						}
+					}
+					add_to_variable = { FRA_evac_aef_count = 1 }
+				}
+				else_if = {
+					limit = { check_variable = { var = FRA_evac_target_id value = 3 compare = equals } }
+					# 3. Madagascar (State 543)
+					543 = {
+						if = {
+							limit = {
+								OR = {
+									has_state_category = pastoral
+									has_state_category = rural
+									has_state_category = town
+								}
+							}
+							set_state_category = large_town
+						}
+						if = {
+							limit = { arms_factory > 5 }
+							set_state_category = city
+						}
+						if = {
+							limit = { arms_factory > 9 }
+							set_state_category = large_city
+						}
+						add_extra_state_shared_building_slots = 2
+						if = {
+							limit = { check_variable = { var = is_mil value = 1 compare = equals } }
+							add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+						}
+						else = {
+							add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+						}
+					}
+					add_to_variable = { FRA_evac_madagascar_count = 1 }
+				}
+				else = {
+					# 4. French Guiana (State 310)
+					310 = {
+						if = {
+							limit = {
+								OR = {
+									has_state_category = pastoral
+									has_state_category = rural
+									has_state_category = town
+								}
+							}
+							set_state_category = large_town
+						}
+						if = {
+							limit = { arms_factory > 5 }
+							set_state_category = city
+						}
+						if = {
+							limit = { arms_factory > 9 }
+							set_state_category = large_city
+						}
+						add_extra_state_shared_building_slots = 2
+						if = {
+							limit = { check_variable = { var = is_mil value = 1 compare = equals } }
+							add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+						}
+						else = {
+							add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+						}
+					}
+					add_to_variable = { FRA_evac_guiana_count = 1 }
+				}
+
+				# Advance carousel rotor - THIS MAKES THE ACTIVE HIGHLIGHT JUMP!
+				add_to_variable = { FRA_evac_rotor = 1 }
+				if = {
+					limit = { check_variable = { var = FRA_evac_rotor value = 7 compare = greater_than } }
+					set_variable = { FRA_evac_rotor = 0 }
+				}
+			}
+		}
+	}
+	else = {
+		# Mainland France has fallen / Free France
+		if = {
+			limit = { NOT = { has_country_flag = FRA_capitulation_timer_started } }
+			set_country_flag = FRA_capitulation_timer_started
+			set_variable = { FRA_days_since_capitulation = 0 }
+		}
+
+		# 30-day (1 month) GUI auto-hide timer after capitulation
+		if = {
+			limit = { NOT = { has_country_flag = FRA_evac_gui_hidden } }
+			add_to_variable = { FRA_days_since_capitulation = 1 }
+			if = {
+				limit = { check_variable = { var = FRA_days_since_capitulation value = 30 compare = greater_than_or_equals } }
+				set_country_flag = FRA_evac_gui_hidden
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_country_flag = FRA_african_construction_enabled } }
+			set_country_flag = FRA_african_construction_enabled
+			FRA_enable_free_france_african_construction = yes
+		}
+		# Clear mainland combat debuff
+		set_variable = { FRA_exhaustion_attack_var = 0 }
+		set_variable = { FRA_exhaustion_defense_var = 0 }
+		set_variable = { FRA_exhaustion_morale_var = 0 }
+
+		# 1-YEAR BUFF FOR GERMAN CASUALTIES (365 DAYS)
+		if = {
+			limit = { NOT = { has_country_flag = FRA_german_losses_buff_granted } }
+			set_country_flag = FRA_german_losses_buff_granted
+			set_variable = { FRA_free_france_buff_days_left = 365 }
+
+			# Five 0.3% steps for conscription, 5% steps for factory output & efficiency
+			if = {
+				limit = { check_variable = { var = FRA_ger_losses_tier value = 5 compare = greater_than_or_equals } }
+				set_variable = { FRA_free_france_conscription_var = 0.015 }
+				set_variable = { FRA_free_france_ic_var = 0.25 }
+				set_variable = { FRA_free_france_eff_var = 0.25 }
+			}
+			else_if = {
+				limit = { check_variable = { var = FRA_ger_losses_tier value = 4 compare = equals } }
+				set_variable = { FRA_free_france_conscription_var = 0.012 }
+				set_variable = { FRA_free_france_ic_var = 0.20 }
+				set_variable = { FRA_free_france_eff_var = 0.20 }
+			}
+			else_if = {
+				limit = { check_variable = { var = FRA_ger_losses_tier value = 3 compare = equals } }
+				set_variable = { FRA_free_france_conscription_var = 0.009 }
+				set_variable = { FRA_free_france_ic_var = 0.15 }
+				set_variable = { FRA_free_france_eff_var = 0.15 }
+			}
+			else_if = {
+				limit = { check_variable = { var = FRA_ger_losses_tier value = 2 compare = equals } }
+				set_variable = { FRA_free_france_conscription_var = 0.006 }
+				set_variable = { FRA_free_france_ic_var = 0.10 }
+				set_variable = { FRA_free_france_eff_var = 0.10 }
+			}
+			else_if = {
+				limit = { check_variable = { var = FRA_ger_losses_tier value = 1 compare = equals } }
+				set_variable = { FRA_free_france_conscription_var = 0.003 }
+				set_variable = { FRA_free_france_ic_var = 0.05 }
+				set_variable = { FRA_free_france_eff_var = 0.05 }
+			}
+			else = {
+				set_variable = { FRA_free_france_conscription_var = 0 }
+				set_variable = { FRA_free_france_ic_var = 0 }
+				set_variable = { FRA_free_france_eff_var = 0 }
+			}
+
+			if = {
+				limit = { check_variable = { var = FRA_ger_losses_tier value = 0 compare = greater_than } }
+				add_ideas = FRA_german_losses_buff
+			}
+		}
+
+		# Decrement 365-day timer
+		if = {
+			limit = { check_variable = { var = FRA_free_france_buff_days_left value = 0 compare = greater_than } }
+			subtract_from_variable = { FRA_free_france_buff_days_left = 1 }
+			if = {
+				limit = { check_variable = { var = FRA_free_france_buff_days_left value = 0 compare = less_than_or_equals } }
+				remove_ideas = FRA_german_losses_buff
+				set_variable = { FRA_free_france_conscription_var = 0 }
+				set_variable = { FRA_free_france_ic_var = 0 }
+				set_variable = { FRA_free_france_eff_var = 0 }
+			}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+state = { #South Sumatra
+	id = 668
+	name = "STATE_668"
+	manpower = 10502791
+	
+	state_category = large_town
+	
+	resources = {
+		rubber = 166
+		oil = 48
+		aluminium = 4
+		steel = 7
+		coal = 7
+	}
+
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = SSI
+		add_core_of = ATJ
+		
+		victory_points = {
+			10322 10
+		}
+		victory_points = {
+			4361 2
+		}
+		victory_points = {
+			7384 1
+		}
+		victory_points = {
+			10382 5
+		}
+		victory_points = {
+			4652 10
+		}
+		victory_points = {
+			12212 1
+		}
+		victory_points = {
+			13398 1
+		}
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+
+			12165 = {
+				naval_base = 1
+			}
+			7384 = {
+				naval_base = 1
+			}
+			12113 = {
+				naval_base = 1
+			}
+			4652 = {
+				naval_base = 1
+			}
+			13398 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces = {
+		7440 10294 4381 12268 12138 10150 10322 1401 12296 4276 12165 1342 4361 4320 12209 7308 1274 1313 1246 7384 7396 4211 12415 7368 12343 10354 1460 4446 10522 8360 10382 1533 13395 1428 13397 12126 10194 12181 1345 4364 1373 12212 1332 10225 12184 10209 1277 12168 7463 12302 7673 4652 7327 12113 13402 1648 13399 10509 12488 7658 13398 13401 13396
+	}
+
+	local_supplies = 0.0 
+}

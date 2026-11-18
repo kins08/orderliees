@@ -1,0 +1,269 @@
+scripted_gui = {
+	ORDL_evacuation_decision_ui = {
+		context_type = decision_category
+		window_name = "ORDL_evacuation_decision_ui"
+		effects = {
+			btn_tag_S1_click = { ORDL_evac_region_S1_click = yes }
+			btn_tag_S2_click = { ORDL_evac_region_S2_click = yes }
+			btn_tag_S3_click = { ORDL_evac_region_S3_click = yes }
+			btn_tag_S4_click = { ORDL_evac_region_S4_click = yes }
+			btn_tag_S5_click = { ORDL_evac_region_S5_click = yes }
+			btn_tag_S6_click = { ORDL_evac_region_S6_click = yes }
+			btn_tag_S7_click = { ORDL_evac_region_S7_click = yes }
+			btn_region_S1_click = { ORDL_evac_region_S1_click = yes }
+			btn_region_S2_click = { ORDL_evac_region_S2_click = yes }
+			btn_region_S3_click = { ORDL_evac_region_S3_click = yes }
+			btn_region_S4_click = { ORDL_evac_region_S4_click = yes }
+			btn_region_S5_click = { ORDL_evac_region_S5_click = yes }
+			btn_region_S6_click = { ORDL_evac_region_S6_click = yes }
+			btn_region_S7_click = { ORDL_evac_region_S7_click = yes }
+		}
+		triggers = {
+			icon_state_11_ok_visible = { 11 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_11_lost_visible = { 11 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_12_ok_visible = { 12 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_12_lost_visible = { 12 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_13_ok_visible = { 13 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_13_lost_visible = { 13 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_78_ok_visible = { 78 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_78_lost_visible = { 78 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_89_ok_visible = { 89 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_89_lost_visible = { 89 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_91_ok_visible = { 91 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_91_lost_visible = { 91 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_93_ok_visible = { 93 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_93_lost_visible = { 93 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_94_ok_visible = { 94 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_94_lost_visible = { 94 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_95_ok_visible = { 95 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_95_lost_visible = { 95 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_96_ok_visible = { 96 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_96_lost_visible = { 96 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_97_ok_visible = { 97 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_97_lost_visible = { 97 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_137_ok_visible = { 137 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_137_lost_visible = { 137 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_188_ok_visible = { 188 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_188_lost_visible = { 188 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_189_ok_visible = { 189 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_189_lost_visible = { 189 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_190_ok_visible = { 190 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_190_lost_visible = { 190 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_191_ok_visible = { 191 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_191_lost_visible = { 191 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_192_ok_visible = { 192 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_192_lost_visible = { 192 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_193_ok_visible = { 193 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_193_lost_visible = { 193 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_194_ok_visible = { 194 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_194_lost_visible = { 194 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_195_ok_visible = { 195 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_195_lost_visible = { 195 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_196_ok_visible = { 196 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_196_lost_visible = { 196 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_197_ok_visible = { 197 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_197_lost_visible = { 197 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_198_ok_visible = { 198 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_198_lost_visible = { 198 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_199_ok_visible = { 199 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_199_lost_visible = { 199 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_200_ok_visible = { 200 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_200_lost_visible = { 200 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_201_ok_visible = { 201 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_201_lost_visible = { 201 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_202_ok_visible = { 202 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_202_lost_visible = { 202 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_203_ok_visible = { 203 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_203_lost_visible = { 203 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_204_ok_visible = { 204 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_204_lost_visible = { 204 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_205_ok_visible = { 205 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_205_lost_visible = { 205 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_206_ok_visible = { 206 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_206_lost_visible = { 206 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_207_ok_visible = { 207 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_207_lost_visible = { 207 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_208_ok_visible = { 208 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_208_lost_visible = { 208 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_209_ok_visible = { 209 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_209_lost_visible = { 209 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_210_ok_visible = { 210 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_210_lost_visible = { 210 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_217_ok_visible = { 217 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_217_lost_visible = { 217 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_218_ok_visible = { 218 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_218_lost_visible = { 218 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_219_ok_visible = { 219 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_219_lost_visible = { 219 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_220_ok_visible = { 220 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_220_lost_visible = { 220 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_221_ok_visible = { 221 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_221_lost_visible = { 221 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_222_ok_visible = { 222 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_222_lost_visible = { 222 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_223_ok_visible = { 223 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_223_lost_visible = { 223 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_224_ok_visible = { 224 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_224_lost_visible = { 224 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_225_ok_visible = { 225 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_225_lost_visible = { 225 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_226_ok_visible = { 226 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_226_lost_visible = { 226 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_227_ok_visible = { 227 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_227_lost_visible = { 227 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_228_ok_visible = { 228 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_228_lost_visible = { 228 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_229_ok_visible = { 229 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_229_lost_visible = { 229 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_230_ok_visible = { 230 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_230_lost_visible = { 230 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_231_ok_visible = { 231 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_231_lost_visible = { 231 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_232_ok_visible = { 232 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_232_lost_visible = { 232 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_233_ok_visible = { 233 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_233_lost_visible = { 233 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_234_ok_visible = { 234 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_234_lost_visible = { 234 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_235_ok_visible = { 235 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_235_lost_visible = { 235 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_236_ok_visible = { 236 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_236_lost_visible = { 236 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_237_ok_visible = { 237 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_237_lost_visible = { 237 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_238_ok_visible = { 238 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_238_lost_visible = { 238 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_240_ok_visible = { 240 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_240_lost_visible = { 240 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_241_ok_visible = { 241 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_241_lost_visible = { 241 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_242_ok_visible = { 242 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_242_lost_visible = { 242 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_243_ok_visible = { 243 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_243_lost_visible = { 243 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_244_ok_visible = { 244 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_244_lost_visible = { 244 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_245_ok_visible = { 245 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_245_lost_visible = { 245 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_246_ok_visible = { 246 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_246_lost_visible = { 246 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_247_ok_visible = { 247 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_247_lost_visible = { 247 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_248_ok_visible = { 248 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_248_lost_visible = { 248 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_252_ok_visible = { 252 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_252_lost_visible = { 252 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_253_ok_visible = { 253 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_253_lost_visible = { 253 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_254_ok_visible = { 254 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_254_lost_visible = { 254 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_255_ok_visible = { 255 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_255_lost_visible = { 255 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_257_ok_visible = { 257 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_257_lost_visible = { 257 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_258_ok_visible = { 258 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_258_lost_visible = { 258 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_259_ok_visible = { 259 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_259_lost_visible = { 259 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_260_ok_visible = { 260 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_260_lost_visible = { 260 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_263_ok_visible = { 263 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_263_lost_visible = { 263 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_264_ok_visible = { 264 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_264_lost_visible = { 264 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_780_ok_visible = { 780 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_780_lost_visible = { 780 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_804_ok_visible = { 804 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_804_lost_visible = { 804 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_805_ok_visible = { 805 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_805_lost_visible = { 805 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_806_ok_visible = { 806 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_806_lost_visible = { 806 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_807_ok_visible = { 807 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_807_lost_visible = { 807 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_808_ok_visible = { 808 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_808_lost_visible = { 808 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_809_ok_visible = { 809 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_809_lost_visible = { 809 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_810_ok_visible = { 810 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_810_lost_visible = { 810 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_811_ok_visible = { 811 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_811_lost_visible = { 811 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_817_ok_visible = { 817 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_817_lost_visible = { 817 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_822_ok_visible = { 822 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_822_lost_visible = { 822 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_823_ok_visible = { 823 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_823_lost_visible = { 823 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_824_ok_visible = { 824 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_824_lost_visible = { 824 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_830_ok_visible = { 830 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_830_lost_visible = { 830 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_239_ok_visible = { 239 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_239_lost_visible = { 239 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_region_S1_ok_visible = { has_country_flag = SOV_evac_region_S1_done NOT = { has_country_flag = SOV_evac_region_S1_lost } }
+			icon_region_S1_lost_visible = { has_country_flag = SOV_evac_region_S1_lost }
+			icon_state_265_ok_visible = { 265 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_265_lost_visible = { 265 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_state_825_ok_visible = { 825 = { has_state_flag = SOV_evac_done_flag NOT = { has_state_flag = SOV_evac_lost_flag } } }
+			icon_state_825_lost_visible = { 825 = { has_state_flag = SOV_evac_lost_flag } }
+			icon_region_S1_red_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S1_done has_country_flag = SOV_evac_region_S1_lost } } }
+			icon_region_S2_ok_visible = { has_country_flag = SOV_evac_region_S2_done NOT = { has_country_flag = SOV_evac_region_S2_lost } }
+			icon_region_S2_lost_visible = { has_country_flag = SOV_evac_region_S2_lost }
+			icon_region_S2_red_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S2_done has_country_flag = SOV_evac_region_S2_lost } } }
+			icon_region_S3_ok_visible = { has_country_flag = SOV_evac_region_S3_done NOT = { has_country_flag = SOV_evac_region_S3_lost } }
+			icon_region_S3_lost_visible = { has_country_flag = SOV_evac_region_S3_lost }
+			icon_region_S3_red_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S3_done has_country_flag = SOV_evac_region_S3_lost } } }
+			icon_region_S4_ok_visible = { has_country_flag = SOV_evac_region_S4_done NOT = { has_country_flag = SOV_evac_region_S4_lost } }
+			icon_region_S4_lost_visible = { has_country_flag = SOV_evac_region_S4_lost }
+			icon_region_S4_red_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S4_done has_country_flag = SOV_evac_region_S4_lost } } }
+			icon_region_S5_ok_visible = { has_country_flag = SOV_evac_region_S5_done NOT = { has_country_flag = SOV_evac_region_S5_lost } }
+			icon_region_S5_lost_visible = { has_country_flag = SOV_evac_region_S5_lost }
+			icon_region_S5_red_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S5_done has_country_flag = SOV_evac_region_S5_lost } } }
+			icon_region_S6_ok_visible = { has_country_flag = SOV_evac_region_S6_done NOT = { has_country_flag = SOV_evac_region_S6_lost } }
+			icon_region_S6_lost_visible = { has_country_flag = SOV_evac_region_S6_lost }
+			icon_region_S6_red_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S6_done has_country_flag = SOV_evac_region_S6_lost } } }
+			icon_region_S7_ok_visible = { has_country_flag = SOV_evac_region_S7_done NOT = { has_country_flag = SOV_evac_region_S7_lost } }
+			icon_region_S7_lost_visible = { has_country_flag = SOV_evac_region_S7_lost }
+			icon_region_S7_red_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S7_done has_country_flag = SOV_evac_region_S7_lost } } }
+			lbl_S1_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S1_active has_country_flag = SOV_evac_region_S1_done has_country_flag = SOV_evac_region_S1_lost } } }
+			lbl_S1_act_visible = { has_country_flag = SOV_evac_region_S1_active }
+			lbl_S1_done_visible = { has_country_flag = SOV_evac_region_S1_done }
+			lbl_S1_lost_visible = { has_country_flag = SOV_evac_region_S1_lost }
+			lbl_S2_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S2_active has_country_flag = SOV_evac_region_S2_done has_country_flag = SOV_evac_region_S2_lost } } }
+			lbl_S2_act_visible = { has_country_flag = SOV_evac_region_S2_active }
+			lbl_S2_done_visible = { has_country_flag = SOV_evac_region_S2_done }
+			lbl_S2_lost_visible = { has_country_flag = SOV_evac_region_S2_lost }
+			lbl_S3_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S3_active has_country_flag = SOV_evac_region_S3_done has_country_flag = SOV_evac_region_S3_lost } } }
+			lbl_S3_act_visible = { has_country_flag = SOV_evac_region_S3_active }
+			lbl_S3_done_visible = { has_country_flag = SOV_evac_region_S3_done }
+			lbl_S3_lost_visible = { has_country_flag = SOV_evac_region_S3_lost }
+			lbl_S4_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S4_active has_country_flag = SOV_evac_region_S4_done has_country_flag = SOV_evac_region_S4_lost } } }
+			lbl_S4_act_visible = { has_country_flag = SOV_evac_region_S4_active }
+			lbl_S4_done_visible = { has_country_flag = SOV_evac_region_S4_done }
+			lbl_S4_lost_visible = { has_country_flag = SOV_evac_region_S4_lost }
+			lbl_S5_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S5_active has_country_flag = SOV_evac_region_S5_done has_country_flag = SOV_evac_region_S5_lost } } }
+			lbl_S5_act_visible = { has_country_flag = SOV_evac_region_S5_active }
+			lbl_S5_done_visible = { has_country_flag = SOV_evac_region_S5_done }
+			lbl_S5_lost_visible = { has_country_flag = SOV_evac_region_S5_lost }
+			lbl_S6_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S6_active has_country_flag = SOV_evac_region_S6_done has_country_flag = SOV_evac_region_S6_lost } } }
+			lbl_S6_act_visible = { has_country_flag = SOV_evac_region_S6_active }
+			lbl_S6_done_visible = { has_country_flag = SOV_evac_region_S6_done }
+			lbl_S6_lost_visible = { has_country_flag = SOV_evac_region_S6_lost }
+			lbl_S7_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S7_active has_country_flag = SOV_evac_region_S7_done has_country_flag = SOV_evac_region_S7_lost } } }
+			lbl_S7_act_visible = { has_country_flag = SOV_evac_region_S7_active }
+			lbl_S7_done_visible = { has_country_flag = SOV_evac_region_S7_done }
+			lbl_S7_lost_visible = { has_country_flag = SOV_evac_region_S7_lost }
+			# line 0 doubles as the fallback, so the header still renders when the
+			# counter was never created (a save from an older build)
+			evac_done_0_visible = { NOT = { check_variable = { SOV_evac_regions_done > 0 } } }
+			evac_done_1_visible = { check_variable = { SOV_evac_regions_done = 1 } }
+			evac_done_2_visible = { check_variable = { SOV_evac_regions_done = 2 } }
+			evac_done_3_visible = { check_variable = { SOV_evac_regions_done = 3 } }
+			evac_done_4_visible = { check_variable = { SOV_evac_regions_done = 4 } }
+			evac_done_5_visible = { check_variable = { SOV_evac_regions_done = 5 } }
+			evac_done_6_visible = { check_variable = { SOV_evac_regions_done = 6 } }
+			evac_done_7_visible = { check_variable = { SOV_evac_regions_done = 7 } }
+																						}
+	}
+}

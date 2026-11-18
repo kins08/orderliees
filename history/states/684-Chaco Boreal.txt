@@ -1,0 +1,24 @@
+state={
+	id=684
+	name="STATE_684"
+	manpower = 1
+	state_category = pastoral
+	resources = {
+	}
+	history={
+		
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			2195 1
+		}
+		victory_points = {
+			5165 1
+		}
+	}
+	provinces = {
+		2195 2209 5165 8203 10973
+	}
+	local_supplies=0.0
+}

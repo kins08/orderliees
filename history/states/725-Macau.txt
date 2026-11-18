@@ -1,0 +1,24 @@
+state={
+	id=725
+	name="STATE_725"
+	manpower = 157805
+	state_category = enclave
+	resources = {
+	}
+	history={
+		owner = CHI
+		buildings = {
+			infrastructure = 2
+			4189 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			4189 1
+		}
+	}
+	provinces={
+		4189
+	}
+	local_supplies=0.0
+}

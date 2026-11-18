@@ -1,0 +1,34 @@
+state = {
+	id = 623
+	name = "STATE_623" # Central Islands
+	manpower = 5757481 
+
+	resources = {
+		steel = 7
+	}
+
+	state_category = large_town
+	
+	history = {
+		owner = USA
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+			12118 = {
+				naval_base = 1
+			}
+		}
+
+		victory_points = {
+			12118 1 
+		}
+	}
+
+	provinces = {
+		1372 4228 4377 7307 10306 12279 1224 1311 1340 4269 4373 1261 1368 7385 7423 10186 10302 12112 12118 12153
+	}
+
+	local_supplies = 6.0 
+}

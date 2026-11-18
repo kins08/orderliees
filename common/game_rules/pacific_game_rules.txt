@@ -1,0 +1,20 @@
+pacific_balance_mode = {
+	name = "PACIFIC_GAME_RULE_NAME"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_idea_USA_jap_poster"
+	default = {
+		name = auto
+		text = "PACIFIC_RULE_AUTO"
+		desc = "PACIFIC_RULE_AUTO_DESC"
+	}
+	option = {
+		name = factor
+		text = "PACIFIC_RULE_FACTOR"
+		desc = "PACIFIC_RULE_FACTOR_DESC"
+	}
+	option = {
+		name = non_factor
+		text = "PACIFIC_RULE_NON_FACTOR"
+		desc = "PACIFIC_RULE_NON_FACTOR_DESC"
+	}
+}

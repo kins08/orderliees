@@ -1,0 +1,182 @@
+units = {
+	fleet = {
+		name = "United States Fleet"
+		naval_base = 6845 # San Diego
+		task_force = {
+			name = "Pacific Battle Fleet - Strike Force"
+			location = 6845 # San Diego
+			ship = { name = "USS Ranger" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "Yorktown Class" } } }
+			ship = { name = "USS Lexington" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "Yorktown Class" } } }
+			ship = { name = "USS Saratoga" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "Yorktown Class" } } }
+			ship = { name = "USS Langley" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "Yorktown Class" } } }
+			ship = { name = "USS Nevada" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Arizona" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Pennsylvania" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Oklahoma" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Tennessee" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS California" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS New Mexico" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Mississippi" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Idaho" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Colorado" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Omaha" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Milwaukee" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Cincinnati" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS New Orleans" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Astoria" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Minneapolis" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Indianapolis" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Trenton" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Concord" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Oglala" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Aroostook" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Raleigh" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Detroit" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Memphis" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Northampton" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Houston" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Pensacola" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Salt Lake City" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Chicago" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Chester" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Dewey" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Hull" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS MacDonough" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Worden" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Farragut" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Dale" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Monaghan" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Aylwin" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Hatfield" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Brooks" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Fox" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Kane" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Rathburne" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Talbot" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+		}
+		task_force = {
+			name = "Atlantic Strike Force"
+			location = 6845 # San Diego
+			ship = { name = "USS West Virginia" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Maryland" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "Colorado Class" } } }
+			ship = { name = "USS Waters" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Dent" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS MacLeish" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS McCormick" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Sturtevant" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+			ship = { name = "USS Overton" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "Brooklyn Class" } } }
+		}
+		task_force = {
+			name = "1st Destroyer Squadron (ASW)"
+			location = 6845 # San Diego
+			ship = { name = "USS Bainbridge" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS King" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Sands" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Lawrence" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Humphreys" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Zane" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Wasmuth" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Trever" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Perry" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Chandler" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Southard" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Hovey" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Long" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Dallas" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Reuben James" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Goff" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Barry" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Hopkins" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Broome" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Borie" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Simpson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Truxtun" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Breckinridge" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Barney" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Blakeley" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Biddle" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Decatur" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Badger" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Jacob Jones" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Leary" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Schenck" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Babbitt" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Hamilton" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Roper" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Litchfield" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Ballard" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Chew" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Crane" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Crosby" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Greene" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+		}
+		task_force = {
+			name = "2nd Destroyer Squadron (ASW)"
+			location = 6845 # San Diego
+			ship = { name = "USS Hogan" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Howard" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Kennison" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Kilty" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Palmer" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Schley" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Stansbury" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Thornton" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Ward" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Dorsey" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Elliot" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Boggs" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Gilmer" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Du Pont" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Bernadou" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Ellis" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Cole" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Tarbell" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Upshur" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Greer" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Allen" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Colhoun" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Gregory" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Little" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS McKean" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Stringham" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Clemson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Goldsborough" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS McFarland" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Osmond Ingram" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Belknap" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Gillis" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Hulbert" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Noa" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS William B Preston" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Dickerson" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Herbert" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Dahlgren" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS Tattnall" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+			ship = { name = "USS J Fred Talbott" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = USA version_name = "Mahan Class" } } }
+		}
+		task_force = {
+			name = "Submarine Force"
+			location = 6845 # San Diego
+			ship = { name = "USS Salmon" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Seal" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Sargo" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Saury" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Spearfish" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Sculpin" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Squalus" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Snapper" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Stingray" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Sturgeon" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Seadragon" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Sealion" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Searaven" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Seawolf" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Tambor" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Tautog" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Thresher" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Triton" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Trout" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+			ship = { name = "USS Tuna" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_2 = { amount = 1 owner = USA version_name = "Salmon Class" } } }
+		}
+	}
+}

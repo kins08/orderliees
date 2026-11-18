@@ -1,0 +1,38 @@
+pacific_battle_category = {
+	icon = generic_naval
+	picture = GFX_decision_cat_picture_pacific_battle
+	priority = 950
+	allowed = {
+		always = yes
+	}
+	visible = {
+		has_global_flag = pacific_battle_active
+		OR = {
+			tag = JAP
+			tag = USA
+			tag = ENG
+			tag = FRA
+			tag = AST
+			tag = CAN
+			tag = SAF
+			tag = RAJ
+			is_in_faction_with = JAP
+			is_in_faction_with = ENG
+			is_in_faction_with = USA
+		}
+	}
+	visible_when_empty = yes
+	scripted_gui = pacific_battle_decision_ui
+}
+
+pacific_battle_debug_category = {
+	icon = generic_naval
+	priority = 949
+	allowed = {
+		always = yes
+	}
+	visible = {
+		is_debug = yes
+	}
+	visible_when_empty = no
+}

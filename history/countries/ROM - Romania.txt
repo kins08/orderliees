@@ -1,0 +1,383 @@
+capital = 46
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "ROM_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "ROM_1936_nsb"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "ROM_1936_naval_mtg"
+	else = {
+		set_naval_oob = "ROM_1936_naval_legacy"
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "ROM_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			photo_reconnaisance = 1
+			bba_early_transport_plane = 1
+		}
+	else = {
+		set_air_oob = "ROM_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_transport_plane = 1
+		}
+	}
+}
+
+set_variable = {
+	production_speed_arms_factory_factor_ROM_mod = 0.15
+}
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.6
+
+recruit_character = ROM_gheorghe_tatarescu
+recruit_character = ROM_constantin_ion_parhon
+recruit_character = ROM_armand_calinescu
+recruit_character = ROM_corneliu_codreanu
+recruit_character = ROM_petre_dumitrescu
+recruit_character = ROM_army_chief_1_ion_antonescu
+recruit_character = ROM_ioan_mihail_racovita
+recruit_character = ROM_gheorghe_avramescu
+recruit_character = ROM_army_chief_2_constantin_sanatescu
+recruit_character = ROM_navy_chief_3_horia_macellariu
+recruit_character = ROM_navy_chief_1_gheorghe_koslinski
+recruit_character = ROM_navy_chief_2_vasile_scodrea
+recruit_character = ROM_theorist_1_gheorghe_potopeanu
+recruit_character = ROM_theorist_2_emanoil_ionescu
+recruit_character = ROM_gheorghe_mihail
+recruit_character = ROM_air_chief_2_ermil_gheorghiu
+recruit_character = ROM_theorist_3_nicolae_sova
+recruit_character = ROM_air_chief_1_gheorghe_jienescu
+recruit_character = ROM_paul_teodorescu
+recruit_character = ROM_gheorghe_vasiliu
+recruit_character = ROM_iuliu_maniu
+recruit_character = ROM_petru_groza
+recruit_character = ROM_gheorghe_gheorghiu_dej
+recruit_character = ROM_nicolae_malaxa
+recruit_character = ROM_mihail_sturdza
+recruit_character = ROM_gheorghe_argeseanu
+recruit_character = ROM_king_michael
+recruit_character = ROM_octavian_goga
+
+# Starting tech
+
+set_technology = {
+	marines = 1
+	paratroopers = 1
+	rangers_tech = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+
+set_grand_doctrine = new_mobile_warfare
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_battlefield_support
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+}
+
+#Ideas
+if = {
+	limit = {
+		has_dlc = "Death or Dishonor"
+	}
+	add_ideas = {
+		ROM_king_carol_ii_hedonist
+	}
+	give_guarantee = CZE
+	give_guarantee = GRE
+	give_guarantee = YUG
+}
+if = {
+	limit = {
+		AND = {  
+			NOT = { has_dlc = "Death or Dishonor" }
+			has_dlc = "Battle for the Bosporus"
+		}
+	}
+	give_guarantee = GRE
+	give_guarantee = YUG
+}
+add_ideas = neutrality_idea
+
+#Kick off kings crazy life
+if = {
+	limit = {
+		has_dlc = "Death or Dishonor"
+	}
+	ROM = {
+		#Pick from list of the sane events first
+		random_list = {
+			100 = { country_event = { id = DOD_romania.81 days = 2 random_days = 20 } }
+		}
+	}
+}
+
+if = {
+	limit = {
+		#has_dlc = Battle for the Bosporus
+	}
+	add_opinion_modifier = { 
+		target = GRE
+		modifier = BFTB_balkan_pact_ally
+	}
+	add_opinion_modifier = { 
+		target = YUG
+		modifier = BFTB_balkan_pact_ally
+	}
+	add_opinion_modifier = { 
+		target = BUL
+		modifier = BFTB_balkan_pact_enemy
+	}
+	add_opinion_modifier = { 
+		target = HUN
+		modifier = BFTB_balkan_pact_enemy
+	}
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 60
+	fascism = 18
+	communism = 2
+	neutrality = 20
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "IAR 14" 
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Regele Ferdinand Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Delfinul Class"				
+		type = ship_hull_submarine_2
+		name_group = ROM_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Marasti Class"				
+		type = ship_hull_light_1
+		name_group = ROM_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Regele Ferdinand Class"	
+		type = ship_hull_light_1
+		name_group = ROM_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+}
+
+# 1939 Start #
+### REFUNDED STARTING EQUIPMENT ###
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 14359
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 88
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 303
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 70
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 30
+}
+if = {
+	limit = { has_dlc = "No Step Back" }
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_1
+		amount = 60
+	}
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_0
+		amount = 60
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	add_equipment_to_stockpile = {
+		type = light_tank_equipment_1
+		amount = 60
+	}
+	add_equipment_to_stockpile = {
+		type = gw_tank_equipment
+		amount = 60
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_0
+		variant_name = "PZL P.11"
+		producer = POL
+		amount = 48
+	}
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_0
+		variant_name = "IAR 14"
+		producer = ROM
+		amount = 24
+	}
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	add_equipment_to_stockpile = {
+		type = fighter_equipment_0
+		producer = POL
+		amount = 48
+	}
+	add_equipment_to_stockpile = {
+		type = fighter_equipment_0
+		amount = 24
+	}
+}
+
+1939.1.1 = {
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		# Ship variants #
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+	}
+}
+
+recruit_character = ROM_constantin_gane
+recruit_character = ROM_martin_bercu
+recruit_character = ROM_eugen_bacescu
+recruit_character = ROM_horia_macellariu
+recruit_character = ROM_dragomir_hurmuzescu
+recruit_character = ROM_hermann_oberth
+recruit_character = ROM_horia_hulubei
+recruit_character = ROM_stefan_procopiu

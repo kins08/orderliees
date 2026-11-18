@@ -1,0 +1,176 @@
+air_subdoctrine_flying_artillery = {
+    track = strike_aircraft
+    name = SUBDOCTRINE_FLYING_ARTILLERY
+    description = SUBDOCTRINE_FLYING_ARTILLERY_DESC
+    icon = GFX_doctrine_combat_unit_destruction_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_sov_only_tt
+            OR = {
+                tag = SOV
+                original_tag = SOV
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        suppression_runs = {
+            category_cas = {
+                air_ground_attack = 0.03
+            }
+        }
+        terrain_familiarity = {
+            category_cas = {
+                air_defence = 0.13
+            }
+            air_power_projection_factor = 0.025
+        }
+        effective_payloads = { 
+            category_cas = {
+                air_ground_attack = 0.03
+            }
+            air_cas_efficiency = 0.05
+        }
+        rugged_airframes = {
+            category_cas = {
+                air_defence = 0.08
+            }
+        }
+        movement_interdiction = {
+            air_mission_efficiency = 0.025
+        }
+    }
+}
+
+air_subdoctrine_dive_bombers = {
+    track = strike_aircraft
+    name = SUBDOCTRINE_DIVE_BOMBERS
+    description = SUBDOCTRINE_DIVE_BOMBERS_DESC
+    icon = GFX_doctrine_dive_bombing_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_axis_tt
+            OR = {
+                tag = GER
+                tag = ITA
+                tag = JAP
+                tag = HUN
+                tag = ROM
+                tag = BUL
+                tag = FIN
+                original_tag = GER
+                original_tag = ITA
+                original_tag = JAP
+                original_tag = HUN
+                original_tag = ROM
+                original_tag = BUL
+                original_tag = FIN
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        forward_air_controllers = {
+            category_cas = {
+                air_ground_attack = 0.08
+            }
+        }
+        all_weather_drills = {
+            category_cas = {
+                air_ground_attack = 0.03
+            }
+            air_cas_efficiency = 0.10
+        }
+        terrifying_precision = { 
+            category_cas = {
+                maximum_speed = 0.03
+            }
+            air_power_projection_factor = 0.025
+        }
+        close_air_support_aces = {
+            category_cas = {
+                air_defence = 0.23
+            }
+        }
+        fighter_bomber_coordination = {
+            category_cas = {
+                air_ground_attack = 0.03
+            }
+            air_mission_efficiency = 0.025
+        }
+    }
+}
+
+air_subdoctrine_flexible_fire_support = {
+    track = strike_aircraft
+    name = SUBDOCTRINE_FLEXIBLE_FIRE_SUPPORT
+    description = SUBDOCTRINE_FLEXIBLE_FIRE_SUPPORT_DESC
+    icon = GFX_doctrine_hunt_and_destroy_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_allies_tt
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = FRA
+                tag = CAN
+                tag = AST
+                tag = SAF
+                tag = RAJ
+                original_tag = ENG
+                original_tag = USA
+                original_tag = FRA
+                original_tag = CAN
+                original_tag = AST
+                original_tag = SAF
+                original_tag = RAJ
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        cas_preservation = {
+            category_cas = {
+                air_ground_attack = 0.03
+            }
+        }
+        adaptable_nav_bombers = {
+            category_cas = {
+                air_defence = 0.08
+            }
+        }
+        forward_spotters = { 
+            air_cas_efficiency = 0.05
+        }
+        continuous_fire_support = {
+            category_cas = {
+                air_defence = 0.13
+            }
+            air_power_projection_factor = 0.025
+        }
+        quick_turnaround = {
+            category_cas = {
+                air_ground_attack = 0.03
+            }
+            air_mission_efficiency = 0.025
+        }
+    }
+}

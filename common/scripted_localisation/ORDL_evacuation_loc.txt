@@ -1,0 +1,562 @@
+defined_text = {
+	name = ORDL_EVAC_LBL_S1
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S1_active }
+		localization_key = ORDL_EVAC_LBL_S1_ACT
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S1_done }
+		localization_key = ORDL_EVAC_LBL_S1_DONE
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S1_lost }
+		localization_key = ORDL_EVAC_LBL_S1_LOST
+	}
+	text = { localization_key = ORDL_EVAC_LBL_S1_IDLE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_LBL_S2
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S2_active }
+		localization_key = ORDL_EVAC_LBL_S2_ACT
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S2_done }
+		localization_key = ORDL_EVAC_LBL_S2_DONE
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S2_lost }
+		localization_key = ORDL_EVAC_LBL_S2_LOST
+	}
+	text = { localization_key = ORDL_EVAC_LBL_S2_IDLE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_LBL_S3
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S3_active }
+		localization_key = ORDL_EVAC_LBL_S3_ACT
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S3_done }
+		localization_key = ORDL_EVAC_LBL_S3_DONE
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S3_lost }
+		localization_key = ORDL_EVAC_LBL_S3_LOST
+	}
+	text = { localization_key = ORDL_EVAC_LBL_S3_IDLE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_LBL_S4
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S4_active }
+		localization_key = ORDL_EVAC_LBL_S4_ACT
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S4_done }
+		localization_key = ORDL_EVAC_LBL_S4_DONE
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S4_lost }
+		localization_key = ORDL_EVAC_LBL_S4_LOST
+	}
+	text = { localization_key = ORDL_EVAC_LBL_S4_IDLE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_LBL_S5
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S5_active }
+		localization_key = ORDL_EVAC_LBL_S5_ACT
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S5_done }
+		localization_key = ORDL_EVAC_LBL_S5_DONE
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S5_lost }
+		localization_key = ORDL_EVAC_LBL_S5_LOST
+	}
+	text = { localization_key = ORDL_EVAC_LBL_S5_IDLE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_LBL_S6
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S6_active }
+		localization_key = ORDL_EVAC_LBL_S6_ACT
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S6_done }
+		localization_key = ORDL_EVAC_LBL_S6_DONE
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S6_lost }
+		localization_key = ORDL_EVAC_LBL_S6_LOST
+	}
+	text = { localization_key = ORDL_EVAC_LBL_S6_IDLE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_LBL_S7
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S7_active }
+		localization_key = ORDL_EVAC_LBL_S7_ACT
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S7_done }
+		localization_key = ORDL_EVAC_LBL_S7_DONE
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S7_lost }
+		localization_key = ORDL_EVAC_LBL_S7_LOST
+	}
+	text = { localization_key = ORDL_EVAC_LBL_S7_IDLE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_CD_LINE
+	text = {
+		trigger = { check_variable = { SOV_evac_regions_active > 1 } }
+		localization_key = ORDL_EVAC_CD_ON
+	}
+	text = { localization_key = ORDL_EVAC_CD_OFF }
+}
+
+defined_text = {
+	name = ORDL_EVAC_NOW
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S1_active }
+		localization_key = ORDL_EVAC_NOW_S1
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S2_active }
+		localization_key = ORDL_EVAC_NOW_S2
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S3_active }
+		localization_key = ORDL_EVAC_NOW_S3
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S4_active }
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S5_active }
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S6_active }
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S7_active }
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = { localization_key = ORDL_EVAC_NOW_NONE }
+}
+
+defined_text = {
+	name = ORDL_EVAC_ACTIVE_1
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S1_active }
+		localization_key = ORDL_EVAC_NOW_S1
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S2_active }
+		localization_key = ORDL_EVAC_NOW_S2
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S3_active }
+		localization_key = ORDL_EVAC_NOW_S3
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S4_active }
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S5_active }
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S6_active }
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S7_active }
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		localization_key = ORDL_EVAC_NOW_NONE
+	}
+}
+
+defined_text = {
+	name = ORDL_EVAC_ACTIVE_2
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S2_active
+		}
+		localization_key = ORDL_EVAC_NOW_S2
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S3_active
+		}
+		localization_key = ORDL_EVAC_NOW_S3
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S4_active
+		}
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S3_active
+		}
+		localization_key = ORDL_EVAC_NOW_S3
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S4_active
+		}
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S4_active
+		}
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S4_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S4_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S4_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S5_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S5_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S6_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		localization_key = ORDL_EVAC_BLANK
+	}
+}
+
+defined_text = {
+	name = ORDL_EVAC_STATUS_LINE
+	text = {
+		trigger = { check_variable = { SOV_evac_regions_active > 1 } }
+		localization_key = ORDL_EVAC_CD_ON
+	}
+	text = {
+		localization_key = ORDL_EVAC_COST
+	}
+}
+
+
+# Aliases with Get prefix
+defined_text = {
+	name = GetEvacActive1
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S1_active }
+		localization_key = ORDL_EVAC_NOW_S1
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S2_active }
+		localization_key = ORDL_EVAC_NOW_S2
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S3_active }
+		localization_key = ORDL_EVAC_NOW_S3
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S4_active }
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S5_active }
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S6_active }
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = { has_country_flag = SOV_evac_region_S7_active }
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		localization_key = ORDL_EVAC_NOW_NONE
+	}
+}
+
+defined_text = {
+	name = GetEvacActive2
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S2_active
+		}
+		localization_key = ORDL_EVAC_NOW_S2
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S3_active
+		}
+		localization_key = ORDL_EVAC_NOW_S3
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S4_active
+		}
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S1_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S3_active
+		}
+		localization_key = ORDL_EVAC_NOW_S3
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S4_active
+		}
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S2_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S4_active
+		}
+		localization_key = ORDL_EVAC_NOW_S4
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S3_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S4_active
+			has_country_flag = SOV_evac_region_S5_active
+		}
+		localization_key = ORDL_EVAC_NOW_S5
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S4_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S4_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S5_active
+			has_country_flag = SOV_evac_region_S6_active
+		}
+		localization_key = ORDL_EVAC_NOW_S6
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S5_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_evac_region_S6_active
+			has_country_flag = SOV_evac_region_S7_active
+		}
+		localization_key = ORDL_EVAC_NOW_S7
+	}
+	text = {
+		localization_key = ORDL_EVAC_BLANK
+	}
+}
+
+defined_text = {
+	name = GetEvacStatusLine
+	text = {
+		trigger = { check_variable = { SOV_evac_regions_active > 1 } }
+		localization_key = ORDL_EVAC_CD_ON
+	}
+	text = {
+		localization_key = ORDL_EVAC_COST
+	}
+}

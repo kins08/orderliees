@@ -1,0 +1,215 @@
+scripted_gui = {
+	FRA_resistance_evac_decision_ui = {
+		context_type = decision_category
+		window_name = "FRA_resistance_evac_decision_ui"
+
+		effects = {
+			btn_select_aof_click = {
+				goto_state = 557
+			}
+			btn_select_aef_click = {
+				goto_state = 539
+			}
+			btn_select_madagascar_click = {
+				goto_state = 543
+			}
+			btn_select_guiana_click = {
+				goto_state = 310
+			}
+		}
+
+		triggers = {
+			# Automated Carousel Destination Highlights
+			card_aof_active_visible = {
+				check_variable = { var = FRA_evac_target_id value = 1 compare = equals }
+			}
+			card_aof_normal_visible = {
+				NOT = { check_variable = { var = FRA_evac_target_id value = 1 compare = equals } }
+			}
+
+			card_aef_active_visible = {
+				check_variable = { var = FRA_evac_target_id value = 2 compare = equals }
+			}
+			card_aef_normal_visible = {
+				NOT = { check_variable = { var = FRA_evac_target_id value = 2 compare = equals } }
+			}
+
+			card_madagascar_active_visible = {
+				check_variable = { var = FRA_evac_target_id value = 3 compare = equals }
+			}
+			card_madagascar_normal_visible = {
+				NOT = { check_variable = { var = FRA_evac_target_id value = 3 compare = equals } }
+			}
+
+			card_guiana_active_visible = {
+				check_variable = { var = FRA_evac_target_id value = 4 compare = equals }
+			}
+			card_guiana_normal_visible = {
+				NOT = { check_variable = { var = FRA_evac_target_id value = 4 compare = equals } }
+			}
+
+			# Embarkation Ports on Metropole Map
+			port_brest_active_mil_visible = {
+				check_variable = { var = FRA_active_port_id value = 1 compare = equals }
+				check_variable = { var = FRA_last_evac_type value = 1 compare = equals }
+			}
+			port_brest_active_civ_visible = {
+				check_variable = { var = FRA_active_port_id value = 1 compare = equals }
+				check_variable = { var = FRA_last_evac_type value = 2 compare = equals }
+			}
+			port_brest_base_visible = {
+				NOT = { check_variable = { var = FRA_active_port_id value = 1 compare = equals } }
+			}
+
+			port_bordeaux_active_mil_visible = {
+				check_variable = { var = FRA_active_port_id value = 2 compare = equals }
+				check_variable = { var = FRA_last_evac_type value = 1 compare = equals }
+			}
+			port_bordeaux_active_civ_visible = {
+				check_variable = { var = FRA_active_port_id value = 2 compare = equals }
+				check_variable = { var = FRA_last_evac_type value = 2 compare = equals }
+			}
+			port_bordeaux_base_visible = {
+				NOT = { check_variable = { var = FRA_active_port_id value = 2 compare = equals } }
+			}
+
+			port_marseille_active_mil_visible = {
+				check_variable = { var = FRA_active_port_id value = 3 compare = equals }
+				check_variable = { var = FRA_last_evac_type value = 1 compare = equals }
+			}
+			port_marseille_active_civ_visible = {
+				check_variable = { var = FRA_active_port_id value = 3 compare = equals }
+				check_variable = { var = FRA_last_evac_type value = 2 compare = equals }
+			}
+			port_marseille_base_visible = {
+				NOT = { check_variable = { var = FRA_active_port_id value = 3 compare = equals } }
+			}
+
+			# German Loss Tiers
+			tier_1_active_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 1 compare = greater_than_or_equals }
+			}
+			tier_1_inactive_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 1 compare = less_than }
+			}
+
+			tier_2_active_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 2 compare = greater_than_or_equals }
+			}
+			tier_2_inactive_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 2 compare = less_than }
+			}
+
+			tier_3_active_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 3 compare = greater_than_or_equals }
+			}
+			tier_3_inactive_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 3 compare = less_than }
+			}
+
+			tier_4_active_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 4 compare = greater_than_or_equals }
+			}
+			tier_4_inactive_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 4 compare = less_than }
+			}
+
+			tier_5_active_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 5 compare = greater_than_or_equals }
+			}
+			tier_5_inactive_visible = {
+				check_variable = { var = FRA_ger_losses_tier value = 5 compare = less_than }
+			}
+		}
+	}
+
+	FRA_resistance_evac_spectator_ui = {
+		context_type = decision_category
+		window_name = "FRA_resistance_evac_spectator_ui"
+
+		triggers = {
+			spectator_port_brest_active_mil_visible = {
+				FRA = {
+					check_variable = { var = FRA_active_port_id value = 1 compare = equals }
+					check_variable = { var = FRA_last_evac_type value = 1 compare = equals }
+				}
+			}
+			spectator_port_brest_active_civ_visible = {
+				FRA = {
+					check_variable = { var = FRA_active_port_id value = 1 compare = equals }
+					check_variable = { var = FRA_last_evac_type value = 2 compare = equals }
+				}
+			}
+			spectator_port_brest_base_visible = {
+				FRA = { NOT = { check_variable = { var = FRA_active_port_id value = 1 compare = equals } } }
+			}
+
+			spectator_port_bordeaux_active_mil_visible = {
+				FRA = {
+					check_variable = { var = FRA_active_port_id value = 2 compare = equals }
+					check_variable = { var = FRA_last_evac_type value = 1 compare = equals }
+				}
+			}
+			spectator_port_bordeaux_active_civ_visible = {
+				FRA = {
+					check_variable = { var = FRA_active_port_id value = 2 compare = equals }
+					check_variable = { var = FRA_last_evac_type value = 2 compare = equals }
+				}
+			}
+			spectator_port_bordeaux_base_visible = {
+				FRA = { NOT = { check_variable = { var = FRA_active_port_id value = 2 compare = equals } } }
+			}
+
+			spectator_port_marseille_active_mil_visible = {
+				FRA = {
+					check_variable = { var = FRA_active_port_id value = 3 compare = equals }
+					check_variable = { var = FRA_last_evac_type value = 1 compare = equals }
+				}
+			}
+			spectator_port_marseille_active_civ_visible = {
+				FRA = {
+					check_variable = { var = FRA_active_port_id value = 3 compare = equals }
+					check_variable = { var = FRA_last_evac_type value = 2 compare = equals }
+				}
+			}
+			spectator_port_marseille_base_visible = {
+				FRA = { NOT = { check_variable = { var = FRA_active_port_id value = 3 compare = equals } } }
+			}
+
+			spectator_tier_1_active_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 1 compare = greater_than_or_equals } }
+			}
+			spectator_tier_1_inactive_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 1 compare = less_than } }
+			}
+
+			spectator_tier_2_active_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 2 compare = greater_than_or_equals } }
+			}
+			spectator_tier_2_inactive_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 2 compare = less_than } }
+			}
+
+			spectator_tier_3_active_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 3 compare = greater_than_or_equals } }
+			}
+			spectator_tier_3_inactive_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 3 compare = less_than } }
+			}
+
+			spectator_tier_4_active_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 4 compare = greater_than_or_equals } }
+			}
+			spectator_tier_4_inactive_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 4 compare = less_than } }
+			}
+
+			spectator_tier_5_active_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 5 compare = greater_than_or_equals } }
+			}
+			spectator_tier_5_inactive_visible = {
+				FRA = { check_variable = { var = FRA_ger_losses_tier value = 5 compare = less_than } }
+			}
+		}
+	}
+}

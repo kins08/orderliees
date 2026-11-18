@@ -1,0 +1,3110 @@
+debug_decisions = {
+	DEBUG_Manu = {
+		priority = 999
+		allowed = {
+			tag = GER
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+		}
+
+		available = {
+		}
+
+		complete_effect = {
+		}
+	}
+	DEBUG_DANNE_GER = {
+		priority = 999
+		allowed = {
+			always = yes
+			tag = GER
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		available = {
+			
+		}
+
+		complete_effect = {	
+			if = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+					}
+				}
+				custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+				add_to_variable = { 
+					GER_industrial_consumer_goods_factor = -0.1
+					tooltip = consumer_goods_factor_tt
+				}
+				GER_reduce_mefo_bills_penalty = yes
+			}
+		}
+	}
+	DEBUG_DANNE_change_CG_GER = {
+		priority = 999
+		allowed = {
+			always = yes
+			tag = GER
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		available = {
+			
+		}
+
+		complete_effect = {	
+			if = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+					}
+				}
+				custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+				add_to_variable = { 
+					GER_industrial_consumer_goods_factor = 0.1
+					tooltip = consumer_goods_factor_tt
+				}
+				GER_add_mefo_bills_penalty = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+#Category only allowed for GER
+GER_mefo_bills_category = {
+
+	GER_mefo_bills_mission = {
+
+		allowed = { always = no }
+
+		icon = ger_mefo_bills
+
+		available = {
+			#NOT = { has_government = democratic }
+			#GER_can_delay_mefo_payment = yes #TODO_DANNE Remove this trigger entirely
+			has_political_power > 0
+			hidden_trigger = { always = no }
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { has_dynamic_modifier = { modifier = GER_mefo_bills_modifier } }
+					has_idea = GER_mefo_bills_ended
+				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = ger_has_cancelled_mefo
+				}
+				#GER_remove_mefo_bills = yes
+				#1
+				GER_pay_back_mefo_bills = yes
+			}
+			else = {
+				custom_effect_tooltip = GER_mefo_bills_mission_tt #TODO_Danne Re-write this to better fit the new circumstances!
+				custom_effect_tooltip = GER_mefo_bills_effect_in_days
+				hidden_effect = {
+					set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+					set_country_flag = paid_for_mefo
+				}
+				#GER_mefo_bills_level_up = yes
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+					}
+					hidden_effect = { set_variable = { var = GER_mefo_bill_counter value = 10 } }
+				}
+				add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+				hidden_effect = {
+					activate_mission = GER_mefo_bills_mission
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	# GER_cancel_mefos = {
+
+	# 	icon = ger_mefo_bills
+
+	# 	ai_will_do = {
+	# 		base = 0
+	# 	}
+
+	# 	available = {
+	# 	}
+
+	# 	cost = 0
+
+	# 	fire_only_once = no
+
+	# 	visible = {
+	# 		has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+	# 		#hidden_trigger = { #These are showing up as triggers for cancelation
+	# 		#	NOT = {
+	# 		#		has_country_flag = ger_has_cancelled_mefo
+	# 		#		has_idea = GER_mefo_bills_ended
+	# 		#	}
+	# 		#}
+	# 	}
+
+	# 	cancel_if_not_visible = yes
+
+	# 	remove_effect = {
+	# 		set_country_flag = ger_has_cancelled_mefo
+	# 	}
+
+	# 	complete_effect = {
+	# 		effect_tooltip = {
+	# 			retire_character = GER_hjalmar_schacht
+	# 			show_ideas_tooltip = hjalmar_schacht
+	# 		}
+
+	# 		custom_effect_tooltip = generic_skip_one_line_tt
+
+	# 		GER_stop_rearmament = yes
+	# 	}
+	# }
+
+	#GER_renew_mefos = {
+#
+	#	icon = ger_mefo_bills
+#
+	#	available = {
+	#		hidden_trigger = {
+	#			has_country_flag = ger_has_cancelled_mefo
+	#			NOT = {
+	#				OR = {
+	#					NOT = { GER_has_mefo_bills = yes }
+	#					has_idea = GER_mefo_bills_ended
+	#				}
+	#			}
+	#		}
+	#	}
+#
+	#	cost = 0
+#
+	#	fire_only_once = no
+#
+	#	visible = {
+	#		hidden_trigger = {
+	#			has_country_flag = ger_has_cancelled_mefo
+	#			NOT = {
+	#				OR = {
+	#					NOT = { GER_has_mefo_bills = yes }
+	#					has_idea = GER_mefo_bills_ended
+	#				}
+	#			}
+	#		}
+	#	}
+#
+	#	cancel_if_not_visible = yes
+#
+	#	remove_effect = {
+	#		clr_country_flag = ger_has_cancelled_mefo
+	#	}
+#
+	#	ai_will_do = {
+	#		factor = 200
+	#	}
+	#}
+}
+
+GER_seize_gold_reserves_cat = {
+	GER_seize_gold_reserves = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 15
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 5
+				check_variable = { GER_industrial_consumer_goods_factor > 0.5 }
+			}
+			modifier = {
+				factor = 5
+				check_variable = { GER_industrial_consumer_goods_factor > 0.65 }
+			}
+			modifier = {
+				factor = 5
+				check_variable = { GER_industrial_consumer_goods_factor > 0.75 }
+			}
+		}
+
+		target_non_existing = yes #This is required for the Decision to even show up. TODO_Danne fix a better solution
+		target_array = ROOT.GER_seize_gold_targets_array
+
+		target_trigger = {
+			FROM = {
+				has_country_flag = GER_has_capitulated_to_germany
+				NOT = { #Don't seize France's gold reserves too soon; set up Vichy France first. Set in event France.10 and cleared in event france.14
+					has_country_flag = GER_dont_seize_gold_reserves_flag
+				}
+				any_core_state = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+					NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
+					OR = {
+						check_variable = { industrial_complex_level > 0 }
+						check_variable = { arms_factory_level > 0 }
+						check_variable = { building_level@dockyard > 0 }
+					}
+				}
+			}
+		}
+
+		available = {
+			FROM = {
+				has_country_flag = GER_has_capitulated_to_germany
+			}
+			ROOT = {
+				custom_trigger_tooltip = {
+					tooltip = GER_economy_of_conquest_modifier_consumer_goods_tt
+					check_variable = { GER_industrial_consumer_goods_factor > 0 }
+				}
+			}
+		}
+
+		target_root_trigger = {
+			ROOT = { has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }}
+		}
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			set_temp_variable = { occupied_state_num_factory = 0 } #This will show how many factories in total Germany controls from FROM's cores
+			add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_military_factories_in_cores@GER }
+			add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_civilian_factories_in_cores@GER }
+			add_to_temp_variable = { GER.occupied_state_num_factory = FROM.num_of_naval_factories_in_cores@GER }
+
+			if = {
+				limit = {
+					NOT = {
+						FROM = {
+							original_tag = TUR
+						}
+					}
+				}
+				FROM = {
+					every_core_state = {
+						limit = {
+							is_on_continent = europe
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
+						}
+						add_compliance = -5
+						add_resistance = 10
+						set_state_flag = GER_seize_gold_reserves_state_flag
+						# add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+					}
+				}
+			}
+			else = {
+				FROM = {
+					every_core_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
+						}
+						add_compliance = -5
+						add_resistance = 10
+						set_state_flag = GER_seize_gold_reserves_state_flag
+						# add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+					}
+				}
+			}
+			
+			divide_temp_variable = { occupied_state_num_factory = 200 } #This is necessary since a single factory will increase the occupied_state_num_factory number to 1, which in turn translates to -100% when subtracting from the Consumer Goods. Dividing it by 100 here will give you 1% instead, which is more like what we want.
+			multiply_temp_variable = { occupied_state_num_factory = -1 }
+
+			#If Germany has seized Gold Reserves from Soviet states, deduct that amount when seizing the nation wide Gold Reserves from Soviet, so we're not double dipping
+			if = { 
+				limit = {
+					FROM = {
+						original_tag = SOV
+					}
+					#Check if Germany has seized Gold Reserves that needs to be deducted from the total amount
+					check_variable = { GER_reduce_russian_CG_bonus < 0 }
+				}
+				subtract_from_temp_variable = { occupied_state_num_factory = GER_reduce_russian_CG_bonus }
+			}
+			
+			custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				GER_industrial_consumer_goods_factor = occupied_state_num_factory
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+	GER_seize_russian_citites_gold_reserves = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 1000
+		}
+
+		state_target = yes
+
+		targets = { 195 219 217 242 218 206 202 137 }
+		#States being targeted: Leningrad, Moscow, Stalingrad, Smolensk, Rostov, Minsk, Kyiv, Crimea
+
+		target_trigger = {
+			FROM = {
+				owner = {
+					original_tag = SOV
+					has_war_with = ROOT
+					NOT = { has_country_flag = GER_has_capitulated_to_germany }
+				}
+				NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
+				NOT = { is_core_of = ROOT }
+				OR = {
+					check_variable = { industrial_complex_level > 0 }
+					check_variable = { arms_factory_level > 0 }
+					check_variable = { building_level@dockyard > 0 }
+				}
+			}
+		}		
+
+		available = {
+			FROM = { #This is all for tooltip purposes
+				is_fully_controlled_by = ROOT
+				owner = {
+					NOT = { has_country_flag = GER_has_capitulated_to_germany }
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		complete_effect = {
+
+			#All temp variables need to be in the same scope to display the effect tooltip properly
+			FROM = {
+				set_temp_variable = { occupied_state_num_factory = 0 }
+				add_to_temp_variable = { occupied_state_num_factory = arms_factory_level }
+				add_to_temp_variable = { occupied_state_num_factory = industrial_complex_level }
+				add_to_temp_variable = { occupied_state_num_factory = building_level@dockyard }
+
+				add_resistance = 10
+				add_compliance = -5
+				set_state_flag = GER_seize_gold_reserves_state_flag
+				# add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+				
+				divide_temp_variable = { occupied_state_num_factory = 200 } #This is necessary since a single factory will increase the occupied_state_num_factory number to 1, which in turn translates to -100% when subtracting from the Consumer Goods. Dividing it by 100 here will give you 1% instead, which is more like what we want.
+				multiply_temp_variable = { occupied_state_num_factory = -1 }
+
+				if = {
+					limit = {
+						FROM = { is_fully_controlled_by = ROOT }
+					}
+					custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+					add_to_variable = {
+						ROOT.GER_industrial_consumer_goods_factor = occupied_state_num_factory
+						tooltip = consumer_goods_factor_tt
+					}
+				}
+				else = {
+					custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_russian_states_tt
+				}
+
+				#Reduce future Soviet Gold Reserves Germany can seize
+				add_to_variable = { ROOT.GER_reduce_russian_CG_bonus = occupied_state_num_factory }
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+}
+
+# Operational Planning
+GER_price_controls_cat = {
+	GER_guns_before_butter = {
+
+		icon = GFX_decision_ger_military_buildup
+
+		ai_will_do = {
+			base = 10
+
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.45 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.55 }
+			}
+		}
+
+		available = {
+		}
+
+		visible = { #This decision is not available for the 1939 Start
+			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+			add_war_support = 0.025
+		}
+	}
+
+	GER_arbeit_und_brot = {
+
+		icon = GFX_decision_generic_political_address
+
+		ai_will_do = {
+			base = 10
+
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.45 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.55 }
+			}
+		}
+
+		available = {
+		}
+
+		visible = { #This decision is not available for the 1939 Start
+			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+			add_popularity = { ideology = ROOT popularity = 0.025 }
+		}
+	}
+	GER_collect_scrap_metal = {
+
+		icon = GFX_decision_steel
+
+		ai_will_do = {
+			base = 10
+
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.45 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.55 }
+			}
+		}
+
+		available = {
+		}
+
+		visible = { #This decision is not available for the 1939 Start
+			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+			add_timed_idea = {
+				idea = GER_collect_scrap_metal_ns
+				days = 90
+			}
+		}
+	}
+	GER_ersatz_material = {
+
+		icon = GFX_decision_generic_consumer_goods
+
+		ai_will_do = {
+			base = 10
+
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.45 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.55 }
+			}
+		}
+
+		available = {
+			has_completed_focus = GER_coal_liquefaction
+		}
+
+		visible = { #This decision is not available for the 1939 Start
+			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+	GER_import_tariffs = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		ai_will_do = {
+			base = 15
+
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.45 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.55 }
+			}
+		}
+
+		available = {
+		}
+
+		visible = { #This decision is not available for the 1939 Start
+			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
+		}
+
+		cost = 15
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+			add_timed_idea = {
+				idea = GER_import_tariffs_ns
+				days = 365
+			}
+		}
+	}
+	GER_implement_rations = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			base = 15
+
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.45 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.55 }
+			}
+		}
+
+		available = {
+			has_stability > 0.2
+		}
+
+		visible = { #This decision is not available for the 1939 Start
+			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
+		}
+
+		cost = 15
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+			add_stability = -0.025
+		}
+	}
+	GER_implement_wage_controls = {
+
+		icon = GFX_decision_hol_attract_foreign_investors
+
+		ai_will_do = {
+			base = 15
+
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.35 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.45 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.55 }
+			}
+		}
+
+		available = {
+			has_stability > 0.2
+		}
+
+		visible = { #This decision is not available for the 1939 Start
+			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
+		}
+
+		cost = 15
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+			add_stability = -0.025
+		}
+	}
+	GER_exploit_the_gombos_treaty = {
+
+		icon = GFX_decision_generic_fundraising
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				check_variable = { GER_industrial_consumer_goods_factor > 0.3 }
+			}
+			modifier = {
+				factor = 1.3
+				check_variable = { GER_industrial_consumer_goods_factor > 0.5 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { GER_industrial_consumer_goods_factor > 0.7 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { GER_industrial_consumer_goods_factor < 0.1 }
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes 
+				has_government = fascism
+			}
+		}
+
+		visible = {
+			has_dlc = "Gotterdammerung"
+			NOT = {
+				OR = {
+					is_in_faction_with = HUN
+					has_guaranteed = HUN
+				}
+			}
+			HUN = {
+				exists = yes
+				has_capitulated = no
+			}
+		}
+
+		available = {
+			HUN = {
+				has_idea = HUN_gombos_trade_treaty
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = GER_exploit_the_gombos_treaty_tt
+			GER_reduce_mefo_bills_penalty = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			HUN = {
+				country_event = {
+					id = wuw_GER_diplomacy.56
+					hours = 2
+				}	
+			}
+			effect_tooltip = {
+				HUN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = GER_stole_our_money_opm
+					}	
+					remove_ideas = HUN_gombos_trade_treaty
+				}
+			}
+		}
+	}
+}
+
+GER_fortify_the_vaterland_cat = {
+	GER_construct_the_westwall = {
+		icon = GFX_decision_generic_fortification
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 3
+				OR = {
+					has_war_with = HOL
+					has_war_with = BEL
+					has_war_with = LUX
+					has_war_with = FRA
+					has_war_with = ENG
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_wargoal_against = HOL
+					has_wargoal_against = BEL
+					has_wargoal_against = LUX
+					has_wargoal_against = FRA
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = GER_constructed_the_westwall
+			}
+		}
+
+		available = {
+			51 = { #Rineland
+				is_fully_controlled_by = ROOT
+				is_demilitarized_zone = no
+			}
+			42 = { #Moselland
+				is_fully_controlled_by = ROOT
+				is_demilitarized_zone = no
+			}
+			974 = { #Baden
+				is_fully_controlled_by = ROOT
+				is_demilitarized_zone = no
+			}
+			NOT = { has_country_flag = GER_constructing_forts_flag }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > GER_fort_construction_cp_cost
+			has_political_power > GER_fort_construction_pp_cost
+		}
+		custom_cost_text = decision_cost_CP_25_pp_15
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		cancel_trigger = {
+			NOT = { 
+				has_full_control_of_state = 51 #Rineland
+				has_full_control_of_state = 42 #Moselland
+				has_full_control_of_state = 974 #Baden
+			}
+		}
+
+		cancel_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+		}
+
+		complete_effect = {
+			set_country_flag = GER_constructing_forts_flag
+
+			hidden_effect = {
+				add_command_power = GER_fort_construction_cp_payment
+				add_political_power = GER_fort_construction_pp_payment
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+
+			custom_effect_tooltip = GER_construct_westwall_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						51 = { #Rhineland
+							any_province_building_level = {
+								province = {
+									id = 3444
+									id = 9522
+									id = 3547
+								}
+								building = bunker
+								level < 4 
+							}
+						}
+
+					}
+					51 = { #Rhineland
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = {
+								id = 3444
+								id = 9522
+								id = 3547
+							}
+							instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						42 = { #Moselland
+							any_province_building_level = {
+								province = {
+									id = 11470
+									id = 11435
+									id = 9575
+									id = 11531
+									id = 563
+									id = 3558
+								}
+								building = bunker
+								level < 4 
+							}
+						}
+
+					}
+					42 = { #Moselland
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = {
+								id = 11470
+								id = 11435
+								id = 9575
+								id = 11531
+								id = 563
+								id = 3558
+							}
+							instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						974 = { #Baden
+							any_province_building_level = {
+								province = {
+									id = 3530
+									id = 6568
+									id = 6542
+									id = 6712
+									id = 11640
+								}
+								building = bunker
+								level < 4
+							}
+						}
+
+					}
+					974 = { #Baden
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = {
+								id = 3530
+								id = 6542
+								id = 6712
+								id = 11640
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				set_country_flag = GER_constructed_the_westwall
+			}
+		}
+	}
+
+	GER_construct_the_ostwall = {
+		icon = GFX_decision_generic_fortification
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				has_war_with = SOV
+				195 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = no } #Leningrad
+				219 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = no } #Moskow
+				217 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = no } #Stalingrad
+				date > "1943.1.1"
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+		}
+
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = GER_controls_dnieper_rive_tt
+				809 = { #Virumaa
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				209 = { #Pskov
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				210 = { #Nevel
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				207 = { #Vitebsk
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				206 = { #Minsk
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				204 = { #Bobruysk
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				194 = { #Mozyr
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				202 = { #Kyiv
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				203 = { #Cherkasy
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				226 = { #Dnipropetrovsk
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				200 = { #Zaporozhe
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+			}
+			NOT = { has_country_flag = GER_constructing_forts_flag }
+		}
+
+		days_remove = 180
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > GER_fort_construction_cp_cost
+			has_political_power > GER_fort_construction_pp_cost
+		}
+		custom_cost_text = decision_cost_CP_25_pp_15
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = GER_not_controls_dnieper_rive_tt
+				OR = {
+					809 = { #Virumaa
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					209 = { #Pskov
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					210 = { #Nevel
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					207 = { #Vitebsk
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					206 = { #Minsk
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					204 = { #Bobruysk
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					194 = { #Mozyr
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					202 = { #Kyiv
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					203 = { #Cherkasy
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					226 = { #Dnipropetrovsk
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					200 = { #Zaporozhe
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+		}
+
+		complete_effect = {
+			set_country_flag = GER_constructing_forts_flag
+
+			hidden_effect = {
+				add_command_power = GER_fort_construction_cp_payment
+				add_political_power = GER_fort_construction_pp_payment
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+
+			custom_effect_tooltip = GER_construct_ostwall_tt
+			effect_tooltip = {	
+				every_state = {
+					limit = { 
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						bunker < 10
+						OR = { #From the Baltic to Azov
+							state = 809 #Virumaa
+							state = 209 #Pskov
+							state = 210 #Nevel
+							state = 207 #Vitebsk
+							state = 206 #Minsk
+							state = 204 #Bobruysk
+							state = 194 #Mozyr
+							state = 202 #Kyiv
+							state = 203 #Cherkasy
+							state = 226 #Dnipropetrovsk
+							state = 200 #Zaporozhe
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+					    }
+					}
+				}
+			}
+			if = {
+				limit = { 
+					809 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					809 = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4640
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					209 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					209 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 415
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3310
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					210 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					210 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3333
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11259
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9386
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					207 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					207 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 323
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11241
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11220
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3331
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					206 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					206 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9289
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3378
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					204 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					204 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6373
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					194 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					194 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6319
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9249
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3507
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					202 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					202 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9568
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3543
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 525
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3494
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					203 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					203 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11454
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 488
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3468
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6478
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					226 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					226 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9433
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11437
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					200 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					}
+				}
+				hidden_effect = {
+					200 = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11405
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6596
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11700
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	GER_construct_the_north_atlantikwall = {
+		icon = GFX_decision_generic_coastal_fortification
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 3
+				OR = {
+					has_war_with = ENG
+					has_war_with = USA
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+			modifier = { #Save CP for the offensive
+				factor = 0
+				focus_progress = {
+				    focus = GER_war_with_the_ussr
+				    progress > 0.01
+				}
+				NOT = {
+					has_completed_focus = GER_war_with_the_ussr
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_controls_norway_tt
+				921 = { #Finnmark
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				920 = { #Troms
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				144 = { #Nordland
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				919 = { #Helgeland
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				143 = { #Trondelag
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				142 = { #Vestlandet
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				918 = { #Agder
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				917 = { #Telemark
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				110 = { #Oslo
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+			}
+			NOT = { has_country_flag = GER_constructing_forts_flag }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > GER_fort_construction_cp_cost
+			has_political_power > GER_fort_construction_pp_cost
+		}
+		custom_cost_text = decision_cost_CP_25_pp_15
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = GER_not_controls_norway_tt
+				OR = {
+					921 = { #Finnmark
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					920 = { #Troms
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					144 = { #Nordland
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					919 = { #Helgeland
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					143 = { #Trondelag
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					142 = { #Vestlandet
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					918 = { #Agder
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					917 = { #Telemark
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					110 = { #Oslo
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+		}
+
+		complete_effect = {
+			set_country_flag = GER_constructing_forts_flag
+
+			hidden_effect = {
+				add_command_power = GER_fort_construction_cp_payment
+				add_political_power = GER_fort_construction_pp_payment
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+
+			custom_effect_tooltip = GER_construct_north_atlantikwall_tt
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					OR = { #From Finnmark to Västergötland
+						state = 921
+						state = 920
+						state = 144
+						state = 919
+						state = 143
+						state = 142
+						state = 918
+						state = 917
+						state = 110
+						state = 911
+						state = 140
+					}
+					coastal_bunker < 10
+					is_coastal = yes 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+				    }
+				}
+			}
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					OR = { #From Finnmark to Västergötland
+						state = 921
+						state = 920
+						state = 144
+						state = 919
+						state = 143
+						state = 142
+						state = 918
+						state = 917
+						state = 110
+						state = 911
+						state = 140
+					}
+					coastal_bunker < 10
+					is_coastal = yes 
+					naval_base > 1
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+				    }
+				}
+			}
+		}
+	}
+	GER_construct_the_central_atlantikwall = {
+		icon = GFX_decision_generic_coastal_fortification
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 3
+				OR = {
+					has_war_with = ENG
+					has_war_with = USA
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+			modifier = { #Save CP for the offensive
+				factor = 0
+				focus_progress = {
+				    focus = GER_war_with_the_ussr
+				    progress > 0.01
+				}
+				NOT = {
+					has_completed_focus = GER_war_with_the_ussr
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_controls_atlantic_coast_jylland_vlaanderen_tt
+				99 = { #Jylland
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				908 = { #Sonderjylland
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				905 = { #Schleswig
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				58 = { #Holstein
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				59 = { #Hannover
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				56 = { #Weser-Ems
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				36 = { #Friesland
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				7 = { #Holland
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				35 = { #Brabant
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				6 = { #Vlaanderen
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				973 = { #Antwerpen
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+			}
+			NOT = { has_country_flag = GER_constructing_forts_flag }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > GER_fort_construction_cp_cost
+			has_political_power > GER_fort_construction_pp_cost
+		}
+		custom_cost_text = decision_cost_CP_25_pp_15
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = GER_not_controls_atlantic_coast_jylland_vlaanderen_tt
+				OR = {
+					99 = { #Jylland
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					908 = { #Sonderjylland
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					905 = { #Schleswig
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					58 = { #Holstein
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					59 = { #Hannover
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					56 = { #Weser-Ems
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					36 = { #Friesland
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					7 = { #Holland
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					35 = { #Brabant
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					6 = { #Vlaanderen
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					973 = { #Antwerpen
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+		}
+
+		complete_effect = {
+			set_country_flag = GER_constructing_forts_flag
+
+			hidden_effect = {
+				add_command_power = GER_fort_construction_cp_payment
+				add_political_power = GER_fort_construction_pp_payment
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+
+			custom_effect_tooltip = GER_construct_central_atlantikwall_tt
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					OR = { #From Jylland to Vlaanderen
+						state = 99
+						state = 908
+						state = 905
+						state = 58 
+						state = 59
+						state = 56
+						state = 36
+						state = 7
+						state = 35
+						state = 6
+						state = 973
+					}
+					coastal_bunker < 10
+					is_coastal = yes 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+				    }
+				}
+			}
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					OR = { #From Jylland to Vlaanderen
+						state = 99
+						state = 908
+						state = 905
+						state = 58 
+						state = 59
+						state = 56
+						state = 36
+						state = 7
+						state = 35
+						state = 6
+						state = 973
+					}
+					coastal_bunker < 10
+					is_coastal = yes 
+					naval_base > 1
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+				    }
+				}
+			}
+		}
+	}
+	GER_construct_the_west_atlantikwall = {
+		icon = GFX_decision_generic_coastal_fortification
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 3
+				OR = {
+					has_war_with = ENG
+					has_war_with = USA
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+			modifier = { #Save CP for the offensive
+				factor = 0
+				focus_progress = {
+				    focus = GER_war_with_the_ussr
+				    progress > 0.01
+				}
+				NOT = {
+					has_completed_focus = GER_war_with_the_ussr
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_controls_french_coast_tt
+				29 = { #Nord-Pas-de_calais
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				781 = { #Picardy
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				15 = { #Normandy
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				14 = { #Brittany
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				30 = { #Loire
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				23 = { #Poitou
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				19 = { #Aquitaine
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				802 = { #Pyrenees-Atlantique
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+			}
+			NOT = { has_country_flag = GER_constructing_forts_flag }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > GER_fort_construction_cp_cost
+			has_political_power > GER_fort_construction_pp_cost
+		}
+		custom_cost_text = decision_cost_CP_25_pp_15
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = GER_not_controls_french_coast_tt
+				OR = {
+					29 = { #Nord-Pas-de_calais
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					781 = { #Picardy
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					15 = { #Normandy
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					14 = { #Brittany
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					30 = { #Loire
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					23 = { #Poitou
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					19 = { #Aquitaine
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					802 = { #Pyrenees-Atlantique
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+		}
+
+		complete_effect = {
+			set_country_flag = GER_constructing_forts_flag
+
+			hidden_effect = {
+				add_command_power = GER_fort_construction_cp_payment
+				add_political_power = GER_fort_construction_pp_payment
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+
+			custom_effect_tooltip = GER_construct_west_atlantikwall_tt
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					OR = { #From ord-Pas-de_calais to Pyrenees-Atlantique
+						state = 29
+						state = 781
+						state = 15
+						state = 14
+						state = 30
+						state = 23
+						state = 19
+						state = 802
+					}
+					coastal_bunker < 10
+					is_coastal = yes 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+				    }
+				}
+			}
+			every_state = {
+				limit = { 
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+					OR = { #From ord-Pas-de_calais to Pyrenees-Atlantique
+						state = 29
+						state = 781
+						state = 15
+						state = 14
+						state = 30
+						state = 23
+						state = 19
+						state = 802
+					}
+					coastal_bunker < 10
+					is_coastal = yes 
+					naval_base > 1
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+				    }
+				}
+			}
+		}
+	}
+	GER_construct_the_alpenwall = {
+		icon = GFX_decision_generic_mountain_fortification
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				has_wargoal_against = ITA
+			}
+			modifier = {
+				factor = 3
+				any_enemy_country = {
+					OR = {
+						controls_state = 158 #Piemonte
+						controls_state = 159 #Lombardia
+						controls_state = 39 #Alto Adige
+						controls_state = 160 #Veneto
+						controls_state = 161 #Emilia Romagna
+					}
+
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_controls_the_alps_tt
+				153 = { #Tirol
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+				972 = { #Steiremark
+					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+				}
+			}
+			NOT = { has_country_flag = GER_constructing_forts_flag }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > GER_fort_construction_cp_cost
+			has_political_power > GER_fort_construction_pp_cost
+		}
+		custom_cost_text = decision_cost_CP_25_pp_15
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = GER_not_controls_the_alps_tt
+				OR = {
+					153 = { #Tirol
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+					972 = { #Steiremark
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = no
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+		}
+
+		complete_effect = {
+			set_country_flag = GER_constructing_forts_flag
+
+			hidden_effect = {
+				add_command_power = GER_fort_construction_cp_payment
+				add_political_power = GER_fort_construction_pp_payment
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+
+			custom_effect_tooltip = GER_construct_alpenwall_tt
+			effect_tooltip = {	
+				every_state = {
+					limit = { 
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						bunker < 10
+						OR = {
+							state = 153 #Tirol
+							state = 972 #Steiremark
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+					    }
+					}
+				}
+			}
+			if = {
+				limit = { 
+					153 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						bunker < 10
+					}
+				}
+				hidden_effect = {
+					153 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11618
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 671
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6673
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					972 = {
+						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						bunker < 10
+					}
+				}
+				hidden_effect = {
+					972 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11612
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 653
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9646
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+GER_hilfskreuzer_cat = {
+	GER_refit_convoys_to_cruisers = {
+		icon = GFX_decision_generic_merge_plant_ship
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 1.5
+				has_equipment = {
+	   				convoy > 200
+		  		}
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+	   				convoy > 300
+		  		}
+			}
+			modifier = {
+				factor = 2
+				has_equipment = {
+	   				convoy > 500
+		  		}
+			}
+		}
+
+		cost = 25
+
+		custom_cost_text = decision_cost_20_convoy_10_NavXP
+
+		custom_cost_trigger = {
+			has_navy_experience > 9
+			has_equipment = {
+				convoy > 19
+			}
+		}
+
+		fire_only_once = no
+		available = {	
+			has_equipment = {
+   				convoy > 19
+	  		}
+		}
+		days_remove = 25
+
+		complete_effect = {
+			#add_equipment_to_stockpile = { 
+			#	type = convoy_1
+			#	amount = -20 
+			#}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = GER_create_merchant_raider_variant }
+					}
+					set_country_flag = GER_create_merchant_raider_variant
+					create_equipment_variant = {
+						name = "Hilfskreuzer"				
+						type = ship_hull_cruiser_1
+						name_group = GER_MR_HISTORICAL #Merchant Raider names
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_light_battery_2
+							fixed_ship_anti_air_slot = empty
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = cruiser_ship_engine_1
+							fixed_ship_armor_slot = ship_armor_cruiser_1
+							fixed_ship_secondaries_slot = dp_ship_secondaries_1
+							mid_1_custom_slot = ship_torpedo_1
+							mid_2_custom_slot = empty
+							rear_1_custom_slot = ship_light_battery_1
+						}
+						obsolete = yes
+					}
+				}
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Hilfskreuzer"
+					creator = ROOT
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = GER_create_merchant_raider_variant }
+					}
+					set_country_flag = GER_create_merchant_raider_variant
+					create_equipment_variant = {
+						name = "Hilfskreuzer"
+						type = light_cruiser_1
+						upgrades = {
+							ship_reliability_upgrade = 0
+							ship_engine_upgrade = 0
+							ship_gun_upgrade = 0
+							ship_anti_air_upgrade = 0
+						}
+						obsolete = yes
+					}
+				}
+				create_ship = {
+					type = light_cruiser_1
+					equipment_variant = "Hilfskreuzer"
+					creator = ROOT
+				}
+			}
+		}
+	}
+}
+
+operations = {
+
+	GER_barbarossa_mission = {
+
+		icon = generic_operation
+
+		allowed = {
+			always = no
+			#added through on_action
+		}
+
+		available = {
+			
+			219 = {	#MOSCOW
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					controller = {
+						original_tag = FIN
+						has_completed_focus = FIN_cooperation_with_germany
+					}
+				}
+			}
+
+			195 = {	#LENINGRAD
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					controller = {
+						original_tag = FIN
+						has_completed_focus = FIN_cooperation_with_germany
+					}
+				}
+			}
+
+			202 = {	#KIEV
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					controller = {
+						original_tag = FIN
+						has_completed_focus = FIN_cooperation_with_germany
+					}
+				}
+			}
+
+			217 = {	#STALINGRAD
+				OR = {
+					is_controlled_by_ROOT_or_ally = yes
+					controller = {
+						original_tag = FIN
+						has_completed_focus = FIN_cooperation_with_germany
+					}
+				}
+			}
+		}
+
+		days_mission_timeout = 180
+		fire_only_once = yes
+
+		activation = {
+
+		}
+
+		is_good = no
+
+		complete_effect = {
+			add_war_support = 0.1
+			custom_effect_tooltip = barbarossa_mission_tt
+		}
+
+		timeout_effect = {
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+# The Generic Political Actions Menu/Category
+political_actions = {
+	# Safety regulations
+	GER_sharpen_air_safety_regulations = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+		}
+
+		visible = {
+			has_government = neutrality
+		}
+
+		complete_effect = {
+			add_timed_idea = { idea = GER_air_safety_regulations days = 1095 }
+			set_global_flag = GER_air_safety_regulations_flag
+		}
+	}
+}
+
+foreign_politics = {
+
+}
+
+#Category only allowed for GER
+GER_military_buildup = {
+
+	GER_plan_z = {
+
+		icon = generic_naval
+
+		available = {
+			has_navy_size = {
+				unit = battleship
+				size > 9
+			}
+			has_navy_size = {
+				unit = battle_cruiser
+				size > 2
+			}
+			has_navy_size = {
+				unit = carrier
+				size > 3
+			}
+			has_navy_size = {
+				unit = heavy_cruiser
+				size > 19
+			}
+			has_navy_size = {
+				unit = light_cruiser
+				size > 19
+			}
+			has_navy_size = {
+				unit = destroyer
+				size > 99
+			}
+		}
+
+		fire_only_once = yes
+		days_mission_timeout = 1800
+		is_good = no
+		activation = {
+			has_completed_focus = GER_plan_z
+		}
+
+
+		visible = {
+			has_completed_focus = GER_plan_z
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			navy_experience = 150
+		}
+
+
+	}
+
+	# GER_jaegernotprogramm = {
+
+	# 	icon = generic_air
+
+	# 	available = {
+	# 		has_war = yes
+	# 		AND = {
+	# 			has_deployed_air_force_size = {
+	# 				type = fighter
+	# 				size < 750
+	# 			}
+	# 			has_equipment = {
+	# 				small_plane_airframe < 250
+	# 			}
+	# 		}
+	# 		NOT = {
+	# 			has_idea = GER_jaegernotprogramm
+	# 		}
+	# 	}
+
+	# 	cost = 50
+
+	# 	fire_only_once = yes
+
+	# 	ai_will_do = {
+	# 		base = 1
+	# 		modifier = {
+	# 			factor = 0
+	# 			OR = {
+	# 				has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
+	# 				has_game_rule = {
+	# 					rule = GER_ai_behavior
+	# 					option = GER_COMMUNIST_STALINIST
+	# 				}
+	# 				has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
+	# 				has_game_rule = {
+	# 					rule = GER_ai_behavior
+	# 					option = GER_COMMUNIST_SPARTACUS
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+
+	# 	visible = {
+	# 		has_war = yes
+	# 		AND = {
+	# 			has_deployed_air_force_size = {
+	# 				type = fighter
+	# 				size < 750
+	# 			}
+	# 			has_equipment = {
+	# 				small_plane_airframe < 250
+	# 			}
+	# 		}
+	# 		NOT = {
+	# 			has_idea = GER_jaegernotprogramm
+	# 		}
+	# 	}
+
+	# 	complete_effect = {
+	# 		add_stability = -0.05
+	# 		add_war_support = -0.05
+	# 		add_timed_idea = { idea = GER_jaegernotprogramm days = 90 }
+	# 	}
+	# }
+}
+
+special_projects = {
+	GER_begin_heavy_water_production = {
+		allowed = {
+			original_tag = GER
+			has_dlc = "La Resistance"
+		}
+		available = {
+			917 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		visible = { has_tech = atomic_research }
+		cost = 0
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				NOT = { has_government = fascism } 
+			}
+		}
+		cancel_trigger = { NOT = { has_global_flag = GER_heavy_water_production_underway } } #can be removed via intelligence ops
+		days_remove = 365
+		remove_effect = {
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.5
+			}
+		}
+		complete_effect = { set_global_flag = GER_heavy_water_production_underway }
+	}
+}
+
+GER_reich_labor_service_cat = { ## DA
+	GER_western_state_development = {
+		priority = 1
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = { 
+			base = 10
+			modifier = {
+				factor = 2
+				has_political_power > 100
+			}
+		}
+
+		available = {
+			56 = { is_fully_controlled_by = ROOT }
+			59 = { is_fully_controlled_by = ROOT }
+			57 = { is_fully_controlled_by = ROOT }
+			55 = { is_fully_controlled_by = ROOT }
+			51 = { is_fully_controlled_by = ROOT }
+			51 = { is_fully_controlled_by = ROOT }
+			42 = { is_fully_controlled_by = ROOT }
+		}
+
+		cancel_trigger = { 
+			NOT = { 
+				56 = { is_controlled_by = ROOT }
+				59 = { is_controlled_by = ROOT }
+				57 = { is_controlled_by = ROOT }
+				55 = { is_controlled_by = ROOT }
+				51 = { is_controlled_by = ROOT }
+				51 = { is_controlled_by = ROOT }
+				42 = { is_controlled_by = ROOT }
+			} 
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 56 #Weser-Ems
+				state = 59 #Hannover
+				state = 57 #Westfalen
+				state = 55 #Hessen
+				state = 51 #Rhineland
+				state = 42 #Moselland
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 56 #Weser-Ems
+				state = 59 #Hannover
+				state = 57 #Westfalen
+				state = 55 #Hessen
+				state = 51 #Rhineland
+				state = 42 #Moselland
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 56 #Weser-Ems
+						state = 59 #Hannover
+						state = 57 #Westfalen
+						state = 55 #Hessen
+						state = 51 #Rhineland
+						state = 42 #Moselland
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = { 
+					modifier = GER_reichs_labor_initiative_modifier
+					days = 545
+					scope = GER
+				}
+			}
+		}
+	}
+	GER_northern_state_development = {
+		priority = 1
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = { 
+			base = 10
+			modifier = {
+				factor = 2
+				has_political_power > 100
+			}
+		}
+
+		available = {
+			905 = { is_fully_controlled_by = ROOT }
+			58 = { is_fully_controlled_by = ROOT }
+			61 = { is_fully_controlled_by = ROOT }
+			62 = { is_fully_controlled_by = ROOT }
+			63 = { is_fully_controlled_by = ROOT }
+		}
+
+		cancel_trigger = { 
+			NOT = { 
+				905 = { is_controlled_by = ROOT }
+				58 = { is_controlled_by = ROOT }
+				61 = { is_controlled_by = ROOT }
+				62 = { is_controlled_by = ROOT }
+				63 = { is_controlled_by = ROOT }
+			} 
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 905 #Schleswig
+				state = 58 #Holstein
+				state = 61 #Mecklenburg
+				state = 62 #Vorpommern
+				state = 63 #Hinterpommern
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 905 #Schleswig
+						state = 58 #Holstein
+						state = 61 #Mecklenburg
+						state = 62 #Vorpommern
+						state = 63 #Hinterpommern
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = { 
+					modifier = GER_reichs_labor_initiative_modifier
+					days = 545
+					scope = GER
+				}
+			}
+		}
+	}
+	GER_eastern_state_development = {
+		priority = 1
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = { 
+			base = 10
+			modifier = {
+				factor = 2
+				has_political_power > 100
+			}
+		}
+
+		available = {
+			759 = { is_fully_controlled_by = ROOT }
+			5 = { is_fully_controlled_by = ROOT }
+			66 = { is_fully_controlled_by = ROOT }
+			67 = { is_fully_controlled_by = ROOT }
+		}
+
+		cancel_trigger = { 
+			NOT = { 
+				759 = { is_controlled_by = ROOT }
+				5 = { is_controlled_by = ROOT }
+				66 = { is_controlled_by = ROOT }
+				67 = { is_controlled_by = ROOT }
+			}
+			if = {
+				limit = {
+					85 = { is_core_of = ROOT }
+				}
+				NOT = {
+					85 = { is_controlled_by = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					803 = { is_core_of = ROOT }
+				}
+				NOT = {
+					803 = { is_controlled_by = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					86 = { is_core_of = ROOT }
+				}
+				NOT = {
+					86 = { is_controlled_by = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					758 = { is_core_of = ROOT }
+				}
+				NOT = {
+					758 = { is_controlled_by = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					188 = { is_core_of = ROOT }
+				}
+				NOT = {
+					188 = { is_controlled_by = ROOT }
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 759 #Königsberg
+				state = 5 #Ermland-Masuren
+				state = 66 #Niederschlesien
+				state = 67 #Oberschlesien
+				state = 85 #Danzig, hinting to the player they can develop this state too
+				state = 803 #Gdynia, hinting to the player they can develop this state too
+				state = 86 #Poznan, hinting to the player they can develop this state too
+				state = 758 #Katowice, hinting to the player they can develop this state too
+				state = 188 #Memel, hinting to the player they can develop this state too
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 759 #Königsberg
+						state = 5 #Ermland-Masuren
+						state = 66 #Niederschlesien
+						state = 67 #Oberschlesien
+						state = 85 #Danzig - in case Germany has cored it
+						state = 803 #Gdynia - in case Germany has cored it
+						state = 86 #Poznan - in case Germany has cored it
+						state = 758 #Katowice- in case Germany has cored it
+						state = 188 #Memel - in case Germany has cored it
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = { 
+					modifier = GER_reichs_labor_initiative_modifier
+					days = 545
+					scope = GER
+				}
+			}
+		}
+	}
+	GER_central_state_development = {
+		priority = 1
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = { 
+			base = 10
+			modifier = {
+				factor = 2
+				has_political_power > 100
+			}
+		}
+
+		available = {
+			64 = { is_fully_controlled_by = ROOT }
+			65 = { is_fully_controlled_by = ROOT }
+			60 = { is_fully_controlled_by = ROOT }
+			68 = { is_fully_controlled_by = ROOT }
+		}
+
+		cancel_trigger = { 
+			NOT = { 
+				64 = { is_controlled_by = ROOT }
+				65 = { is_controlled_by = ROOT }
+				60 = { is_controlled_by = ROOT }
+				68 = { is_controlled_by = ROOT }
+			} 
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 64 #Brandenburg
+				state = 65 #Sachsen
+				state = 60 #Thüringen
+				state = 68 #Ostmark
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 64 #Brandenburg
+						state = 65 #Sachsen
+						state = 60 #Thüringen
+						state = 68 #Ostmark
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = { 
+					modifier = GER_reichs_labor_initiative_modifier
+					days = 545
+					scope = GER
+				}
+			}
+		}
+	}
+	GER_southern_state_development = {
+		priority = 1
+		icon = GFX_decision_generic_construction
+
+		ai_will_do = { 
+			base = 10
+			modifier = {
+				factor = 2
+				has_political_power > 100
+			}
+		}
+
+		available = {
+			52 = { is_fully_controlled_by = ROOT }
+			974 = { is_fully_controlled_by = ROOT }
+			50 = { is_fully_controlled_by = ROOT }
+			53 = { is_fully_controlled_by = ROOT }
+			54 = { is_fully_controlled_by = ROOT }
+		}
+
+		cancel_trigger = { 
+			NOT = { 
+				52 = { is_controlled_by = ROOT }
+				974 = { is_fully_controlled_by = ROOT }
+				50 = { is_controlled_by = ROOT }
+				53 = { is_controlled_by = ROOT }
+				54 = { is_controlled_by = ROOT }
+			} 
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 50 #Württemberg
+				state = 974 #Baden
+				state = 52 #Oberbayern
+				state = 53 #Niederbayern
+				state = 54 #Franken
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 50 #Württemberg
+						state = 974 #Baden
+						state = 52 #Oberbayern
+						state = 53 #Niederbayern
+						state = 54 #Franken
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = { 
+					modifier = GER_reichs_labor_initiative_modifier
+					days = 545
+					scope = GER
+				}
+			}
+		}
+	}
+}

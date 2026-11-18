@@ -1,0 +1,979 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_possible_country = {
+				if = {
+					limit = {
+						any_character = {
+							is_army_chief = yes
+						}
+					}
+					set_country_flag = army_chief_active
+					add_daily_mastery = {
+						amount = 0.17
+						days = 7
+						folder = land
+						name = army_chief_doctrine_gain
+					}
+					if = {
+						limit = {
+							OR = {
+								has_dlc = "Arms Against Tyranny"
+								has_dlc = "No Compromise, No Surrender"
+							}
+						}
+						add_daily_mastery = {
+							amount = 0.0685
+							days = 7
+							folder = special_forces
+							name = army_chief_sf_doctrine_gain
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_character = {
+							is_navy_chief = yes
+						}
+					}
+					set_country_flag = navy_chief_active
+					add_daily_mastery = {
+						amount = 0.17
+						days = 7
+						folder = naval
+						name = navy_chief_doctrine_gain
+					}
+					if = {
+						limit = {
+							OR = {
+								has_dlc = "Arms Against Tyranny"
+								has_dlc = "No Compromise, No Surrender"
+							}
+						}
+						add_daily_mastery = {
+							amount = 0.0685
+							days = 7
+							folder = special_forces
+							name = navy_chief_sf_doctrine_gain
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_character = {
+							is_air_chief = yes
+						}
+					}
+					set_country_flag = air_chief_active
+					add_daily_mastery = {
+						amount = 0.17
+						days = 7
+						folder = air
+						name = air_chief_doctrine_gain
+					}
+					if = {
+						limit = {
+							OR = {
+								has_dlc = "Arms Against Tyranny"
+								has_dlc = "No Compromise, No Surrender"
+							}
+						}
+						add_daily_mastery = {
+							amount = 0.0685
+							days = 7
+							folder = special_forces
+							name = air_chief_sf_doctrine_gain
+						}
+					}
+				}
+				set_temp_variable = { hc_count = 0 }
+				every_character = {
+					limit = {
+						is_high_command = yes
+						has_army_ledger = yes
+					}
+					ROOT = {
+						if = {
+							limit = {
+								check_variable = { hc_count = 0 }
+							}
+							set_country_flag = army_hc_1_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = land
+								name = army_high_command_doctrine_gain_1
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { hc_count = 1 }
+							}
+							set_country_flag = army_hc_2_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = land
+								name = army_high_command_doctrine_gain_2
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { hc_count = 2 }
+							}
+							set_country_flag = army_hc_3_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = land
+								name = army_high_command_doctrine_gain_3
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+					}
+				}
+				set_temp_variable = { hc_count = 0 }
+				every_character = {
+					limit = {
+						is_high_command = yes
+						has_navy_ledger = yes
+					}
+					ROOT = {
+						if = {
+							limit = {
+								check_variable = { hc_count = 0 }
+							}
+							set_country_flag = navy_hc_1_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = naval
+								name = navy_high_command_doctrine_gain_1
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { hc_count = 1 }
+							}
+							set_country_flag = navy_hc_2_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = naval
+								name = navy_high_command_doctrine_gain_2
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { hc_count = 2 }
+							}
+							set_country_flag = navy_hc_3_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = naval
+								name = navy_high_command_doctrine_gain_3
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+					}
+				}
+				set_temp_variable = { hc_count = 0 }
+				every_character = {
+					limit = {
+						is_high_command = yes
+						has_air_ledger = yes
+					}
+					ROOT = {
+						if = {
+							limit = {
+								check_variable = { hc_count = 0 }
+							}
+							set_country_flag = air_hc_1_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = air
+								name = air_high_command_doctrine_gain_1
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { hc_count = 1 }
+							}
+							set_country_flag = air_hc_2_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = air
+								name = air_high_command_doctrine_gain_2
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { hc_count = 2 }
+							}
+							set_country_flag = air_hc_3_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = air
+								name = air_high_command_doctrine_gain_3
+							}
+							add_to_temp_variable = { hc_count = 1 }
+						}
+					}
+				}
+				set_temp_variable = { sf_hc_count = 0 }
+				every_character = {
+					limit = {
+						is_high_command = yes
+					}
+					ROOT = {
+						if = {
+							limit = {
+								OR = {
+									has_dlc = "Arms Against Tyranny"
+									has_dlc = "No Compromise, No Surrender"
+								}
+							}
+							if = {
+								limit = {
+									check_variable = { sf_hc_count = 0 }
+								}
+								set_country_flag = hc_sf_1_active
+								add_daily_mastery = {
+									amount = 0.0685
+									days = 7
+									folder = special_forces
+									name = high_command_sf_doctrine_gain_1
+								}
+								add_to_temp_variable = { sf_hc_count = 1 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { sf_hc_count = 1 }
+								}
+								set_country_flag = hc_sf_2_active
+								add_daily_mastery = {
+									amount = 0.0685
+									days = 7
+									folder = special_forces
+									name = high_command_sf_doctrine_gain_2
+								}
+								add_to_temp_variable = { sf_hc_count = 1 }
+							}
+							else_if = {
+								limit = {
+									check_variable = { sf_hc_count = 2 }
+								}
+								set_country_flag = hc_sf_3_active
+								add_daily_mastery = {
+									amount = 0.0685
+									days = 7
+									folder = special_forces
+									name = high_command_sf_doctrine_gain_3
+								}
+								add_to_temp_variable = { sf_hc_count = 1 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					any_character = {
+						is_army_chief = yes
+					}
+				}
+				set_country_flag = army_chief_active
+				add_daily_mastery = {
+					amount = 0.17
+					days = 7
+					folder = land
+					name = army_chief_doctrine_gain
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Arms Against Tyranny"
+							has_dlc = "No Compromise, No Surrender"
+						}
+					}
+					add_daily_mastery = {
+						amount = 0.0685
+						days = 7
+						folder = special_forces
+						name = army_chief_sf_doctrine_gain
+					}
+				}
+			}
+			else = {
+				clr_country_flag = army_chief_active
+			}
+			if = {
+				limit = {
+					any_character = {
+						is_navy_chief = yes
+					}
+				}
+				set_country_flag = navy_chief_active
+				add_daily_mastery = {
+					amount = 0.17
+					days = 7
+					folder = naval
+					name = navy_chief_doctrine_gain
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Arms Against Tyranny"
+							has_dlc = "No Compromise, No Surrender"
+						}
+					}
+					add_daily_mastery = {
+						amount = 0.0685
+						days = 7
+						folder = special_forces
+						name = navy_chief_sf_doctrine_gain
+					}
+				}
+			}
+			else = {
+				clr_country_flag = navy_chief_active
+			}
+			if = {
+				limit = {
+					any_character = {
+						is_air_chief = yes
+					}
+				}
+				set_country_flag = air_chief_active
+				add_daily_mastery = {
+					amount = 0.17
+					days = 7
+					folder = air
+					name = air_chief_doctrine_gain
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Arms Against Tyranny"
+							has_dlc = "No Compromise, No Surrender"
+						}
+					}
+					add_daily_mastery = {
+						amount = 0.0685
+						days = 7
+						folder = special_forces
+						name = air_chief_sf_doctrine_gain
+					}
+				}
+			}
+			else = {
+				clr_country_flag = air_chief_active
+			}
+			set_temp_variable = { hc_count = 0 }
+			clr_country_flag = army_hc_1_active
+			clr_country_flag = army_hc_2_active
+			clr_country_flag = army_hc_3_active
+			every_character = {
+				limit = {
+					is_high_command = yes
+					has_army_ledger = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { hc_count = 0 }
+						}
+						set_country_flag = army_hc_1_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = land
+							name = army_high_command_doctrine_gain_1
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 1 }
+						}
+						set_country_flag = army_hc_2_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = land
+							name = army_high_command_doctrine_gain_2
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 2 }
+						}
+						set_country_flag = army_hc_3_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = land
+							name = army_high_command_doctrine_gain_3
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+				}
+			}
+			set_temp_variable = { hc_count = 0 }
+			clr_country_flag = navy_hc_1_active
+			clr_country_flag = navy_hc_2_active
+			clr_country_flag = navy_hc_3_active
+			every_character = {
+				limit = {
+					is_high_command = yes
+					has_navy_ledger = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { hc_count = 0 }
+						}
+						set_country_flag = navy_hc_1_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = naval
+							name = navy_high_command_doctrine_gain_1
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 1 }
+						}
+						set_country_flag = navy_hc_2_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = naval
+							name = navy_high_command_doctrine_gain_2
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 2 }
+						}
+						set_country_flag = navy_hc_3_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = naval
+							name = navy_high_command_doctrine_gain_3
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+				}
+			}
+			set_temp_variable = { hc_count = 0 }
+			clr_country_flag = air_hc_1_active
+			clr_country_flag = air_hc_2_active
+			clr_country_flag = air_hc_3_active
+			every_character = {
+				limit = {
+					is_high_command = yes
+					has_air_ledger = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { hc_count = 0 }
+						}
+						set_country_flag = air_hc_1_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = air
+							name = air_high_command_doctrine_gain_1
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 1 }
+						}
+						set_country_flag = air_hc_2_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = air
+							name = air_high_command_doctrine_gain_2
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 2 }
+						}
+						set_country_flag = air_hc_3_active
+						add_daily_mastery = {
+							amount = 0.07
+							days = 7
+							folder = air
+							name = air_high_command_doctrine_gain_3
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+				}
+			}
+			set_temp_variable = { sf_hc_count = 0 }
+			clr_country_flag = hc_sf_1_active
+			clr_country_flag = hc_sf_2_active
+			clr_country_flag = hc_sf_3_active
+			every_character = {
+				limit = {
+					is_high_command = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							OR = {
+								has_dlc = "Arms Against Tyranny"
+								has_dlc = "No Compromise, No Surrender"
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { sf_hc_count = 0 }
+							}
+							set_country_flag = hc_sf_1_active
+							add_daily_mastery = {
+								amount = 0.0685
+								days = 7
+								folder = special_forces
+								name = high_command_sf_doctrine_gain_1
+							}
+							add_to_temp_variable = { sf_hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { sf_hc_count = 1 }
+							}
+							set_country_flag = hc_sf_2_active
+							add_daily_mastery = {
+								amount = 0.0685
+								days = 7
+								folder = special_forces
+								name = high_command_sf_doctrine_gain_2
+							}
+							add_to_temp_variable = { sf_hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { sf_hc_count = 2 }
+							}
+							set_country_flag = hc_sf_3_active
+							add_daily_mastery = {
+								amount = 0.0685
+								days = 7
+								folder = special_forces
+								name = high_command_sf_doctrine_gain_3
+							}
+							add_to_temp_variable = { sf_hc_count = 1 }
+						}
+					}
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					any_character = {
+						is_army_chief = yes
+					}
+					NOT = {
+						has_country_flag = army_chief_active
+					}
+				}
+				set_country_flag = army_chief_active
+				add_daily_mastery = {
+					amount = 0.17
+					days = 7
+					folder = land
+					name = army_chief_doctrine_gain
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Arms Against Tyranny"
+							has_dlc = "No Compromise, No Surrender"
+						}
+					}
+					add_daily_mastery = {
+						amount = 0.0685
+						days = 7
+						folder = special_forces
+						name = army_chief_sf_doctrine_gain
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						is_navy_chief = yes
+					}
+					NOT = {
+						has_country_flag = navy_chief_active
+					}
+				}
+				set_country_flag = navy_chief_active
+				add_daily_mastery = {
+					amount = 0.17
+					days = 7
+					folder = naval
+					name = navy_chief_doctrine_gain
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Arms Against Tyranny"
+							has_dlc = "No Compromise, No Surrender"
+						}
+					}
+					add_daily_mastery = {
+						amount = 0.0685
+						days = 7
+						folder = special_forces
+						name = navy_chief_sf_doctrine_gain
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						is_air_chief = yes
+					}
+					NOT = {
+						has_country_flag = air_chief_active
+					}
+				}
+				set_country_flag = air_chief_active
+				add_daily_mastery = {
+					amount = 0.17
+					days = 7
+					folder = air
+					name = air_chief_doctrine_gain
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Arms Against Tyranny"
+							has_dlc = "No Compromise, No Surrender"
+						}
+					}
+					add_daily_mastery = {
+						amount = 0.0685
+						days = 7
+						folder = special_forces
+						name = air_chief_sf_doctrine_gain
+					}
+				}
+			}
+			set_temp_variable = { hc_count = 0 }
+			every_character = {
+				limit = {
+					is_high_command = yes
+					has_army_ledger = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { hc_count = 0 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = army_hc_1_active
+								}
+							}
+							set_country_flag = army_hc_1_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = land
+								name = army_high_command_doctrine_gain_1
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 1 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = army_hc_2_active
+								}
+							}
+							set_country_flag = army_hc_2_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = land
+								name = army_high_command_doctrine_gain_2
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 2 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = army_hc_3_active
+								}
+							}
+							set_country_flag = army_hc_3_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = land
+								name = army_high_command_doctrine_gain_3
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+				}
+			}
+			set_temp_variable = { hc_count = 0 }
+			every_character = {
+				limit = {
+					is_high_command = yes
+					has_navy_ledger = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { hc_count = 0 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = navy_hc_1_active
+								}
+							}
+							set_country_flag = navy_hc_1_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = naval
+								name = navy_high_command_doctrine_gain_1
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 1 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = navy_hc_2_active
+								}
+							}
+							set_country_flag = navy_hc_2_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = naval
+								name = navy_high_command_doctrine_gain_2
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 2 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = navy_hc_3_active
+								}
+							}
+							set_country_flag = navy_hc_3_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = naval
+								name = navy_high_command_doctrine_gain_3
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+				}
+			}
+			set_temp_variable = { hc_count = 0 }
+			every_character = {
+				limit = {
+					is_high_command = yes
+					has_air_ledger = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { hc_count = 0 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = air_hc_1_active
+								}
+							}
+							set_country_flag = air_hc_1_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = air
+								name = air_high_command_doctrine_gain_1
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 1 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = air_hc_2_active
+								}
+							}
+							set_country_flag = air_hc_2_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = air
+								name = air_high_command_doctrine_gain_2
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = { hc_count = 2 }
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = air_hc_3_active
+								}
+							}
+							set_country_flag = air_hc_3_active
+							add_daily_mastery = {
+								amount = 0.07
+								days = 7
+								folder = air
+								name = air_high_command_doctrine_gain_3
+							}
+						}
+						add_to_temp_variable = { hc_count = 1 }
+					}
+				}
+			}
+			set_temp_variable = { sf_hc_count = 0 }
+			every_character = {
+				limit = {
+					is_high_command = yes
+				}
+				ROOT = {
+					if = {
+						limit = {
+							OR = {
+								has_dlc = "Arms Against Tyranny"
+								has_dlc = "No Compromise, No Surrender"
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { sf_hc_count = 0 }
+							}
+							if = {
+								limit = {
+									NOT = {
+										has_country_flag = hc_sf_1_active
+									}
+								}
+								set_country_flag = hc_sf_1_active
+								add_daily_mastery = {
+									amount = 0.0685
+									days = 7
+									folder = special_forces
+									name = high_command_sf_doctrine_gain_1
+								}
+							}
+							add_to_temp_variable = { sf_hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { sf_hc_count = 1 }
+							}
+							if = {
+								limit = {
+									NOT = {
+										has_country_flag = hc_sf_2_active
+									}
+								}
+								set_country_flag = hc_sf_2_active
+								add_daily_mastery = {
+									amount = 0.0685
+									days = 7
+									folder = special_forces
+									name = high_command_sf_doctrine_gain_2
+								}
+							}
+							add_to_temp_variable = { sf_hc_count = 1 }
+						}
+						else_if = {
+							limit = {
+								check_variable = { sf_hc_count = 2 }
+							}
+							if = {
+								limit = {
+									NOT = {
+										has_country_flag = hc_sf_3_active
+									}
+								}
+								set_country_flag = hc_sf_3_active
+								add_daily_mastery = {
+									amount = 0.0685
+									days = 7
+									folder = special_forces
+									name = high_command_sf_doctrine_gain_3
+								}
+							}
+							add_to_temp_variable = { sf_hc_count = 1 }
+						}
+					}
+				}
+			}
+		}
+	}
+}

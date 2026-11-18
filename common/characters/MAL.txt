@@ -1,0 +1,18 @@
+characters={
+	MAL_shenton_thomas={
+		name= MAL_shenton_thomas
+		portraits={
+			civilian={
+				large="GFX_portrait_malaya_shenton_thomas"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1953.3.1.1"
+			traits = {
+				MAL_governor_of_the_straits_settlements_trait 
+			}
+			id=-1
+		}
+	}
+}

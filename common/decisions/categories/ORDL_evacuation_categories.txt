@@ -1,0 +1,33 @@
+SOV_evacuation = {
+	priority = 150
+
+	icon = GFX_decision_cat_icon_evacuation
+
+	scripted_gui = ORDL_evacuation_decision_ui
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		has_completed_focus = SOV_move_industry_to_the_urals
+	}
+
+	visible_when_empty = yes
+}
+
+SOV_evacuation_regions = {
+	priority = 149
+
+	icon = GFX_decision_cat_icon_evacuation
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		has_completed_focus = SOV_move_industry_to_the_urals
+	}
+
+	visible_when_empty = no
+}

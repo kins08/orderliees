@@ -1,0 +1,94 @@
+ORDL_decisions2 = {
+    ENG_annex_SAF = {
+
+        icon = generic_operation
+        
+        allowed = { original_tag = ENG }
+        
+        available = {
+           date>1936.1.1
+            SAF = { is_ai = yes  }
+        }
+        
+        visible = { 
+            country_exists = SAF 
+            SAF = { 
+                is_ai = yes 
+            }    
+        }
+        
+        cost = 0
+        
+        fire_only_once = yes
+        
+        complete_effect = {
+            
+            annex_country = {
+                target = SAF
+                transfer_troops = yes
+            }
+        }
+    }
+    
+    ENG_annex_australia = {
+
+      icon = generic_operation
+        
+        allowed = { original_tag = ENG }
+        
+        available = {
+            date>1936.1.1
+           AST = { is_ai = yes  }
+        }
+        
+        visible = { 
+            country_exists = AST
+            AST = { 
+                is_ai = yes 
+            }    
+        }
+        
+        cost = 0
+        
+        fire_only_once = yes
+        
+        complete_effect = {
+            
+            annex_country = {
+                target = AST
+                transfer_troops = yes
+            }
+        }
+    }
+
+    ENG_annex_canada = {
+
+      icon = generic_operation
+        
+        allowed = { original_tag = ENG }
+        
+        available = {
+            date>1936.1.1
+            CAN = { is_ai = yes  }
+        }
+        
+        visible = { 
+            country_exists = CAN
+            CAN = { 
+                is_ai = yes 
+            }    
+        }
+        
+        cost = 0
+        
+        fire_only_once = yes
+        
+        complete_effect = {
+            
+            annex_country = {
+                target = CAN
+                transfer_troops = yes
+            }
+        }
+    }
+}

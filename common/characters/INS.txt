@@ -1,0 +1,29 @@
+characters = {
+	INS_bonifacius_cornelis_de_jonge = {
+		name = INS_bonifacius_cornelis_de_jonge
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_INS_bonifacius_jonge"
+			}
+		}
+
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+				INS_staunch_imperialist
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		country_leader = {
+			ideology = conservatism
+			traits = {
+				INS_staunch_imperialist
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+	}
+}

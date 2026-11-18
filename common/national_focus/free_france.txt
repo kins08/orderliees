@@ -1,0 +1,1227 @@
+focus_tree = {
+	id = free_french_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1
+			tag = FRA
+			
+		}
+	}
+	
+	default = no
+	focus = {
+		id = FRA_appeal_to_the_french_nation
+		icon = GFX_focus_fra_french_union
+		x = 18
+		y = 0
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {}
+		mutually_exclusive = { }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_leader = { ruling_only = yes character = FRA_theorist_1_charles_de_gaulle}
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_manpower = 250000
+			add_stability = 0.20
+			add_political_power = 150
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_timed_idea = {
+				idea = FRA_gain_eff
+				days = 14
+			}
+		}
+	}
+	focus = {
+		id = FRA_appeal_to_overseas_territories
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_appeal_to_the_french_nation
+		}
+		relative_position_id = FRA_appeal_to_the_french_nation
+		
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = FRA_appeal_to_overseas_territories_resources_cust
+			hidden_effect = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+				add_offsite_building = {
+					type = dockyard
+					level = 5
+				}
+				FRA = {
+					add_state_core = 539
+					add_state_core = 768
+					add_state_core = 769
+					add_state_core = 657
+					add_state_core = 770
+				}
+				539 = {
+					
+					add_resource = { type = tungsten amount = 20 }
+					add_resource = { type = steel amount = 40 }
+					add_resource = { type = chromium amount = 10 }
+					add_resource = { type = coal amount = 20 }
+				}
+
+				768 = {
+					
+					add_resource = { type = tungsten amount = 15 }
+					add_resource = { type = steel amount = 35 }
+					add_resource = { type = chromium amount = 8 }
+					add_resource = { type = coal amount = 15 }
+				}
+
+				769 = {
+					
+					add_resource = { type = tungsten amount = 20 }
+					add_resource = { type = steel amount = 45 }
+					add_resource = { type = chromium amount = 12 }
+					add_resource = { type = coal amount = 25 }
+				}
+
+				657 = {
+					
+					add_resource = { type = tungsten amount = 10 }
+					add_resource = { type = steel amount = 30 }
+					add_resource = { type = chromium amount = 15 }
+					add_resource = { type = coal amount = 10 }
+				}
+
+				770 = {
+					
+					add_resource = { type = tungsten amount = 25 }
+					add_resource = { type = steel amount = 50 }
+					add_resource = { type = chromium amount = 20 }
+					add_resource = { type = coal amount = 30 }
+				}
+			}
+			
+			
+		}
+	}
+	focus = {
+		id = FRA_intervention_in_west_africa
+		icon = GFX_focus_CONGO_gold_and_diamonds
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_appeal_to_overseas_territories
+		}
+		relative_position_id = FRA_appeal_to_overseas_territories
+		
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = FRA_invade_west_africa_cust
+			hidden_effect = {
+				FRA = {
+				# transfer_state = 771
+				# add_state_core = 771
+				# transfer_state = 515
+				# add_state_core = 515
+				# transfer_state = 778
+				# add_state_core = 778
+				# transfer_state = 782
+				# add_state_core = 782
+				transfer_state = 777
+				add_state_core = 777
+				transfer_state = 772
+				add_state_core = 772
+				transfer_state = 774
+				add_state_core = 774
+				transfer_state = 894
+				add_state_core = 894
+				transfer_state = 556
+				add_state_core = 556
+				transfer_state = 775
+				add_state_core = 775
+				transfer_state = 776
+				add_state_core = 776
+				transfer_state = 895
+				add_state_core = 895
+				transfer_state = 272
+				add_state_core = 272
+				transfer_state = 557
+				add_state_core = 557
+				transfer_state = 773
+				add_state_core = 773
+			}
+			
+				777 = {
+					
+					add_resource = { type = steel amount = 22 }
+					add_resource = { type = coal amount = 15 }
+					add_resource = { type = tungsten amount = 3 }
+					add_resource = { type = chromium amount = 2 }
+				}
+
+				772 = {
+					
+					add_resource = { type = steel amount = 15 }
+					add_resource = { type = coal amount = 10 }
+					add_resource = { type = tungsten amount = 2 }
+					add_resource = { type = chromium amount = 1 }
+				}
+
+				773 = {
+					
+					add_resource = { type = steel amount = 18 }
+					add_resource = { type = coal amount = 12 }
+					add_resource = { type = tungsten amount = 3 }
+					add_resource = { type = chromium amount = 2 }
+				}
+
+				
+
+				556 = {
+					
+					add_resource = { type = steel amount = 15 }
+					add_resource = { type = coal amount = 10 }
+					add_resource = { type = tungsten amount = 2 }
+					add_resource = { type = chromium amount = 1 }
+				}
+
+				538 = { 
+					
+					add_resource = { type = steel amount = 18 }
+					add_resource = { type = coal amount = 12 }
+					add_resource = { type = tungsten amount = 2 }
+					add_resource = { type = chromium amount = 2 } 
+				}
+				295 = { 
+					
+					add_resource = { type = steel amount = 12 }
+					add_resource = { type = coal amount = 8 }
+					add_resource = { type = tungsten amount = 1 }
+					add_resource = { type = chromium amount = 1 } 
+				}
+				884 = { 
+					
+					add_resource = { type = steel amount = 15 }
+					add_resource = { type = coal amount = 10 }
+					add_resource = { type = tungsten amount = 2 }
+					add_resource = { type = chromium amount = 1 } 
+				}
+				
+			}
+			
+		}
+	}
+	focus = {
+		id = FRA_intervention_in_syria
+		icon = GFX_focus_GER_afrikakorps
+		x = -2
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_appeal_to_overseas_territories
+		}
+		relative_position_id = FRA_appeal_to_overseas_territories
+		
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = FRA_invade_syria_cust
+			hidden_effect = {
+				FRA = {
+					transfer_state = 553
+					add_state_core = 553
+					transfer_state = 554
+					add_state_core = 554
+					transfer_state = 673
+					add_state_core = 673
+					transfer_state = 676
+					add_state_core = 676
+					transfer_state = 795
+					add_state_core = 795
+				}
+			
+			}
+			
+		}
+	}
+	focus = {
+		id = FRA_intervention_in_indochina
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_appeal_to_overseas_territories
+		}
+		relative_position_id = FRA_appeal_to_overseas_territories
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				FRA_controls_indochina = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		allow_branch = {
+			always = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_indochina }
+			unlock_decision_tooltip = { decision = FRA_promise_independence_to_indochina }
+			unlock_decision_tooltip = { decision = FRA_invasion_in_indochina }
+		}
+	}
+	focus = {
+		id = FRA_intervention_in_central_africa
+		icon = GFX_goal_generic_position_armies
+		x = 3
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_appeal_to_overseas_territories
+		}
+		relative_position_id = FRA_appeal_to_overseas_territories
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				FRA_controls_central_africa = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		allow_branch = {
+			always = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_central_africa }
+			unlock_decision_tooltip = { decision = FRA_promise_independence_to_central_africa }
+			unlock_decision_tooltip = { decision = FRA_invasion_in_central_africa }
+		}
+	}
+	focus = {
+		id = FRA_intervention_in_madagascar
+		icon = GFX_focus_PHI_reunite_madagascar
+		x = 2
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_appeal_to_overseas_territories
+		}
+		relative_position_id = FRA_appeal_to_overseas_territories
+		
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			custom_effect_tooltip = FRA_invade_madagascar_cust
+			hidden_effect = {
+				FRA = {
+					transfer_state = 543
+					add_state_core = 543
+					transfer_state = 702
+					add_state_core = 702
+					transfer_state = 704
+					add_state_core = 704
+				}
+				543 = {
+					
+					add_resource = { type = steel amount = 22 }
+					add_resource = { type = coal amount = 15 }
+					add_resource = { type = tungsten amount = 3 }
+					add_resource = { type = chromium amount = 2 }
+				}
+
+				
+			}
+			
+		}
+	}
+	focus = {
+		id = FRA_form_the_national_committee
+		icon = GFX_focus_generic_commission
+		x = 0
+		y = 3
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_intervention_in_madagascar
+			focus = FRA_intervention_in_syria
+			focus = FRA_intervention_in_indochina
+			
+		}
+		relative_position_id = FRA_appeal_to_overseas_territories
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = { FRA_industrial_expansion_mod }
+		}
+	}
+	focus = {
+		id = FRA_intervention_in_north_africa
+		icon = GFX_focus_generic_camel_corps
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_form_the_national_committee
+		}
+		relative_position_id = FRA_form_the_national_committee
+		
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			USA = {
+				always = no
+			}
+		}
+
+		will_lead_to_war_with = D04
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			769 = {
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = arms_factory
+					level = 10
+				}
+			}
+
+				
+		}
+	}
+	focus = {
+		id = FRA_form_the_provisional_government_of_the_republic
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_intervention_in_north_africa
+		}
+		relative_position_id = FRA_intervention_in_north_africa
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			16 = {
+				is_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		allow_branch = {
+			always = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			IF = {
+				limit = {
+					has_idea = FRA_defeatism
+				}
+				remove_ideas = { FRA_defeatism }
+			}
+			load_focus_tree = french_focus
+			#TODO_GABRIEL: Make scripted effect to give correct focuses depending on left/right
+		}
+	}
+	focus = {
+		id = FRA_continue_the_fight
+		icon = GFX_focus_PER_communist_afghanistan_intervention
+		x = 5
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_appeal_to_the_french_nation
+		}
+		relative_position_id = FRA_appeal_to_the_french_nation
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			539 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 350
+			}
+		}
+	}
+	focus = {
+		id = FRA_the_free_french_navy
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_continue_the_fight
+		}
+		relative_position_id = FRA_continue_the_fight
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+
+			
+
+			create_equipment_variant = {
+				name = "ACL Battleship Class"
+				type = ship_hull_heavy_3
+
+				parent_version = 0
+
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					fixed_ship_engine_slot = heavy_ship_engine_3
+
+					front_1_custom_slot = ship_heavy_battery_3
+					front_2_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = dp_light_battery_2
+					rear_1_custom_slot = ship_anti_air_3
+
+					ship_fire_control_system_slot = ship_fire_control_system_3
+					ship_radar_slot = ship_radar_3
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_3
+					creator = FRA
+					version_name = "ACL Battleship Class"
+				}
+				name = "Madagascar" 
+				requested_factories = 20
+				progress = 0.99
+				amount = 1
+				industrial_manufacturer = mio:FRA_acl_organization
+			}
+
+			create_equipment_variant = {
+				name = "ACL Battleship Class"
+				type = ship_hull_heavy_3
+
+				parent_version = 0
+
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					fixed_ship_engine_slot = heavy_ship_engine_3
+
+					front_1_custom_slot = ship_heavy_battery_3
+					front_2_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = dp_light_battery_2
+					rear_1_custom_slot = ship_anti_air_3
+
+					ship_fire_control_system_slot = ship_fire_control_system_3
+					ship_radar_slot = ship_radar_3
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_3
+					creator = FRA
+					version_name = "ACL Battleship Class"
+				}
+				name = "Tongo" 
+				requested_factories = 20
+				progress = 0.99
+				amount = 1
+				industrial_manufacturer = mio:FRA_acl_organization
+			}
+
+			create_equipment_variant = {
+				name = "ACL Battleship Class"
+				type = ship_hull_heavy_3
+
+				parent_version = 0
+
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					fixed_ship_engine_slot = heavy_ship_engine_3
+
+					front_1_custom_slot = ship_heavy_battery_3
+					front_2_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = dp_light_battery_2
+					rear_1_custom_slot = ship_anti_air_3
+
+					ship_fire_control_system_slot = ship_fire_control_system_3
+					ship_radar_slot = ship_radar_3
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_3
+					creator = FRA
+					version_name = "ACL Battleship Class"
+				}
+				name = "Gabon" 
+				requested_factories = 20
+				progress = 0.99
+				amount = 1
+				industrial_manufacturer = mio:FRA_acl_organization
+			}
+
+			create_equipment_variant = {
+				name = "ACL Battleship Class"
+				type = ship_hull_heavy_3
+
+				parent_version = 0
+
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					fixed_ship_engine_slot = heavy_ship_engine_3
+
+					front_1_custom_slot = ship_heavy_battery_3
+					front_2_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = dp_light_battery_2
+					rear_1_custom_slot = ship_anti_air_3
+
+					ship_fire_control_system_slot = ship_fire_control_system_3
+					ship_radar_slot = ship_radar_3
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_3
+					creator = FRA
+					version_name = "ACL Battleship Class"
+				}
+				name = "Kongo" 
+				requested_factories = 20
+				progress = 0.99
+				amount = 1
+				industrial_manufacturer = mio:FRA_acl_organization
+			}
+			
+		}
+	}
+	focus = {
+		id = FRA_colonial_recruitment
+		icon = GFX_focus_INS_evacuate_soldiers_to_australia
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_the_free_french_navy
+		}
+		relative_position_id = FRA_the_free_french_navy
+		
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_owned_state = {
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = { FRA_colonial_recruitment }
+		}
+	}
+	focus = {
+		id = FRA_the_regiment_normandie
+		icon = GFX_focus_generic_cruiser_submarines
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_colonial_recruitment
+		}
+		relative_position_id = FRA_colonial_recruitment
+		
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+
+				add_ideas = FRA_allied_convoy_program
+			}
+
+			add_ideas = { FRA_allied_convoy_program }
+		}
+	}
+
+	focus = {
+		id = FRA_refus_absurde
+		icon = GFX_focus_generic_army_doctrines_2
+		x = -6
+		y = 1
+		
+		prerequisite = { 
+			focus = FRA_appeal_to_the_french_nation
+		}
+		relative_position_id = FRA_appeal_to_the_french_nation
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+			
+		}
+		
+		bypass = {
+			not = { has_idea = FRA_defeatism }
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = { FRA_defeatism }
+		}
+	}
+	focus = {
+		id = FRA_the_maquis
+		icon = GFX_focus_AST_owen_gun
+		x = -2
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_refus_absurde
+		}
+		relative_position_id = FRA_refus_absurde
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_avtomati_granati
+				bonus = 1.0
+				uses = 2
+				technology = improved_infantry_weapons_2
+				technology = advanced_infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = FRA_connections_to_industrialists
+		icon = GFX_focus_generic_industrial_experts
+		x = 2
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_refus_absurde
+		}
+		relative_position_id = FRA_refus_absurde
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				name = concentrated_industry5_bonus
+				bonus = 1.0
+				uses = 1
+				technology = concentrated_industry5
+			}
+		}
+	}
+	focus = {
+		id = FRA_reach_out_to_trade_unions
+		icon = GFX_focus_generic_industrialists
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_connections_to_industrialists
+		}
+		relative_position_id = FRA_connections_to_industrialists
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				name = assembly_line_bonus
+				bonus = 1.0
+				uses = 1
+				technology = assembly_line_production
+			}
+		}
+	}
+	focus = {
+		id = FRA_cooperation_with_the_communists
+		icon = GFX_focus_generic_public_works
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_reach_out_to_trade_unions
+		}
+		relative_position_id = FRA_reach_out_to_trade_unions
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				name = excavation1_bonus
+				bonus = 1.0
+				uses = 1
+				technology = excavation1
+			}
+
+			add_tech_bonus = {
+				name = excavation2_bonus
+				bonus = 1.0
+				uses = 1
+				technology = excavation2
+			}
+
+			add_tech_bonus = {
+				name = excavation3_bonus
+				bonus = 1.0
+				uses = 1
+				technology = excavation3
+			}
+
+			add_tech_bonus = {
+				name = excavation4_bonus
+				bonus = 1.0
+				uses = 1
+				technology = excavation4
+			}
+
+		}
+	}
+	focus = {
+		id = FRA_the_civil_and_military_organization
+		icon = GFX_focus_generic_anti_tank_guns
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_the_maquis
+		}
+		relative_position_id = FRA_the_maquis
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_ptoshki
+				bonus = 1.0
+				uses = 1
+				technology = antitank5
+			}	
+		}
+	}
+	focus = {
+		id = FRA_national_council_of_the_resistance
+		icon = GFX_focus_focus_fra_national_resistance_council
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_the_civil_and_military_organization
+		}
+		
+		relative_position_id = FRA_the_civil_and_military_organization
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = { FRA_national_resistance_council }
+		}
+	}
+	focus = {
+		id = FRA_national_uprising
+		icon = GFX_focus_SWI_fortify_border_with_france
+		x = -2
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_national_council_of_the_resistance
+		}
+		relative_position_id = FRA_national_council_of_the_resistance
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = { FRA_national_uprising_mod }
+		}
+	}
+	focus = {
+		id = FRA_french_forces_of_the_interior
+		icon = GFX_focus_fra_milice
+		x = 2
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = { 
+			focus = FRA_national_council_of_the_resistance
+		}
+		relative_position_id = FRA_national_council_of_the_resistance
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = { FRA_french_internal_forces }
+		}
+	}
+		
+}

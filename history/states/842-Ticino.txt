@@ -1,0 +1,19 @@
+state={
+	id=842
+	name="STATE_842"
+	manpower = 113144
+	state_category = town
+	resources = {
+	}
+	history={
+		
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 9600 1 }
+	}
+	provinces={
+		9600 3641
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,42 @@
+
+
+
+
+##### AIR WINGS #####
+air_wings = {
+	# Air wings removed and refunded to stockpile
+} 
+
+
+####### Starting Production Queue #######
+instant_effect = { 
+	if = { 
+		limit = { is_tutorial = no } 
+
+		add_equipment_production = { 
+			equipment = { 
+				type = small_plane_cas_airframe_1 
+				creator = "ITA" 
+				version_name = "Ba.65"
+			} 
+
+			requested_factories = 1 
+			progress = 0.2 
+			efficiency = 50 
+			industrial_manufacturer = mio:ITA_caproni_organization
+		}
+
+		add_equipment_production = { 
+			equipment = { 
+				type = small_plane_cas_airframe_0 
+				creator = "ITA" 
+				version_name = "Ca.111"
+			} 
+
+			requested_factories = 1 
+			progress = 0.2 
+			efficiency = 85 
+			industrial_manufacturer = mio:ITA_caproni_organization
+		}
+	}
+} 

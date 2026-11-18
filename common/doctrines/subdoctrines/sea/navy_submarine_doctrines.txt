@@ -1,0 +1,202 @@
+wolfpacks = {
+    track = submarines
+    name = SUBDOCTRINE_SUBMARINE_WOLFPACKS
+    description = SUBDOCTRINE_SUBMARINE_WOLFPACKS_DESC
+    icon = GFX_doctrine_wolfpacks_medium
+
+    xp_cost = 0
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 75
+            original_tag = GER
+        }
+    }
+
+    # EFFECTS
+    naval_retreat_speed_after_initial_combat = 0.15
+    submarine = {
+        max_organisation = 10
+        surface_detection = 0.10
+    }
+    convoy_raiding_efficiency_factor = 0.20
+
+    rewards = {
+        predictive_expertise = {
+            naval_torpedo_reveal_chance_factor = -0.05
+            submarine = {
+                naval_torpedo_hit_chance_factor = 0.10
+            }
+        }
+        pack_search_patterns = {
+            submarine = {
+                surface_detection = 0.15
+                convoy_raiding_coordination = 0.30
+            }
+        }
+        improvisation = {
+            navy_submarine_attack_factor = 0.05
+            submarine = {
+                max_strength = 0.20
+                max_organisation = 15
+            }
+        }
+        rough_weather_procedure = {
+            naval_torpedo_reveal_chance_factor = -0.05
+            equipment_bonus = {
+                ship_hull_submarine = {
+                    naval_weather_penalty_factor = -0.15
+                }
+            }
+        }
+        wolfpack_coordination = {
+            naval_torpedo_reveal_chance_factor = -0.05
+            submarine = {
+                surface_detection = 0.15
+                convoy_raiding_coordination = 0.30
+            }
+        }
+    }
+}
+
+submarine_fleet_operations = {
+    track = submarines
+    name = SUBDOCTRINE_SUBMARINE_FLEET_OPERATIONS
+    description = SUBDOCTRINE_SUBMARINE_FLEET_OPERATIONS_DESC
+    icon = GFX_doctrine_submarine_operations_medium
+
+    xp_cost = 0
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 25
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        modifier = {
+            factor = 2
+            is_major = yes 
+        }
+        modifier = {
+            factor = 0
+            is_major = no 
+        }
+    }
+
+    # EFFECTS
+    strike_force_movement_org_loss = -0.20
+    submarine = {
+        max_organisation = 10
+    }
+
+    rewards = {
+        predictive_search_patterns = {
+            naval_torpedo_reveal_chance_factor = -0.05
+            submarine = {
+                surface_detection = 0.15
+            }
+        }
+        long_range_patrol_schedule = {
+            submarine = {
+                naval_range = 0.15
+                max_organisation = 15
+            }
+        }
+        sustained_operations = {
+            submarine = {
+                supply_consumption = -0.20
+                fuel_consumption = -0.10
+            }
+        }
+        ambush_tactics = {
+            naval_torpedo_reveal_chance_factor = -0.05
+            submarine = {
+                sub_attack = 0.10
+            }
+        }
+        diverse_operations = {
+            submarine = {
+                surface_detection = 0.15
+            }
+        }
+    }
+}
+
+capital_hunters = {
+    track = submarines
+    name = SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS
+    description = SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS_DESC
+    icon = GFX_doctrine_unrestricted_submarine_warfare_medium
+
+    xp_cost = 0
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 50
+            OR = {
+                original_tag = USA
+                original_tag = JAP
+            }
+        }
+    }
+
+    # EFFECTS
+    submarine = {
+        max_organisation = 10
+        surface_detection = 0.15
+    }
+    naval_strike_targetting_factor = 0.10
+
+    rewards = {
+        stalking_the_giants = {
+            submarine = {
+                sub_attack = 0.15
+                max_organisation = 15
+            }
+        }
+        periscope_patrols = {
+            submarine = {
+                surface_detection = 0.15
+                sub_visibility = -0.05
+            }
+        }
+        torpedo_spread_tactics = {
+            submarine = {
+                naval_torpedo_hit_chance_factor = 0.10
+            }
+        }
+        evasion_drills = {
+            submarine = {
+                sub_visibility = -0.05
+                naval_speed = 0.10
+            }
+        }
+        escape_when_empty = {
+            submarine = {
+                sub_visibility = -0.05
+                naval_speed = 0.10
+            }
+            sub_retreat_speed = 0.15
+        }
+    }
+}

@@ -1,0 +1,15 @@
+CZE_ckd_praga_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+	allowed = {
+		original_tag = CZE
+	}
+}
+
+CZE_skoda_armor_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_2
+	allowed = {
+		original_tag = CZE
+	}
+}

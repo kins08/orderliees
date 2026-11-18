@@ -1,0 +1,6 @@
+
+
+air_wings = {
+	# Air wings removed and refunded to stockpile
+}
+

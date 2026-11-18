@@ -1,0 +1,26 @@
+state = {
+	id = 840
+	name = "STATE_840"
+	manpower = 1028895
+	
+	state_category = pastoral
+	
+	history = {
+		owner = ITA
+		victory_points = {
+		 	12941 1 
+		}
+		buildings = {
+			infrastructure = 2
+			12941 = {
+				naval_base = 2
+			}
+			
+		}
+	}
+	provinces = { 
+		11014 12941
+	}
+
+	local_supplies = 0.0 
+}

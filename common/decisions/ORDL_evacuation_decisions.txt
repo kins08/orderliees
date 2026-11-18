@@ -1,0 +1,306 @@
+SOV_evacuation_regions = {
+
+	SOV_evac_decision_S1 = {
+		icon = GFX_decision_icon_evacuation
+		priority = 10
+		allowed = { original_tag = SOV }
+		visible = {
+			always = yes
+			NOT = { has_country_flag = SOV_evac_region_S1_done }
+			NOT = { has_country_flag = SOV_evac_region_S1_lost }
+		}
+		available = {
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_FOCUS has_completed_focus = SOV_move_industry_to_the_urals }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_IDLE NOT = { has_country_flag = SOV_evac_region_S1_active } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TWO check_variable = { SOV_evac_regions_active < 2 } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_PP has_political_power > 34 }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TRAINS has_equipment = { train_equipment > 19 } }
+			custom_trigger_tooltip = {
+				tooltip = ORDL_EVAC_REQ_STATES
+				any_state = {
+					OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 }
+					is_fully_controlled_by = SOV
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+			}
+		}
+		days_remove = 30
+		days_re_enable = 0
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = ORDL_EVAC_DEC_TT_S1
+			ORDL_evac_region_S1_click = yes
+		}
+		remove_effect = {
+			set_variable = { SOV_evac_region_S1_days = 0 }
+			set_country_flag = SOV_evac_region_S1_done
+			clr_country_flag = SOV_evac_region_S1_active
+			clr_country_flag = SOV_evac_region_S1_running
+			ORDL_evac_region_S1_finish = yes
+			ORDL_evac_recalculate_counts = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	SOV_evac_decision_S2 = {
+		icon = GFX_decision_icon_evacuation
+		priority = 11
+		allowed = { original_tag = SOV }
+		visible = {
+			always = yes
+			NOT = { has_country_flag = SOV_evac_region_S2_done }
+			NOT = { has_country_flag = SOV_evac_region_S2_lost }
+		}
+		available = {
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_FOCUS has_completed_focus = SOV_move_industry_to_the_urals }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_IDLE NOT = { has_country_flag = SOV_evac_region_S2_active } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TWO check_variable = { SOV_evac_regions_active < 2 } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_PP has_political_power > 34 }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TRAINS has_equipment = { train_equipment > 19 } }
+			custom_trigger_tooltip = {
+				tooltip = ORDL_EVAC_REQ_STATES
+				any_state = {
+					OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 }
+					is_fully_controlled_by = SOV
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+			}
+		}
+		days_remove = 30
+		days_re_enable = 0
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = ORDL_EVAC_DEC_TT_S2
+			ORDL_evac_region_S2_click = yes
+		}
+		remove_effect = {
+			set_variable = { SOV_evac_region_S2_days = 0 }
+			set_country_flag = SOV_evac_region_S2_done
+			clr_country_flag = SOV_evac_region_S2_active
+			clr_country_flag = SOV_evac_region_S2_running
+			ORDL_evac_region_S2_finish = yes
+			ORDL_evac_recalculate_counts = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	SOV_evac_decision_S3 = {
+		icon = GFX_decision_icon_evacuation
+		priority = 12
+		allowed = { original_tag = SOV }
+		visible = {
+			always = yes
+			NOT = { has_country_flag = SOV_evac_region_S3_done }
+			NOT = { has_country_flag = SOV_evac_region_S3_lost }
+		}
+		available = {
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_FOCUS has_completed_focus = SOV_move_industry_to_the_urals }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_IDLE NOT = { has_country_flag = SOV_evac_region_S3_active } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TWO check_variable = { SOV_evac_regions_active < 2 } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_PP has_political_power > 34 }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TRAINS has_equipment = { train_equipment > 19 } }
+			custom_trigger_tooltip = {
+				tooltip = ORDL_EVAC_REQ_STATES
+				any_state = {
+					OR = { state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203 }
+					is_fully_controlled_by = SOV
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+			}
+		}
+		days_remove = 45
+		days_re_enable = 0
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = ORDL_EVAC_DEC_TT_S3
+			ORDL_evac_region_S3_click = yes
+		}
+		remove_effect = {
+			set_variable = { SOV_evac_region_S3_days = 0 }
+			set_country_flag = SOV_evac_region_S3_done
+			clr_country_flag = SOV_evac_region_S3_active
+			clr_country_flag = SOV_evac_region_S3_running
+			ORDL_evac_region_S3_finish = yes
+			ORDL_evac_recalculate_counts = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	SOV_evac_decision_S4 = {
+		icon = GFX_decision_icon_evacuation
+		priority = 13
+		allowed = { original_tag = SOV }
+		visible = {
+			always = yes
+			NOT = { has_country_flag = SOV_evac_region_S4_done }
+			NOT = { has_country_flag = SOV_evac_region_S4_lost }
+		}
+		available = {
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_FOCUS has_completed_focus = SOV_move_industry_to_the_urals }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_IDLE NOT = { has_country_flag = SOV_evac_region_S4_active } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TWO check_variable = { SOV_evac_regions_active < 2 } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_PP has_political_power > 34 }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TRAINS has_equipment = { train_equipment > 19 } }
+			custom_trigger_tooltip = {
+				tooltip = ORDL_EVAC_REQ_STATES
+				any_state = {
+					OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 }
+					is_fully_controlled_by = SOV
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+			}
+		}
+		days_remove = 45
+		days_re_enable = 0
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = ORDL_EVAC_DEC_TT_S4
+			ORDL_evac_region_S4_click = yes
+		}
+		remove_effect = {
+			set_variable = { SOV_evac_region_S4_days = 0 }
+			set_country_flag = SOV_evac_region_S4_done
+			clr_country_flag = SOV_evac_region_S4_active
+			clr_country_flag = SOV_evac_region_S4_running
+			ORDL_evac_region_S4_finish = yes
+			ORDL_evac_recalculate_counts = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	SOV_evac_decision_S5 = {
+		icon = GFX_decision_icon_evacuation
+		priority = 14
+		allowed = { original_tag = SOV }
+		visible = {
+			always = yes
+			NOT = { has_country_flag = SOV_evac_region_S5_done }
+			NOT = { has_country_flag = SOV_evac_region_S5_lost }
+		}
+		available = {
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_FOCUS has_completed_focus = SOV_move_industry_to_the_urals }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_WAVE2 has_country_flag = SOV_evac_second_wave_unlocked }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_IDLE NOT = { has_country_flag = SOV_evac_region_S5_active } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TWO check_variable = { SOV_evac_regions_active < 2 } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_PP has_political_power > 34 }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TRAINS has_equipment = { train_equipment > 19 } }
+			custom_trigger_tooltip = {
+				tooltip = ORDL_EVAC_REQ_STATES
+				any_state = {
+					OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264 }
+					is_fully_controlled_by = SOV
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+			}
+		}
+		days_remove = 60
+		days_re_enable = 0
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = ORDL_EVAC_DEC_TT_S5
+			ORDL_evac_region_S5_click = yes
+		}
+		remove_effect = {
+			set_variable = { SOV_evac_region_S5_days = 0 }
+			set_country_flag = SOV_evac_region_S5_done
+			clr_country_flag = SOV_evac_region_S5_active
+			clr_country_flag = SOV_evac_region_S5_running
+			ORDL_evac_region_S5_finish = yes
+			ORDL_evac_recalculate_counts = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	SOV_evac_decision_S6 = {
+		icon = GFX_decision_icon_evacuation
+		priority = 15
+		allowed = { original_tag = SOV }
+		visible = {
+			always = yes
+			NOT = { has_country_flag = SOV_evac_region_S6_done }
+			NOT = { has_country_flag = SOV_evac_region_S6_lost }
+		}
+		available = {
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_FOCUS has_completed_focus = SOV_move_industry_to_the_urals }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_WAVE2 has_country_flag = SOV_evac_second_wave_unlocked }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_IDLE NOT = { has_country_flag = SOV_evac_region_S6_active } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TWO check_variable = { SOV_evac_regions_active < 2 } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_PP has_political_power > 34 }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TRAINS has_equipment = { train_equipment > 19 } }
+			custom_trigger_tooltip = {
+				tooltip = ORDL_EVAC_REQ_STATES
+				any_state = {
+					OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 246 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 }
+					is_fully_controlled_by = SOV
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+			}
+		}
+		days_remove = 60
+		days_re_enable = 0
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = ORDL_EVAC_DEC_TT_S6
+			ORDL_evac_region_S6_click = yes
+		}
+		remove_effect = {
+			set_variable = { SOV_evac_region_S6_days = 0 }
+			set_country_flag = SOV_evac_region_S6_done
+			clr_country_flag = SOV_evac_region_S6_active
+			clr_country_flag = SOV_evac_region_S6_running
+			ORDL_evac_region_S6_finish = yes
+			ORDL_evac_recalculate_counts = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	SOV_evac_decision_S7 = {
+		icon = GFX_decision_icon_evacuation
+		priority = 16
+		allowed = { original_tag = SOV }
+		visible = {
+			always = yes
+			NOT = { has_country_flag = SOV_evac_region_S7_done }
+			NOT = { has_country_flag = SOV_evac_region_S7_lost }
+		}
+		available = {
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_FOCUS has_completed_focus = SOV_move_industry_to_the_urals }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_WAVE2 has_country_flag = SOV_evac_second_wave_unlocked }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_IDLE NOT = { has_country_flag = SOV_evac_region_S7_active } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TWO check_variable = { SOV_evac_regions_active < 2 } }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_PP has_political_power > 34 }
+			custom_trigger_tooltip = { tooltip = ORDL_EVAC_REQ_TRAINS has_equipment = { train_equipment > 19 } }
+			custom_trigger_tooltip = {
+				tooltip = ORDL_EVAC_REQ_STATES
+				any_state = {
+					OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 }
+					is_fully_controlled_by = SOV
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+			}
+		}
+		days_remove = 60
+		days_re_enable = 0
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			custom_effect_tooltip = ORDL_EVAC_DEC_TT_S7
+			ORDL_evac_region_S7_click = yes
+		}
+		remove_effect = {
+			set_variable = { SOV_evac_region_S7_days = 0 }
+			set_country_flag = SOV_evac_region_S7_done
+			clr_country_flag = SOV_evac_region_S7_active
+			clr_country_flag = SOV_evac_region_S7_running
+			ORDL_evac_region_S7_finish = yes
+			ORDL_evac_recalculate_counts = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

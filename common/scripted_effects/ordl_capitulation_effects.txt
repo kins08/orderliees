@@ -1,0 +1,337 @@
+# ===================================================================
+# Orderlies - Territorial Settlements and Armistice Protocols
+# ===================================================================
+
+ordl_effect_north_africa_axis_victory = {
+	set_global_flag = AXIS_win_africa
+	clr_global_flag = ALLIES_win_africa
+	every_country = {
+		limit = {
+			OR = {
+				tag = GER
+				tag = ITA
+				is_in_faction_with = GER
+				is_in_faction_with = ITA
+			}
+		}
+		remove_ideas = africa_is_over_idea
+		add_ideas = egypt_conqueror_idea
+	}
+}
+
+ordl_effect_north_africa_allied_victory = {
+	set_global_flag = ALLIES_win_africa
+	clr_global_flag = AXIS_win_africa
+	every_country = {
+		limit = {
+			OR = {
+				tag = GER
+				tag = ITA
+				is_in_faction_with = GER
+				is_in_faction_with = ITA
+			}
+		}
+		remove_ideas = egypt_conqueror_idea
+		add_ideas = africa_is_over_idea
+	}
+}
+
+ordl_execute_french_demobilization = {
+	FRA = {
+		set_equipment_fraction = 0.0
+	}
+}
+
+ordl_execute_french_capitulation = {
+	set_global_flag = FRA_cap
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = FRA
+				original_tag = GER
+				original_tag = ITA
+				original_tag = BUL
+				original_tag = HUN
+				original_tag = ROM
+			}
+		}
+		add_ideas = FRA_cap_idea
+	}
+	FRA = {
+		country_event = { id = ordl_peace.3 days = 1 }
+		country_event = { id = ordl_peace.3 days = 2 }
+		country_event = { id = ordl_peace.3 days = 3 }
+		country_event = { id = ordl_peace.3 days = 4 }
+	}
+	country_event = { id = news.34 days = 5 }
+}
+
+ordl_execute_bessarabia_transfer = {
+	set_global_flag = bessarabia_transfered_flag
+	SOV = {
+		transfer_state = 78
+		transfer_state = 80
+		transfer_state = 762
+	}
+}
+
+ordl_execute_soviet_capitulation = {
+	set_global_flag = sov_cap_flag
+
+	# Romanian territorial restoration
+	ROM = {
+		transfer_state = 78
+		transfer_state = 80
+		transfer_state = 762
+	}
+
+	# Finnish armistice and northern border settlement
+	FIN = {
+		white_peace = { tag = SOV }
+		transfer_state = 146
+		transfer_state = 147
+		transfer_state = 213
+		transfer_state = 215
+		transfer_state = 216
+	}
+
+	# Japanese Far Eastern peace protocol
+	JAP = {
+		white_peace = { tag = SOV }
+		transfer_state = 408
+		transfer_state = 409
+		transfer_state = 560
+		transfer_state = 561
+		transfer_state = 652
+		transfer_state = 654
+	}
+
+	# German administrative governance over European Russia
+	GER = {
+		transfer_state = 11
+		transfer_state = 12
+		transfer_state = 13
+		transfer_state = 89
+		transfer_state = 91
+		transfer_state = 93
+		transfer_state = 94
+		transfer_state = 95
+		transfer_state = 96
+		transfer_state = 97
+		transfer_state = 137
+		transfer_state = 189
+		transfer_state = 190
+		transfer_state = 191
+		transfer_state = 192
+		transfer_state = 193
+		transfer_state = 194
+		transfer_state = 195
+		transfer_state = 196
+		transfer_state = 197
+		transfer_state = 198
+		transfer_state = 199
+		transfer_state = 200
+		transfer_state = 201
+		transfer_state = 202
+		transfer_state = 203
+		transfer_state = 204
+		transfer_state = 205
+		transfer_state = 206
+		transfer_state = 207
+		transfer_state = 208
+		transfer_state = 209
+		transfer_state = 210
+		transfer_state = 214
+		transfer_state = 217
+		transfer_state = 218
+		transfer_state = 219
+		transfer_state = 220
+		transfer_state = 221
+		transfer_state = 222
+		transfer_state = 223
+		transfer_state = 224
+		transfer_state = 225
+		transfer_state = 226
+		transfer_state = 227
+		transfer_state = 228
+		transfer_state = 229
+		transfer_state = 230
+		transfer_state = 231
+		transfer_state = 232
+		transfer_state = 233
+		transfer_state = 234
+		transfer_state = 235
+		transfer_state = 236
+		transfer_state = 237
+		transfer_state = 238
+		transfer_state = 239
+		transfer_state = 240
+		transfer_state = 241
+		transfer_state = 242
+		transfer_state = 243
+		transfer_state = 244
+		transfer_state = 245
+		transfer_state = 246
+		transfer_state = 247
+		transfer_state = 248
+		transfer_state = 252
+		transfer_state = 253
+		transfer_state = 254
+		transfer_state = 255
+		transfer_state = 257
+		transfer_state = 258
+		transfer_state = 259
+		transfer_state = 260
+		transfer_state = 263
+		transfer_state = 264
+		transfer_state = 265
+		transfer_state = 351
+		transfer_state = 780
+		transfer_state = 804
+		transfer_state = 805
+		transfer_state = 806
+		transfer_state = 807
+		transfer_state = 808
+		transfer_state = 809
+		transfer_state = 810
+		transfer_state = 811
+		transfer_state = 817
+		transfer_state = 822
+		transfer_state = 823
+		transfer_state = 824
+		transfer_state = 825
+		transfer_state = 830
+		transfer_state = 875
+		transfer_state = 876
+		transfer_state = 989
+	}
+}
+
+ordl_execute_japanese_capitulation = {
+	set_global_flag = JAP_capitulated
+
+	# Soviet-Japanese peace and Sakhalin/Kurile demarcation
+	if = {
+		limit = { JAP = { has_war_with = SOV } }
+		SOV = {
+			white_peace = { tag = JAP }
+		}
+	}
+	SOV = {
+		transfer_state = 537
+		transfer_state = 555
+	}
+
+	# Universal Allied white peace and demilitarized neutrality
+	JAP = {
+		white_peace = ENG
+		white_peace = USA
+		white_peace = INS
+		white_peace = AST
+		white_peace = SAF
+		white_peace = RAJ
+		white_peace = CAN
+		white_peace = FRA
+		add_ideas = ordl_strict_neutrality
+	}
+
+	# Chinese territorial restoration and Manchurian liberation
+	CHI = {
+		transfer_state = 283
+		transfer_state = 325
+		transfer_state = 326
+		transfer_state = 328
+		transfer_state = 524
+		transfer_state = 591
+		transfer_state = 592
+		transfer_state = 593
+		transfer_state = 594
+		transfer_state = 595
+		transfer_state = 596
+		transfer_state = 597
+		transfer_state = 598
+		transfer_state = 599
+		transfer_state = 600
+		transfer_state = 602
+		transfer_state = 603
+		transfer_state = 605
+		transfer_state = 606
+		transfer_state = 607
+		transfer_state = 608
+		transfer_state = 609
+		transfer_state = 610
+		transfer_state = 611
+		transfer_state = 612
+		transfer_state = 613
+		transfer_state = 614
+		transfer_state = 615
+		transfer_state = 620
+		transfer_state = 621
+		transfer_state = 622
+		transfer_state = 710
+		transfer_state = 711
+		transfer_state = 712
+		transfer_state = 713
+		transfer_state = 724
+		transfer_state = 725
+		transfer_state = 739
+		transfer_state = 740
+		transfer_state = 741
+		transfer_state = 742
+		transfer_state = 743
+		transfer_state = 744
+		transfer_state = 745
+		transfer_state = 746
+		transfer_state = 747
+		transfer_state = 748
+		transfer_state = 749
+		transfer_state = 757
+		transfer_state = 1023
+		transfer_state = 1024
+		transfer_state = 1025
+		transfer_state = 1026
+		transfer_state = 1027
+		transfer_state = 1028
+		transfer_state = 1029
+		transfer_state = 1030
+		transfer_state = 1032
+		transfer_state = 1034
+		transfer_state = 1037
+	}
+
+	# Korean independence and sovereignty
+	KOR = {
+		transfer_state = 525
+		transfer_state = 527
+		transfer_state = 1019
+		transfer_state = 1020
+		transfer_state = 1021
+		transfer_state = 1022
+		add_ideas = ordl_strict_neutrality
+	}
+
+	# Siamese frontier adjustments
+	SIA = {
+		transfer_state = 289
+		transfer_state = 720
+		transfer_state = 864
+		transfer_state = 865
+		transfer_state = 1043
+		transfer_state = 1050
+		transfer_state = 1051
+		transfer_state = 1052
+		add_ideas = ordl_strict_neutrality
+	}
+
+	# French Indochina restoration
+	FRA = {
+		transfer_state = 286
+		transfer_state = 666
+		transfer_state = 667
+		transfer_state = 737
+		transfer_state = 1013
+		transfer_state = 1040
+		transfer_state = 1041
+		transfer_state = 1042
+	}
+}

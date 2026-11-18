@@ -1,0 +1,2076 @@
+guiTypes = {
+
+	containerWindowType = {
+
+		name = "ORDL_evacuation_decision_ui"
+
+		position = { x = 0 y = 0 }
+
+		size = { width = 500 height = 672 }
+
+		background = {
+
+			name = "bg"
+
+			quadTextureSprite = "GFX_tiled_window_transparent"
+
+		}
+
+		containerWindowType = {
+
+			name = "evac_header"
+
+			position = { x = 0 y = 0 }
+
+			size = { width = 500 height = 84 }
+
+			background = {
+
+				name = "stats_bg"
+
+				spriteType = "GFX_tiled_plain_bg"
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_title"
+
+				position = { x = 10 y = 4 }
+
+				font = "hoi_18mbs"
+
+				text = "ORDL_EVAC_HEADER"
+
+				maxWidth = 400
+
+				maxHeight = 20
+
+				format = left
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_stat_out"
+
+				position = { x = 10 y = 26 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_STAT_OUT"
+
+				maxWidth = 480
+
+				maxHeight = 16
+
+				format = left
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_stat_lost"
+
+				position = { x = 10 y = 44 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_STAT_LOST"
+
+				maxWidth = 480
+
+				maxHeight = 16
+
+				format = left
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_stat_transit"
+
+				position = { x = 10 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_STAT_TRANSIT"
+
+				maxWidth = 330
+
+				maxHeight = 16
+
+				format = left
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_0"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_0"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_1"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_1"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_2"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_2"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_3"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_3"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_4"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_4"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_5"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_5"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_6"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_6"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+			instantTextBoxType = {
+
+				name = "evac_done_7"
+
+				position = { x = 324 y = 62 }
+
+				font = "hoi_16mbs"
+
+				text = "ORDL_EVAC_DONE_7"
+
+				maxWidth = 154
+
+				maxHeight = 16
+
+				format = right
+
+			}
+
+
+
+
+		}
+
+		iconType = {
+			name = "evac_map_bg"
+			position = { x = 4 y = 88 }
+			spriteType = "GFX_ORDL_evac_map_bg"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S1_red"
+			position = { x = 60 y = 113 }
+			spriteType = "GFX_evac_region_S1_red"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S1_ok"
+			position = { x = 60 y = 113 }
+			spriteType = "GFX_evac_region_S1_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S1_lost"
+			position = { x = 60 y = 113 }
+			spriteType = "GFX_evac_region_S1_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S2_red"
+			position = { x = 69 y = 179 }
+			spriteType = "GFX_evac_region_S2_red"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S2_ok"
+			position = { x = 69 y = 179 }
+			spriteType = "GFX_evac_region_S2_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S2_lost"
+			position = { x = 69 y = 179 }
+			spriteType = "GFX_evac_region_S2_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S3_red"
+			position = { x = 84 y = 253 }
+			spriteType = "GFX_evac_region_S3_red"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S3_ok"
+			position = { x = 84 y = 253 }
+			spriteType = "GFX_evac_region_S3_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S3_lost"
+			position = { x = 84 y = 253 }
+			spriteType = "GFX_evac_region_S3_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S4_red"
+			position = { x = 127 y = 302 }
+			spriteType = "GFX_evac_region_S4_red"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S4_ok"
+			position = { x = 127 y = 302 }
+			spriteType = "GFX_evac_region_S4_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S4_lost"
+			position = { x = 127 y = 302 }
+			spriteType = "GFX_evac_region_S4_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S5_red"
+			position = { x = 144 y = 88 }
+			spriteType = "GFX_evac_region_S5_red"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S5_ok"
+			position = { x = 144 y = 88 }
+			spriteType = "GFX_evac_region_S5_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S5_lost"
+			position = { x = 144 y = 88 }
+			spriteType = "GFX_evac_region_S5_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S6_red"
+			position = { x = 187 y = 150 }
+			spriteType = "GFX_evac_region_S6_red"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S6_ok"
+			position = { x = 187 y = 150 }
+			spriteType = "GFX_evac_region_S6_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S6_lost"
+			position = { x = 187 y = 150 }
+			spriteType = "GFX_evac_region_S6_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S7_red"
+			position = { x = 261 y = 287 }
+			spriteType = "GFX_evac_region_S7_red"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S7_ok"
+			position = { x = 261 y = 287 }
+			spriteType = "GFX_evac_region_S7_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S7_lost"
+			position = { x = 261 y = 287 }
+			spriteType = "GFX_evac_region_S7_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_11_ok"
+			position = { x = 87 y = 189 }
+			spriteType = "GFX_evac_11_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_11_lost"
+			position = { x = 87 y = 189 }
+			spriteType = "GFX_evac_11_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_12_ok"
+			position = { x = 104 y = 145 }
+			spriteType = "GFX_evac_12_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_12_lost"
+			position = { x = 104 y = 145 }
+			spriteType = "GFX_evac_12_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_13_ok"
+			position = { x = 94 y = 126 }
+			spriteType = "GFX_evac_13_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_13_lost"
+			position = { x = 94 y = 126 }
+			spriteType = "GFX_evac_13_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_78_ok"
+			position = { x = 128 y = 311 }
+			spriteType = "GFX_evac_78_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_78_lost"
+			position = { x = 128 y = 311 }
+			spriteType = "GFX_evac_78_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_89_ok"
+			position = { x = 86 y = 293 }
+			spriteType = "GFX_evac_89_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_89_lost"
+			position = { x = 86 y = 293 }
+			spriteType = "GFX_evac_89_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_91_ok"
+			position = { x = 88 y = 277 }
+			spriteType = "GFX_evac_91_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_91_lost"
+			position = { x = 88 y = 277 }
+			spriteType = "GFX_evac_91_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_93_ok"
+			position = { x = 96 y = 262 }
+			spriteType = "GFX_evac_93_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_93_lost"
+			position = { x = 96 y = 262 }
+			spriteType = "GFX_evac_93_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_94_ok"
+			position = { x = 90 y = 233 }
+			spriteType = "GFX_evac_94_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_94_lost"
+			position = { x = 90 y = 233 }
+			spriteType = "GFX_evac_94_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_95_ok"
+			position = { x = 96 y = 212 }
+			spriteType = "GFX_evac_95_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_95_lost"
+			position = { x = 96 y = 212 }
+			spriteType = "GFX_evac_95_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_96_ok"
+			position = { x = 122 y = 186 }
+			spriteType = "GFX_evac_96_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_96_lost"
+			position = { x = 122 y = 186 }
+			spriteType = "GFX_evac_96_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_97_ok"
+			position = { x = 70 y = 212 }
+			spriteType = "GFX_evac_97_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_97_lost"
+			position = { x = 70 y = 212 }
+			spriteType = "GFX_evac_97_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_137_ok"
+			position = { x = 210 y = 350 }
+			spriteType = "GFX_evac_137_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_137_lost"
+			position = { x = 210 y = 350 }
+			spriteType = "GFX_evac_137_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_188_ok"
+			position = { x = 62 y = 186 }
+			spriteType = "GFX_evac_188_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_188_lost"
+			position = { x = 62 y = 186 }
+			spriteType = "GFX_evac_188_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_189_ok"
+			position = { x = 63 y = 175 }
+			spriteType = "GFX_evac_189_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_189_lost"
+			position = { x = 63 y = 175 }
+			spriteType = "GFX_evac_189_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_190_ok"
+			position = { x = 62 y = 150 }
+			spriteType = "GFX_evac_190_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_190_lost"
+			position = { x = 62 y = 150 }
+			spriteType = "GFX_evac_190_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_191_ok"
+			position = { x = 122 y = 132 }
+			spriteType = "GFX_evac_191_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_191_lost"
+			position = { x = 122 y = 132 }
+			spriteType = "GFX_evac_191_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_192_ok"
+			position = { x = 175 y = 318 }
+			spriteType = "GFX_evac_192_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_192_lost"
+			position = { x = 175 y = 318 }
+			spriteType = "GFX_evac_192_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_193_ok"
+			position = { x = 185 y = 254 }
+			spriteType = "GFX_evac_193_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_193_lost"
+			position = { x = 185 y = 254 }
+			spriteType = "GFX_evac_193_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_194_ok"
+			position = { x = 146 y = 241 }
+			spriteType = "GFX_evac_194_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_194_lost"
+			position = { x = 146 y = 241 }
+			spriteType = "GFX_evac_194_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_195_ok"
+			position = { x = 176 y = 99 }
+			spriteType = "GFX_evac_195_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_195_lost"
+			position = { x = 176 y = 99 }
+			spriteType = "GFX_evac_195_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_196_ok"
+			position = { x = 198 y = 330 }
+			spriteType = "GFX_evac_196_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_196_lost"
+			position = { x = 198 y = 330 }
+			spriteType = "GFX_evac_196_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_197_ok"
+			position = { x = 185 y = 310 }
+			spriteType = "GFX_evac_197_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_197_lost"
+			position = { x = 185 y = 310 }
+			spriteType = "GFX_evac_197_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_198_ok"
+			position = { x = 144 y = 293 }
+			spriteType = "GFX_evac_198_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_198_lost"
+			position = { x = 144 y = 293 }
+			spriteType = "GFX_evac_198_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_199_ok"
+			position = { x = 130 y = 280 }
+			spriteType = "GFX_evac_199_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_199_lost"
+			position = { x = 130 y = 280 }
+			spriteType = "GFX_evac_199_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_200_ok"
+			position = { x = 231 y = 319 }
+			spriteType = "GFX_evac_200_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_200_lost"
+			position = { x = 231 y = 319 }
+			spriteType = "GFX_evac_200_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_201_ok"
+			position = { x = 141 y = 263 }
+			spriteType = "GFX_evac_201_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_201_lost"
+			position = { x = 141 y = 263 }
+			spriteType = "GFX_evac_201_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_202_ok"
+			position = { x = 170 y = 265 }
+			spriteType = "GFX_evac_202_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_202_lost"
+			position = { x = 170 y = 265 }
+			spriteType = "GFX_evac_202_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_203_ok"
+			position = { x = 173 y = 284 }
+			spriteType = "GFX_evac_203_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_203_lost"
+			position = { x = 173 y = 284 }
+			spriteType = "GFX_evac_203_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_204_ok"
+			position = { x = 137 y = 225 }
+			spriteType = "GFX_evac_204_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_204_lost"
+			position = { x = 137 y = 225 }
+			spriteType = "GFX_evac_204_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_205_ok"
+			position = { x = 224 y = 196 }
+			spriteType = "GFX_evac_205_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_205_lost"
+			position = { x = 224 y = 196 }
+			spriteType = "GFX_evac_205_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_206_ok"
+			position = { x = 139 y = 202 }
+			spriteType = "GFX_evac_206_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_206_lost"
+			position = { x = 139 y = 202 }
+			spriteType = "GFX_evac_206_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_207_ok"
+			position = { x = 148 y = 180 }
+			spriteType = "GFX_evac_207_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_207_lost"
+			position = { x = 148 y = 180 }
+			spriteType = "GFX_evac_207_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_208_ok"
+			position = { x = 150 y = 108 }
+			spriteType = "GFX_evac_208_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_208_lost"
+			position = { x = 150 y = 108 }
+			spriteType = "GFX_evac_208_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_209_ok"
+			position = { x = 146 y = 126 }
+			spriteType = "GFX_evac_209_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_209_lost"
+			position = { x = 146 y = 126 }
+			spriteType = "GFX_evac_209_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_210_ok"
+			position = { x = 151 y = 159 }
+			spriteType = "GFX_evac_210_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_210_lost"
+			position = { x = 151 y = 159 }
+			spriteType = "GFX_evac_210_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_217_ok"
+			position = { x = 349 y = 293 }
+			spriteType = "GFX_evac_217_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_217_lost"
+			position = { x = 349 y = 293 }
+			spriteType = "GFX_evac_217_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_218_ok"
+			position = { x = 284 y = 313 }
+			spriteType = "GFX_evac_218_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_218_lost"
+			position = { x = 284 y = 313 }
+			spriteType = "GFX_evac_218_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_219_ok"
+			position = { x = 244 y = 166 }
+			spriteType = "GFX_evac_219_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_219_lost"
+			position = { x = 244 y = 166 }
+			spriteType = "GFX_evac_219_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_220_ok"
+			position = { x = 230 y = 250 }
+			spriteType = "GFX_evac_220_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_220_lost"
+			position = { x = 230 y = 250 }
+			spriteType = "GFX_evac_220_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_221_ok"
+			position = { x = 241 y = 283 }
+			spriteType = "GFX_evac_221_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_221_lost"
+			position = { x = 241 y = 283 }
+			spriteType = "GFX_evac_221_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_222_ok"
+			position = { x = 239 y = 228 }
+			spriteType = "GFX_evac_222_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_222_lost"
+			position = { x = 239 y = 228 }
+			spriteType = "GFX_evac_222_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_223_ok"
+			position = { x = 253 y = 206 }
+			spriteType = "GFX_evac_223_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_223_lost"
+			position = { x = 253 y = 206 }
+			spriteType = "GFX_evac_223_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_224_ok"
+			position = { x = 195 y = 220 }
+			spriteType = "GFX_evac_224_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_224_lost"
+			position = { x = 195 y = 220 }
+			spriteType = "GFX_evac_224_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_225_ok"
+			position = { x = 199 y = 250 }
+			spriteType = "GFX_evac_225_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_225_lost"
+			position = { x = 199 y = 250 }
+			spriteType = "GFX_evac_225_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_226_ok"
+			position = { x = 216 y = 302 }
+			spriteType = "GFX_evac_226_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_226_lost"
+			position = { x = 216 y = 302 }
+			spriteType = "GFX_evac_226_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_227_ok"
+			position = { x = 262 y = 301 }
+			spriteType = "GFX_evac_227_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_227_lost"
+			position = { x = 262 y = 301 }
+			spriteType = "GFX_evac_227_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_228_ok"
+			position = { x = 278 y = 288 }
+			spriteType = "GFX_evac_228_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_228_lost"
+			position = { x = 278 y = 288 }
+			spriteType = "GFX_evac_228_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_229_ok"
+			position = { x = 376 y = 418 }
+			spriteType = "GFX_evac_229_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_229_lost"
+			position = { x = 376 y = 418 }
+			spriteType = "GFX_evac_229_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_230_ok"
+			position = { x = 347 y = 426 }
+			spriteType = "GFX_evac_230_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_230_lost"
+			position = { x = 347 y = 426 }
+			spriteType = "GFX_evac_230_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_231_ok"
+			position = { x = 326 y = 403 }
+			spriteType = "GFX_evac_231_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_231_lost"
+			position = { x = 326 y = 403 }
+			spriteType = "GFX_evac_231_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_232_ok"
+			position = { x = 372 y = 368 }
+			spriteType = "GFX_evac_232_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_232_lost"
+			position = { x = 372 y = 368 }
+			spriteType = "GFX_evac_232_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_233_ok"
+			position = { x = 294 y = 378 }
+			spriteType = "GFX_evac_233_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_233_lost"
+			position = { x = 294 y = 378 }
+			spriteType = "GFX_evac_233_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_234_ok"
+			position = { x = 263 y = 339 }
+			spriteType = "GFX_evac_234_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_234_lost"
+			position = { x = 263 y = 339 }
+			spriteType = "GFX_evac_234_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_235_ok"
+			position = { x = 316 y = 353 }
+			spriteType = "GFX_evac_235_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_235_lost"
+			position = { x = 316 y = 353 }
+			spriteType = "GFX_evac_235_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_236_ok"
+			position = { x = 372 y = 308 }
+			spriteType = "GFX_evac_236_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_236_lost"
+			position = { x = 372 y = 308 }
+			spriteType = "GFX_evac_236_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_237_ok"
+			position = { x = 334 y = 319 }
+			spriteType = "GFX_evac_237_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_237_lost"
+			position = { x = 334 y = 319 }
+			spriteType = "GFX_evac_237_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_238_ok"
+			position = { x = 307 y = 315 }
+			spriteType = "GFX_evac_238_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_238_lost"
+			position = { x = 307 y = 315 }
+			spriteType = "GFX_evac_238_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_239_ok"
+			position = { x = 338 y = 242 }
+			spriteType = "GFX_evac_239_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_239_lost"
+			position = { x = 338 y = 242 }
+			spriteType = "GFX_evac_239_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_240_ok"
+			position = { x = 246 y = 266 }
+			spriteType = "GFX_evac_240_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_240_lost"
+			position = { x = 246 y = 266 }
+			spriteType = "GFX_evac_240_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_241_ok"
+			position = { x = 180 y = 210 }
+			spriteType = "GFX_evac_241_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_241_lost"
+			position = { x = 180 y = 210 }
+			spriteType = "GFX_evac_241_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_242_ok"
+			position = { x = 188 y = 168 }
+			spriteType = "GFX_evac_242_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_242_lost"
+			position = { x = 188 y = 168 }
+			spriteType = "GFX_evac_242_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_243_ok"
+			position = { x = 192 y = 203 }
+			spriteType = "GFX_evac_243_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_243_lost"
+			position = { x = 192 y = 203 }
+			spriteType = "GFX_evac_243_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_244_ok"
+			position = { x = 192 y = 104 }
+			spriteType = "GFX_evac_244_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_244_lost"
+			position = { x = 192 y = 104 }
+			spriteType = "GFX_evac_244_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_245_ok"
+			position = { x = 302 y = 293 }
+			spriteType = "GFX_evac_245_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_245_lost"
+			position = { x = 302 y = 293 }
+			spriteType = "GFX_evac_245_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_246_ok"
+			position = { x = 220 y = 156 }
+			spriteType = "GFX_evac_246_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_246_lost"
+			position = { x = 220 y = 156 }
+			spriteType = "GFX_evac_246_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_247_ok"
+			position = { x = 234 y = 136 }
+			spriteType = "GFX_evac_247_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_247_lost"
+			position = { x = 234 y = 136 }
+			spriteType = "GFX_evac_247_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_248_ok"
+			position = { x = 271 y = 128 }
+			spriteType = "GFX_evac_248_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_248_lost"
+			position = { x = 271 y = 128 }
+			spriteType = "GFX_evac_248_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_252_ok"
+			position = { x = 328 y = 150 }
+			spriteType = "GFX_evac_252_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_252_lost"
+			position = { x = 328 y = 150 }
+			spriteType = "GFX_evac_252_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_253_ok"
+			position = { x = 281 y = 151 }
+			spriteType = "GFX_evac_253_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_253_lost"
+			position = { x = 281 y = 151 }
+			spriteType = "GFX_evac_253_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_254_ok"
+			position = { x = 285 y = 197 }
+			spriteType = "GFX_evac_254_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_254_lost"
+			position = { x = 285 y = 197 }
+			spriteType = "GFX_evac_254_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_255_ok"
+			position = { x = 332 y = 206 }
+			spriteType = "GFX_evac_255_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_255_lost"
+			position = { x = 332 y = 206 }
+			spriteType = "GFX_evac_255_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_257_ok"
+			position = { x = 304 y = 224 }
+			spriteType = "GFX_evac_257_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_257_lost"
+			position = { x = 304 y = 224 }
+			spriteType = "GFX_evac_257_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_258_ok"
+			position = { x = 276 y = 228 }
+			spriteType = "GFX_evac_258_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_258_lost"
+			position = { x = 276 y = 228 }
+			spriteType = "GFX_evac_258_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_259_ok"
+			position = { x = 209 y = 280 }
+			spriteType = "GFX_evac_259_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_259_lost"
+			position = { x = 209 y = 280 }
+			spriteType = "GFX_evac_259_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_260_ok"
+			position = { x = 282 y = 255 }
+			spriteType = "GFX_evac_260_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_260_lost"
+			position = { x = 282 y = 255 }
+			spriteType = "GFX_evac_260_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_263_ok"
+			position = { x = 172 y = 126 }
+			spriteType = "GFX_evac_263_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_263_lost"
+			position = { x = 172 y = 126 }
+			spriteType = "GFX_evac_263_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_264_ok"
+			position = { x = 210 y = 88 }
+			spriteType = "GFX_evac_264_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_264_lost"
+			position = { x = 210 y = 88 }
+			spriteType = "GFX_evac_264_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_265_ok"
+			position = { x = 319 y = 269 }
+			spriteType = "GFX_evac_265_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_265_lost"
+			position = { x = 319 y = 269 }
+			spriteType = "GFX_evac_265_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_780_ok"
+			position = { x = 98 y = 191 }
+			spriteType = "GFX_evac_780_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_780_lost"
+			position = { x = 98 y = 191 }
+			spriteType = "GFX_evac_780_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_804_ok"
+			position = { x = 100 y = 156 }
+			spriteType = "GFX_evac_804_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_804_lost"
+			position = { x = 100 y = 156 }
+			spriteType = "GFX_evac_804_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_805_ok"
+			position = { x = 84 y = 156 }
+			spriteType = "GFX_evac_805_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_805_lost"
+			position = { x = 84 y = 156 }
+			spriteType = "GFX_evac_805_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_806_ok"
+			position = { x = 122 y = 153 }
+			spriteType = "GFX_evac_806_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_806_lost"
+			position = { x = 122 y = 153 }
+			spriteType = "GFX_evac_806_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_807_ok"
+			position = { x = 74 y = 126 }
+			spriteType = "GFX_evac_807_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_807_lost"
+			position = { x = 74 y = 126 }
+			spriteType = "GFX_evac_807_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_808_ok"
+			position = { x = 90 y = 114 }
+			spriteType = "GFX_evac_808_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_808_lost"
+			position = { x = 90 y = 114 }
+			spriteType = "GFX_evac_808_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_809_ok"
+			position = { x = 120 y = 115 }
+			spriteType = "GFX_evac_809_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_809_lost"
+			position = { x = 120 y = 115 }
+			spriteType = "GFX_evac_809_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_810_ok"
+			position = { x = 83 y = 199 }
+			spriteType = "GFX_evac_810_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_810_lost"
+			position = { x = 83 y = 199 }
+			spriteType = "GFX_evac_810_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_811_ok"
+			position = { x = 86 y = 174 }
+			spriteType = "GFX_evac_811_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_811_lost"
+			position = { x = 86 y = 174 }
+			spriteType = "GFX_evac_811_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_817_ok"
+			position = { x = 369 y = 390 }
+			spriteType = "GFX_evac_817_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_817_lost"
+			position = { x = 369 y = 390 }
+			spriteType = "GFX_evac_817_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_822_ok"
+			position = { x = 308 y = 390 }
+			spriteType = "GFX_evac_822_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_822_lost"
+			position = { x = 308 y = 390 }
+			spriteType = "GFX_evac_822_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_823_ok"
+			position = { x = 336 y = 388 }
+			spriteType = "GFX_evac_823_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_823_lost"
+			position = { x = 336 y = 388 }
+			spriteType = "GFX_evac_823_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_824_ok"
+			position = { x = 357 y = 387 }
+			spriteType = "GFX_evac_824_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_824_lost"
+			position = { x = 357 y = 387 }
+			spriteType = "GFX_evac_824_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_825_ok"
+			position = { x = 365 y = 260 }
+			spriteType = "GFX_evac_825_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_825_lost"
+			position = { x = 365 y = 260 }
+			spriteType = "GFX_evac_825_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_830_ok"
+			position = { x = 159 y = 316 }
+			spriteType = "GFX_evac_830_ok"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_state_830_lost"
+			position = { x = 159 y = 316 }
+			spriteType = "GFX_evac_830_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "evac_seams"
+			position = { x = 83 y = 117 }
+			spriteType = "GFX_ORDL_evac_seams"
+			scale = 0.25
+		}
+		buttonType = {
+			name = "btn_tag_S1"
+			position = { x = 65 y = 157 }
+			size = { x = 180 y = 24 }
+			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+			pdx_tooltip = "ORDL_EVAC_REGION_TT_S1"
+			clicksound = click_default
+		}
+		instantTextBoxType = {
+			name = "lbl_S1_idle"
+			position = { x = 81 y = 157 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S1_IDLE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S1_act"
+			position = { x = 81 y = 157 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S1_ACT"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S1_done"
+			position = { x = 81 y = 157 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S1_DONE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S1_lost"
+			position = { x = 81 y = 157 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S1_LOST"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "btn_tag_S2"
+			position = { x = 97 y = 214 }
+			size = { x = 180 y = 24 }
+			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+			pdx_tooltip = "ORDL_EVAC_REGION_TT_S2"
+			clicksound = click_default
+		}
+		instantTextBoxType = {
+			name = "lbl_S2_idle"
+			position = { x = 113 y = 214 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S2_IDLE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S2_act"
+			position = { x = 113 y = 214 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S2_ACT"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S2_done"
+			position = { x = 113 y = 214 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S2_DONE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S2_lost"
+			position = { x = 113 y = 214 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S2_LOST"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "btn_tag_S3"
+			position = { x = 76 y = 280 }
+			size = { x = 180 y = 24 }
+			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+			pdx_tooltip = "ORDL_EVAC_REGION_TT_S3"
+			clicksound = click_default
+		}
+		instantTextBoxType = {
+			name = "lbl_S3_idle"
+			position = { x = 92 y = 280 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S3_IDLE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S3_act"
+			position = { x = 92 y = 280 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S3_ACT"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S3_done"
+			position = { x = 92 y = 280 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S3_DONE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S3_lost"
+			position = { x = 92 y = 280 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S3_LOST"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "btn_tag_S4"
+			position = { x = 119 y = 330 }
+			size = { x = 180 y = 24 }
+			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+			pdx_tooltip = "ORDL_EVAC_REGION_TT_S4"
+			clicksound = click_default
+		}
+		instantTextBoxType = {
+			name = "lbl_S4_idle"
+			position = { x = 135 y = 330 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S4_IDLE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S4_act"
+			position = { x = 135 y = 330 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S4_ACT"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S4_done"
+			position = { x = 135 y = 330 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S4_DONE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S4_lost"
+			position = { x = 135 y = 330 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S4_LOST"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "btn_tag_S5"
+			position = { x = 158 y = 111 }
+			size = { x = 180 y = 24 }
+			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+			pdx_tooltip = "ORDL_EVAC_REGION_TT_S5"
+			clicksound = click_default
+		}
+		instantTextBoxType = {
+			name = "lbl_S5_idle"
+			position = { x = 174 y = 111 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S5_IDLE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S5_act"
+			position = { x = 174 y = 111 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S5_ACT"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S5_done"
+			position = { x = 174 y = 111 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S5_DONE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S5_lost"
+			position = { x = 174 y = 111 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S5_LOST"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "btn_tag_S6"
+			position = { x = 257 y = 221 }
+			size = { x = 180 y = 24 }
+			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+			pdx_tooltip = "ORDL_EVAC_REGION_TT_S6"
+			clicksound = click_default
+		}
+		instantTextBoxType = {
+			name = "lbl_S6_idle"
+			position = { x = 273 y = 221 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S6_IDLE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S6_act"
+			position = { x = 273 y = 221 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S6_ACT"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S6_done"
+			position = { x = 273 y = 221 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S6_DONE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S6_lost"
+			position = { x = 273 y = 221 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S6_LOST"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "btn_tag_S7"
+			position = { x = 303 y = 340 }
+			size = { x = 180 y = 24 }
+			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+			pdx_tooltip = "ORDL_EVAC_REGION_TT_S7"
+			clicksound = click_default
+		}
+		instantTextBoxType = {
+			name = "lbl_S7_idle"
+			position = { x = 319 y = 340 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S7_IDLE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S7_act"
+			position = { x = 319 y = 340 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S7_ACT"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S7_done"
+			position = { x = 319 y = 340 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S7_DONE"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "lbl_S7_lost"
+			position = { x = 319 y = 340 }
+			font = "hoi_18mbs"
+			text = "ORDL_EVAC_LBL_S7_LOST"
+			maxWidth = 200
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		containerWindowType = {
+			name = "region_box_S1"
+			position = { x = 4 y = 542 }
+			size = { width = 120 height = 22 }
+			background = {
+				name = "plaque_S1"
+				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			buttonType = {
+				name = "btn_region_S1"
+				position = { x = 0 y = 0 }
+				size = { x = 120 y = 22 }
+				quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+				pdx_tooltip = "ORDL_EVAC_REGION_TT_S1"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "lbl_box_S1"
+				position = { x = 0 y = 2 }
+				font = "hoi_16mbs"
+				text = "ORDL_EVAC_LBL_S1"
+				maxWidth = 120
+				maxHeight = 18
+				format = center
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "region_box_S2"
+			position = { x = 128 y = 542 }
+			size = { width = 120 height = 22 }
+			background = {
+				name = "plaque_S2"
+				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			buttonType = {
+				name = "btn_region_S2"
+				position = { x = 0 y = 0 }
+				size = { x = 120 y = 22 }
+				quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+				pdx_tooltip = "ORDL_EVAC_REGION_TT_S2"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "lbl_box_S2"
+				position = { x = 0 y = 2 }
+				font = "hoi_16mbs"
+				text = "ORDL_EVAC_LBL_S2"
+				maxWidth = 120
+				maxHeight = 18
+				format = center
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "region_box_S3"
+			position = { x = 252 y = 542 }
+			size = { width = 120 height = 22 }
+			background = {
+				name = "plaque_S3"
+				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			buttonType = {
+				name = "btn_region_S3"
+				position = { x = 0 y = 0 }
+				size = { x = 120 y = 22 }
+				quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+				pdx_tooltip = "ORDL_EVAC_REGION_TT_S3"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "lbl_box_S3"
+				position = { x = 0 y = 2 }
+				font = "hoi_16mbs"
+				text = "ORDL_EVAC_LBL_S3"
+				maxWidth = 120
+				maxHeight = 18
+				format = center
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "region_box_S4"
+			position = { x = 376 y = 542 }
+			size = { width = 120 height = 22 }
+			background = {
+				name = "plaque_S4"
+				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			buttonType = {
+				name = "btn_region_S4"
+				position = { x = 0 y = 0 }
+				size = { x = 120 y = 22 }
+				quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+				pdx_tooltip = "ORDL_EVAC_REGION_TT_S4"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "lbl_box_S4"
+				position = { x = 0 y = 2 }
+				font = "hoi_16mbs"
+				text = "ORDL_EVAC_LBL_S4"
+				maxWidth = 120
+				maxHeight = 18
+				format = center
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "region_box_S5"
+			position = { x = 4 y = 566 }
+			size = { width = 120 height = 22 }
+			background = {
+				name = "plaque_S5"
+				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			buttonType = {
+				name = "btn_region_S5"
+				position = { x = 0 y = 0 }
+				size = { x = 120 y = 22 }
+				quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+				pdx_tooltip = "ORDL_EVAC_REGION_TT_S5"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "lbl_box_S5"
+				position = { x = 0 y = 2 }
+				font = "hoi_16mbs"
+				text = "ORDL_EVAC_LBL_S5"
+				maxWidth = 120
+				maxHeight = 18
+				format = center
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "region_box_S6"
+			position = { x = 128 y = 566 }
+			size = { width = 120 height = 22 }
+			background = {
+				name = "plaque_S6"
+				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			buttonType = {
+				name = "btn_region_S6"
+				position = { x = 0 y = 0 }
+				size = { x = 120 y = 22 }
+				quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+				pdx_tooltip = "ORDL_EVAC_REGION_TT_S6"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "lbl_box_S6"
+				position = { x = 0 y = 2 }
+				font = "hoi_16mbs"
+				text = "ORDL_EVAC_LBL_S6"
+				maxWidth = 120
+				maxHeight = 18
+				format = center
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "region_box_S7"
+			position = { x = 252 y = 566 }
+			size = { width = 120 height = 22 }
+			background = {
+				name = "plaque_S7"
+				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			buttonType = {
+				name = "btn_region_S7"
+				position = { x = 0 y = 0 }
+				size = { x = 120 y = 22 }
+				quadTextureSprite = "GFX_ORDL_evac_blank_btn"
+				pdx_tooltip = "ORDL_EVAC_REGION_TT_S7"
+				clicksound = click_default
+			}
+			instantTextBoxType = {
+				name = "lbl_box_S7"
+				position = { x = 0 y = 2 }
+				font = "hoi_16mbs"
+				text = "ORDL_EVAC_LBL_S7"
+				maxWidth = 120
+				maxHeight = 18
+				format = center
+				alwaystransparent = yes
+			}
+		}
+				instantTextBoxType = {
+			name = "evac_line_1"
+			position = { x = 8 y = 596 }
+			font = "hoi_16mbs"
+			text = "ORDL_EVAC_ACTIVE_1"
+			maxWidth = 484
+			maxHeight = 16
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "evac_line_2"
+			position = { x = 8 y = 614 }
+			font = "hoi_16mbs"
+			text = "ORDL_EVAC_ACTIVE_2"
+			maxWidth = 484
+			maxHeight = 16
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "evac_line_3"
+			position = { x = 8 y = 632 }
+			font = "hoi_16mbs"
+			text = "ORDL_EVAC_STATUS_LINE"
+			maxWidth = 484
+			maxHeight = 16
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "evac_line_4"
+			position = { x = 8 y = 650 }
+			font = "hoi_16mbs"
+			text = "ORDL_EVAC_LEGEND"
+			maxWidth = 484
+			maxHeight = 16
+			format = left
+			alwaystransparent = yes
+		}
+	}
+}

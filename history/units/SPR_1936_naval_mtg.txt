@@ -1,0 +1,18 @@
+
+units= {
+
+	
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Under Construction Notes ###
+	# CA: ARE Canarias (Canarias class, comm. 1-Oct, 1936), ARE Baleares (Canarias class, comm. 28-Dec, 1936)
+	# DD: Júpiter class (x2) (minelayers) ("ARE Júpiter" "ARE Vulcano")
+	# DD: Churucca class (x6) ("ARE Gravina" "ARE Escaño" "ARE Císcar" "ARE Jorge Juan" "ARE Ulloa")
+}

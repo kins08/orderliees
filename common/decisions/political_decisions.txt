@@ -1,0 +1,1100 @@
+
+
+political_actions = {
+	give_refuge_ger = {
+
+		icon = generic_research
+
+        allowed = {
+            OR = {
+                original_tag = ENG
+                original_tag = USA
+                original_tag = FRA
+                original_tag = CAN
+                original_tag = TUR
+            }
+        }
+
+		visible = {
+            NOT = { has_government = fascism }
+            NOT = { has_government = communism }
+			is_government_in_exile = no
+		}
+
+        cost = 100
+        fire_only_once = yes
+        
+        days_remove = -1
+
+        available = {
+            GER = { NOT = { has_government = ROOT } }
+        }
+
+        modifier = {
+            special_project_speed_factor = 0.02
+            research_speed_factor = 0.05
+            stability_factor = -0.05
+        }
+
+        remove_trigger = {
+            OR = {
+                GER = { has_government = ROOT }
+                AND = {
+                    country_exists = WGR
+                    WGR = { has_government = ROOT }
+                }
+                AND = {
+                    country_exists = DDR
+                    DDR = { has_government = ROOT }
+                }
+            }
+        }
+
+        ai_will_do = {
+			base = 1
+			modifier = {
+				tag = ENG
+				has_war = no
+				date < 1937.3.1
+				factor = 0
+			}
+			modifier = {
+				tag = FRA
+				has_war = no
+				has_government = democratic
+				factor = 5
+			}
+		}
+    }
+    give_refuge_ita = {
+
+    	icon = generic_research
+
+        allowed = {
+            OR = {
+                original_tag = ENG
+                original_tag = USA
+                original_tag = FRA
+                original_tag = CAN
+                original_tag = TUR
+            }
+		}
+
+		visible = {
+            NOT = { has_government = fascism }
+            NOT = { has_government = communism }
+			is_government_in_exile = no
+        }
+        cost = 100
+        fire_only_once = yes
+        days_remove = -1
+
+        available = {
+            ITA = { NOT = { has_government = ROOT } }
+        }
+
+        modifier = {
+        	special_project_speed_factor = 0.02
+            research_speed_factor = 0.05
+            stability_factor = -0.05
+        }
+
+        remove_trigger = {
+            ITA = { has_government = ROOT }
+        }
+        ai_will_do = {
+			base = 1
+			modifier = {
+				tag = ENG
+				has_war = no
+				date < 1937.3.1
+				factor = 0
+			}
+		}
+    }
+
+    anti_fascist_raids = {
+
+    	icon = generic_civil_support
+
+    	visible = {
+    		OR = {
+				NOT = { has_government = fascism }
+				AND = {
+					original_tag = RAJ
+					has_idea = idea_RAJ_kingmaker	
+				}
+
+    			AND = {
+    				original_tag = SIA
+    				has_dlc = "Thunder at Our Gates"
+    			}
+			}
+			IF = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					original_tag = AUS
+				}
+				NOT = { always = no }
+			}
+		}
+
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							has_dlc = "Thunder at Our Gates"
+							original_tag = SIA
+						}
+					}
+				}
+            	fascism > 0.1
+			}
+			if = {
+				limit = {
+					has_aat = yes 
+					original_tag = NOR 
+				}
+				NOT = { 
+					has_idea = NOR_anti_communist_sentiment_ns
+				}
+			}
+        }
+	
+		modifier = {
+			fascism_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 120
+		cost = 50
+
+		cancel_trigger = {
+			if = {
+				limit = {
+					original_tag = AUS
+				}
+				OR = {
+					always = no
+					always = no
+					always = no
+				}
+			}
+			else = {
+				always = no
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				tag = AUS
+				fascism > 0.45
+				is_historical_focus_on = no
+			}
+			modifier = {
+				add = 10
+				tag = AUS
+				fascism > 0.45
+				GER = { always = no }
+			}
+			modifier = {
+				add = 10
+				tag = AUS
+				fascism > 0.45
+				always = no
+			}
+			modifier = {
+				add = 50
+				tag = AUS
+				has_dlc = "Gotterdammerung"
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = AUS_ANTI_ANSCLUSS_STRESS
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+			modifier = {
+				add = 10
+				original_tag = ITA
+				always = no
+				OR = {
+					ITA_is_monarchist_ai = yes
+					ITA_is_christian_democracy_ai = yes
+				}
+			}
+			modifier = {
+				add = 40
+				original_tag = ITA
+				always = no
+			}
+
+			modifier = {
+				add = 500
+				original_tag = SIA
+				has_idea = idea_SIA_civilian_rebellious
+			}
+
+			modifier = {
+				add = 500
+				original_tag = SIA 
+				NOT = { always = no }
+				always = no
+				NOT = { has_idea = idea_SIA_civilian_full_support }
+			}
+		}
+    }
+
+    anti_democratic_raids = {
+
+    	icon = generic_civil_support
+
+    	visible = {
+    		OR = {
+				NOT = { has_government = democratic }
+    			AND = {
+    				original_tag = RAJ
+    				has_idea = idea_RAJ_kingmaker	
+    			}
+
+    			AND = {
+    				original_tag = SIA
+    				has_dlc = "Thunder at Our Gates"
+    			}
+			}
+		}
+
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							has_dlc = "Thunder at Our Gates"
+							original_tag = SIA
+						}
+					}
+				}
+            	democratic > 0.1
+			}
+            if = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+        }
+	
+		modifier = {
+			democratic_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 120
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		ai_will_do = {
+			base = 0
+
+			modifier = {
+				add = 500
+				original_tag = SIA
+				has_idea = idea_SIA_military_rebellious
+			}
+		}
+    }
+
+    anti_communist_raids = {
+
+    	icon = generic_civil_support
+
+    	visible = {
+    		OR = {
+				NOT = { has_government = communism }
+    			AND = {
+    				original_tag = RAJ
+    				has_idea = idea_RAJ_kingmaker	
+    			}
+			}
+		}
+
+		available = {
+            communism > 0.1
+        }
+	
+		modifier = {
+			communism_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 120
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		remove_effect = {
+		}
+		
+		ai_will_do = {
+			base = 0
+			modifier = { # If they have nothing else big to spend pp on, and this is avaiable, Monarchist Germany should start work on removing communist support. 
+				add = 10
+				original_tag = GER
+				OR = {
+					has_country_flag = GER_AI_RANDOM_KAISER
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = KAISER
+					}
+				}
+			}
+			modifier = { 
+				add = 5
+				has_dlc = "No Compromise, No Surrender"
+				original_tag = CHI
+				communism > 0.1
+			}
+
+		}
+    }
+
+    anti_neutrality_raids = {
+
+    	icon = generic_civil_support
+
+    	allowed = {
+    	}
+
+    	visible = {
+    		OR = { # has_focus_tree is not allwoed in the allowed trigger
+    			has_focus_tree = austro_hungarian_releasable_focus
+    			has_focus_tree = generic_focus
+    			has_idea = idea_RAJ_kingmaker
+    		}
+    		OR = {
+				NOT = { has_government = neutrality }
+    			original_tag = RAJ
+			}
+		}
+
+		available = {
+            neutrality > 0.1
+            if = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+        }
+	
+		modifier = {
+			neutrality_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 120
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		remove_effect = {
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }
+    
+	ban_fascist_party = {
+
+		icon = generic_civil_support
+
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Graveyard of Empires"
+					original_tag = RAJ
+					has_idea = ENG_dominion_fascist_propaganda
+					
+				}
+			}
+			else = {
+				fascism < 0.2
+			}
+			IF = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+			IF = {
+				limit = {
+					has_aat = yes 
+					original_tag = NOR 
+				}
+				NOT = {
+					has_idea = NOR_anti_communist_sentiment_ns
+				}
+			}
+			IF = {
+				limit = {
+					has_dlc = "Trial of Allegiance"
+					original_tag = CHL
+				}
+				custom_trigger_tooltip = {
+					tooltip = CHL_can_not_have_anarchy_tt
+					NOT = {
+						OR = {
+							has_idea = idea_CHL_near_anarchic_society
+							has_idea = idea_CHL_near_anarchic_society_2
+							has_idea = idea_CHL_near_anarchic_society_3
+							has_idea = idea_CHL_near_anarchic_society_4
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					original_tag = RAJ
+					has_dlc = "Graveyard of Empires"
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_government = fascism }
+			fascism > 0
+			IF = { 
+				limit = { 
+					has_dlc = "Battle for the Bosporus"	
+				}
+				NOT = { original_tag = GRE }
+			}
+
+			IF = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+					original_tag = AUS
+				}
+				NOT = { always = no }
+			}
+
+			IF = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					original_tag = AST
+				}
+				NOT = { has_completed_focus = AST_australia_first }
+			}
+		}
+
+		remove_trigger = {
+			hidden_trigger = {
+				OR = {
+					has_government = fascism
+					has_country_flag = DEN_allow_fascism_flag
+				}
+			}
+		}
+	
+		modifier = {
+			fascism_drift = -0.05
+		}
+	
+		days_remove = -1
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@fascism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+				set_country_flag = banned_fascism_flag
+			}
+			remove_fascist_spirits_effect = yes
+			custom_effect_tooltip = ban_fascist_party_tt
+			add_stability = ban_ideology_var
+			if = {
+				limit = {
+					has_idea = ENG_dominion_fascist_propaganda
+				}
+				remove_ideas = ENG_dominion_fascist_propaganda
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 50
+				tag = AUS
+				has_dlc = "Gotterdammerung"
+				OR = {
+					has_country_flag = AUS_AI_RANDOM_ANTI_ANSCLUSS_STRESS
+					has_game_rule = {
+						rule = AUS_AI_BEHAVIOR
+						option = AUS_ANTI_ANSCLUSS_STRESS
+					}
+				}
+			}
+		}
+	}
+
+	ban_democratic_party = {
+
+		icon = generic_civil_support
+
+		available = {
+			democratic < 0.2
+			IF = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_government = democratic }
+			democratic > 0
+			IF = { 
+				limit = { 
+					has_dlc = "Battle for the Bosporus"	
+				}
+				NOT = { original_tag = GRE }
+			}
+			IF = {
+				limit = {
+					has_dlc = "Trial of Allegiance"
+				}
+				NOT = { original_tag = CHL }
+			}
+		}
+
+		remove_trigger = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = DEN_allow_democratic_flag
+					has_government = democratic
+				}
+			}
+		}
+	
+		modifier = {
+			democratic_drift = -0.05
+		}
+	
+		days_remove = -1
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@democratic
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+				set_country_flag = banned_democratic_flag				
+			}
+			remove_democratic_spirits_effect = yes 
+			custom_effect_tooltip = ban_democratic_party_tt
+			add_stability = ban_ideology_var
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	ban_communist_party = {
+
+		icon = generic_civil_support
+
+		available = {
+			communism < 0.2
+			IF = {
+				limit = {
+					has_dlc = "Trial of Allegiance"
+					original_tag = CHL
+				}
+				custom_trigger_tooltip = {
+					tooltip = CHL_can_not_have_anarchy_tt
+					NOT = {
+						OR = {
+							has_idea = idea_CHL_near_anarchic_society
+							has_idea = idea_CHL_near_anarchic_society_2
+							has_idea = idea_CHL_near_anarchic_society_3
+							has_idea = idea_CHL_near_anarchic_society_4
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_government = communism }
+			communism > 0
+			IF = { 
+				limit = { 
+					has_dlc = "Battle for the Bosporus"	
+				}
+				NOT = { original_tag = GRE }
+			}
+
+			IF = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					original_tag = AST
+				}
+				NOT = { has_completed_focus = AST_against_war_and_fascism }
+			}
+		}
+
+		remove_trigger = {
+			hidden_trigger = {
+				OR = {
+					has_government = communism
+					has_country_flag = DEN_allow_communism_flag
+				}
+			}
+		}
+	
+		modifier = {
+			communism_drift = -0.05
+		}
+	
+		days_remove = -1
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@communism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+				set_country_flag = banned_communism_flag
+				if = {#NSB -> If country has Trotskyist Revolutionary Uprisings NS, swap it with the weakened version
+					limit = {
+						has_idea = SOV_trotskyist_revolutionary_agitation
+					}
+					swap_ideas = {
+						remove_idea = SOV_trotskyist_revolutionary_agitation
+						add_idea = SOV_trotskyist_revolutionary_agitation_weakened
+					}
+				}
+			}
+			remove_communist_spirits_effect = yes
+			custom_effect_tooltip = ban_communist_party_tt
+			add_stability = ban_ideology_var
+		}
+		
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2000
+				original_tag = FIN
+				FIN_is_historical_ai = yes
+				OR = {
+					has_idea = communist_pressure
+					communism > 0.08
+				}
+				NOT = { has_completed_focus = FIN_the_lone_wolf }
+			}
+		}
+	}
+
+	ban_neutrality_party = {
+
+		icon = generic_civil_support
+
+		allowed = {	
+		}
+
+		visible = {
+			OR = { # has_focus_tree is not allwoed in the allowed trigger
+				has_focus_tree = austro_hungarian_releasable_focus
+				has_focus_tree = generic_focus
+			}
+			NOT = { has_government = neutrality }
+			neutrality > 0
+		}
+
+		available = {
+			neutrality < 0.2
+			IF = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+		}
+
+		remove_trigger = {
+		}
+	
+		modifier = {
+			neutrality_drift = -0.05
+		}
+	
+		days_remove = -1
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@neutrality
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+				set_country_flag = banned_neutrality_flag
+			}
+			custom_effect_tooltip = ban_neutrality_party_tt
+			add_stability = ban_ideology_var
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	institute_press_censorship_fascist_state = {
+
+		icon = generic_political_discourse
+
+		available = {
+			if = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Battle for the Bosporus"
+					original_tag = BUL
+				}
+				NOT = {
+					has_country_flag = {
+						flag = BUL_freedom_of_press_flag
+						days < 365
+					}
+					focus_progress = {
+						focus = BUL_freedom_of_press
+						progress > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_government = fascism
+			if = { 
+				limit = { 
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = { original_tag = GRE }
+			}
+		}
+	
+		modifier = {
+			communism_drift = -0.01
+			fascism_drift = 0.03
+			democratic_drift = -0.01
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 360
+		cost = 150
+	
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	institute_press_censorship_democratic_state = {
+
+		icon = generic_political_discourse
+
+		available = {
+			if = {
+				limit = {
+					tag = TUR
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = {
+					always = no
+				}
+			}
+			if = {
+				limit = {
+					original_tag = BUL
+					has_dlc = "Battle for the Bosporus"				
+				}
+				NOT = {
+					has_country_flag = {
+						flag = BUL_freedom_of_press_flag
+						days < 365
+					}
+					focus_progress = {
+						focus = BUL_freedom_of_press
+						progress > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_government = democratic
+			if = { 
+				limit = { 
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = { original_tag = GRE }
+			}
+		}
+		
+		modifier = {
+			communism_drift = -0.01
+			fascism_drift = -0.01
+			democratic_drift = 0.03
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 360
+		cost = 150
+	
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	institute_press_censorship_communist_state = {
+
+		icon = generic_political_discourse
+
+		available = {
+			if = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+			if = {
+				limit = {
+					original_tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = {
+					has_country_flag = {
+						flag = BUL_freedom_of_press_flag
+						days < 365
+					}
+					focus_progress = {
+						focus = BUL_freedom_of_press
+						progress > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_government = communism
+			if = { 
+				limit = { 
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = { original_tag = GRE }
+			}
+		}
+	
+		modifier = {
+			communism_drift = 0.03
+			fascism_drift = -0.01
+			democratic_drift = -0.01
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 360
+		cost = 150
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	institute_press_censorship_neutrality_state = {
+
+		icon = generic_political_discourse
+
+		available = {
+			if = {
+				limit = {
+					tag = SPR
+				}
+				NOT = {
+					has_idea = SPR_political_violence
+				}
+			}
+			if = {
+				limit = {
+					tag = TUR
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = {
+					always = no
+				}
+			}
+			if = {
+				limit = {
+					original_tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = {
+					has_country_flag = {
+						flag = BUL_freedom_of_press_flag
+						days < 365
+					}
+					focus_progress = {
+						focus = BUL_freedom_of_press
+						progress > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_government = neutrality
+			if = { 
+				limit = { 
+					has_dlc = "Battle for the Bosporus"
+				}
+				NOT = { original_tag = GRE }
+			}
+		}
+	
+		modifier = {
+			communism_drift = -0.01
+			fascism_drift = -0.01
+			democratic_drift = -0.01
+			neutrality_drift = 0.03
+		}
+	
+		days_remove = 360
+		cost = 150
+		
+		ai_will_do = {
+			base = 0
+			modifier = { #Help Historical AI Finland
+				add = 10
+				has_dlc = "Arms Against Tyranny"
+				original_tag = FIN
+				FIN_is_historical_ai = yes
+				has_government = neutrality
+				NOT = { has_completed_focus = FIN_the_lone_wolf }
+				neutrality < 0.85
+			}
+			modifier = {
+				add = 1
+				has_dlc = "No Compromise, No Surrender"
+				original_tag = CHI
+				NOT = { always = no }
+				fascism > 0.1
+			}
+			modifier = {
+				add = 1.5
+				has_dlc = "No Compromise, No Surrender"
+				original_tag = CHI
+				NOT = { always = no }
+				communism > 0.1
+			}
+			modifier = {
+				add = 2.5
+				has_dlc = "No Compromise, No Surrender"
+				original_tag = CHI
+				NOT = { always = no }
+				communism > 0.25
+			}
+		}
+	}
+}

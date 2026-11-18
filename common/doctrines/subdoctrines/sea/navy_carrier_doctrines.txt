@@ -1,0 +1,188 @@
+carrier_battlegroups = {
+    track = carriers
+    name = SUBDOCTRINE_CARRIER_BATTLEGROUPS
+    description = SUBDOCTRINE_CARRIER_BATTLEGROUPS_DESC
+    icon = GFX_doctrine_carrier_battlegroups_medium
+
+    xp_cost = 0
+    xp_type = navy
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 50
+            original_tag = USA
+        }
+    }
+
+    available = {
+        always = yes
+    }
+
+    # EFFECTS
+    port_strike = 0.35
+    sortie_efficiency = 0.25
+    carrier_capacity_penalty_reduction = -0.25
+    navy_carrier_air_agility_factor = 0.05
+
+    rewards = {
+        long_distance_logistics = {
+            navy_max_range_factor = 0.10
+            carrier = {
+                sub_detection = 0.25
+            }
+        }
+        long_range_target_acquisition = {
+            navy_carrier_air_targetting_factor = 0.15
+        }
+        personnel_management = {
+            carrier = {
+                max_organisation = 45
+            }
+        }
+        dedicated_record_keeping = {
+            carrier = {
+                carrier_surface_detection = 0.20
+                max_organisation = 30
+            }
+        }
+        floating_fortresses = {
+            carrier = {
+                anti_air_attack = 0.35
+                max_organisation = 30
+            }
+            sortie_efficiency = 0.20
+        }
+    }
+}
+
+floating_airfields = {
+    track = carriers
+    name = SUBDOCTRINE_CARRIER_AIRFIELDS
+    description = SUBDOCTRINE_CARRIER_AIRFIELDS_DESC
+    icon = GFX_doctrine_floating_airfield_medium
+
+    xp_cost = 0
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 25
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+            }
+        }
+        modifier = {
+            factor = 2
+            is_major = yes 
+        }
+        modifier = {
+            factor = 0
+            is_major = no 
+        }
+    }
+
+    # EFFECTS
+    sortie_efficiency = 0.20
+    carrier = {
+        max_organisation = 35
+    }
+    navy_carrier_air_targetting_factor = 0.05
+    
+    rewards = {
+        traffic_control_systems = {
+            carrier_capacity_penalty_reduction = -0.20
+            carrier = {
+                sub_detection = 0.25
+                max_organisation = 35
+            }
+        }
+        floating_city = {
+            carrier = {
+                max_organisation = 35
+            }
+        }
+        veteran_pilots = {
+            navy_carrier_air_attack_factor = 0.15
+            sortie_efficiency = 0.10
+        }
+        night_fighting_expertise = {
+            air_carrier_night_penalty_reduction_factor = 0.15
+        }
+        rough_weather_procedures = {
+            equipment_bonus = {
+                carrier = {
+                    naval_weather_penalty_factor = -0.25
+                }
+            }
+        }
+    }
+}
+
+massed_carrier_fleet = {
+    track = carriers
+    name = SUBDOCTRINE_MASSED_CARRIER_FLEET
+    description = SUBDOCTRINE_MASSED_CARRIER_FLEET_DESC
+    icon = GFX_doctrine_carrier_primacy_medium
+
+    xp_cost = 0
+    xp_type = navy
+
+    ai_will_do = { 
+        base = 1
+        modifier = {
+            factor = 50
+            original_tag = JAP
+        }
+    }
+    available = {
+        always = yes
+    }
+
+    # EFFECTS
+    naval_morale_factor = 0.10
+    carrier = {
+        max_organisation = 35
+    }
+    convoy_raiding_efficiency_factor = 0.15
+
+    rewards = {
+        deep_operative_support = {
+            carrier = {
+                reliability = 0.10
+                naval_range = 0.20
+            }
+        }
+        carrier_independence = {
+            carrier = {
+                max_organisation = 35
+                naval_speed = 0.05
+            }
+            navy_carrier_air_targetting_factor = 0.10
+        }
+        crew_shifts = {
+            sortie_efficiency = 0.30
+            carrier_sortie_hours_delay = -2
+        }
+        efficient_rearming = {
+            carrier = {
+                supply_consumption = -0.20
+                fuel_consumption = -0.10
+            }
+        }
+        unceasing_airpower = {
+            carrier_traffic = 0.30
+            carrier_night_traffic = 0.30
+            carrier = {
+                anti_air_attack = 0.20
+                max_organisation = 35
+            }
+        }
+    }
+}

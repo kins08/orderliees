@@ -1,0 +1,221 @@
+add_namespace = ordl_peace
+
+# Axis dominance in North Africa
+news_event = {
+	id = ordl_peace.1
+	title = ordl_peace.1.t
+	desc = ordl_peace.1.d
+	picture = GFX_news_event_generic_panzer_attack
+
+	major = yes
+	fire_only_once = no
+
+	trigger = {
+		NOT = {
+			has_global_flag = AXIS_win_africa
+		}
+		446 = {
+			ordl_is_axis_state = yes
+		}
+		903 = {
+			ordl_is_axis_state = yes
+		}
+		447 = {
+			ordl_is_axis_state = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			ordl_effect_north_africa_axis_victory = yes
+		}
+	}
+
+	option = {
+		name = ordl_peace.1.a
+	}
+}
+
+# Allied recapture of North Africa
+news_event = {
+	id = ordl_peace.2
+	title = ordl_peace.2.t
+	desc = ordl_peace.2.d
+	picture = GFX_news_event_generic_anglo_iraqi_war_1
+
+	major = yes
+	fire_only_once = no
+
+	trigger = {
+		NOT = {
+			has_global_flag = ALLIES_win_africa
+		}
+		north_africa_has_been_fallen = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			ordl_effect_north_africa_allied_victory = yes
+		}
+	}
+
+	option = {
+		name = ordl_peace.2.a
+	}
+}
+
+# French equipment dissolution prior to capitulation
+news_event = {
+	id = ordl_peace.3
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		ordl_execute_french_demobilization = yes
+	}
+}
+
+# French collapse and armistice sequence
+news_event = {
+	id = ordl_peace.4
+	title = ordl_peace.4.t
+	desc = ordl_peace.4.d
+	picture = GFX_news_event_generic_anglo_iraqi_war_1
+
+	major = yes
+	hidden = yes
+	fire_only_once = no
+
+	trigger = {
+		FRA = {
+			surrender_progress > 0.41
+		}
+		NOT = {
+			has_global_flag = FRA_cap
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		ordl_execute_french_capitulation = yes
+	}
+}
+
+# Soviet annexation of Bessarabia
+news_event = {
+	id = ordl_peace.5
+	title = ordl_peace.5.t
+	desc = ordl_peace.5.d
+	picture = GFX_news_event_005
+
+	major = yes
+	fire_only_once = no
+
+	trigger = {
+		date > 1940.7.2
+		NOT = {
+			has_global_flag = bessarabia_transfered_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			ordl_execute_bessarabia_transfer = yes
+		}
+	}
+
+	option = {
+		name = ordl_peace.5.a
+	}
+}
+
+# Soviet capitulation and eastern settlement
+news_event = {
+	id = ordl_peace.6
+	title = ordl_peace.6.t
+	desc = ordl_peace.6.d
+	picture = GFX_news_event_GER_bombers
+	major = yes
+	fire_only_once = no
+
+	trigger = {
+		NOT = {
+			has_global_flag = sov_cap_flag
+		}
+		OR = {
+			SOV = {
+				surrender_progress > 0.79
+			}
+			AND = {
+				219 = { NOT = { is_controlled_by = SOV } } # Moscow
+				195 = { NOT = { is_controlled_by = SOV } } # Leningrad
+				217 = { NOT = { is_controlled_by = SOV } } # Stalingrad
+				229 = { NOT = { is_controlled_by = SOV } } # Baku
+				251 = { NOT = { is_controlled_by = SOV } } # Kuybyshev
+				249 = { NOT = { is_controlled_by = SOV } } # Sverdlovsk
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			ordl_execute_soviet_capitulation = yes
+		}
+	}
+
+	option = {
+		name = ordl_peace.6.a
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+}
+
+# Japanese capitulation and Pacific settlement
+news_event = {
+	id = ordl_peace.7
+	title = ordl_peace.7.t
+	desc = ordl_peace.7.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+
+	trigger = {
+		JAP = {
+			surrender_progress > 0.71
+		}
+		NOT = {
+			has_global_flag = JAP_capitulated
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			ordl_execute_japanese_capitulation = yes
+		}
+	}
+
+	option = {
+		name = ordl_peace.7.a
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+}

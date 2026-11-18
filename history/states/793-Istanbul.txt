@@ -1,0 +1,21 @@
+state={
+	id=793
+	name="STATE_793"
+	manpower = 1
+	state_category = city
+	resources = {
+	}
+	history={
+		
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			9833 25
+		}
+	}
+	provinces={
+		9833 11829
+	}
+	local_supplies=0.0
+}

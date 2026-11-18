@@ -1,0 +1,402 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_cat_picture_pacific_battle"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_pacific_battle.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_icon_pacific"
+		texturefile = "gfx/interface/decisions/decision_cat_icon_pacific.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_jap_poster"
+		texturefile = "gfx/interface/ideas/GFX_idea_USA_jap_poster.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_samurai_banner"
+		texturefile = "gfx/interface/ideas/GFX_idea_samurai_banner.dds"
+	}
+	spriteType = {
+		name = "GFX_pacific_gui_banner"
+		texturefile = "gfx/interface/pacific/pacific_gui_banner.png"
+	}
+	spriteType = {
+		name = "GFX_pacific_transparent_button"
+		texturefile = "gfx/interface/pacific/pacific_transparent_button.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_borneo_north_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_borneo_north_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_borneo_north_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_borneo_north_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_borneo_north_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_borneo_north_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_borneo_north_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_borneo_north_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_hawaii_bigisland_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_hawaii_bigisland_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_hawaii_bigisland_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_hawaii_bigisland_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_hawaii_bigisland_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_hawaii_bigisland_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_hawaii_bigisland_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_hawaii_bigisland_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_iwojima_south_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_iwojima_south_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_iwojima_south_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_iwojima_south_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_iwojima_south_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_iwojima_south_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_iwojima_south_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_iwojima_south_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_south_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_south_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_south_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_south_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_south_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_south_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_south_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_south_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_west_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_west_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_west_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_west_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_west_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_west_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_java_west_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_java_west_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_luzon_east_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_luzon_east_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_luzon_east_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_luzon_east_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_luzon_east_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_luzon_east_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_luzon_east_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_luzon_east_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_malaya_east_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_malaya_east_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_malaya_east_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_malaya_east_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_malaya_east_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_malaya_east_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_malaya_east_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_malaya_east_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_midway_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_midway_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_midway_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_midway_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_midway_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_midway_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_midway_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_midway_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_mindanao_east_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_mindanao_east_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_mindanao_east_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_mindanao_east_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_mindanao_east_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_mindanao_east_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_mindanao_east_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_mindanao_east_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_aus_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_aus_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_aus_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_aus_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_aus_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_aus_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_aus_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_aus_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_nl_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_nl_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_nl_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_nl_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_nl_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_nl_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_newguinea_nl_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_newguinea_nl_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_okinawa_mid_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_okinawa_mid_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_okinawa_mid_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_okinawa_mid_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_okinawa_mid_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_okinawa_mid_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_okinawa_mid_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_okinawa_mid_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_saipan_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_saipan_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_saipan_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_saipan_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_saipan_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_saipan_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_saipan_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_saipan_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_sumatra_south_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_sumatra_south_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_sumatra_south_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_sumatra_south_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_sumatra_south_state_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_sumatra_south_state_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v3_sumatra_south_state_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v3_sumatra_south_state_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_borneo_north_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_borneo_north_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_borneo_north_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_borneo_north_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_hawaii_bigisland_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_hawaii_bigisland_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_hawaii_bigisland_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_hawaii_bigisland_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_iwojima_south_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_iwojima_south_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_iwojima_south_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_iwojima_south_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_java_south_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_java_south_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_java_south_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_java_south_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_java_west_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_java_west_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_java_west_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_java_west_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_luzon_east_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_luzon_east_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_luzon_east_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_luzon_east_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_malaya_east_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_malaya_east_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_malaya_east_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_malaya_east_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_midway_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_midway_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_midway_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_midway_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_mindanao_east_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_mindanao_east_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_mindanao_east_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_mindanao_east_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_newguinea_aus_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_newguinea_aus_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_newguinea_aus_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_newguinea_aus_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_newguinea_nl_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_newguinea_nl_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_newguinea_nl_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_newguinea_nl_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_okinawa_mid_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_okinawa_mid_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_okinawa_mid_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_okinawa_mid_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_saipan_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_saipan_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_saipan_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_saipan_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_singapore_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_singapore_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_singapore_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_singapore_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_sumatra_south_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_sumatra_south_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_sumatra_south_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_sumatra_south_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_idea_eng_service_overseas"
+		texturefile = "gfx/interface/ideas/idea_USA_navy_strong_country.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pacific_allies_dynamic_modifier"
+		texturefile = "gfx/interface/ideas/idea_USA_navy_strong_country.dds"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_taiwan_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_taiwan_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_taiwan_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_taiwan_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_delhi_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_delhi_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_delhi_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_delhi_land_JAP.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_canberra_land_ALLY"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_canberra_land_ALLY.png"
+	}
+	spriteType = {
+		name = "GFX_map_gui_asia_v4_canberra_land_JAP"
+		texturefile = "gfx/interface/pacific/map_gui_asia_v4_canberra_land_JAP.png"
+	}
+}

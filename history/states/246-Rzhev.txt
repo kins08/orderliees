@@ -1,0 +1,28 @@
+
+state={
+	id=246
+	name="STATE_246"
+	manpower = 1025458
+	
+	state_category = rural
+	resources={
+		steel=16 # was: 24
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			11349 1
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		226 333 3279 3215 6303 9265 9343 11315 11326 11349 11384 9272 11254 335 9382 9318
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,205 @@
+# ==============================================================================
+# Orderlies Multiplayer Mod - Standardized Division Templates & Missions
+# Automated template deployment & military missions for competitive play
+# ==============================================================================
+
+ordl_templates_category = {
+
+	ordl_template_2w = {
+		icon = GFX_decision_generic_army_support
+		allowed = { always = yes }
+		available = { is_ai = no }
+		visible = { is_ai = no }
+		fire_only_once = yes
+
+		complete_effect = {
+			division_template = {
+				name = "ORDL 2W Garrison"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+				}
+			}
+		}
+	}
+
+	ordl_template_convert_40w = {
+		icon = GFX_decision_generic_army_support
+		allowed = { always = yes }
+		available = { is_ai = no }
+		visible = { is_ai = no }
+		fire_only_once = yes
+
+		complete_effect = {
+			division_template = {
+				name = "ORDL 40W Convert"
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 } infantry = { x = 0 y = 3 } infantry = { x = 0 y = 4 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 } infantry = { x = 1 y = 3 } infantry = { x = 1 y = 4 }
+					infantry = { x = 2 y = 0 } infantry = { x = 2 y = 1 } infantry = { x = 2 y = 2 } infantry = { x = 2 y = 3 } infantry = { x = 2 y = 4 }
+					infantry = { x = 3 y = 0 } infantry = { x = 3 y = 1 } infantry = { x = 3 y = 2 } infantry = { x = 3 y = 3 } infantry = { x = 3 y = 4 }
+				}
+			}
+		}
+	}
+
+	ordl_template_infantry_50w = {
+		icon = GFX_decision_generic_army_support
+		allowed = { always = yes }
+		available = { is_ai = no }
+		visible = { is_ai = no }
+		fire_only_once = yes
+
+		complete_effect = {
+			division_template = {
+				name = "ORDL 50W Infantry"
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 } infantry = { x = 0 y = 3 } infantry = { x = 0 y = 4 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 } infantry = { x = 1 y = 3 } infantry = { x = 1 y = 4 }
+					infantry = { x = 2 y = 0 } infantry = { x = 2 y = 1 } infantry = { x = 2 y = 2 } infantry = { x = 2 y = 3 } infantry = { x = 2 y = 4 }
+					infantry = { x = 3 y = 0 } infantry = { x = 3 y = 1 } infantry = { x = 3 y = 2 } infantry = { x = 3 y = 3 } infantry = { x = 3 y = 4 }
+					infantry = { x = 4 y = 0 } infantry = { x = 4 y = 1 } infantry = { x = 4 y = 2 } infantry = { x = 4 y = 3 } infantry = { x = 4 y = 4 }
+				}
+			}
+		}
+	}
+
+	ordl_template_armor_40w = {
+		icon = GFX_decision_generic_tank
+		allowed = { always = yes }
+		available = { is_ai = no }
+		visible = { is_ai = no }
+		fire_only_once = yes
+
+		complete_effect = {
+			division_template = {
+				name = "ORDL Medium Tank 40W"
+				regiments = {
+					medium_armor = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_tank_destroyer_brigade = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
+					medium_armor = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_tank_destroyer_brigade = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+					medium_armor = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_tank_destroyer_brigade = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+					medium_armor = { x = 0 y = 3 }  medium_tank_destroyer_brigade = { x = 1 y = 3 } medium_tank_destroyer_brigade = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+				}
+				support = {
+					assault_engineer = { x = 0 y = 0 }
+					light_tank_recon = { x = 0 y = 1 }
+					medium_flame_tank = { x = 0 y = 2 }
+					field_hospital = { x = 0 y = 3 }
+					armored_signal = { x = 0 y = 4 }
+				}
+				regimental_support = {
+					anti_air_battery = { x = 0 y = 0 }
+					anti_air_battery = { x = 0 y = 1 }
+					anti_air_battery = { x = 0 y = 2 }
+					anti_air_battery = { x = 0 y = 3 }
+					anti_air_battery = { x = 0 y = 4 }
+				}
+			}
+
+			division_template = {
+				name = "ORDL Amphibious Tank 40W"
+				regiments = {
+					amphibious_medium_armor = { x = 0 y = 0 }  amphibious_medium_armor = { x = 1 y = 0 } amphibious_medium_armor = { x = 2 y = 0 } amphibious_mechanized = { x = 3 y = 0 } amphibious_mechanized = { x = 4 y = 0 }
+					amphibious_medium_armor = { x = 0 y = 1 }  amphibious_medium_armor = { x = 1 y = 1 } amphibious_medium_armor = { x = 2 y = 1 } amphibious_mechanized = { x = 3 y = 1 } amphibious_mechanized = { x = 4 y = 1 }
+					amphibious_medium_armor = { x = 0 y = 2 }  amphibious_medium_armor = { x = 1 y = 2 } amphibious_medium_armor = { x = 2 y = 2 } amphibious_mechanized = { x = 3 y = 2 } amphibious_mechanized = { x = 4 y = 2 }
+					amphibious_medium_armor = { x = 0 y = 3 }  amphibious_medium_armor = { x = 1 y = 3 } amphibious_medium_armor = { x = 2 y = 3 } amphibious_mechanized = { x = 3 y = 3 } amphibious_mechanized = { x = 4 y = 3 }
+				}
+				support = {
+					pioneer_support = { x = 0 y = 0 }
+					light_tank_recon = { x = 0 y = 1 }
+					medium_flame_tank = { x = 0 y = 2 }
+					field_hospital = { x = 0 y = 3 }
+					anti_air = { x = 0 y = 4 }
+				}
+				regimental_support = {
+					anti_air_battery = { x = 0 y = 0 }
+					anti_air_battery = { x = 0 y = 1 }
+					anti_air_battery = { x = 0 y = 2 }
+					anti_air_battery = { x = 0 y = 3 }
+					anti_air_battery = { x = 0 y = 4 }
+				}
+			}
+		}
+	}
+
+	ordl_send_military_attache_spain = {
+		icon = GFX_decision_revolt
+		cost = 0
+
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 99
+		}
+		custom_cost_text = decision_cost_CP_50_PP_100
+
+		allowed = {
+			NOT = { original_tag = SPR }
+			NOT = { original_tag = D01 }
+			NOT = { original_tag = SPA }
+		}
+
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = ordl_attache_spain_sent }
+		}
+
+		available = {
+			date > 1936.7.17
+			command_power > 49
+			has_political_power > 99
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = ordl_attache_spain_sent
+			add_command_power = -50
+			add_political_power = -100
+			add_war_support = 0.10
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ordl_send_military_attache_china = {
+		icon = GFX_decision_revolt
+		cost = 0
+
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 99
+		}
+		custom_cost_text = decision_cost_CP_50_PP_100
+
+		allowed = {
+			NOT = { original_tag = CHI }
+			NOT = { original_tag = PRC }
+			NOT = { original_tag = JAP }
+		}
+
+		visible = {
+			is_ai = no
+			NOT = { has_country_flag = ordl_attache_china_sent }
+		}
+
+		available = {
+			date > 1937.6.1
+			command_power > 49
+			has_political_power > 99
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = ordl_attache_china_sent
+			add_command_power = -50
+			add_political_power = -100
+			add_war_support = 0.10
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

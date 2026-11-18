@@ -1,0 +1,98 @@
+state = {
+	id = 335
+	name = "STATE_335" # Java
+	manpower = 44234363
+	
+	state_category = megalopolis
+	
+	resources = {
+		rubber = 63
+		oil = 40
+	}
+
+	history = {
+		owner = INS
+		add_core_of = INS
+		add_core_of = TNE
+		add_core_of = BLI
+
+		victory_points = {
+			7421 15
+		}
+		victory_points = {
+			4434 1
+		}
+		victory_points = {
+			13387 1
+		}
+		victory_points = {
+			13391 1
+		}
+		victory_points = {
+			12234 1
+		}
+		victory_points = {
+			13404 1 #Purwokerto
+		}
+		victory_points = {
+			13405 15 #Semarang
+		}
+		victory_points = {
+			13406 10 #Yogyakarta
+		}
+		victory_points = {
+			13407 3 #Surakarta
+		}
+		victory_points = {
+			13403 10 #Surabaya
+		}
+		victory_points = {
+			13386 3 # Denpassar
+		}
+		victory_points = {
+			4301 1 #Ende
+		}
+		victory_points = {
+			7381 25
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 3
+			dockyard = 1
+			air_base = 3
+
+			13387 = {
+				naval_base = 1
+			}
+			12234 = {
+				naval_base = 1
+			}
+			13384 = {
+				naval_base = 1
+			}
+			13403 = {
+				naval_base = 3
+			}
+			13406 = {
+				naval_base = 1
+			}
+			13386 = {
+				naval_base = 1
+			}
+			4301 = {
+				naval_base = 1
+			}
+			7381 = {
+				naval_base = 2
+			}
+		}
+	}
+
+	provinces = {
+		1398 10307 1386 13382 7421 1425 4621 4434 7223 10279 7293 10191 12162 12219 12234 13387 13389 13390 13391 13388 13384 13392 1209 1413 4306 4390 4608 7642 7654 10135 10479 10491 12277 12293 12472 13383 13405 13403 13404 13406 13407 4273 13386 13385 1298 4301 10175 7321 12151 10219 13394 13393 7381 12249 4406
+	}
+
+	local_supplies = 5.0 
+}

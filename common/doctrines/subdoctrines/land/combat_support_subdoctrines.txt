@@ -1,0 +1,358 @@
+self_propelled_support = {
+    track = combat_support
+    name = SUBDOCTRINE_SELF_PROPELLED_SUPPORT
+    description = SUBDOCTRINE_SELF_PROPELLED_SUPPORT_DESC
+    icon = GFX_doctrine_self_propelled_support_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_artillery_axis_tt
+            OR = {
+                tag = GER
+                tag = JAP
+                tag = HUN
+                tag = BUL
+                tag = FIN
+                original_tag = GER
+                original_tag = JAP
+                original_tag = HUN
+                original_tag = BUL
+                original_tag = FIN
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        mobile_battery_management_platoons = {
+            category_tank_destroyers = {
+                max_organisation = 2
+                soft_attack = 0.05
+            }
+        }
+        screening_attacks = {
+            category_tank_destroyers = {
+                max_organisation = 2
+                hard_attack = 0.05
+            }
+        }
+        all_terrain_mobility = {
+            category_tank_destroyers = {
+                max_organisation = 2
+                soft_attack = 0.05
+                hard_attack = 0.05
+            }
+        }
+        multirole_support_vehicles = {
+            category_tank_destroyers = {
+                maximum_speed = 0.10
+                hard_attack = 0.02
+            }
+        }
+        shoot_and_scoot = {
+            category_self_propelled_anti_air = {
+                max_organisation = 2
+            }
+            medium_armor = {
+                soft_attack = 0.05
+                breakthrough = 0.05
+            }
+            category_tank_destroyers = {
+                hard_attack = 0.02
+                max_organisation = 2
+                default_morale = 0.30
+            }
+        }
+    }
+}
+
+mobile_recon_assault_units = {
+    track = combat_support
+    name = SUBDOCTRINE_MOBILE_RECON_ASSAULT_UNITS
+    description = SUBDOCTRINE_MOBILE_RECON_ASSAULT_UNITS_DESC
+    icon = GFX_doctrine_armored_cavalry_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_support_coord_tt
+            OR = {
+                tag = SOV
+                tag = USA
+                tag = ENG
+                tag = FRA
+                tag = CAN
+                tag = AST
+                original_tag = SOV
+                original_tag = USA
+                original_tag = ENG
+                original_tag = FRA
+                original_tag = CAN
+                original_tag = AST
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        recon_spearhead = {
+            medium_armor = {
+                max_organisation = 2
+                hard_attack = 0.05
+            }
+        }
+        mobile_vanguard = {
+            medium_armor = {
+                maximum_speed = 0.10
+                hard_attack = 0.02
+            }
+        }
+        breakthrough_recon = {
+            medium_armor = {
+                hard_attack = 0.05
+                breakthrough = 0.05
+                default_morale = 0.30
+            }
+        }
+        hunter_killer_groups = {
+            category_tank_destroyers = {
+                hard_attack = 0.10
+                max_organisation = 2
+            }
+        }
+        heavy_assault_coordination = {
+            heavy_armor = {
+                hard_attack = 0.05
+                max_organisation = 7
+            }
+            category_self_propelled_anti_air = {
+                air_attack = 0.05
+            }
+        }
+    }
+}
+
+siege_artillery = {
+    track = combat_support
+    name = SUBDOCTRINE_SIEGE_ARTILLERY
+    description = SUBDOCTRINE_SIEGE_ARTILLERY_DESC
+    icon = GFX_doctrine_siege_artillery_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_ita_only_tt
+            OR = {
+                tag = ITA
+                original_tag = ITA
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        fortress_busters = {
+            medium_armor = {
+                max_organisation = 5
+            }
+            category_tank_destroyers = {
+                max_organisation = 5
+            }
+        }
+        urban_strongpoint_sieges = {
+            medium_armor = {
+                breakthrough = 0.10
+                soft_attack = 0.10
+            }
+        }
+        terrain_adaptation = {
+            medium_armor = {
+                desert = {
+                    attack = 0.05
+                    # defense = 0.15
+                }
+                hills = {
+                    attack = 0.05
+                    # defense = 0.15
+                }
+            }
+            category_tank_destroyers = {
+                hard_attack = 0.05
+                desert = {
+                    attack = 0.05
+                    # defense = 0.15
+                }
+                hills = {
+                    attack = 0.05
+                    # defense = 0.15
+                }
+            }
+        }
+        siege_specialization = {
+            category_army = {
+                fort = {
+                    attack = 0.25
+                }
+                urban = {
+                    attack = 0.20
+                }
+            }
+            category_self_propelled_anti_air = {
+                air_attack = 0.10
+            }
+        }
+        endurance_bombardment = {
+            category_tank_destroyers = {
+                default_morale = 0.30
+                hard_attack = 0.05
+            }
+        }
+    }
+}
+
+field_engineering_works = {
+    track = combat_support
+    name = SUBDOCTRINE_FIELD_ENGINEERING_WORKS
+    description = SUBDOCTRINE_FIELD_ENGINEERING_WORKS_DESC
+    icon = GFX_doctrine_field_engineering_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_saf_raj_tt
+            OR = {
+                tag = SAF
+                tag = RAJ
+                original_tag = SAF
+                original_tag = RAJ
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        field_fortifications = {
+            category_army = {
+                defense = 0.05
+            }
+            engineer = {
+                defense = 0.05
+            }
+        }
+        machine_gun_emplacements = {
+            fire_support = {
+                defense = 0.05
+            }
+            category_all_infantry = {
+                max_organisation = 5
+            }
+        }
+        infantry_fire_coordination = {
+            fire_support = {
+                soft_attack = 0.05
+            }
+            category_all_infantry = {
+                defense = 0.05
+            }
+        }
+        defense_consolidation = {
+            fire_support = {
+                defense = 0.05
+            }
+            category_all_infantry = {
+                max_organisation = 2
+            }
+        }
+        sapper_river_crossings = {
+            engineer = {
+                defense = 0.05
+                maximum_speed = 0.10
+                river = {
+                    movement = 0.20
+                }
+            }
+        }
+    }
+}
+
+anti_tank_frontline = {
+    track = combat_support
+    name = SUBDOCTRINE_ANTI_TANK_FRONT
+    description = SUBDOCTRINE_ANTI_TANK_FRONT_DESC
+    icon = GFX_doctrine_antitank_frontline_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_rom_only_tt
+            OR = {
+                tag = ROM
+                original_tag = ROM
+                tag = BUL
+                original_tag = BUL
+                tag = ITA
+                original_tag = ITA
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        pakfront = {
+            engineer = {
+                entrenchment = 1
+            }
+        }
+        coastal_and_infantry_defense = {
+            engineer = {
+                amphibious = {
+                    # defense = 0.15
+                }
+            }
+            category_all_infantry = {
+                soft_attack = 0.05
+            }
+        }
+        mg_defensive_networks = {
+            category_all_infantry = {
+                max_organisation = 5
+            }
+            fire_support = {
+                defense = 0.10
+            }
+        }
+        heavy_fire_coverage = {
+            fire_support = {
+                soft_attack = 0.10
+            }
+            category_all_infantry = {
+                soft_attack = 0.05
+            }
+        }
+        advanced_river_defense = {
+            engineer = {
+                defense = 0.05
+                maximum_speed = 0.15
+                river = {
+                    movement = 0.20
+                }
+            }
+        }
+    }
+}

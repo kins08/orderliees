@@ -1,0 +1,21 @@
+on_actions = {
+	on_daily_FIN = {
+		effect = {
+			if = {
+				limit = {
+					has_war_with = SOV
+					NOT = { has_idea = fin_winter_war_spirit }
+					NOT = { has_completed_focus = FIN_remove_speed_debuff }
+				}
+				add_ideas = fin_winter_war_spirit
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = SOV }
+					has_idea = fin_winter_war_spirit
+				}
+				remove_ideas = fin_winter_war_spirit
+			}
+		}
+	}
+}

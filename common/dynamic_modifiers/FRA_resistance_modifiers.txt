@@ -1,0 +1,22 @@
+FRA_resistance_dynamic_modifier = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_FRA_mainland_resistance
+
+	army_attack_factor = FRA_exhaustion_attack_var
+	army_defence_factor = FRA_exhaustion_defense_var
+	army_morale_factor = FRA_exhaustion_morale_var
+
+	conscription = FRA_free_france_conscription_var
+	industrial_capacity_factory = FRA_free_france_ic_var
+	production_factory_max_efficiency_factor = FRA_free_france_eff_var
+}
+
+FRA_colonial_construction_locked_modifier = {
+	enable = {
+		always = yes
+	}
+	local_building_slots = -20
+	local_building_slots_factor = -1.0
+}

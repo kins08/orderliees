@@ -1,0 +1,57 @@
+FIN_apply_winter_debuffs_effect = {
+	FIN_remove_winter_debuffs_effect = yes
+
+	718 = { add_dynamic_modifier = { modifier = fin_speed_debuff_border } }
+	if = {
+		limit = {
+			NOT = { SOV = { has_completed_focus = SOV_secure_leningrad } }
+		}
+		146 = { add_dynamic_modifier = { modifier = fin_speed_debuff_border } }
+		147 = { add_dynamic_modifier = { modifier = fin_speed_debuff_border } }
+	}
+
+	150 = { add_dynamic_modifier = { modifier = fin_speed_debuff_mid } }
+	926 = { add_dynamic_modifier = { modifier = fin_speed_debuff_mid } }
+	924 = { add_dynamic_modifier = { modifier = fin_speed_debuff_mid } }
+	925 = { add_dynamic_modifier = { modifier = fin_speed_debuff_mid } }
+
+	111 = { add_dynamic_modifier = { modifier = fin_speed_debuff_deep } }
+	922 = { add_dynamic_modifier = { modifier = fin_speed_debuff_deep } }
+	923 = { add_dynamic_modifier = { modifier = fin_speed_debuff_deep } }
+	149 = { add_dynamic_modifier = { modifier = fin_speed_debuff_deep } }
+	148 = { add_dynamic_modifier = { modifier = fin_speed_debuff_deep } }
+	145 = { add_dynamic_modifier = { modifier = fin_speed_debuff_deep } }
+}
+
+FIN_remove_winter_debuffs_effect = {
+	if = { limit = { 146 = { has_dynamic_modifier = { modifier = fin_speed_debuff_border } } } 146 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_border } } }
+	if = { limit = { 147 = { has_dynamic_modifier = { modifier = fin_speed_debuff_border } } } 147 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_border } } }
+	if = { limit = { 722 = { has_dynamic_modifier = { modifier = fin_speed_debuff_border } } } 722 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_border } } }
+
+	if = { limit = { 150 = { has_dynamic_modifier = { modifier = fin_speed_debuff_mid } } } 150 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_mid } } }
+	if = { limit = { 930 = { has_dynamic_modifier = { modifier = fin_speed_debuff_mid } } } 930 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_mid } } }
+	if = { limit = { 928 = { has_dynamic_modifier = { modifier = fin_speed_debuff_mid } } } 928 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_mid } } }
+	if = { limit = { 929 = { has_dynamic_modifier = { modifier = fin_speed_debuff_mid } } } 929 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_mid } } }
+
+	if = { limit = { 111 = { has_dynamic_modifier = { modifier = fin_speed_debuff_deep } } } 111 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_deep } } }
+	if = { limit = { 926 = { has_dynamic_modifier = { modifier = fin_speed_debuff_deep } } } 926 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_deep } } }
+	if = { limit = { 927 = { has_dynamic_modifier = { modifier = fin_speed_debuff_deep } } } 927 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_deep } } }
+	if = { limit = { 149 = { has_dynamic_modifier = { modifier = fin_speed_debuff_deep } } } 149 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_deep } } }
+	if = { limit = { 148 = { has_dynamic_modifier = { modifier = fin_speed_debuff_deep } } } 148 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_deep } } }
+	if = { limit = { 145 = { has_dynamic_modifier = { modifier = fin_speed_debuff_deep } } } 145 = { remove_dynamic_modifier = { modifier = fin_speed_debuff_deep } } }
+}
+
+FIN_end_winter_war_effect = {
+	FIN_remove_winter_debuffs_effect = yes
+
+	FIN = {
+		if = {
+			limit = { has_idea = fin_winter_war_spirit }
+			remove_ideas = fin_winter_war_spirit
+		}
+		if = {
+			limit = { has_idea = fin_counterattack }
+			remove_ideas = fin_counterattack
+		}
+	}
+}

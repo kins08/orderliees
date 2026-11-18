@@ -1,0 +1,25 @@
+bitmapfonts = {
+	bitmapfont = {
+		name = "hoi_16mbs"
+		fontfiles = {
+			"gfx/fonts/hoi_16mbs"
+			"gfx/fonts/hoi_16mbs_cryllic"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			O = { 238 123 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+			g = { 175 175 175 }
+			b = { 40 40 40 }
+			B = { 0 0 255 }
+			C = { 35 206 255 }
+			L = { 195 176 145 }
+			W = { 255 255 255 }
+		}
+	}
+}

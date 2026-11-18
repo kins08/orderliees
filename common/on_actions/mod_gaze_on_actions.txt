@@ -1,0 +1,68 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				add_timed_idea = {
+					idea = ordl_industrial_startup
+					days = 30
+				}
+
+				if = {
+					limit = {
+						has_war = no
+					}
+					add_ideas = ordl_peacetime_exercises
+				}
+			}
+
+			28 = {
+				add_dynamic_modifier = {
+					modifier = FRA_magino
+					scope = GER
+				}
+				add_dynamic_modifier = {
+					modifier = FRA_magino
+					scope = ITA
+				}
+				add_dynamic_modifier = {
+					modifier = FRA_magino
+					scope = HUN
+				}
+				add_dynamic_modifier = {
+					modifier = FRA_magino
+					scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = FRA_magino
+					scope = BUL
+				}
+			}
+
+			42 = {
+				add_dynamic_modifier = {
+					modifier = GER_saarbruken
+					scope = FRA
+				}
+			}
+
+			974 = {
+				add_dynamic_modifier = {
+					modifier = GER_saarbruken
+					scope = FRA
+				}
+			}
+		}
+	}
+
+	on_peaceconference_ended = {
+		effect = {
+			every_country = {
+				limit = {
+					has_war = no
+					NOT = { has_idea = ordl_peacetime_exercises }
+				}
+				add_ideas = ordl_peacetime_exercises
+			}
+		}
+	}
+}

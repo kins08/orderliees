@@ -1,0 +1,3 @@
+﻿set_capital = {
+	state = 622
+}

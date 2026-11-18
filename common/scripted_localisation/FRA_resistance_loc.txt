@@ -1,0 +1,170 @@
+defined_text = {
+	name = GetFRALastEvacSourceStateName
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_last_evac_source_state_id value = 0 compare = greater_than } }
+		}
+		localization_key = FRA_LOC_LAST_EVAC_SOURCE_STATE
+	}
+	text = {
+		localization_key = FRA_LOC_LAST_EVAC_SOURCE_STATE_FALLBACK
+	}
+}
+
+defined_text = {
+	name = GetFRACarouselTargetText
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_evac_target_id value = 1 compare = equals } }
+		}
+		localization_key = FRA_TARGET_AOF_ROTOR
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_evac_target_id value = 2 compare = equals } }
+		}
+		localization_key = FRA_TARGET_AEF_ROTOR
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_evac_target_id value = 3 compare = equals } }
+		}
+		localization_key = FRA_TARGET_MADAGASCAR_ROTOR
+	}
+	text = {
+		localization_key = FRA_TARGET_GUIANA_ROTOR
+	}
+}
+
+defined_text = {
+	name = GetFRAPortName
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_active_port_id value = 1 compare = equals } }
+		}
+		localization_key = FRA_PORT_BREST
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_active_port_id value = 2 compare = equals } }
+		}
+		localization_key = FRA_PORT_BORDEAUX
+	}
+	text = {
+		localization_key = FRA_PORT_MARSEILLE
+	}
+}
+
+defined_text = {
+	name = GetFRAShipmentStatus
+	text = {
+		trigger = {
+			FRA = {
+				check_variable = { var = FRA_mil_evacuated value = FRA_max_mil_evacuable compare = greater_than_or_equals }
+				check_variable = { var = FRA_civ_evacuated value = FRA_max_civ_evacuable compare = greater_than_or_equals }
+				check_variable = { var = FRA_max_mil_evacuable value = 0 compare = greater_than }
+			}
+		}
+		localization_key = FRA_SHIPMENT_STATUS_COMPLETED
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_last_evac_type value = 2 compare = equals } }
+		}
+		localization_key = FRA_SHIPMENT_STATUS_CIV
+	}
+	text = {
+		localization_key = FRA_SHIPMENT_STATUS_MIL
+	}
+}
+
+defined_text = {
+	name = GetFRAMetropoleStatusText
+	text = {
+		trigger = {
+			FRA = {
+				OR = {
+					has_capitulated = yes
+					surrender_progress > 0.80
+				}
+			}
+		}
+		localization_key = FRA_METROPOLE_STATUS_FALLEN
+	}
+	text = {
+		trigger = {
+			FRA = { has_war_with = GER }
+		}
+		localization_key = FRA_METROPOLE_STATUS_ACTIVE
+	}
+	text = {
+		localization_key = FRA_METROPOLE_STATUS_PEACE
+	}
+}
+
+defined_text = {
+	name = GetFRAGerLossesText
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_ger_losses_tier value = 5 compare = greater_than_or_equals } }
+		}
+		localization_key = FRA_GER_LOSSES_T5
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_ger_losses_tier value = 4 compare = equals } }
+		}
+		localization_key = FRA_GER_LOSSES_T4
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_ger_losses_tier value = 3 compare = equals } }
+		}
+		localization_key = FRA_GER_LOSSES_T3
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_ger_losses_tier value = 2 compare = equals } }
+		}
+		localization_key = FRA_GER_LOSSES_T2
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_ger_losses_tier value = 1 compare = equals } }
+		}
+		localization_key = FRA_GER_LOSSES_T1
+	}
+	text = {
+		localization_key = FRA_GER_LOSSES_T0
+	}
+}
+
+defined_text = {
+	name = GetFRAMainlandDebuffText
+	text = {
+		trigger = {
+			FRA = { NOT = { has_war_with = GER } }
+		}
+		localization_key = FRA_MAINLAND_DEBUFF_PEACE
+	}
+	text = {
+		trigger = {
+			FRA = {
+				OR = {
+					has_capitulated = yes
+					surrender_progress > 0.80
+				}
+			}
+		}
+		localization_key = FRA_MAINLAND_DEBUFF_FALLEN
+	}
+	text = {
+		trigger = {
+			FRA = { check_variable = { var = FRA_exhaustion_attack_var value = -0.001 compare = greater_than } }
+		}
+		localization_key = FRA_MAINLAND_DEBUFF_NONE
+	}
+	text = {
+		localization_key = FRA_MAINLAND_DEBUFF_ACTIVE
+	}
+}

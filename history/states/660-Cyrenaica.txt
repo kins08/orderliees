@@ -1,0 +1,20 @@
+state={
+	id=660
+	name="STATE_660"
+	manpower = 8808
+	
+	state_category = wasteland
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		1062 1186 4060 4063 7139 7206 10049 12025 12079 13078 7063
+	}
+
+	local_supplies=0.0 
+}

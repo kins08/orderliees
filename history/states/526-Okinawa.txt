@@ -1,0 +1,87 @@
+state = {
+	id = 526
+	name = "STATE_526"
+	manpower = 524000
+
+	resources = {
+		coal = 4 # Represents the Iriomote and Utara coal mines (and quite a few more)
+	}
+
+	state_category = pastoral
+
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_core_of = OKN
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+			industrial_complex = 1
+			11932 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			11932 10
+		}
+		victory_points = {
+			13512 5
+		}
+		strategic_province_location = {
+			defensible_coastline = 1123
+		}
+		strategic_province_location = {
+			defensible_coastline = 13510
+		}
+		strategic_province_location = {
+			defensible_coastline = 7115
+		}
+		strategic_province_location = {
+			defensible_coastline = 13512
+		}
+		strategic_province_location = {
+			defensible_coastline = 10124
+		}
+		strategic_province_location = {
+			defensible_coastline = 11932
+		}
+		strategic_province_location = {
+			defensible_coastline = 13511
+		}
+		strategic_province_location = {
+			defensible_coastline = 13514
+		}
+		strategic_province_location = {
+			defensible_coastline = 13513
+		}
+		strategic_province_location = {
+			defensive_chokepoint = 13514
+		}
+		strategic_province_location = {
+			defensive_chokepoint = 13512
+		}
+		strategic_province_location = {
+			defensive_chokepoint = 13513
+		}
+		strategic_province_location = {
+			defensive_chokepoint = 11932
+		}
+		strategic_state_location = {
+			favorable_approach = 13511
+		}
+	} 
+
+	provinces = {
+		1123
+		7115
+		10124
+		11932
+		13510
+		13511
+		13512
+		13513
+		13514
+	}
+
+	local_supplies = 0.0
+}

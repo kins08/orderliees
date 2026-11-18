@@ -1,0 +1,14 @@
+units = {
+	fleet = {
+		name = "Flota Romania de Mare"
+		naval_base = 657
+		task_force = {
+			name = "Flota Romania de Mare"
+			location = 657
+			ship = { name = "NMS Marasti" pride_of_the_fleet = yes definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROM version_name = "Marasti Class" } } }
+			ship = { name = "NMS Marasesti" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROM version_name = "Marasti Class" } } }
+			ship = { name = "NMS Regele Ferdinand" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROM version_name = "Regele Ferdinand Class" } } }
+			ship = { name = "NMS Regina Maria" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ROM version_name = "Regele Ferdinand Class" } } }
+		}
+	}
+}

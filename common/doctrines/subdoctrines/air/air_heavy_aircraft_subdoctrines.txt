@@ -1,0 +1,83 @@
+air_subdoctrine_night_bombing = {
+    track = heavy_aircraft
+    name = SUBDOCTRINE_NIGHT_BOMBING
+    description = SUBDOCTRINE_NIGHT_BOMBING_DESC
+    icon = GFX_doctrine_night_bombing_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        night_raids = {
+            air_night_penalty = -0.05
+        }
+        stealth_approach = {
+            air_night_penalty = -0.05
+            air_weather_penalty = -0.05
+        }
+        shared_principles = {
+            category_heavy_fighter = {
+                air_attack = 0.03
+                air_range = 0.08
+            }
+        }
+        bombing_discipline = {
+            air_night_penalty = -0.05
+            air_power_projection_factor = 0.025
+        }
+        durable_airframes = {
+            air_strategic_bomber_night_penalty = -0.10
+            air_strategic_bomber_bombing_factor = 0.05
+            air_mission_efficiency = 0.025
+        }
+    }
+}
+
+air_subdoctrine_carpet_bombing = {
+    track = heavy_aircraft
+    name = SUBDOCTRINE_CARPET_BOMBING
+    description = SUBDOCTRINE_CARPET_BOMBING_DESC
+    icon = GFX_doctrine_mass_destruction_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        veteran_bomber_crews = {
+            category_strat_bomber = {
+                air_bombing = 0.08
+            }
+        }
+        breaking_the_spirit = {
+            category_strat_bomber = {
+                air_defence = 0.08
+            }
+        }
+        destruction_campaigns = {
+            air_strategic_bomber_bombing_factor = 0.10
+            air_weather_penalty = -0.10
+        }
+        coordinated_air_operations = {
+            category_strat_bomber = {
+                air_bombing = 0.03
+                air_range = 0.13
+            }
+        }
+        defensive_formation = {
+            air_strategic_bomber_bombing_factor = 0.15
+            air_mission_efficiency = 0.025
+        }
+    }
+}

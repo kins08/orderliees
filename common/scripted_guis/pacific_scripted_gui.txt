@@ -1,0 +1,101 @@
+scripted_gui = {
+	pacific_battle_decision_ui = {
+		context_type = decision_category
+		window_name = "pacific_battle_decision_ui"
+		visible = {
+			has_global_flag = pacific_battle_active
+		}
+		effects = {
+			# No goto_state effects to prevent co-op camera hijacking
+		}
+		triggers = {
+			# 1. Малайя (336)
+			state_336_is_jap_visible = {
+				336 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_336_is_ally_visible = {
+				336 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 2. Западная Ява (335)
+			state_335_is_jap_visible = {
+				335 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_335_is_ally_visible = {
+				335 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 3. Лусон / Филиппины (327)
+			state_327_is_jap_visible = {
+				327 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_327_is_ally_visible = {
+				327 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 4. Папуа (975)
+			state_975_is_jap_visible = {
+				975 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_975_is_ally_visible = {
+				975 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 5. Дели (439)
+			state_439_is_jap_visible = {
+				439 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_439_is_ally_visible = {
+				439 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 6. Канберра (285)
+			state_285_is_jap_visible = {
+				285 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_285_is_ally_visible = {
+				285 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 7. Гавайи (626)
+			state_626_is_jap_visible = {
+				626 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_626_is_ally_visible = {
+				626 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 8. Мидуэй (628)
+			state_628_is_jap_visible = {
+				628 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_628_is_ally_visible = {
+				628 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 9. Тайвань (524)
+			state_524_is_jap_visible = {
+				524 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_524_is_ally_visible = {
+				524 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 10. Окинава (526)
+			state_526_is_jap_visible = {
+				526 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_526_is_ally_visible = {
+				526 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+
+			# 11. Иводзима (642)
+			state_642_is_jap_visible = {
+				642 = { check_is_state_controlled_by_japan_side = yes }
+			}
+			state_642_is_ally_visible = {
+				642 = { NOT = { check_is_state_controlled_by_japan_side = yes } }
+			}
+		}
+	}
+}

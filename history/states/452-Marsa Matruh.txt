@@ -1,0 +1,31 @@
+
+state={
+	id=452
+	name="STATE_452"
+	manpower = 52556
+	
+	state_category = wasteland
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			10061 = {
+				naval_base = 5
+			}
+			1071 = {
+				naval_base = 3
+			}
+		}
+		victory_points = { 13421 5 }
+		victory_points = { 13422 5 }
+		victory_points = { 10061 2 }
+	}
+
+	provinces={
+	  	12091 7148 1143 10127 13420 13421 13422 13424 13425 13462 13463 13464 13486 13487 13488 11967 10061 11910 1071
+	}
+
+
+	local_supplies=9.0 
+}

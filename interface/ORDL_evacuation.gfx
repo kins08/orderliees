@@ -1,0 +1,1263 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ORDL_evac_map_bg"
+		texturefile = "gfx/interface/evacuation/map_bg_v2.png"
+	}
+	spriteType = {
+		name = "GFX_ORDL_evac_blank_btn"
+		texturefile = "gfx/interface/evacuation/blank_button.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_sov_evacuation"
+		texturefile = "gfx/event_pictures/news_event_sov_evacuation.png"
+	}
+	spriteType = {
+		name = "GFX_ORDL_evac_seams"
+		texturefile = "gfx/interface/evacuation/regions/seams.png"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_icon_evacuation"
+		texturefile = "gfx/interface/decisions/decision_cat_icon_evacuation.png"
+	}
+	spriteType = {
+		name = "GFX_decision_icon_evacuation"
+		texturefile = "gfx/interface/decisions/decision_icon_evacuation.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_evacuation"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_evacuation.png"
+	}
+	spriteType = {
+		name = "GFX_evac_11_red"
+		texturefile = "gfx/interface/evacuation/evac_11_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_11_ok"
+		texturefile = "gfx/interface/evacuation/evac_11_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_11_lost"
+		texturefile = "gfx/interface/evacuation/evac_11_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_12_red"
+		texturefile = "gfx/interface/evacuation/evac_12_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_12_ok"
+		texturefile = "gfx/interface/evacuation/evac_12_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_12_lost"
+		texturefile = "gfx/interface/evacuation/evac_12_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_13_red"
+		texturefile = "gfx/interface/evacuation/evac_13_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_13_ok"
+		texturefile = "gfx/interface/evacuation/evac_13_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_13_lost"
+		texturefile = "gfx/interface/evacuation/evac_13_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_78_red"
+		texturefile = "gfx/interface/evacuation/evac_78_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_78_ok"
+		texturefile = "gfx/interface/evacuation/evac_78_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_78_lost"
+		texturefile = "gfx/interface/evacuation/evac_78_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_89_red"
+		texturefile = "gfx/interface/evacuation/evac_89_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_89_ok"
+		texturefile = "gfx/interface/evacuation/evac_89_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_89_lost"
+		texturefile = "gfx/interface/evacuation/evac_89_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_91_red"
+		texturefile = "gfx/interface/evacuation/evac_91_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_91_ok"
+		texturefile = "gfx/interface/evacuation/evac_91_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_91_lost"
+		texturefile = "gfx/interface/evacuation/evac_91_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_93_red"
+		texturefile = "gfx/interface/evacuation/evac_93_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_93_ok"
+		texturefile = "gfx/interface/evacuation/evac_93_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_93_lost"
+		texturefile = "gfx/interface/evacuation/evac_93_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_94_red"
+		texturefile = "gfx/interface/evacuation/evac_94_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_94_ok"
+		texturefile = "gfx/interface/evacuation/evac_94_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_94_lost"
+		texturefile = "gfx/interface/evacuation/evac_94_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_95_red"
+		texturefile = "gfx/interface/evacuation/evac_95_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_95_ok"
+		texturefile = "gfx/interface/evacuation/evac_95_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_95_lost"
+		texturefile = "gfx/interface/evacuation/evac_95_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_96_red"
+		texturefile = "gfx/interface/evacuation/evac_96_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_96_ok"
+		texturefile = "gfx/interface/evacuation/evac_96_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_96_lost"
+		texturefile = "gfx/interface/evacuation/evac_96_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_97_red"
+		texturefile = "gfx/interface/evacuation/evac_97_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_97_ok"
+		texturefile = "gfx/interface/evacuation/evac_97_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_97_lost"
+		texturefile = "gfx/interface/evacuation/evac_97_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_137_red"
+		texturefile = "gfx/interface/evacuation/evac_137_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_137_ok"
+		texturefile = "gfx/interface/evacuation/evac_137_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_137_lost"
+		texturefile = "gfx/interface/evacuation/evac_137_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_188_red"
+		texturefile = "gfx/interface/evacuation/evac_188_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_188_ok"
+		texturefile = "gfx/interface/evacuation/evac_188_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_188_lost"
+		texturefile = "gfx/interface/evacuation/evac_188_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_189_red"
+		texturefile = "gfx/interface/evacuation/evac_189_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_189_ok"
+		texturefile = "gfx/interface/evacuation/evac_189_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_189_lost"
+		texturefile = "gfx/interface/evacuation/evac_189_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_190_red"
+		texturefile = "gfx/interface/evacuation/evac_190_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_190_ok"
+		texturefile = "gfx/interface/evacuation/evac_190_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_190_lost"
+		texturefile = "gfx/interface/evacuation/evac_190_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_191_red"
+		texturefile = "gfx/interface/evacuation/evac_191_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_191_ok"
+		texturefile = "gfx/interface/evacuation/evac_191_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_191_lost"
+		texturefile = "gfx/interface/evacuation/evac_191_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_192_red"
+		texturefile = "gfx/interface/evacuation/evac_192_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_192_ok"
+		texturefile = "gfx/interface/evacuation/evac_192_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_192_lost"
+		texturefile = "gfx/interface/evacuation/evac_192_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_193_red"
+		texturefile = "gfx/interface/evacuation/evac_193_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_193_ok"
+		texturefile = "gfx/interface/evacuation/evac_193_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_193_lost"
+		texturefile = "gfx/interface/evacuation/evac_193_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_194_red"
+		texturefile = "gfx/interface/evacuation/evac_194_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_194_ok"
+		texturefile = "gfx/interface/evacuation/evac_194_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_194_lost"
+		texturefile = "gfx/interface/evacuation/evac_194_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_195_red"
+		texturefile = "gfx/interface/evacuation/evac_195_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_195_ok"
+		texturefile = "gfx/interface/evacuation/evac_195_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_195_lost"
+		texturefile = "gfx/interface/evacuation/evac_195_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_196_red"
+		texturefile = "gfx/interface/evacuation/evac_196_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_196_ok"
+		texturefile = "gfx/interface/evacuation/evac_196_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_196_lost"
+		texturefile = "gfx/interface/evacuation/evac_196_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_197_red"
+		texturefile = "gfx/interface/evacuation/evac_197_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_197_ok"
+		texturefile = "gfx/interface/evacuation/evac_197_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_197_lost"
+		texturefile = "gfx/interface/evacuation/evac_197_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_198_red"
+		texturefile = "gfx/interface/evacuation/evac_198_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_198_ok"
+		texturefile = "gfx/interface/evacuation/evac_198_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_198_lost"
+		texturefile = "gfx/interface/evacuation/evac_198_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_199_red"
+		texturefile = "gfx/interface/evacuation/evac_199_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_199_ok"
+		texturefile = "gfx/interface/evacuation/evac_199_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_199_lost"
+		texturefile = "gfx/interface/evacuation/evac_199_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_200_red"
+		texturefile = "gfx/interface/evacuation/evac_200_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_200_ok"
+		texturefile = "gfx/interface/evacuation/evac_200_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_200_lost"
+		texturefile = "gfx/interface/evacuation/evac_200_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_201_red"
+		texturefile = "gfx/interface/evacuation/evac_201_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_201_ok"
+		texturefile = "gfx/interface/evacuation/evac_201_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_201_lost"
+		texturefile = "gfx/interface/evacuation/evac_201_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_202_red"
+		texturefile = "gfx/interface/evacuation/evac_202_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_202_ok"
+		texturefile = "gfx/interface/evacuation/evac_202_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_202_lost"
+		texturefile = "gfx/interface/evacuation/evac_202_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_203_red"
+		texturefile = "gfx/interface/evacuation/evac_203_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_203_ok"
+		texturefile = "gfx/interface/evacuation/evac_203_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_203_lost"
+		texturefile = "gfx/interface/evacuation/evac_203_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_204_red"
+		texturefile = "gfx/interface/evacuation/evac_204_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_204_ok"
+		texturefile = "gfx/interface/evacuation/evac_204_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_204_lost"
+		texturefile = "gfx/interface/evacuation/evac_204_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_205_red"
+		texturefile = "gfx/interface/evacuation/evac_205_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_205_ok"
+		texturefile = "gfx/interface/evacuation/evac_205_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_205_lost"
+		texturefile = "gfx/interface/evacuation/evac_205_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_206_red"
+		texturefile = "gfx/interface/evacuation/evac_206_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_206_ok"
+		texturefile = "gfx/interface/evacuation/evac_206_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_206_lost"
+		texturefile = "gfx/interface/evacuation/evac_206_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_207_red"
+		texturefile = "gfx/interface/evacuation/evac_207_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_207_ok"
+		texturefile = "gfx/interface/evacuation/evac_207_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_207_lost"
+		texturefile = "gfx/interface/evacuation/evac_207_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_208_red"
+		texturefile = "gfx/interface/evacuation/evac_208_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_208_ok"
+		texturefile = "gfx/interface/evacuation/evac_208_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_208_lost"
+		texturefile = "gfx/interface/evacuation/evac_208_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_209_red"
+		texturefile = "gfx/interface/evacuation/evac_209_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_209_ok"
+		texturefile = "gfx/interface/evacuation/evac_209_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_209_lost"
+		texturefile = "gfx/interface/evacuation/evac_209_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_210_red"
+		texturefile = "gfx/interface/evacuation/evac_210_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_210_ok"
+		texturefile = "gfx/interface/evacuation/evac_210_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_210_lost"
+		texturefile = "gfx/interface/evacuation/evac_210_lost.png"
+	}
+
+
+
+
+
+
+
+
+
+	spriteType = {
+		name = "GFX_evac_217_red"
+		texturefile = "gfx/interface/evacuation/evac_217_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_217_ok"
+		texturefile = "gfx/interface/evacuation/evac_217_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_217_lost"
+		texturefile = "gfx/interface/evacuation/evac_217_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_218_red"
+		texturefile = "gfx/interface/evacuation/evac_218_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_218_ok"
+		texturefile = "gfx/interface/evacuation/evac_218_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_218_lost"
+		texturefile = "gfx/interface/evacuation/evac_218_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_219_red"
+		texturefile = "gfx/interface/evacuation/evac_219_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_219_ok"
+		texturefile = "gfx/interface/evacuation/evac_219_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_219_lost"
+		texturefile = "gfx/interface/evacuation/evac_219_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_220_red"
+		texturefile = "gfx/interface/evacuation/evac_220_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_220_ok"
+		texturefile = "gfx/interface/evacuation/evac_220_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_220_lost"
+		texturefile = "gfx/interface/evacuation/evac_220_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_221_red"
+		texturefile = "gfx/interface/evacuation/evac_221_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_221_ok"
+		texturefile = "gfx/interface/evacuation/evac_221_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_221_lost"
+		texturefile = "gfx/interface/evacuation/evac_221_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_222_red"
+		texturefile = "gfx/interface/evacuation/evac_222_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_222_ok"
+		texturefile = "gfx/interface/evacuation/evac_222_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_222_lost"
+		texturefile = "gfx/interface/evacuation/evac_222_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_223_red"
+		texturefile = "gfx/interface/evacuation/evac_223_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_223_ok"
+		texturefile = "gfx/interface/evacuation/evac_223_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_223_lost"
+		texturefile = "gfx/interface/evacuation/evac_223_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_224_red"
+		texturefile = "gfx/interface/evacuation/evac_224_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_224_ok"
+		texturefile = "gfx/interface/evacuation/evac_224_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_224_lost"
+		texturefile = "gfx/interface/evacuation/evac_224_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_225_red"
+		texturefile = "gfx/interface/evacuation/evac_225_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_225_ok"
+		texturefile = "gfx/interface/evacuation/evac_225_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_225_lost"
+		texturefile = "gfx/interface/evacuation/evac_225_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_226_red"
+		texturefile = "gfx/interface/evacuation/evac_226_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_226_ok"
+		texturefile = "gfx/interface/evacuation/evac_226_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_226_lost"
+		texturefile = "gfx/interface/evacuation/evac_226_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_227_red"
+		texturefile = "gfx/interface/evacuation/evac_227_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_227_ok"
+		texturefile = "gfx/interface/evacuation/evac_227_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_227_lost"
+		texturefile = "gfx/interface/evacuation/evac_227_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_228_red"
+		texturefile = "gfx/interface/evacuation/evac_228_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_228_ok"
+		texturefile = "gfx/interface/evacuation/evac_228_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_228_lost"
+		texturefile = "gfx/interface/evacuation/evac_228_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_229_red"
+		texturefile = "gfx/interface/evacuation/evac_229_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_229_ok"
+		texturefile = "gfx/interface/evacuation/evac_229_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_229_lost"
+		texturefile = "gfx/interface/evacuation/evac_229_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_230_red"
+		texturefile = "gfx/interface/evacuation/evac_230_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_230_ok"
+		texturefile = "gfx/interface/evacuation/evac_230_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_230_lost"
+		texturefile = "gfx/interface/evacuation/evac_230_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_231_red"
+		texturefile = "gfx/interface/evacuation/evac_231_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_231_ok"
+		texturefile = "gfx/interface/evacuation/evac_231_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_231_lost"
+		texturefile = "gfx/interface/evacuation/evac_231_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_232_red"
+		texturefile = "gfx/interface/evacuation/evac_232_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_232_ok"
+		texturefile = "gfx/interface/evacuation/evac_232_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_232_lost"
+		texturefile = "gfx/interface/evacuation/evac_232_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_233_red"
+		texturefile = "gfx/interface/evacuation/evac_233_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_233_ok"
+		texturefile = "gfx/interface/evacuation/evac_233_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_233_lost"
+		texturefile = "gfx/interface/evacuation/evac_233_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_234_red"
+		texturefile = "gfx/interface/evacuation/evac_234_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_234_ok"
+		texturefile = "gfx/interface/evacuation/evac_234_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_234_lost"
+		texturefile = "gfx/interface/evacuation/evac_234_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_235_red"
+		texturefile = "gfx/interface/evacuation/evac_235_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_235_ok"
+		texturefile = "gfx/interface/evacuation/evac_235_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_235_lost"
+		texturefile = "gfx/interface/evacuation/evac_235_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_236_red"
+		texturefile = "gfx/interface/evacuation/evac_236_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_236_ok"
+		texturefile = "gfx/interface/evacuation/evac_236_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_236_lost"
+		texturefile = "gfx/interface/evacuation/evac_236_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_237_red"
+		texturefile = "gfx/interface/evacuation/evac_237_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_237_ok"
+		texturefile = "gfx/interface/evacuation/evac_237_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_237_lost"
+		texturefile = "gfx/interface/evacuation/evac_237_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_238_red"
+		texturefile = "gfx/interface/evacuation/evac_238_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_238_ok"
+		texturefile = "gfx/interface/evacuation/evac_238_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_238_lost"
+		texturefile = "gfx/interface/evacuation/evac_238_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_240_red"
+		texturefile = "gfx/interface/evacuation/evac_240_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_240_ok"
+		texturefile = "gfx/interface/evacuation/evac_240_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_240_lost"
+		texturefile = "gfx/interface/evacuation/evac_240_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_241_red"
+		texturefile = "gfx/interface/evacuation/evac_241_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_241_ok"
+		texturefile = "gfx/interface/evacuation/evac_241_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_241_lost"
+		texturefile = "gfx/interface/evacuation/evac_241_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_242_red"
+		texturefile = "gfx/interface/evacuation/evac_242_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_242_ok"
+		texturefile = "gfx/interface/evacuation/evac_242_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_242_lost"
+		texturefile = "gfx/interface/evacuation/evac_242_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_243_red"
+		texturefile = "gfx/interface/evacuation/evac_243_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_243_ok"
+		texturefile = "gfx/interface/evacuation/evac_243_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_243_lost"
+		texturefile = "gfx/interface/evacuation/evac_243_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_244_red"
+		texturefile = "gfx/interface/evacuation/evac_244_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_244_ok"
+		texturefile = "gfx/interface/evacuation/evac_244_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_244_lost"
+		texturefile = "gfx/interface/evacuation/evac_244_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_245_red"
+		texturefile = "gfx/interface/evacuation/evac_245_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_245_ok"
+		texturefile = "gfx/interface/evacuation/evac_245_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_245_lost"
+		texturefile = "gfx/interface/evacuation/evac_245_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_246_red"
+		texturefile = "gfx/interface/evacuation/evac_246_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_246_ok"
+		texturefile = "gfx/interface/evacuation/evac_246_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_246_lost"
+		texturefile = "gfx/interface/evacuation/evac_246_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_247_red"
+		texturefile = "gfx/interface/evacuation/evac_247_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_247_ok"
+		texturefile = "gfx/interface/evacuation/evac_247_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_247_lost"
+		texturefile = "gfx/interface/evacuation/evac_247_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_248_red"
+		texturefile = "gfx/interface/evacuation/evac_248_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_248_ok"
+		texturefile = "gfx/interface/evacuation/evac_248_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_248_lost"
+		texturefile = "gfx/interface/evacuation/evac_248_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_252_red"
+		texturefile = "gfx/interface/evacuation/evac_252_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_252_ok"
+		texturefile = "gfx/interface/evacuation/evac_252_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_252_lost"
+		texturefile = "gfx/interface/evacuation/evac_252_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_253_red"
+		texturefile = "gfx/interface/evacuation/evac_253_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_253_ok"
+		texturefile = "gfx/interface/evacuation/evac_253_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_253_lost"
+		texturefile = "gfx/interface/evacuation/evac_253_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_254_red"
+		texturefile = "gfx/interface/evacuation/evac_254_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_254_ok"
+		texturefile = "gfx/interface/evacuation/evac_254_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_254_lost"
+		texturefile = "gfx/interface/evacuation/evac_254_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_255_red"
+		texturefile = "gfx/interface/evacuation/evac_255_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_255_ok"
+		texturefile = "gfx/interface/evacuation/evac_255_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_255_lost"
+		texturefile = "gfx/interface/evacuation/evac_255_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_257_red"
+		texturefile = "gfx/interface/evacuation/evac_257_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_257_ok"
+		texturefile = "gfx/interface/evacuation/evac_257_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_257_lost"
+		texturefile = "gfx/interface/evacuation/evac_257_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_258_red"
+		texturefile = "gfx/interface/evacuation/evac_258_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_258_ok"
+		texturefile = "gfx/interface/evacuation/evac_258_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_258_lost"
+		texturefile = "gfx/interface/evacuation/evac_258_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_259_red"
+		texturefile = "gfx/interface/evacuation/evac_259_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_259_ok"
+		texturefile = "gfx/interface/evacuation/evac_259_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_259_lost"
+		texturefile = "gfx/interface/evacuation/evac_259_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_260_red"
+		texturefile = "gfx/interface/evacuation/evac_260_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_260_ok"
+		texturefile = "gfx/interface/evacuation/evac_260_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_260_lost"
+		texturefile = "gfx/interface/evacuation/evac_260_lost.png"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_evac_263_red"
+		texturefile = "gfx/interface/evacuation/evac_263_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_263_ok"
+		texturefile = "gfx/interface/evacuation/evac_263_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_263_lost"
+		texturefile = "gfx/interface/evacuation/evac_263_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_264_red"
+		texturefile = "gfx/interface/evacuation/evac_264_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_264_ok"
+		texturefile = "gfx/interface/evacuation/evac_264_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_264_lost"
+		texturefile = "gfx/interface/evacuation/evac_264_lost.png"
+	}
+
+
+
+
+
+
+	spriteType = {
+		name = "GFX_evac_780_red"
+		texturefile = "gfx/interface/evacuation/evac_780_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_780_ok"
+		texturefile = "gfx/interface/evacuation/evac_780_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_780_lost"
+		texturefile = "gfx/interface/evacuation/evac_780_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_804_red"
+		texturefile = "gfx/interface/evacuation/evac_804_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_804_ok"
+		texturefile = "gfx/interface/evacuation/evac_804_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_804_lost"
+		texturefile = "gfx/interface/evacuation/evac_804_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_805_red"
+		texturefile = "gfx/interface/evacuation/evac_805_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_805_ok"
+		texturefile = "gfx/interface/evacuation/evac_805_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_805_lost"
+		texturefile = "gfx/interface/evacuation/evac_805_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_806_red"
+		texturefile = "gfx/interface/evacuation/evac_806_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_806_ok"
+		texturefile = "gfx/interface/evacuation/evac_806_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_806_lost"
+		texturefile = "gfx/interface/evacuation/evac_806_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_807_red"
+		texturefile = "gfx/interface/evacuation/evac_807_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_807_ok"
+		texturefile = "gfx/interface/evacuation/evac_807_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_807_lost"
+		texturefile = "gfx/interface/evacuation/evac_807_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_808_red"
+		texturefile = "gfx/interface/evacuation/evac_808_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_808_ok"
+		texturefile = "gfx/interface/evacuation/evac_808_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_808_lost"
+		texturefile = "gfx/interface/evacuation/evac_808_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_809_red"
+		texturefile = "gfx/interface/evacuation/evac_809_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_809_ok"
+		texturefile = "gfx/interface/evacuation/evac_809_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_809_lost"
+		texturefile = "gfx/interface/evacuation/evac_809_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_810_red"
+		texturefile = "gfx/interface/evacuation/evac_810_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_810_ok"
+		texturefile = "gfx/interface/evacuation/evac_810_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_810_lost"
+		texturefile = "gfx/interface/evacuation/evac_810_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_811_red"
+		texturefile = "gfx/interface/evacuation/evac_811_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_811_ok"
+		texturefile = "gfx/interface/evacuation/evac_811_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_811_lost"
+		texturefile = "gfx/interface/evacuation/evac_811_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_817_red"
+		texturefile = "gfx/interface/evacuation/evac_817_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_817_ok"
+		texturefile = "gfx/interface/evacuation/evac_817_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_817_lost"
+		texturefile = "gfx/interface/evacuation/evac_817_lost.png"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_evac_822_red"
+		texturefile = "gfx/interface/evacuation/evac_822_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_822_ok"
+		texturefile = "gfx/interface/evacuation/evac_822_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_822_lost"
+		texturefile = "gfx/interface/evacuation/evac_822_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_823_red"
+		texturefile = "gfx/interface/evacuation/evac_823_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_823_ok"
+		texturefile = "gfx/interface/evacuation/evac_823_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_823_lost"
+		texturefile = "gfx/interface/evacuation/evac_823_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_824_red"
+		texturefile = "gfx/interface/evacuation/evac_824_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_824_ok"
+		texturefile = "gfx/interface/evacuation/evac_824_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_824_lost"
+		texturefile = "gfx/interface/evacuation/evac_824_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_830_red"
+		texturefile = "gfx/interface/evacuation/evac_830_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_830_ok"
+		texturefile = "gfx/interface/evacuation/evac_830_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_830_lost"
+		texturefile = "gfx/interface/evacuation/evac_830_lost.png"
+	}
+
+
+
+
+
+
+	spriteType = {
+		name = "GFX_ORDL_evac_region_plaque"
+		texturefile = "gfx/interface/evacuation/regions/region_plaque.png"
+	}
+	spriteType = {
+		name = "GFX_evac_239_red"
+		texturefile = "gfx/interface/evacuation/evac_239_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_239_ok"
+		texturefile = "gfx/interface/evacuation/evac_239_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_239_lost"
+		texturefile = "gfx/interface/evacuation/evac_239_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_265_red"
+		texturefile = "gfx/interface/evacuation/evac_265_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_265_ok"
+		texturefile = "gfx/interface/evacuation/evac_265_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_265_lost"
+		texturefile = "gfx/interface/evacuation/evac_265_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_825_red"
+		texturefile = "gfx/interface/evacuation/evac_825_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_825_ok"
+		texturefile = "gfx/interface/evacuation/evac_825_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_825_lost"
+		texturefile = "gfx/interface/evacuation/evac_825_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S1_red"
+		texturefile = "gfx/interface/evacuation/regions/region_S1_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S1_ok"
+		texturefile = "gfx/interface/evacuation/regions/region_S1_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S1_lost"
+		texturefile = "gfx/interface/evacuation/regions/region_S1_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S2_red"
+		texturefile = "gfx/interface/evacuation/regions/region_S2_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S2_ok"
+		texturefile = "gfx/interface/evacuation/regions/region_S2_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S2_lost"
+		texturefile = "gfx/interface/evacuation/regions/region_S2_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S3_red"
+		texturefile = "gfx/interface/evacuation/regions/region_S3_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S3_ok"
+		texturefile = "gfx/interface/evacuation/regions/region_S3_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S3_lost"
+		texturefile = "gfx/interface/evacuation/regions/region_S3_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S4_red"
+		texturefile = "gfx/interface/evacuation/regions/region_S4_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S4_ok"
+		texturefile = "gfx/interface/evacuation/regions/region_S4_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S4_lost"
+		texturefile = "gfx/interface/evacuation/regions/region_S4_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S5_red"
+		texturefile = "gfx/interface/evacuation/regions/region_S5_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S5_ok"
+		texturefile = "gfx/interface/evacuation/regions/region_S5_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S5_lost"
+		texturefile = "gfx/interface/evacuation/regions/region_S5_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S6_red"
+		texturefile = "gfx/interface/evacuation/regions/region_S6_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S6_ok"
+		texturefile = "gfx/interface/evacuation/regions/region_S6_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S6_lost"
+		texturefile = "gfx/interface/evacuation/regions/region_S6_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S7_red"
+		texturefile = "gfx/interface/evacuation/regions/region_S7_red.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S7_ok"
+		texturefile = "gfx/interface/evacuation/regions/region_S7_ok.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S7_lost"
+		texturefile = "gfx/interface/evacuation/regions/region_S7_lost.png"
+	}
+
+}

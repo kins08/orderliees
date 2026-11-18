@@ -1,0 +1,475 @@
+guiTypes = {
+	containerWindowType = {
+		name = "pacific_battle_decision_ui"
+		position = { x = 0 y = 0 }
+		size = { width = 500 height = 285 }
+
+		# Информационная шапка
+		containerWindowType = {
+			name = "stats_header"
+			position = { x = 6 y = 0 }
+			size = { width = 488 height = 75 }
+
+			background = {
+				name = "stats_bg"
+				spriteType = "GFX_tiled_plain_bg"
+			}
+
+			instantTextBoxType = {
+				name = "pacific_title"
+				position = { x = 12 y = 14 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_HEADER_TITLE"
+				maxWidth = 260
+				maxHeight = 20
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "pacific_bases_counter"
+				position = { x = 12 y = 38 }
+				font = "hoi_16mbs"
+				text = "[GetPacificBasesCounter]"
+				maxWidth = 260
+				maxHeight = 20
+				format = left
+			}
+
+			# Три параметра модификаторов
+			instantTextBoxType = {
+				name = "stat_attack"
+				position = { x = 270 y = 10 }
+				font = "hoi_16mbs"
+				text = "[GetPacificStat1Text]"
+				maxWidth = 210
+				maxHeight = 18
+				format = right
+				pdx_tooltip = "PACIFIC_STAT_ATTACK_TT"
+			}
+			instantTextBoxType = {
+				name = "stat_resources"
+				position = { x = 270 y = 30 }
+				font = "hoi_16mbs"
+				text = "[GetPacificStat2Text]"
+				maxWidth = 210
+				maxHeight = 18
+				format = right
+				pdx_tooltip = "PACIFIC_STAT_RESOURCES_TT"
+			}
+			instantTextBoxType = {
+				name = "stat_output"
+				position = { x = 270 y = 50 }
+				font = "hoi_16mbs"
+				text = "[GetPacificStat3Text]"
+				maxWidth = 210
+				maxHeight = 18
+				format = right
+				pdx_tooltip = "PACIFIC_STAT_OUTPUT_TT"
+			}
+		}
+
+		# ==========================================
+		# РЯД 1: 6 РЕГИОНОВ (y = 82)
+		# ==========================================
+
+		# 1. Малайя (336)
+		containerWindowType = {
+			name = "base_336"
+			position = { x = 13 y = 82 }
+			size = { width = 74 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_336"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_336"
+				maxWidth = 74
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_336_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_malaya_east_land_ALLY"
+				position = { x = 17 y = 22 }
+				scale = 0.23
+			}
+			iconType = {
+				name = "state_336_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_malaya_east_land_JAP"
+				position = { x = 17 y = 22 }
+				scale = 0.23
+			}
+			buttonType = {
+				name = "btn_goto_state_336"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_336"
+				clicksound = click_default
+			}
+		}
+
+		# 2. Западная Ява (335)
+		containerWindowType = {
+			name = "base_335"
+			position = { x = 93 y = 82 }
+			size = { width = 74 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_335"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_335"
+				maxWidth = 74
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_335_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_java_west_land_ALLY"
+				position = { x = 5 y = 28 }
+				scale = 0.20
+			}
+			iconType = {
+				name = "state_335_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_java_west_land_JAP"
+				position = { x = 5 y = 28 }
+				scale = 0.20
+			}
+			buttonType = {
+				name = "btn_goto_state_335"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_335"
+				clicksound = click_default
+			}
+		}
+
+		# 3. Лусон / Филиппины (327)
+		containerWindowType = {
+			name = "base_327"
+			position = { x = 173 y = 82 }
+			size = { width = 74 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_327"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_327"
+				maxWidth = 74
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_327_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_luzon_east_land_ALLY"
+				position = { x = 16 y = 22 }
+				scale = 0.23
+			}
+			iconType = {
+				name = "state_327_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_luzon_east_land_JAP"
+				position = { x = 16 y = 22 }
+				scale = 0.23
+			}
+			buttonType = {
+				name = "btn_goto_state_327"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_327"
+				clicksound = click_default
+			}
+		}
+
+		# 4. Папуа (975)
+		containerWindowType = {
+			name = "base_975"
+			position = { x = 253 y = 82 }
+			size = { width = 74 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_975"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_975"
+				maxWidth = 74
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_975_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_newguinea_aus_land_ALLY"
+				position = { x = 5 y = 28 }
+				scale = 0.20
+			}
+			iconType = {
+				name = "state_975_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_newguinea_aus_land_JAP"
+				position = { x = 5 y = 28 }
+				scale = 0.20
+			}
+			buttonType = {
+				name = "btn_goto_state_975"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_975"
+				clicksound = click_default
+			}
+		}
+
+		# 5. Дели (439)
+		containerWindowType = {
+			name = "base_439"
+			position = { x = 333 y = 82 }
+			size = { width = 74 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_439"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_439"
+				maxWidth = 74
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_439_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_delhi_land_ALLY"
+				position = { x = 15 y = 22 }
+				scale = 0.23
+			}
+			iconType = {
+				name = "state_439_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_delhi_land_JAP"
+				position = { x = 15 y = 22 }
+				scale = 0.23
+			}
+			buttonType = {
+				name = "btn_goto_state_439"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_439"
+				clicksound = click_default
+			}
+		}
+
+		# 6. Канберра (285)
+		containerWindowType = {
+			name = "base_285"
+			position = { x = 413 y = 82 }
+			size = { width = 74 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_285"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_285"
+				maxWidth = 74
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_285_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_canberra_land_ALLY"
+				position = { x = 12 y = 24 }
+				scale = 0.23
+			}
+			iconType = {
+				name = "state_285_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_canberra_land_JAP"
+				position = { x = 12 y = 24 }
+				scale = 0.23
+			}
+			buttonType = {
+				name = "btn_goto_state_285"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_285"
+				clicksound = click_default
+			}
+		}
+
+		# ==========================================
+		# РЯД 2: 5 РЕГИОНОВ (y = 182)
+		# ==========================================
+
+		# 7. Гавайи (626)
+		containerWindowType = {
+			name = "base_626"
+			position = { x = 16 y = 182 }
+			size = { width = 80 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_626"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_626"
+				maxWidth = 80
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_626_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_hawaii_bigisland_land_ALLY"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			iconType = {
+				name = "state_626_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_hawaii_bigisland_land_JAP"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			buttonType = {
+				name = "btn_goto_state_626"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_626"
+				clicksound = click_default
+			}
+		}
+
+		# 8. Мидуэй (628)
+		containerWindowType = {
+			name = "base_628"
+			position = { x = 112 y = 182 }
+			size = { width = 80 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_628"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_628"
+				maxWidth = 80
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_628_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_midway_land_ALLY"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			iconType = {
+				name = "state_628_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_midway_land_JAP"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			buttonType = {
+				name = "btn_goto_state_628"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_628"
+				clicksound = click_default
+			}
+		}
+
+		# 9. Тайвань (524)
+		containerWindowType = {
+			name = "base_524"
+			position = { x = 208 y = 182 }
+			size = { width = 80 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_524"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_524"
+				maxWidth = 80
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_524_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_taiwan_land_ALLY"
+				position = { x = 27 y = 22 }
+				scale = 0.24
+			}
+			iconType = {
+				name = "state_524_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_taiwan_land_JAP"
+				position = { x = 27 y = 22 }
+				scale = 0.24
+			}
+			buttonType = {
+				name = "btn_goto_state_524"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_524"
+				clicksound = click_default
+			}
+		}
+
+		# 10. Окинава (526)
+		containerWindowType = {
+			name = "base_526"
+			position = { x = 304 y = 182 }
+			size = { width = 80 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_526"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_526"
+				maxWidth = 80
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_526_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_okinawa_mid_land_ALLY"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			iconType = {
+				name = "state_526_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_okinawa_mid_land_JAP"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			buttonType = {
+				name = "btn_goto_state_526"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_526"
+				clicksound = click_default
+			}
+		}
+
+		# 11. Иводзима (642)
+		containerWindowType = {
+			name = "base_642"
+			position = { x = 400 y = 182 }
+			size = { width = 80 height = 95 }
+
+			instantTextBoxType = {
+				name = "name_642"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "PACIFIC_NAME_642"
+				maxWidth = 80
+				maxHeight = 18
+				format = center
+			}
+			iconType = {
+				name = "state_642_is_ally"
+				spriteType = "GFX_map_gui_asia_v4_iwojima_south_land_ALLY"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			iconType = {
+				name = "state_642_is_jap"
+				spriteType = "GFX_map_gui_asia_v4_iwojima_south_land_JAP"
+				position = { x = 15 y = 26 }
+				scale = 0.24
+			}
+			buttonType = {
+				name = "btn_goto_state_642"
+				position = { x = 0 y = 18 }
+				quadTextureSprite = "GFX_pacific_transparent_button"
+				pdx_tooltip = "PACIFIC_TT_642"
+				clicksound = click_default
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+capital = 1026 # Nanjing
+
+recruit_character = CHI_chiang_kaishek
+recruit_character = CHI_wang_jingwei
+
+set_stability = 1
+set_war_support = 1
+
+set_popularities = {
+	neutrality = 100
+}
+
+add_ideas = {
+	ordl_strict_neutrality
+	free_trade
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+set_technology = {
+	tech_mountaineers = 1
+	marines = 1
+	paratroopers = 1
+	rangers_tech = 1
+}
+
+set_convoys = 40

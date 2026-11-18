@@ -1,0 +1,98 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_decision_cat_icon_fra_evacuation"
+		texturefile = "gfx/interface/decisions/decision_cat_icon_fra_evacuation.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_picture_fra_evacuation"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_fra_evacuation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_FRA_mainland_resistance"
+		texturefile = "gfx/interface/ideas/FRA_mainland_resistance.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_FRA_german_losses_buff"
+		texturefile = "gfx/interface/ideas/FRA_german_losses_buff.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_transparent_button"
+		texturefile = "gfx/interface/fra_evacuation/fra_transparent_button.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_map_france_metropole"
+		texturefile = "gfx/interface/fra_evacuation/map_france_metropole.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_port_marker_mil"
+		texturefile = "gfx/interface/fra_evacuation/port_marker_mil.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_port_marker_civ"
+		texturefile = "gfx/interface/fra_evacuation/port_marker_civ.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_port_marker_base"
+		texturefile = "gfx/interface/fra_evacuation/port_marker_base.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_card_aof"
+		texturefile = "gfx/interface/fra_evacuation/card_aof.png"
+	}
+	spriteType = {
+		name = "GFX_fra_card_aof_active"
+		texturefile = "gfx/interface/fra_evacuation/card_aof_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_card_aef"
+		texturefile = "gfx/interface/fra_evacuation/card_aef.png"
+	}
+	spriteType = {
+		name = "GFX_fra_card_aef_active"
+		texturefile = "gfx/interface/fra_evacuation/card_aef_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_card_madagascar"
+		texturefile = "gfx/interface/fra_evacuation/card_madagascar.png"
+	}
+	spriteType = {
+		name = "GFX_fra_card_madagascar_active"
+		texturefile = "gfx/interface/fra_evacuation/card_madagascar_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_card_guiana"
+		texturefile = "gfx/interface/fra_evacuation/card_guiana.png"
+	}
+	spriteType = {
+		name = "GFX_fra_card_guiana_active"
+		texturefile = "gfx/interface/fra_evacuation/card_guiana_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_inactive"
+		texturefile = "gfx/interface/fra_evacuation/tier_inactive.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_active"
+		texturefile = "gfx/interface/fra_evacuation/tier_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_hitbox"
+		texturefile = "gfx/interface/fra_evacuation/tier_hitbox.png"
+	}
+}

@@ -1,0 +1,3 @@
+﻿add_namespace = MTG_naval_treaty
+
+# Country invited to join naval treaty

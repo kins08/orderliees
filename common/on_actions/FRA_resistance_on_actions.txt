@@ -1,0 +1,86 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+				FRA_lock_colonial_construction = yes
+			}
+		}
+	}
+
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { tag = FRA }
+							ROOT = { tag = GER }
+						}
+						AND = {
+							FROM = { tag = GER }
+							ROOT = { tag = FRA }
+						}
+					}
+				}
+				FRA = {
+					FRA_unlock_colonial_construction = yes
+					FRA_resistance_war_start = yes
+					FRA_resistance_daily_update = yes
+				}
+			}
+		}
+	}
+
+	on_daily_FRA = {
+		effect = {
+			# Unlock slots in 1939
+			if = {
+				limit = {
+					date > 1939.1.1
+					NOT = { has_country_flag = FRA_colonial_slots_unlocked }
+				}
+				FRA_unlock_colonial_construction = yes
+			}
+
+			# War start initialization
+			if = {
+				limit = {
+					has_war_with = GER
+					NOT = { has_country_flag = FRA_resistance_war_started }
+				}
+				FRA_unlock_colonial_construction = yes
+				FRA_resistance_war_start = yes
+			}
+
+			# Daily war update
+			if = {
+				limit = {
+					OR = {
+						has_war_with = GER
+						check_variable = { var = FRA_free_france_buff_days_left value = 0 compare = greater_than }
+						has_country_flag = FRA_capitulation_timer_started
+					}
+				}
+				FRA_resistance_daily_update = yes
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = FRA }
+				}
+				FRA = {
+					if = {
+						limit = { NOT = { has_country_flag = FRA_capitulation_timer_started } }
+						set_country_flag = FRA_capitulation_timer_started
+						set_variable = { FRA_days_since_capitulation = 0 }
+					}
+					FRA_enable_free_france_african_construction = yes
+				}
+			}
+		}
+	}
+}

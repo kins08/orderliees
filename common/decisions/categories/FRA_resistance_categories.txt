@@ -1,0 +1,73 @@
+FRA_resistance_evac_category = {
+	priority = 150
+
+	icon = GFX_decision_cat_icon_fra_evacuation
+	picture = GFX_decision_cat_picture_fra_evacuation
+
+	scripted_gui = FRA_resistance_evac_decision_ui
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	visible = {
+		original_tag = FRA
+		has_war_with = GER
+		NOT = { has_country_flag = FRA_evac_gui_hidden }
+	}
+
+	visible_when_empty = yes
+}
+
+FRA_resistance_evac_spectator_category = {
+	priority = 149
+
+	icon = GFX_decision_cat_icon_fra_evacuation
+	picture = GFX_decision_cat_picture_fra_evacuation
+
+	scripted_gui = FRA_resistance_evac_spectator_ui
+
+	allowed = {
+		OR = {
+			tag = CAN
+			tag = USA
+			tag = ENG
+			tag = GER
+			tag = ITA
+			tag = HUN
+			tag = ROM
+			tag = BUL
+			tag = SOV
+			tag = RAJ
+			tag = SAF
+			tag = AST
+			tag = TUR
+			tag = JAP
+		}
+	}
+
+	visible = {
+		OR = {
+			tag = CAN
+			tag = USA
+			tag = ENG
+			tag = GER
+			tag = ITA
+			tag = HUN
+			tag = ROM
+			tag = BUL
+			tag = SOV
+			tag = RAJ
+			tag = SAF
+			tag = AST
+			tag = TUR
+			tag = JAP
+		}
+		FRA = {
+			has_war_with = GER
+			NOT = { has_country_flag = FRA_evac_gui_hidden }
+		}
+	}
+
+	visible_when_empty = yes
+}

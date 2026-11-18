@@ -1,0 +1,201 @@
+# Hidden ideas for Allied attack debuff/bonus against European Axis
+# Range: -27% (maximum Japanese conquest) to +17% (Allied control of Midway + liberation of Taiwan, Okinawa, Iwo Jima)
+ideas = {
+	hidden_ideas = {
+		pacific_allied_axis_attack_buff_p17 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.17 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.17 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.17 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.17 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.17 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.17 }
+		}
+		pacific_allied_axis_attack_buff_p15 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.15 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.15 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.15 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.15 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.15 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.15 }
+		}
+		pacific_allied_axis_attack_buff_p12 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.12 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.12 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.12 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.12 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.12 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.12 }
+		}
+		pacific_allied_axis_attack_buff_p10 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.10 }
+		}
+		pacific_allied_axis_attack_buff_p7 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.07 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.07 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.07 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.07 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.07 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.07 }
+		}
+		pacific_allied_axis_attack_buff_p5 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.05 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.05 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.05 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.05 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.05 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.05 }
+		}
+		pacific_allied_axis_attack_buff_p2 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.02 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.02 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.02 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.02 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.02 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.02 }
+		}
+		pacific_allied_axis_attack_debuff_0 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = 0.00 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.00 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.00 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.00 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.00 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.00 }
+		}
+		pacific_allied_axis_attack_debuff_m3_5 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = -0.035 }
+			targeted_modifier = { tag = ITA attack_bonus_against = -0.035 }
+			targeted_modifier = { tag = ROM attack_bonus_against = -0.035 }
+			targeted_modifier = { tag = HUN attack_bonus_against = -0.035 }
+			targeted_modifier = { tag = FIN attack_bonus_against = -0.035 }
+			targeted_modifier = { tag = BUL attack_bonus_against = -0.035 }
+		}
+		pacific_allied_axis_attack_debuff_m7 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = -0.07 }
+			targeted_modifier = { tag = ITA attack_bonus_against = -0.07 }
+			targeted_modifier = { tag = ROM attack_bonus_against = -0.07 }
+			targeted_modifier = { tag = HUN attack_bonus_against = -0.07 }
+			targeted_modifier = { tag = FIN attack_bonus_against = -0.07 }
+			targeted_modifier = { tag = BUL attack_bonus_against = -0.07 }
+		}
+		pacific_allied_axis_attack_debuff_m10_5 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = -0.105 }
+			targeted_modifier = { tag = ITA attack_bonus_against = -0.105 }
+			targeted_modifier = { tag = ROM attack_bonus_against = -0.105 }
+			targeted_modifier = { tag = HUN attack_bonus_against = -0.105 }
+			targeted_modifier = { tag = FIN attack_bonus_against = -0.105 }
+			targeted_modifier = { tag = BUL attack_bonus_against = -0.105 }
+		}
+		pacific_allied_axis_attack_debuff_m14 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = -0.14 }
+			targeted_modifier = { tag = ITA attack_bonus_against = -0.14 }
+			targeted_modifier = { tag = ROM attack_bonus_against = -0.14 }
+			targeted_modifier = { tag = HUN attack_bonus_against = -0.14 }
+			targeted_modifier = { tag = FIN attack_bonus_against = -0.14 }
+			targeted_modifier = { tag = BUL attack_bonus_against = -0.14 }
+		}
+		pacific_allied_axis_attack_debuff_m18 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = -0.18 }
+			targeted_modifier = { tag = ITA attack_bonus_against = -0.18 }
+			targeted_modifier = { tag = ROM attack_bonus_against = -0.18 }
+			targeted_modifier = { tag = HUN attack_bonus_against = -0.18 }
+			targeted_modifier = { tag = FIN attack_bonus_against = -0.18 }
+			targeted_modifier = { tag = BUL attack_bonus_against = -0.18 }
+		}
+		pacific_allied_axis_attack_debuff_m22 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = -0.22 }
+			targeted_modifier = { tag = ITA attack_bonus_against = -0.22 }
+			targeted_modifier = { tag = ROM attack_bonus_against = -0.22 }
+			targeted_modifier = { tag = HUN attack_bonus_against = -0.22 }
+			targeted_modifier = { tag = FIN attack_bonus_against = -0.22 }
+			targeted_modifier = { tag = BUL attack_bonus_against = -0.22 }
+		}
+		pacific_allied_axis_attack_debuff_m27 = {
+			name = pacific_allied_axis_attack_debuff
+			picture = GFX_idea_USA_jap_poster
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			targeted_modifier = { tag = GER attack_bonus_against = -0.27 }
+			targeted_modifier = { tag = ITA attack_bonus_against = -0.27 }
+			targeted_modifier = { tag = ROM attack_bonus_against = -0.27 }
+			targeted_modifier = { tag = HUN attack_bonus_against = -0.27 }
+			targeted_modifier = { tag = FIN attack_bonus_against = -0.27 }
+			targeted_modifier = { tag = BUL attack_bonus_against = -0.27 }
+		}
+	}
+}

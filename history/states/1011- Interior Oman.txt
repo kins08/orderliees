@@ -1,0 +1,30 @@
+state = {
+	id = 1011
+	name = "STATE_1011"
+	manpower = 129000
+	
+	state_category = pastoral
+	
+	resources = {
+		oil = 2
+	}
+
+	history = {
+
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+
+		victory_points = {
+			5049 1 # Nizwa
+		}
+		
+	}
+
+	provinces = {
+		2018 5049
+	}
+
+	local_supplies = 0.0 
+}

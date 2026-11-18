@@ -1,0 +1,496 @@
+# Pacific War mechanic calculations
+
+# Remove targeted attack ideas from an Allied nation
+remove_pacific_allied_attack_ideas = {
+	if = { limit = { has_idea = pacific_allied_axis_attack_buff_p17 } remove_ideas = pacific_allied_axis_attack_buff_p17 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_buff_p15 } remove_ideas = pacific_allied_axis_attack_buff_p15 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_buff_p12 } remove_ideas = pacific_allied_axis_attack_buff_p12 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_buff_p10 } remove_ideas = pacific_allied_axis_attack_buff_p10 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_buff_p7 } remove_ideas = pacific_allied_axis_attack_buff_p7 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_buff_p5 } remove_ideas = pacific_allied_axis_attack_buff_p5 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_buff_p2 } remove_ideas = pacific_allied_axis_attack_buff_p2 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_0 } remove_ideas = pacific_allied_axis_attack_debuff_0 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_m3_5 } remove_ideas = pacific_allied_axis_attack_debuff_m3_5 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_m7 } remove_ideas = pacific_allied_axis_attack_debuff_m7 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_m10_5 } remove_ideas = pacific_allied_axis_attack_debuff_m10_5 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_m14 } remove_ideas = pacific_allied_axis_attack_debuff_m14 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_m18 } remove_ideas = pacific_allied_axis_attack_debuff_m18 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_m22 } remove_ideas = pacific_allied_axis_attack_debuff_m22 }
+	if = { limit = { has_idea = pacific_allied_axis_attack_debuff_m27 } remove_ideas = pacific_allied_axis_attack_debuff_m27 }
+}
+
+# Synchronize targeted attack idea with current Allied attack modifier
+sync_pacific_allied_attack_idea = {
+	if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > 0.125 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_buff_p15 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_buff_p15
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > 0.075 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_buff_p10 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_buff_p10
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > 0.025 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_buff_p5 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_buff_p5
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > -0.015 } }
+		remove_pacific_allied_attack_ideas = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > -0.050 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_debuff_m3_5 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_debuff_m3_5
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > -0.085 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_debuff_m7 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_debuff_m7
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > -0.120 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_debuff_m10_5 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_debuff_m10_5
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > -0.160 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_debuff_m14 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_debuff_m14
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > -0.200 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_debuff_m18 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_debuff_m18
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.pacific_attack_factor_var > -0.245 } }
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_debuff_m22 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_debuff_m22
+		}
+	}
+	else = {
+		if = {
+			limit = { NOT = { has_idea = pacific_allied_axis_attack_debuff_m27 } }
+			remove_pacific_allied_attack_ideas = yes
+			add_ideas = pacific_allied_axis_attack_debuff_m27
+		}
+	}
+}
+
+# Apply effects to a single Allied nation
+apply_pacific_allied_country_effect = {
+	set_variable = { pacific_allied_attack_var = global.pacific_attack_factor_var }
+	set_variable = { pacific_attack_factor_var = global.pacific_attack_factor_var }
+	set_variable = { pacific_allied_resources_var = global.pacific_allied_resources_var }
+	set_variable = { pacific_allied_ic_output_var = global.pacific_allied_ic_output_var }
+
+	if = {
+		limit = {
+			OR = {
+				check_variable = { pacific_allied_attack_var > 0.001 }
+				check_variable = { pacific_allied_attack_var < -0.001 }
+				check_variable = { pacific_allied_resources_var > 0.001 }
+				check_variable = { pacific_allied_resources_var < -0.001 }
+				check_variable = { pacific_allied_ic_output_var > 0.001 }
+				check_variable = { pacific_allied_ic_output_var < -0.001 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = pacific_allies_dynamic_modifier } }
+			}
+			add_dynamic_modifier = {
+				modifier = pacific_allies_dynamic_modifier
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = pacific_allies_dynamic_modifier }
+			}
+			remove_dynamic_modifier = {
+				modifier = pacific_allies_dynamic_modifier
+			}
+		}
+	}
+	sync_pacific_allied_attack_idea = yes
+}
+
+# Remove effects from a single Allied nation
+remove_pacific_allied_country_effect = {
+	if = {
+		limit = {
+			has_dynamic_modifier = { modifier = pacific_allies_dynamic_modifier }
+		}
+		remove_dynamic_modifier = {
+			modifier = pacific_allies_dynamic_modifier
+		}
+	}
+	remove_pacific_allied_attack_ideas = yes
+	clear_variable = pacific_allied_attack_var
+	clear_variable = pacific_attack_factor_var
+	clear_variable = pacific_allied_resources_var
+	clear_variable = pacific_allied_ic_output_var
+}
+
+apply_pacific_allied_attack_debuff = {
+	USA = { apply_pacific_allied_country_effect = yes }
+	ENG = { apply_pacific_allied_country_effect = yes }
+	FRA = { apply_pacific_allied_country_effect = yes }
+	AST = { apply_pacific_allied_country_effect = yes }
+	CAN = { apply_pacific_allied_country_effect = yes }
+	SAF = { apply_pacific_allied_country_effect = yes }
+	RAJ = { apply_pacific_allied_country_effect = yes }
+}
+
+# Remove from all Allied block countries
+remove_pacific_allied_attack_debuff = {
+	USA = { remove_pacific_allied_country_effect = yes }
+	ENG = { remove_pacific_allied_country_effect = yes }
+	FRA = { remove_pacific_allied_country_effect = yes }
+	AST = { remove_pacific_allied_country_effect = yes }
+	CAN = { remove_pacific_allied_country_effect = yes }
+	SAF = { remove_pacific_allied_country_effect = yes }
+	RAJ = { remove_pacific_allied_country_effect = yes }
+}
+
+init_pacific_battle_mechanic = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = pacific_battle_active }
+		}
+		set_global_flag = pacific_battle_active
+		recalculate_pacific_balance = yes
+	}
+}
+
+terminate_pacific_battle_mechanic = {
+	clr_global_flag = pacific_battle_active
+	JAP = {
+		if = {
+			limit = { has_dynamic_modifier = { modifier = pacific_theater_bonus } }
+			remove_dynamic_modifier = { modifier = pacific_theater_bonus }
+		}
+		clear_variable = pacific_max_efficiency_var
+		clear_variable = pacific_retention_var
+		clear_variable = pacific_ic_output_var
+	}
+	remove_pacific_allied_attack_debuff = yes
+	clear_variable = global.pacific_controlled_bases
+	clear_variable = global.pacific_controlled_by_allies
+	clear_variable = global.pacific_attack_factor_var
+	clear_variable = global.pacific_allied_attack_var
+	clear_variable = global.pacific_max_efficiency_var
+	clear_variable = global.pacific_retention_var
+	clear_variable = global.pacific_ic_output_var
+	clear_variable = global.pacific_allied_resources_var
+	clear_variable = global.pacific_allied_ic_output_var
+}
+
+recalculate_pacific_balance = {
+	set_temp_variable = { controlled_by_japan = 0 }
+	set_temp_variable = { controlled_by_allies = 0 }
+
+	set_temp_variable = { cur_jap_eff = 0.0 }
+	set_temp_variable = { cur_jap_ret = 0.0 }
+	set_temp_variable = { cur_jap_ic  = 0.0 }
+
+	set_temp_variable = { cur_ally_att = 0.0 }
+	set_temp_variable = { cur_ally_res = 0.0 }
+	set_temp_variable = { cur_ally_ic  = 0.0 }
+
+	set_temp_variable = { south_seas_held = 0 }
+	set_temp_variable = { allied_above_held = 0 }
+
+	# -------------------------------------------------------------
+	# 1. Южные моря (4 региона): Малайя (336), Ява (335), Манила (327), Папуа (975)
+	# Япония при контроле всех 4: Макс. эфф 5%, Сохранение эфф 12%, Оутпут 8% (шаги: 1/3/2, 2/6/4, 3/9/6, 5/12/8)
+	# Союзники получают дебаф: -3.5% Атаки, -2.5% Добычи, -2.0% Объёма за каждый
+	# -------------------------------------------------------------
+
+	# Малайя (336)
+	if = {
+		limit = { 336 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { south_seas_held = 1 }
+		subtract_from_temp_variable = { cur_ally_att = 0.035 }
+		subtract_from_temp_variable = { cur_ally_res = 0.025 }
+		subtract_from_temp_variable = { cur_ally_ic  = 0.020 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { allied_above_held = 1 }
+	}
+
+	# Западная Ява (335)
+	if = {
+		limit = { 335 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { south_seas_held = 1 }
+		subtract_from_temp_variable = { cur_ally_att = 0.035 }
+		subtract_from_temp_variable = { cur_ally_res = 0.025 }
+		subtract_from_temp_variable = { cur_ally_ic  = 0.020 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { allied_above_held = 1 }
+	}
+
+	# Манила / Филиппины (327)
+	if = {
+		limit = { 327 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { south_seas_held = 1 }
+		subtract_from_temp_variable = { cur_ally_att = 0.035 }
+		subtract_from_temp_variable = { cur_ally_res = 0.025 }
+		subtract_from_temp_variable = { cur_ally_ic  = 0.020 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { allied_above_held = 1 }
+	}
+
+	# Папуа (975)
+	if = {
+		limit = { 975 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { south_seas_held = 1 }
+		subtract_from_temp_variable = { cur_ally_att = 0.035 }
+		subtract_from_temp_variable = { cur_ally_res = 0.025 }
+		subtract_from_temp_variable = { cur_ally_ic  = 0.020 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { allied_above_held = 1 }
+	}
+
+	# Базовые бафы Японии за Южные моря (целые проценты, без дробей)
+	if = {
+		limit = { check_variable = { south_seas_held = 4 } }
+		add_to_temp_variable = { cur_jap_eff = 0.05 }
+		add_to_temp_variable = { cur_jap_ret = 0.12 }
+		add_to_temp_variable = { cur_jap_ic  = 0.08 }
+	}
+	else_if = {
+		limit = { check_variable = { south_seas_held = 3 } }
+		add_to_temp_variable = { cur_jap_eff = 0.03 }
+		add_to_temp_variable = { cur_jap_ret = 0.09 }
+		add_to_temp_variable = { cur_jap_ic  = 0.06 }
+	}
+	else_if = {
+		limit = { check_variable = { south_seas_held = 2 } }
+		add_to_temp_variable = { cur_jap_eff = 0.02 }
+		add_to_temp_variable = { cur_jap_ret = 0.06 }
+		add_to_temp_variable = { cur_jap_ic  = 0.04 }
+	}
+	else_if = {
+		limit = { check_variable = { south_seas_held = 1 } }
+		add_to_temp_variable = { cur_jap_eff = 0.01 }
+		add_to_temp_variable = { cur_jap_ret = 0.03 }
+		add_to_temp_variable = { cur_jap_ic  = 0.02 }
+	}
+
+	# -------------------------------------------------------------
+	# 2. Столицы (2 региона): Дели (439), Канберра (285)
+	# При захвате Японией: увеличивает ВСЕ бафы Японии на 2% за каждый регион (+2% эфф, +2% сохр, +2% оутпут)
+	# Союзники получают дебаф: -4.0% Атаки, -4.0% Добычи, -4.0% Объёма за каждый
+	# -------------------------------------------------------------
+
+	# Дели (439)
+	if = {
+		limit = { 439 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { cur_jap_eff = 0.02 }
+		add_to_temp_variable = { cur_jap_ret = 0.02 }
+		add_to_temp_variable = { cur_jap_ic  = 0.02 }
+		subtract_from_temp_variable = { cur_ally_att = 0.040 }
+		subtract_from_temp_variable = { cur_ally_res = 0.040 }
+		subtract_from_temp_variable = { cur_ally_ic  = 0.040 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { allied_above_held = 1 }
+	}
+
+	# Канберра (285)
+	if = {
+		limit = { 285 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { cur_jap_eff = 0.02 }
+		add_to_temp_variable = { cur_jap_ret = 0.02 }
+		add_to_temp_variable = { cur_jap_ic  = 0.02 }
+		subtract_from_temp_variable = { cur_ally_att = 0.040 }
+		subtract_from_temp_variable = { cur_ally_res = 0.040 }
+		subtract_from_temp_variable = { cur_ally_ic  = 0.040 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { allied_above_held = 1 }
+	}
+
+	# -------------------------------------------------------------
+	# 3. Гавайи (626)
+	# При захвате Японией: увеличивает ВСЕ бафы Японии на 5% (+5% эфф, +5% сохр, +5% оутпут)
+	# Союзники получают дебаф: -5.0% Атаки, -5.0% Добычи, -5.0% Объёма
+	# -------------------------------------------------------------
+
+	# Гавайи (626)
+	if = {
+		limit = { 626 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { cur_jap_eff = 0.05 }
+		add_to_temp_variable = { cur_jap_ret = 0.05 }
+		add_to_temp_variable = { cur_jap_ic  = 0.05 }
+		subtract_from_temp_variable = { cur_ally_att = 0.050 }
+		subtract_from_temp_variable = { cur_ally_res = 0.050 }
+		subtract_from_temp_variable = { cur_ally_ic  = 0.050 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { allied_above_held = 1 }
+	}
+
+	# -------------------------------------------------------------
+	# 4. Мидуэй (628)
+	# При захвате Японией: увеличивает ВСЕ бафы Японии на 2% (+2% эфф, +2% сохр, +2% оутпут)
+	# Не даёт штраф Союзникам и не блокирует их бафф контрнаступления
+	# -------------------------------------------------------------
+
+	# Мидуэй (628)
+	if = {
+		limit = { 628 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+		add_to_temp_variable = { cur_jap_eff = 0.02 }
+		add_to_temp_variable = { cur_jap_ret = 0.02 }
+		add_to_temp_variable = { cur_jap_ic  = 0.02 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+	}
+
+	# -------------------------------------------------------------
+	# 5. Тайвань (524), Окинава (526), Иводзима (642)
+	# Не дают дебаф Алиесам!
+	# И ТОЛЬКО ОНИ дают им баф к атаке при контроле ВСЕХ остальных 7 ключевых регионов обороны.
+	# Каждый регион даёт БАФ по: +5.0% Атаки, +3.0% Добычи, +2.0% Объёма
+	# -------------------------------------------------------------
+
+	set_temp_variable = { home_liberated_count = 0 }
+
+	# Тайвань (524)
+	if = {
+		limit = { 524 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { home_liberated_count = 1 }
+	}
+
+	# Окинава (526)
+	if = {
+		limit = { 526 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { home_liberated_count = 1 }
+	}
+
+	# Иводзима (642)
+	if = {
+		limit = { 642 = { check_is_state_controlled_by_japan_side = yes } }
+		add_to_temp_variable = { controlled_by_japan = 1 }
+	}
+	else = {
+		add_to_temp_variable = { controlled_by_allies = 1 }
+		add_to_temp_variable = { home_liberated_count = 1 }
+	}
+
+	# Баф начисляется только если Союзники удерживают ВСЕ 7 ключевых регионов обороны
+	if = {
+		limit = { check_variable = { allied_above_held = 7 } }
+		set_temp_variable = { home_buff_att = home_liberated_count }
+		multiply_temp_variable = { home_buff_att = 0.050 }
+		add_to_temp_variable = { cur_ally_att = home_buff_att }
+
+		set_temp_variable = { home_buff_res = home_liberated_count }
+		multiply_temp_variable = { home_buff_res = 0.030 }
+		add_to_temp_variable = { cur_ally_res = home_buff_res }
+
+		set_temp_variable = { home_buff_ic = home_liberated_count }
+		multiply_temp_variable = { home_buff_ic = 0.020 }
+		add_to_temp_variable = { cur_ally_ic = home_buff_ic }
+	}
+
+	# Store variables globally
+	set_variable = { global.pacific_controlled_bases = controlled_by_japan }
+	set_variable = { global.pacific_controlled_by_allies = controlled_by_allies }
+	set_variable = { global.pacific_max_efficiency_var = cur_jap_eff }
+	set_variable = { global.pacific_retention_var = cur_jap_ret }
+	set_variable = { global.pacific_ic_output_var = cur_jap_ic }
+	set_variable = { global.pacific_allied_resources_var = cur_ally_res }
+	set_variable = { global.pacific_allied_ic_output_var = cur_ally_ic }
+	set_variable = { global.pacific_attack_factor_var = cur_ally_att }
+	set_variable = { global.pacific_allied_attack_var = cur_ally_att }
+
+	# Apply dynamic modifier to Japan
+	JAP = {
+		set_variable = { pacific_max_efficiency_var = global.pacific_max_efficiency_var }
+		set_variable = { pacific_retention_var = global.pacific_retention_var }
+		set_variable = { pacific_ic_output_var = global.pacific_ic_output_var }
+
+		if = {
+			limit = {
+				OR = {
+					check_variable = { pacific_max_efficiency_var > 0.001 }
+					check_variable = { pacific_retention_var > 0.001 }
+					check_variable = { pacific_ic_output_var > 0.001 }
+				}
+			}
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = pacific_theater_bonus } } }
+				add_dynamic_modifier = { modifier = pacific_theater_bonus }
+			}
+		}
+		else = {
+			if = {
+				limit = { has_dynamic_modifier = { modifier = pacific_theater_bonus } }
+				remove_dynamic_modifier = { modifier = pacific_theater_bonus }
+			}
+		}
+	}
+
+	# Apply dynamic modifier and ideas to all Allied countries
+	apply_pacific_allied_attack_debuff = yes
+}

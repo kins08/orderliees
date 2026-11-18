@@ -1,0 +1,2 @@
+# add_namespace = startup.institut
+# Event startup.institut.1 removed as institutes are pre-assigned in states history.

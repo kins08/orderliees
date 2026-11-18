@@ -1,0 +1,199 @@
+armored_spearhead = {
+    track = armor
+    name = SUBDOCTRINE_ARMORED_SPEARHEAD
+    description = SUBDOCTRINE_ARMORED_SPEARHEAD_DESC
+    icon = GFX_doctrine_armored_spearhead_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_armor_axis_tt
+            OR = {
+                tag = GER
+                tag = ITA
+                tag = HUN
+                tag = BUL
+                tag = FIN
+                original_tag = GER
+                original_tag = ITA
+                original_tag = HUN
+                original_tag = BUL
+                original_tag = FIN
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        force_concentration = {
+            category_all_armor = {
+                breakthrough = 0.05
+                default_morale = 0.30
+            }
+        }
+        armored_breakthrough_exploits = {
+            category_tank_destroyers = {
+                max_organisation = 2
+            }
+        }
+        local_reserves = {
+            medium_armor = {
+                soft_attack = 0.05
+                breakthrough = 0.10
+            }
+        }
+        tactical_reconnaissance = {
+            category_all_armor = {
+                ap_attack = 0.10
+                max_organisation = 5
+            }
+        }
+        assault_detachments = {
+            category_tank_destroyers = {
+                hard_attack = 0.02
+            }
+        }
+    }
+}
+
+armored_infantry_support = {
+    track = armor
+    name = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT
+    description = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT_DESC
+    icon = GFX_doctrine_armored_infantry_support_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_armor_inf_support_tt
+            OR = {
+                tag = SOV
+                tag = ROM
+                tag = RAJ
+                tag = SAF
+                tag = ENG
+                tag = FRA
+                tag = CAN
+                tag = AST
+                tag = ITA
+                original_tag = SOV
+                original_tag = ROM
+                original_tag = RAJ
+                original_tag = SAF
+                original_tag = ENG
+                original_tag = FRA
+                original_tag = CAN
+                original_tag = AST
+                original_tag = ITA
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        mobile_reserves = {
+            category_all_armor = {
+                defense = 0.10
+                default_morale = 0.30
+            }
+        }
+        armored_cohorts = {
+            category_tank_destroyers = {
+                hard_attack = 0.05
+                max_organisation = 2
+            }
+        }
+        maintenance_routines = {
+            heavy_armor = {
+                max_organisation = 2
+                breakthrough = 0.05
+            }
+        }
+        fuel_rationing = {
+            medium_armor = {
+                breakthrough = 0.10
+            }
+            category_tank_destroyers = {
+                hard_attack = 0.02
+            }
+        }
+        mobile_armored_strongpoints = {
+            category_all_infantry = {
+                defense = 0.05
+            }
+            category_all_armor = {
+                ap_attack = 0.10
+                max_organisation = 5
+            }
+        }
+    }
+}
+
+streamlined_deployment = {
+    track = armor
+    name = SUBDOCTRINE_STREAMLINED_DEPLOYMENT
+    description = SUBDOCTRINE_STREAMLINED_DEPLOYMENT_DESC
+    icon = GFX_doctrine_streamlined_deployment_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_armor_streamlined_deployment_tt
+            OR = {
+                tag = USA
+                tag = JAP
+                tag = ROM
+                original_tag = USA
+                original_tag = JAP
+                original_tag = ROM
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        flexible_armored_battalions = {
+            category_all_armor = {
+                breakthrough = 0.10
+                soft_attack = 0.10
+            }
+        }
+        mechanized_wave = {
+            category_all_armor = {
+                max_organisation = 5
+            }
+        }
+        tank_desant = {
+            amphibious_medium_armor = {
+                breakthrough = 0.05
+                soft_attack = 0.02
+                hard_attack = 0.05
+            }
+        }
+        full_front_deployment = {
+            amphibious_medium_armor = {
+                hard_attack = 0.05
+            }
+            category_army = {
+                soft_attack = 0.10
+                defense = 0.10
+            }
+        }
+        continuous_offensives = {
+            category_all_armor = {
+                max_organisation = 5
+                default_morale = 0.40
+                hard_attack = 0.05
+            }
+        }
+    }
+}

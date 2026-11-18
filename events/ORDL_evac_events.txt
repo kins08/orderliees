@@ -1,0 +1,18 @@
+add_namespace = ordl_evac
+
+# Fired once, from ORDL_evac_news_effect, when the first region finishes loading.
+# fire_only_once keeps it from repeating for every later region.
+news_event = {
+	id = ordl_evac.1
+	title = ordl_evac.1.t
+	desc = ordl_evac.1.d
+	picture = GFX_news_event_sov_evacuation
+
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ordl_evac.1.a
+	}
+}

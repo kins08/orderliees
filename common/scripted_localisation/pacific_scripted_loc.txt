@@ -1,0 +1,158 @@
+defined_text = {
+	name = GetPacificStatusLabel
+	text = {
+		trigger = {
+			has_global_flag = pacific_battle_active
+		}
+		localization_key = PACIFIC_STATUS_ACTIVE
+	}
+	text = {
+		localization_key = PACIFIC_STATUS_INACTIVE
+	}
+}
+
+defined_text = {
+	name = GetPacificBasesCounter
+	text = {
+		localization_key = PACIFIC_BASES_COUNTER_TEXT
+	}
+}
+
+defined_text = {
+	name = GetPacificStat1Text
+	text = {
+		trigger = {
+			OR = {
+				tag = USA
+				tag = ENG
+				tag = FRA
+				tag = AST
+				tag = CAN
+				tag = SAF
+				tag = RAJ
+				is_in_faction_with = ENG
+				is_in_faction_with = USA
+			}
+		}
+		localization_key = PACIFIC_STAT_ATTACK
+	}
+	text = {
+		localization_key = PACIFIC_STAT_EFFICIENCY_JAP
+	}
+}
+
+defined_text = {
+	name = GetPacificStat2Text
+	text = {
+		trigger = {
+			OR = {
+				tag = USA
+				tag = ENG
+				tag = FRA
+				tag = AST
+				tag = CAN
+				tag = SAF
+				tag = RAJ
+				is_in_faction_with = ENG
+				is_in_faction_with = USA
+			}
+		}
+		localization_key = PACIFIC_STAT_RESOURCES_ALLY
+	}
+	text = {
+		localization_key = PACIFIC_STAT_RETENTION_JAP
+	}
+}
+
+defined_text = {
+	name = GetPacificStat3Text
+	text = {
+		trigger = {
+			OR = {
+				tag = USA
+				tag = ENG
+				tag = FRA
+				tag = AST
+				tag = CAN
+				tag = SAF
+				tag = RAJ
+				is_in_faction_with = ENG
+				is_in_faction_with = USA
+			}
+		}
+		localization_key = PACIFIC_STAT_OUTPUT_ALLY
+	}
+	text = {
+		localization_key = PACIFIC_STAT_OUTPUT_JAP
+	}
+}
+
+# Dynamic tooltips for header stats
+defined_text = {
+	name = GetPacificStat1TT
+	text = {
+		trigger = {
+			OR = {
+				tag = USA
+				tag = ENG
+				tag = FRA
+				tag = AST
+				tag = CAN
+				tag = SAF
+				tag = RAJ
+				is_in_faction_with = ENG
+				is_in_faction_with = USA
+			}
+		}
+		localization_key = PACIFIC_STAT_ATTACK_ALLY_TT
+	}
+	text = {
+		localization_key = PACIFIC_STAT_EFFICIENCY_JAP_TT
+	}
+}
+
+defined_text = {
+	name = GetPacificStat2TT
+	text = {
+		trigger = {
+			OR = {
+				tag = USA
+				tag = ENG
+				tag = FRA
+				tag = AST
+				tag = CAN
+				tag = SAF
+				tag = RAJ
+				is_in_faction_with = ENG
+				is_in_faction_with = USA
+			}
+		}
+		localization_key = PACIFIC_STAT_RESOURCES_ALLY_TT
+	}
+	text = {
+		localization_key = PACIFIC_STAT_RETENTION_JAP_TT
+	}
+}
+
+defined_text = {
+	name = GetPacificStat3TT
+	text = {
+		trigger = {
+			OR = {
+				tag = USA
+				tag = ENG
+				tag = FRA
+				tag = AST
+				tag = CAN
+				tag = SAF
+				tag = RAJ
+				is_in_faction_with = ENG
+				is_in_faction_with = USA
+			}
+		}
+		localization_key = PACIFIC_STAT_OUTPUT_ALLY_TT
+	}
+	text = {
+		localization_key = PACIFIC_STAT_OUTPUT_JAP_TT
+	}
+}

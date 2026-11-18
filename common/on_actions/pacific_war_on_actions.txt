@@ -1,0 +1,145 @@
+# On-actions for Pacific War mechanic
+on_actions = {
+	on_startup = {
+		effect = {
+			clr_global_flag = pacific_battle_active
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = pacific_battle_active
+					tag = JAP
+				}
+				recalculate_pacific_balance = yes
+			}
+		}
+	}
+
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = pacific_battle_active }
+					OR = {
+						AND = {
+							FROM = {
+								OR = {
+									tag = JAP
+									is_in_faction_with = JAP
+								}
+							}
+							ROOT = {
+								OR = {
+									tag = USA
+									tag = ENG
+									tag = FRA
+									tag = AST
+									tag = CAN
+									tag = SAF
+									tag = RAJ
+									is_in_faction_with = ENG
+									is_in_faction_with = USA
+								}
+							}
+						}
+						AND = {
+							ROOT = {
+								OR = {
+									tag = JAP
+									is_in_faction_with = JAP
+								}
+							}
+							FROM = {
+								OR = {
+									tag = USA
+									tag = ENG
+									tag = FRA
+									tag = AST
+									tag = CAN
+									tag = SAF
+									tag = RAJ
+									is_in_faction_with = ENG
+									is_in_faction_with = USA
+								}
+							}
+						}
+					}
+				}
+				init_pacific_battle_mechanic = yes
+			}
+		}
+	}
+
+	# Trigger recalculation when control changes for any of the 11 key regions
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = pacific_battle_active
+					FROM.FROM = {
+						OR = {
+							state = 336   # Малайя
+							state = 335   # Западная Ява
+							state = 327   # Лусон / Филиппины
+							state = 975   # Папуа
+							state = 439   # Дели
+							state = 285   # Канберра
+							state = 626   # Гавайи
+							state = 628   # Мидуэй
+							state = 524   # Тайвань
+							state = 526   # Окинава
+							state = 642   # Иводзима
+						}
+					}
+				}
+				recalculate_pacific_balance = yes
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = pacific_battle_active
+					OR = {
+						ROOT = { tag = JAP }
+						ROOT = { tag = USA }
+						ROOT = { tag = ENG }
+					}
+				}
+				if = {
+					limit = {
+						JAP = {
+							NOT = {
+								has_war_with = USA
+								has_war_with = ENG
+							}
+						}
+					}
+					terminate_pacific_battle_mechanic = yes
+				}
+			}
+		}
+	}
+
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = pacific_battle_active
+					JAP = {
+						NOT = {
+							has_war_with = USA
+							has_war_with = ENG
+						}
+					}
+				}
+				terminate_pacific_battle_mechanic = yes
+			}
+		}
+	}
+}

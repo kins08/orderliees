@@ -1,0 +1,1100 @@
+guiTypes = {
+
+	# =========================================================================
+	# 1. ПАНЕЛЬ ЭВАКУАЦИИ ФРАНЦИИ (ДЛЯ ФРАНЦИИ - С КОЛОНИЯМИ И КАРУСЕЛЬЮ)
+	# =========================================================================
+	containerWindowType = {
+		name = "FRA_resistance_evac_decision_ui"
+		position = { x = 0 y = 0 }
+		size = { width = 500 height = 612 }
+
+		# 1.1 СТАТИСТИЧЕСКАЯ ШАПКА
+		containerWindowType = {
+			name = "evac_header"
+			position = { x = 5 y = 0 }
+			size = { width = 490 height = 86 }
+
+			background = {
+				name = "header_bg"
+				spriteType = "GFX_tiled_plain_bg"
+			}
+
+			instantTextBoxType = {
+				name = "header_title"
+				position = { x = 12 y = 6 }
+				font = "hoi_18mbs"
+				text = "FRA_EVAC_HEADER_TITLE"
+				maxWidth = 460
+				maxHeight = 20
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "stat_days"
+				position = { x = 12 y = 28 }
+				font = "hoi_16mbs"
+				text = "FRA_EVAC_STAT_DAYS"
+				maxWidth = 255
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "stat_mil"
+				position = { x = 12 y = 46 }
+				font = "hoi_16mbs"
+				text = "FRA_EVAC_STAT_MIL"
+				maxWidth = 255
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "stat_civ"
+				position = { x = 12 y = 64 }
+				font = "hoi_16mbs"
+				text = "FRA_EVAC_STAT_CIV"
+				maxWidth = 255
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "stat_target"
+				position = { x = 270 y = 28 }
+				font = "hoi_16mbs"
+				text = "[GetFRACarouselTargetText]"
+				maxWidth = 208
+				maxHeight = 18
+				format = right
+			}
+
+			instantTextBoxType = {
+				name = "stat_losses"
+				position = { x = 270 y = 46 }
+				font = "hoi_16mbs"
+				text = "[GetFRAGerLossesText]"
+				maxWidth = 208
+				maxHeight = 18
+				format = right
+			}
+
+			instantTextBoxType = {
+				name = "stat_exhaustion"
+				position = { x = 270 y = 64 }
+				font = "hoi_16mbs"
+				text = "[GetFRAMainlandDebuffText]"
+				maxWidth = 208
+				maxHeight = 18
+				format = right
+			}
+		}
+
+		# 1.2 КАРТА МЕТРОПОЛИИ ФРАНЦИИ С ДИНАМИЧЕСКИМИ ПОРТАМИ
+		containerWindowType = {
+			name = "metropole_map_window"
+			position = { x = 5 y = 90 }
+			size = { width = 490 height = 180 }
+
+			iconType = {
+				name = "france_metropole_map"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_map_france_metropole"
+			}
+
+			# Port 1: Brest
+			iconType = {
+				name = "port_brest_base"
+				position = { x = 170 y = 61 }
+				spriteType = "GFX_fra_port_marker_base"
+				pdx_tooltip = "FRA_PORT_BREST_TT"
+			}
+			iconType = {
+				name = "port_brest_active_mil"
+				position = { x = 167 y = 58 }
+				spriteType = "GFX_fra_port_marker_mil"
+				pdx_tooltip = "FRA_PORT_BREST_TT"
+			}
+			iconType = {
+				name = "port_brest_active_civ"
+				position = { x = 167 y = 58 }
+				spriteType = "GFX_fra_port_marker_civ"
+				pdx_tooltip = "FRA_PORT_BREST_TT"
+			}
+
+			# Port 2: Bordeaux
+			iconType = {
+				name = "port_bordeaux_base"
+				position = { x = 202 y = 110 }
+				spriteType = "GFX_fra_port_marker_base"
+				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
+			}
+			iconType = {
+				name = "port_bordeaux_active_mil"
+				position = { x = 199 y = 107 }
+				spriteType = "GFX_fra_port_marker_mil"
+				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
+			}
+			iconType = {
+				name = "port_bordeaux_active_civ"
+				position = { x = 199 y = 107 }
+				spriteType = "GFX_fra_port_marker_civ"
+				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
+			}
+
+			# Port 3: Marseille
+			iconType = {
+				name = "port_marseille_base"
+				position = { x = 256 y = 139 }
+				spriteType = "GFX_fra_port_marker_base"
+				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
+			}
+			iconType = {
+				name = "port_marseille_active_mil"
+				position = { x = 253 y = 136 }
+				spriteType = "GFX_fra_port_marker_mil"
+				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
+			}
+			iconType = {
+				name = "port_marseille_active_civ"
+				position = { x = 253 y = 136 }
+				spriteType = "GFX_fra_port_marker_civ"
+				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
+			}
+
+			instantTextBoxType = {
+				name = "metropole_label"
+				position = { x = 12 y = 140 }
+				font = "hoi_16mbs"
+				text = "FRA_METROPOLE_LABEL"
+				maxWidth = 165
+				maxHeight = 35
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "metropole_status"
+				position = { x = 175 y = 140 }
+				font = "hoi_16mbs"
+				text = "[GetFRAShipmentStatus]"
+				maxWidth = 305
+				maxHeight = 35
+				format = right
+			}
+		}
+
+		# 1.3 КАРТОЧКИ РЕГИОНОВ ЭВАКУАЦИИ (АВТОМАТИЧЕСКАЯ КАРУСЕЛЬ)
+		# 1.3.1 AOF - Западная Африка (Дакар)
+		containerWindowType = {
+			name = "card_aof_container"
+			position = { x = 5 y = 276 }
+			size = { width = 242 height = 125 }
+
+			iconType = {
+				name = "card_aof_normal"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_aof"
+			}
+			iconType = {
+				name = "card_aof_active"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_aof_active"
+			}
+
+			instantTextBoxType = {
+				name = "title_aof"
+				position = { x = 8 y = 6 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_AOF_TITLE"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "prio_aof"
+				position = { x = 8 y = 22 }
+				font = "hoi_16mbs"
+				text = "FRA_PRIO_HIGH"
+				maxWidth = 150
+				maxHeight = 16
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "count_aof"
+				position = { x = 8 y = 96 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_AOF_COUNT"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			buttonType = {
+				name = "btn_select_aof"
+				position = { x = 0 y = 0 }
+				size = { x = 242 y = 125 }
+				quadTextureSprite = "GFX_fra_transparent_button"
+				pdx_tooltip = "FRA_CARD_AOF_TT"
+				clicksound = click_default
+			}
+		}
+
+		# 1.3.2 AEF - Экваториальная Африка (Габон, Конго)
+		containerWindowType = {
+			name = "card_aef_container"
+			position = { x = 253 y = 276 }
+			size = { width = 242 height = 125 }
+
+			iconType = {
+				name = "card_aef_normal"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_aef"
+			}
+			iconType = {
+				name = "card_aef_active"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_aef_active"
+			}
+
+			instantTextBoxType = {
+				name = "title_aef"
+				position = { x = 8 y = 6 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_AEF_TITLE"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "prio_aef"
+				position = { x = 8 y = 22 }
+				font = "hoi_16mbs"
+				text = "FRA_PRIO_HIGH"
+				maxWidth = 150
+				maxHeight = 16
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "count_aef"
+				position = { x = 8 y = 96 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_AEF_COUNT"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			buttonType = {
+				name = "btn_select_aef"
+				position = { x = 0 y = 0 }
+				size = { x = 242 y = 125 }
+				quadTextureSprite = "GFX_fra_transparent_button"
+				pdx_tooltip = "FRA_CARD_AEF_TT"
+				clicksound = click_default
+			}
+		}
+
+		# 1.3.3 МАДАГАСКАР
+		containerWindowType = {
+			name = "card_madagascar_container"
+			position = { x = 5 y = 405 }
+			size = { width = 242 height = 125 }
+
+			iconType = {
+				name = "card_madagascar_normal"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_madagascar"
+			}
+			iconType = {
+				name = "card_madagascar_active"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_madagascar_active"
+			}
+
+			instantTextBoxType = {
+				name = "title_madagascar"
+				position = { x = 8 y = 6 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_MADAGASCAR_TITLE"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "prio_madagascar"
+				position = { x = 8 y = 22 }
+				font = "hoi_16mbs"
+				text = "FRA_PRIO_LOW"
+				maxWidth = 150
+				maxHeight = 16
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "count_madagascar"
+				position = { x = 8 y = 96 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_MADAGASCAR_COUNT"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			buttonType = {
+				name = "btn_select_madagascar"
+				position = { x = 0 y = 0 }
+				size = { x = 242 y = 125 }
+				quadTextureSprite = "GFX_fra_transparent_button"
+				pdx_tooltip = "FRA_CARD_MADAGASCAR_TT"
+				clicksound = click_default
+			}
+		}
+
+		# 1.3.4 ФРАНЦУЗСКАЯ ГВИАНА
+		containerWindowType = {
+			name = "card_guiana_container"
+			position = { x = 253 y = 405 }
+			size = { width = 242 height = 125 }
+
+			iconType = {
+				name = "card_guiana_normal"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_guiana"
+			}
+			iconType = {
+				name = "card_guiana_active"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_card_guiana_active"
+			}
+
+			instantTextBoxType = {
+				name = "title_guiana"
+				position = { x = 8 y = 6 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_GUIANA_TITLE"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "prio_guiana"
+				position = { x = 8 y = 22 }
+				font = "hoi_16mbs"
+				text = "FRA_PRIO_LOW"
+				maxWidth = 150
+				maxHeight = 16
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "count_guiana"
+				position = { x = 8 y = 96 }
+				font = "hoi_16mbs"
+				text = "FRA_CARD_GUIANA_COUNT"
+				maxWidth = 150
+				maxHeight = 18
+				format = left
+			}
+
+			buttonType = {
+				name = "btn_select_guiana"
+				position = { x = 0 y = 0 }
+				size = { x = 242 y = 125 }
+				quadTextureSprite = "GFX_fra_transparent_button"
+				pdx_tooltip = "FRA_CARD_GUIANA_TT"
+				clicksound = click_default
+			}
+		}
+
+		# 1.4 ШКАЛА ПОТЕРЬ ВЕРМАХТА (УРОН И БАФФ)
+		containerWindowType = {
+			name = "ger_losses_section"
+			position = { x = 5 y = 535 }
+			size = { width = 490 height = 72 }
+
+			instantTextBoxType = {
+				name = "losses_section_title"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "FRA_GER_LOSSES_SECTION_TITLE"
+				maxWidth = 490
+				maxHeight = 18
+				format = center
+			}
+
+			# Tier 1: 100K
+			containerWindowType = {
+				name = "tier_1_box"
+				position = { x = 0 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "tier_1_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_1_TT"
+				}
+				iconType = {
+					name = "tier_1_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_1_TT"
+				}
+				instantTextBoxType = {
+					name = "tier_1_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "100K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "tier_1_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень I"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "tier_1_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_1_TT"
+				}
+			}
+
+			# Tier 2: 250K
+			containerWindowType = {
+				name = "tier_2_box"
+				position = { x = 99 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "tier_2_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_2_TT"
+				}
+				iconType = {
+					name = "tier_2_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_2_TT"
+				}
+				instantTextBoxType = {
+					name = "tier_2_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "250K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "tier_2_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень II"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "tier_2_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_2_TT"
+				}
+			}
+
+			# Tier 3: 450K
+			containerWindowType = {
+				name = "tier_3_box"
+				position = { x = 198 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "tier_3_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_3_TT"
+				}
+				iconType = {
+					name = "tier_3_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_3_TT"
+				}
+				instantTextBoxType = {
+					name = "tier_3_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "450K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "tier_3_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень III"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "tier_3_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_3_TT"
+				}
+			}
+
+			# Tier 4: 700K
+			containerWindowType = {
+				name = "tier_4_box"
+				position = { x = 297 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "tier_4_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_4_TT"
+				}
+				iconType = {
+					name = "tier_4_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_4_TT"
+				}
+				instantTextBoxType = {
+					name = "tier_4_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "700K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "tier_4_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень IV"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "tier_4_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_4_TT"
+				}
+			}
+
+			# Tier 5: 1.0M
+			containerWindowType = {
+				name = "tier_5_box"
+				position = { x = 396 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "tier_5_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_5_TT"
+				}
+				iconType = {
+					name = "tier_5_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_5_TT"
+				}
+				instantTextBoxType = {
+					name = "tier_5_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "1.0M"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "tier_5_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень V"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "tier_5_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_5_TT"
+				}
+			}
+		}
+	}
+
+	# =========================================================================
+	# 2. ПАНЕЛЬ ДЛЯ ДРУГИХ СТРАН (СПЕКТАТОР / СОЮЗНИКИ / ВРАГИ)
+	# =========================================================================
+	containerWindowType = {
+		name = "FRA_resistance_evac_spectator_ui"
+		position = { x = 0 y = 0 }
+		size = { width = 500 height = 360 }
+
+		containerWindowType = {
+			name = "spectator_evac_header"
+			position = { x = 5 y = 0 }
+			size = { width = 490 height = 86 }
+
+			background = {
+				name = "spectator_header_bg"
+				spriteType = "GFX_tiled_plain_bg"
+			}
+
+			instantTextBoxType = {
+				name = "spectator_header_title"
+				position = { x = 12 y = 6 }
+				font = "hoi_18mbs"
+				text = "FRA_EVAC_HEADER_TITLE"
+				maxWidth = 460
+				maxHeight = 20
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "spectator_stat_days"
+				position = { x = 12 y = 28 }
+				font = "hoi_16mbs"
+				text = "FRA_EVAC_STAT_DAYS"
+				maxWidth = 255
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "spectator_stat_mil"
+				position = { x = 12 y = 46 }
+				font = "hoi_16mbs"
+				text = "FRA_EVAC_STAT_MIL"
+				maxWidth = 255
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "spectator_stat_civ"
+				position = { x = 12 y = 64 }
+				font = "hoi_16mbs"
+				text = "FRA_EVAC_STAT_CIV"
+				maxWidth = 255
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "spectator_stat_target"
+				position = { x = 270 y = 28 }
+				font = "hoi_16mbs"
+				text = "[GetFRACarouselTargetText]"
+				maxWidth = 208
+				maxHeight = 18
+				format = right
+			}
+
+			instantTextBoxType = {
+				name = "spectator_stat_losses"
+				position = { x = 270 y = 46 }
+				font = "hoi_16mbs"
+				text = "[GetFRAGerLossesText]"
+				maxWidth = 208
+				maxHeight = 18
+				format = right
+			}
+
+			instantTextBoxType = {
+				name = "spectator_stat_exhaustion"
+				position = { x = 270 y = 64 }
+				font = "hoi_16mbs"
+				text = "[GetFRAMainlandDebuffText]"
+				maxWidth = 208
+				maxHeight = 18
+				format = right
+			}
+		}
+
+		containerWindowType = {
+			name = "spectator_metropole_map_window"
+			position = { x = 5 y = 90 }
+			size = { width = 490 height = 180 }
+
+			iconType = {
+				name = "spectator_france_metropole_map"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_map_france_metropole"
+			}
+
+			# Port 1: Brest
+			iconType = {
+				name = "spectator_port_brest_base"
+				position = { x = 170 y = 61 }
+				spriteType = "GFX_fra_port_marker_base"
+				pdx_tooltip = "FRA_PORT_BREST_TT"
+			}
+			iconType = {
+				name = "spectator_port_brest_active_mil"
+				position = { x = 167 y = 58 }
+				spriteType = "GFX_fra_port_marker_mil"
+				pdx_tooltip = "FRA_PORT_BREST_TT"
+			}
+			iconType = {
+				name = "spectator_port_brest_active_civ"
+				position = { x = 167 y = 58 }
+				spriteType = "GFX_fra_port_marker_civ"
+				pdx_tooltip = "FRA_PORT_BREST_TT"
+			}
+
+			# Port 2: Bordeaux
+			iconType = {
+				name = "spectator_port_bordeaux_base"
+				position = { x = 202 y = 110 }
+				spriteType = "GFX_fra_port_marker_base"
+				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
+			}
+			iconType = {
+				name = "spectator_port_bordeaux_active_mil"
+				position = { x = 199 y = 107 }
+				spriteType = "GFX_fra_port_marker_mil"
+				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
+			}
+			iconType = {
+				name = "spectator_port_bordeaux_active_civ"
+				position = { x = 199 y = 107 }
+				spriteType = "GFX_fra_port_marker_civ"
+				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
+			}
+
+			# Port 3: Marseille
+			iconType = {
+				name = "spectator_port_marseille_base"
+				position = { x = 256 y = 139 }
+				spriteType = "GFX_fra_port_marker_base"
+				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
+			}
+			iconType = {
+				name = "spectator_port_marseille_active_mil"
+				position = { x = 253 y = 136 }
+				spriteType = "GFX_fra_port_marker_mil"
+				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
+			}
+			iconType = {
+				name = "spectator_port_marseille_active_civ"
+				position = { x = 253 y = 136 }
+				spriteType = "GFX_fra_port_marker_civ"
+				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
+			}
+
+			instantTextBoxType = {
+				name = "spectator_metropole_label"
+				position = { x = 12 y = 140 }
+				font = "hoi_16mbs"
+				text = "FRA_METROPOLE_LABEL"
+				maxWidth = 165
+				maxHeight = 35
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "spectator_metropole_status"
+				position = { x = 175 y = 140 }
+				font = "hoi_16mbs"
+				text = "[GetFRAShipmentStatus]"
+				maxWidth = 305
+				maxHeight = 35
+				format = right
+			}
+		}
+
+		containerWindowType = {
+			name = "spectator_ger_losses_section"
+			position = { x = 5 y = 280 }
+			size = { width = 490 height = 72 }
+
+			instantTextBoxType = {
+				name = "spectator_losses_section_title"
+				position = { x = 0 y = 0 }
+				font = "hoi_16mbs"
+				text = "FRA_GER_LOSSES_SECTION_TITLE"
+				maxWidth = 490
+				maxHeight = 18
+				format = center
+			}
+
+			# Tier 1
+			containerWindowType = {
+				name = "spectator_tier_1_box"
+				position = { x = 0 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "spectator_tier_1_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_1_TT"
+				}
+				iconType = {
+					name = "spectator_tier_1_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_1_TT"
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_1_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "100K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_1_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень I"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "spectator_tier_1_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_1_TT"
+				}
+			}
+
+			# Tier 2
+			containerWindowType = {
+				name = "spectator_tier_2_box"
+				position = { x = 99 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "spectator_tier_2_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_2_TT"
+				}
+				iconType = {
+					name = "spectator_tier_2_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_2_TT"
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_2_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "250K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_2_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень II"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "spectator_tier_2_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_2_TT"
+				}
+			}
+
+			# Tier 3
+			containerWindowType = {
+				name = "spectator_tier_3_box"
+				position = { x = 198 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "spectator_tier_3_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_3_TT"
+				}
+				iconType = {
+					name = "spectator_tier_3_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_3_TT"
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_3_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "450K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_3_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень III"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "spectator_tier_3_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_3_TT"
+				}
+			}
+
+			# Tier 4
+			containerWindowType = {
+				name = "spectator_tier_4_box"
+				position = { x = 297 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "spectator_tier_4_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_4_TT"
+				}
+				iconType = {
+					name = "spectator_tier_4_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_4_TT"
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_4_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "700K"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_4_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень IV"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "spectator_tier_4_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_4_TT"
+				}
+			}
+
+			# Tier 5
+			containerWindowType = {
+				name = "spectator_tier_5_box"
+				position = { x = 396 y = 22 }
+				size = { width = 94 height = 46 }
+
+				iconType = {
+					name = "spectator_tier_5_inactive"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_inactive"
+					pdx_tooltip = "FRA_TIER_5_TT"
+				}
+				iconType = {
+					name = "spectator_tier_5_active"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_fra_tier_active"
+					pdx_tooltip = "FRA_TIER_5_TT"
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_5_label"
+					position = { x = 2 y = 6 }
+					font = "hoi_16mbs"
+					text = "1.0M"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				instantTextBoxType = {
+					name = "spectator_tier_5_sub"
+					position = { x = 2 y = 24 }
+					font = "hoi_16mbs"
+					text = "Ступень V"
+					maxWidth = 90
+					maxHeight = 16
+					format = center
+					alwaystransparent = yes
+				}
+				buttonType = {
+					name = "spectator_tier_5_btn"
+					position = { x = 0 y = 0 }
+					size = { x = 94 y = 44 }
+					quadTextureSprite = "GFX_fra_tier_hitbox"
+					pdx_tooltip = "FRA_TIER_5_TT"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+state = {
+	id = 967
+	name = "STATE_967" # Northern Dobruja
+	manpower = 490000
+	resources = {
+	}
+
+	state_category = city
+
+	history = {
+
+		owner = ROM
+		add_core_of = ROM
+		add_claim_by = BUL
+
+		victory_points = { 
+			657 3 
+		}
+
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			657 = {
+				naval_base = 8
+			}
+			687 = {
+				naval_base = 1
+			}
+			dockyard = 1
+		}
+		
+	}
+
+	provinces = {
+		657 9635 3076 687
+	}
+
+	local_supplies = 0.0 
+}

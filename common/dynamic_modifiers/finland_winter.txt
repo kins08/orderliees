@@ -1,0 +1,35 @@
+fin_speed_debuff_border = {
+	enable = { always = yes }
+	icon = GFX_modifiers_FIN_motti_tactics_modifier
+	attacker_modifier = yes
+
+	remove_trigger = {
+		ROOT = { NOT = { is_owned_by = FIN } }
+	}
+
+	enemy_army_speed_factor = -0.50
+}
+
+fin_speed_debuff_mid = {
+	enable = { always = yes }
+	icon = GFX_modifiers_FIN_motti_tactics_modifier
+	attacker_modifier = yes
+
+	remove_trigger = {
+		ROOT = { NOT = { is_owned_by = FIN } }
+	}
+
+	enemy_army_speed_factor = -0.85
+}
+
+fin_speed_debuff_deep = {
+	enable = { always = yes }
+	icon = GFX_modifiers_FIN_motti_tactics_modifier
+	attacker_modifier = yes
+
+	remove_trigger = {
+		ROOT = { NOT = { is_owned_by = FIN } }
+	}
+
+	enemy_army_speed_factor = -0.90
+}

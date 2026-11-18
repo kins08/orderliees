@@ -1,0 +1,21 @@
+state={
+	id=694
+	name="STATE_694"
+	manpower = 1
+	state_category = small_island
+	resources = {
+	}
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1751 3
+		}
+	}
+	provinces={
+		1751
+	}
+	local_supplies=0.0
+}

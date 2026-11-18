@@ -1,0 +1,22 @@
+state={
+	id=751
+	name="STATE_751"
+	manpower = 1
+	state_category = pastoral
+	resources = {
+	}
+	history={
+		
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			10750 1
+		}
+	}
+	provinces={
+		2053 2099 7997 10750 10796 10834 10865 12846 12890 13146 13381
+	}
+	buildings_max_level_factor = 1.000
+	local_supplies=0.0
+}

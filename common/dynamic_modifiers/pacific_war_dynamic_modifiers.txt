@@ -1,0 +1,33 @@
+pacific_theater_bonus = {
+	enable = {
+		OR = {
+			check_variable = { pacific_max_efficiency_var > 0.001 }
+			check_variable = { pacific_retention_var > 0.001 }
+			check_variable = { pacific_ic_output_var > 0.001 }
+		}
+	}
+	icon = GFX_idea_USA_jap_poster
+
+	production_factory_max_efficiency_factor = pacific_max_efficiency_var
+	line_change_production_efficiency_factor = pacific_retention_var
+	industrial_capacity_factory = pacific_ic_output_var
+}
+
+pacific_allies_dynamic_modifier = {
+	enable = {
+		OR = {
+			check_variable = { pacific_allied_attack_var > 0.001 }
+			check_variable = { pacific_allied_attack_var < -0.001 }
+			check_variable = { pacific_allied_resources_var > 0.001 }
+			check_variable = { pacific_allied_resources_var < -0.001 }
+			check_variable = { pacific_allied_ic_output_var > 0.001 }
+			check_variable = { pacific_allied_ic_output_var < -0.001 }
+		}
+	}
+	icon = GFX_idea_USA_jap_poster
+
+	custom_modifier_tooltip = pacific_allies_dynamic_modifier_tt
+
+	local_resources_factor = pacific_allied_resources_var
+	industrial_capacity_factory = pacific_allied_ic_output_var
+}

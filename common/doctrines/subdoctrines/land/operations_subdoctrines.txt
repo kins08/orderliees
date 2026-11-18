@@ -1,0 +1,192 @@
+deep_battle = {
+    track = operations
+    name = SUBDOCTRINE_DEEP_BATTLE
+    description = SUBDOCTRINE_DEEP_BATTLE_DESC
+    icon = GFX_doctrine_deep_battle_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_sov_only_tt
+            OR = {
+                tag = SOV
+                original_tag = SOV
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        echeloned_offensive = {
+            category_all_infantry = {
+                breakthrough = 0.05
+                soft_attack = 0.05
+            }
+            category_vehicle_infantry = {
+                breakthrough = 0.05
+                soft_attack = 0.05
+            }
+        }
+        mobile_operational_groups = {
+            category_vehicle_infantry = {
+                max_organisation = 5
+                maximum_speed = 0.05
+            }
+            category_all_armor = {
+                max_organisation = 5
+                maximum_speed = 0.05
+            }
+        }
+        logistical_depth = {
+            out_of_supply_factor = -0.15
+            supply_consumption_factor = -0.05
+        }
+        shock_army_resilience = {
+            org_loss_when_moving = -0.15
+            army_morale = 0.30
+        }
+        decisive_deep_penetration = {
+            category_army = {
+                breakthrough = 0.10
+            }
+            coordination_bonus = 0.05
+            enemy_army_bonus_air_superiority_factor = -0.15
+        }
+    }
+}
+
+rapid_dominance = {
+    track = operations
+    name = SUBDOCTRINE_RAPID_DOMINANCE
+    description = SUBDOCTRINE_RAPID_DOMINANCE_DESC
+    icon = GFX_doctrine_shock_and_awe_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_axis_tt
+            OR = {
+                tag = GER
+                tag = ITA
+                tag = JAP
+                tag = HUN
+                tag = ROM
+                tag = BUL
+                tag = FIN
+                original_tag = GER
+                original_tag = ITA
+                original_tag = JAP
+                original_tag = HUN
+                original_tag = ROM
+                original_tag = BUL
+                original_tag = FIN
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        spearhead_momentum = {
+            category_army = {
+                soft_attack = 0.05
+                breakthrough = 0.05
+            }
+        }
+        command_initiative = {
+            # initiative = 0.05
+            max_planning = 0.10
+        }
+        air_ground_dominance = {
+            enemy_army_bonus_air_superiority_factor = -0.15
+        }
+        panzer_dash = {
+            category_all_armor = {
+                maximum_speed = 0.10
+                max_organisation = 4
+            }
+        }
+        fluid_mechanized_lines = {
+            category_all_infantry = {
+                defense = 0.10
+                breakthrough = 0.05
+            }
+            category_vehicle_infantry = {
+                defense = 0.10
+                breakthrough = 0.05
+            }
+            org_loss_when_moving = -0.10
+        }
+    }
+}
+
+operational_tactics = {
+    track = operations
+    name = SUBDOCTRINE_OPERATIONAL_TACTICS
+    description = SUBDOCTRINE_OPERATIONAL_TACTICS_DESC
+    icon = GFX_doctrine_mobile_defense_medium
+
+    xp_cost = 0
+    xp_type = army
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_allies_tt
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = FRA
+                tag = CAN
+                tag = AST
+                tag = SAF
+                tag = RAJ
+                original_tag = ENG
+                original_tag = USA
+                original_tag = FRA
+                original_tag = CAN
+                original_tag = AST
+                original_tag = SAF
+                original_tag = RAJ
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        methodical_planning = {
+            planning_speed = 0.10
+            out_of_supply_factor = -0.10
+        }
+        integrated_battery_fire = {
+            artillery = {
+                soft_attack = 0.10
+                max_organisation = 5
+            }
+        }
+        air_screen_integration = {
+            anti_air = {
+                air_attack = 0.05
+            }
+            enemy_army_bonus_air_superiority_factor = -0.15
+        }
+        defensive_offensive_flexibility = {
+            category_all_infantry = {
+                defense = 0.10
+                breakthrough = 0.05
+            }
+            category_vehicle_infantry = {
+                defense = 0.10
+                breakthrough = 0.05
+            }
+        }
+        grand_theater_planning = {
+            max_planning = 0.10
+        }
+    }
+}

@@ -1,0 +1,38 @@
+﻿l_english:
+
+ GER_fate_of_yugoslavia_custom: "§YYugoslavia will be partitioned.§! Each Axis power will receive its designated sphere of territory."
+ GER_fate_of_greece_custom: "§YOperation Marita secures Greece.§! In accordance with bilateral agreements, Italy and Bulgaria will receive their designated zones."
+ GER_expand_the_reichsautobahn_east_tt: "Maximizes §Yinfrastructure§! in §YSaxony§!, §YOstmark§!, §YNiederschlesien§!, and §YOberschlesien§!."
+ GER_expand_the_reichsautobahn_south_tt: "Maximizes §Yinfrastructure§! in §YBaden§!, §YWürttemberg§!, §YUpper Bavaria§!, and §YLower Bavaria§!."
+ GER_barbarossa_fate_of_the_reich_tooltip: "§R[Struggle for the Life of the Reich]§!\n\n'This hour decides the destiny of the §YGerman Nation§! for the next §Wmillennia§!! The monumental clash of two worlds is inevitable, and §Rcompromise is impossible§!.\n\nEither the §YGreater German Reich§! shatters the mortal threat in the East forever, or we fall under the weight of §Rhostile hordes§!.\n\nOur entire history has led toward this §Wdecisive confrontation§!. Every German soldier, every tank, and every battery is dedicated to one single objective: §Gseize the Great Victory§! and establish the §Yeternal supremacy of the Reich§!.'"
+
+
+ GER_speer_eastern_armaments: "Armaments Ministry Reorganization"
+ GER_speer_eastern_armaments_desc: "Reich Minister Speer's directives institute rigid production schedules and direct executive accountability. Eliminating overlapping authority between Wehrmacht procurement branches optimizes raw materials and dramatically escalates munitions deliveries to the Ostfront."
+ GER_operation_blau: "Fall Blau"
+ GER_operation_blau_desc: "Major offensive across the southern wing of the Eastern Front targeting Caucasian oilfields, accelerating strategic research and securing vital fuel reserves."
+ GER_operation_citadel: "Unternehmen Zitadelle"
+ GER_operation_citadel_desc: "The premier armored clash on the Eastern Front, generating decisive army experience and boosting tank design and doctrine technologies."
+ GER_return_territories: "Repudiation of the Versailles Diktat: the 1914 borders on the West and East are declared §Yintegral and indivisible territory of the Reich§!."
+
+ GER_operation_western_operations: "Western Operational Directives"
+ GER_operation_western_operations_desc: "Coordinates Wehrmacht strategic directives in the West, authorizing Operation Wacht am Rhein."
+ GER_op_barbarossa_tt: "§YUnlocks 'Unternehmen Barbarossa'§!"
+ GER_op_blau_tt: "§YUnlocks 'Fall Blau'§!"
+ GER_op_zitadelle_tt: "§YUnlocks 'Unternehmen Zitadelle'§!"
+ GER_op_sonnenblume_tt: "§YUnlocks 'Unternehmen Sonnenblume'§!"
+ GER_op_weiss_tt: "§YUnlocks 'Fall Weiß'§!"
+ GER_op_gelb_tt: "§YUnlocks 'Fall Gelb'§!"
+ GER_op_western_tt: "§YUnlocks 'Wacht am Rhein'§!"
+ GER_speer_advisor_tt: "§YAlbert Speer becomes available as a Political Advisor§!"
+
+ # OKW Operational Directives
+ ordl_ger_offensives_category: "OKW Operational Directives"
+ ordl_ger_offensives_category_desc: "Strategic campaign directives and major offensives of the Wehrmacht High Command."
+ GER_activate_fall_blau: "Fall Blau"
+ GER_activate_fall_blau_desc: "Major strategic offensive across the southern wing of the Eastern Front to seize Caucasian oilfields and reach the Volga. Grants an attack bonus against the USSR for 90 days."
+ GER_activate_operation_citadel: "Unternehmen Zitadelle"
+ GER_activate_operation_citadel_desc: "Concentrated armored pincer offensive to eliminate enemy salient positions and encircle Soviet field armies. Grants an attack bonus against the USSR for 75 days and army experience."
+ GER_activate_wacht_am_rhein: "Unternehmen Wacht am Rhein"
+ GER_activate_wacht_am_rhein_desc: "Decisive armored counter-offensive on the Western Front to sever Allied spearheads and throw the landing forces back into the sea. Grants an attack bonus against the Western Allies for 60 days."
+ GER_allies_landed_normandy_tt: "§YThe Allies control Normandy/Brittany, territory in Belgium/Netherlands, or German core territory§!"

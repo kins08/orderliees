@@ -1,0 +1,177 @@
+air_subdoctrine_fighter_homeland_defense = {
+    track = fighter_aircraft
+    name = SUBDOCTRINE_FIGHTER_HOMELAND_DEFENSE
+    description = SUBDOCTRINE_FIGHTER_HOMELAND_DEFENSE_DESC
+    icon = GFX_dogfighting_experience_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_sov_only_tt
+            OR = {
+                tag = SOV
+                original_tag = SOV
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        interception_priority = {
+            category_fighter = {
+                air_attack = 0.055
+                maximum_speed = 0.105
+            }
+        }
+        air_defense_grids = {
+            air_power_projection_factor = 0.05
+        }
+        air_wing_knowledge_transfer = {
+            category_fighter = {
+                air_defence = 0.105
+            }
+            equipment_bonus = {
+                small_plane_airframe = {
+                    instant = yes
+                    build_cost_ic = -0.01
+                }
+            }
+        }
+        experienced_pilots_protection = {
+            air_power_projection_factor = 0.05
+        }
+        mass_sorties = {
+            category_fighter = {
+                air_agility = 0.055
+            }
+            air_superiority_efficiency = 0.05
+            air_mission_efficiency = 0.025
+        }
+    }
+}
+
+air_subdoctrine_tactical_flexibility = {
+    track = fighter_aircraft
+    name = SUBDOCTRINE_TACTICAL_FLEXIBILITY
+    description = SUBDOCTRINE_TACTICAL_FLEXIBILITY_DESC
+    icon = GFX_fighter_baiting_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_axis_tt
+            OR = {
+                tag = GER
+                tag = ITA
+                tag = JAP
+                tag = HUN
+                tag = ROM
+                tag = BUL
+                tag = FIN
+                original_tag = GER
+                original_tag = ITA
+                original_tag = JAP
+                original_tag = HUN
+                original_tag = ROM
+                original_tag = BUL
+                original_tag = FIN
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        loose_formation = {
+            category_fighter = {
+                air_attack = 0.08
+                air_defence = 0.08
+            }
+        }
+        high_altitude_approach = {
+            air_power_projection_factor = 0.05
+        }
+        combat_discipline = {
+            category_fighter = {
+                maximum_speed = 0.13
+                air_agility = 0.08
+            }
+        }
+        high_speed_dive = {
+            air_power_projection_factor = 0.05
+        }
+        aces_of_the_sky = {
+            category_fighter = {
+                air_agility = 0.03
+                air_attack = 0.03
+            }
+            air_superiority_efficiency = 0.05
+            air_mission_efficiency = 0.025
+        }
+    }	
+}
+
+air_subdoctrine_escort_fighter = {
+    track = fighter_aircraft
+    name = SUBDOCTRINE_ESCORT_FIGHTER
+    description = SUBDOCTRINE_ESCORT_FIGHTER_DESC
+    icon = GFX_doctrine_escort_relay_system_medium
+
+    xp_cost = 0
+    xp_type = air
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = subdoctrine_allies_tt
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = FRA
+                tag = CAN
+                tag = AST
+                tag = SAF
+                tag = RAJ
+                original_tag = ENG
+                original_tag = USA
+                original_tag = FRA
+                original_tag = CAN
+                original_tag = AST
+                original_tag = SAF
+                original_tag = RAJ
+            }
+        }
+    }
+
+    ai_will_do = { base = 1 }
+
+    rewards = {
+        escort_procedures = {
+            category_fighter = {
+                air_attack = 0.03
+                air_defence = 0.13
+            }
+        }
+        extended_search_patterns = {
+            air_power_projection_factor = 0.05
+        }
+        improved_maintenance_protocols = {
+            category_fighter = {
+                air_defence = 0.03
+                maximum_speed = 0.08
+                air_agility = 0.03
+            }
+        }
+        increased_sky_presence = {
+            air_power_projection_factor = 0.05
+        }
+        constant_air_offensive = {
+            air_superiority_efficiency = 0.05
+            air_mission_efficiency = 0.025
+        }
+    }
+}

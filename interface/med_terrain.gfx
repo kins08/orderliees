@@ -1,0 +1,94 @@
+spriteTypes = {
+
+	# Day
+	spriteType = {
+		name = "GFX_terrain_water_med_day"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_day.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_day_rain"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_day_rain.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_day_storm"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_day_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_day_snow"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_day_snow.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_day_snow_storm"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_day_snow_storm.dds"
+	}
+
+	# Night
+	spriteType = {
+		name = "GFX_terrain_water_med_night"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_night.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_night_rain"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_night_rain.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_night_storm"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_night_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_night_snow"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_night_snow.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_water_med_night_snow_storm"
+		textureFile = "gfx/interface/terrains/terrain_shallow_sea_night_snow_storm.dds"
+	}
+
+	# Ongoing Sea Battle
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_day"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_day.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_day_rain"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_day_rain.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_day_snow"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_day_snow.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_day_snow_storm"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_day_snow_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_day_storm"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_day_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_night"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_night.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_night_rain"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_night_rain.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_night_snow"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_night_snow.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_night_snow_storm"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_night_snow_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ongoing_sea_battle_water_med_night_storm"
+		textureFile = "gfx/interface/terrains/terrain_ongoing_sea_battle_shallow_sea_night_storm.dds"
+	}
+
+	# Designer Adjuster Icon
+	spriteType = {
+		name = "GFX_adjuster_water_med_bg"
+		textureFile = "gfx//interface//shallow_sea_icon.dds"
+	}
+}

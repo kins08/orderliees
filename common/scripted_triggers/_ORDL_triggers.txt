@@ -1,0 +1,50 @@
+ordl_is_allies_state = {
+	OR = {
+		is_controlled_by = USA
+		is_controlled_by = ENG
+		is_controlled_by = CAN
+		is_controlled_by = SAF
+		is_controlled_by = RAJ
+		is_controlled_by = AST
+		is_controlled_by = FRA
+		is_controlled_by = INS
+	}
+}
+
+ordl_is_axis_state = {
+	OR = {
+		is_controlled_by = GER
+		is_controlled_by = ITA
+		is_controlled_by = HUN
+		is_controlled_by = ROM
+		is_controlled_by = BUL
+		is_controlled_by = JAP
+		is_controlled_by = FIN
+	}
+}
+
+is_controlled_by_axis = {
+	ordl_is_axis_state = yes
+}
+
+is_controlled_by_allies = {
+	ordl_is_allies_state = yes
+}
+
+north_africa_has_been_fallen = {
+	458 = { ordl_is_allies_state = yes }
+	662 = { ordl_is_allies_state = yes }
+	448 = { ordl_is_allies_state = yes }
+	658 = { ordl_is_allies_state = yes }
+	449 = { ordl_is_allies_state = yes }
+	659 = { ordl_is_allies_state = yes }
+	1056 = { ordl_is_allies_state = yes }
+	660 = { ordl_is_allies_state = yes }
+	450 = { ordl_is_allies_state = yes }
+	451 = { ordl_is_allies_state = yes }
+	1057 = { ordl_is_allies_state = yes }
+	452 = { ordl_is_allies_state = yes }
+	903 = { ordl_is_allies_state = yes }
+	447 = { ordl_is_allies_state = yes }
+	446 = { ordl_is_allies_state = yes }
+}

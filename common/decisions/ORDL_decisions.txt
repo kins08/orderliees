@@ -1,0 +1,358 @@
+ORDL_decisions = {
+    GER_annex_hungary = {
+
+        icon = generic_operation
+        
+        allowed = { original_tag = GER }
+        
+        available = {
+            date>1936.1.1
+            HUN = { is_ai = yes  }
+        }
+        
+        visible = { 
+            country_exists = HUN 
+            HUN = { 
+                is_ai = yes 
+            }    
+        }
+        
+        cost = 0
+        
+        fire_only_once = yes
+        
+        complete_effect = {
+            
+            annex_country = {
+                target = HUN
+                transfer_troops = yes
+            }
+
+            hidden_effect = {
+                43 = {
+                    set_compliance = 100
+                }
+                155 = {
+                    set_compliance = 100 
+                } 
+                970 = {
+                    set_compliance = 100
+                }
+                969 = {
+                    set_compliance = 100
+                }
+                154 = {
+                    set_compliance = 100
+                }
+            }
+        }
+    }
+    
+    GER_annex_romania = {
+
+        icon = generic_operation
+        
+        allowed = { original_tag = GER }
+        
+        available = {
+            date>1936.1.1
+            ROM = { is_ai = yes  }
+        }
+        
+        visible = { 
+            country_exists = ROM 
+            ROM = { 
+                is_ai = yes 
+            }    
+        }
+        
+        cost = 0
+        
+        fire_only_once = yes
+        
+        complete_effect = {
+            
+            annex_country = {
+                target = ROM
+                transfer_troops = yes
+            }
+
+            hidden_effect = {
+                46 = {
+                    set_compliance = 100
+                }
+                81 = {
+                    set_compliance = 100 
+                } 
+                77 = {
+                    set_compliance = 100
+                }
+                967 = {
+                    set_compliance = 100
+                }
+                762 = {
+                    set_compliance = 100
+                }
+                78 = {
+                    set_compliance = 100
+                }
+                79 = {
+                    set_compliance = 100
+                }
+                80 = {
+                    set_compliance = 100
+                }
+                76 = {
+                    set_compliance = 100
+                }
+                84 = {
+                    set_compliance = 100
+                }
+                83 = {
+                    set_compliance = 100
+                }
+                82 = {
+                    set_compliance = 100
+                }
+            }
+        }
+    }
+
+    GER_annex_bulgaria = {
+
+        icon = generic_operation
+        
+        allowed = { original_tag = GER }
+        
+        available = {
+            date>1936.1.1
+            BUL = { is_ai = yes  }
+        }
+        
+        visible = { 
+            country_exists = BUL
+            BUL = { 
+                is_ai = yes 
+            }    
+        }
+        
+        cost = 0
+        
+        fire_only_once = yes
+        
+        complete_effect = {
+            
+            annex_country = {
+                target = BUL
+                transfer_troops = yes
+            }
+
+            hidden_effect = {
+                48 = {
+                    set_compliance = 100
+                }
+                212 = {
+                    set_compliance = 100 
+                } 
+                797 = {
+                    set_compliance = 100
+                }
+                211 = {
+                    set_compliance = 100
+                }
+                
+            }
+        }
+    }
+
+    GER_op_sonnenblume = {
+        icon = generic_operation
+
+        available = {
+            date > 1941.3.10
+            date < 1941.3.24
+            has_completed_focus = GER_establish_the_afrikakorps
+        }
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_timed_idea = { idea = GER_op_sonnenblume days = 60 }
+        }
+        ai_will_do = { factor = 10 }
+    }
+
+    GER_op_fall_blau = {
+        icon = generic_operation
+
+        available = {
+            date > 1942.5.20
+            date < 1942.6.3
+            has_completed_focus = GER_operation_blau
+        }
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_timed_idea = { idea = GER_op_fall_blau days = 75 }
+        }
+        ai_will_do = { factor = 10 }
+    }
+
+    GER_op_zitadelle = {
+        icon = generic_operation
+
+        available = {
+            date > 1943.6.20
+            date < 1943.7.4
+            has_completed_focus = GER_operation_citadel
+        }
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_timed_idea = { idea = GER_op_zitadelle days = 45 }
+        }
+        ai_will_do = { factor = 10 }
+    }
+
+    GER_op_wacht_am_rhein = {
+        icon = generic_operation
+
+        available = {
+            date > 1941.12.1
+            has_completed_focus = GER_operation_western_operations
+            custom_trigger_tooltip = {
+                tooltip = GER_allies_landed_normandy_tt
+                OR = {
+                    15 = { # Normandy
+                        controller = {
+                            has_war_with = ROOT
+                            OR = {
+                                tag = USA
+                                tag = ENG
+                                is_in_faction_with = ENG
+                                is_in_faction_with = USA
+                            }
+                        }
+                    }
+                    14 = { # Brittany
+                        controller = {
+                            has_war_with = ROOT
+                            OR = {
+                                tag = USA
+                                tag = ENG
+                                is_in_faction_with = ENG
+                                is_in_faction_with = USA
+                            }
+                        }
+                    }
+                    any_state = {
+                        is_core_of = BEL
+                        controller = {
+                            has_war_with = ROOT
+                            OR = {
+                                tag = USA
+                                tag = ENG
+                                is_in_faction_with = ENG
+                                is_in_faction_with = USA
+                            }
+                        }
+                    }
+                    any_state = {
+                        is_core_of = HOL
+                        controller = {
+                            has_war_with = ROOT
+                            OR = {
+                                tag = USA
+                                tag = ENG
+                                is_in_faction_with = ENG
+                                is_in_faction_with = USA
+                            }
+                        }
+                    }
+                    any_core_state = {
+                        controller = {
+                            has_war_with = ROOT
+                            OR = {
+                                tag = USA
+                                tag = ENG
+                                is_in_faction_with = ENG
+                                is_in_faction_with = USA
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_timed_idea = { idea = GER_op_wacht_am_rhein days = 60 }
+        }
+        ai_will_do = { factor = 10 }
+    }
+
+    GER_invite_finland_to_axis = {
+        icon = generic_operation
+
+        allowed = { original_tag = GER }
+
+        visible = {
+            country_exists = FIN
+            FIN = {
+                exists = yes
+                NOT = { is_in_faction_with = ROOT }
+                NOT = { has_war_with = ROOT }
+            }
+        }
+
+        available = {
+            OR = {
+                195 = {
+                    controller = {
+                        OR = {
+                            tag = ROOT
+                            is_in_faction_with = ROOT
+                            tag = FIN
+                        }
+                    }
+                }
+                controls_province = 3151
+                any_country = {
+                    OR = {
+                        is_in_faction_with = ROOT
+                        tag = FIN
+                    }
+                    controls_province = 3151
+                }
+                date > 1942.5.31
+            }
+        }
+
+        cost = 0
+
+        fire_only_once = yes
+
+        complete_effect = {
+            if = {
+                limit = { FIN = { has_idea = FIN_the_lone_wolf } }
+                FIN = { remove_ideas = FIN_the_lone_wolf }
+            }
+            if = {
+                limit = { FIN = { is_in_faction = yes } }
+                FIN = { leave_faction = yes }
+            }
+            if = {
+                limit = { is_in_faction = no }
+                create_faction = Axis
+            }
+            add_to_faction = FIN
+            FIN = { hidden_effect = { FIN_end_winter_war_effect = yes } }
+        }
+
+        ai_will_do = { factor = 100 }
+    }
+
+}

@@ -1,0 +1,2773 @@
+# Soviet evacuation system.
+
+ORDL_evac_init_effect = {
+	if = {
+		limit = { NOT = { has_global_flag = ORDL_evac_init_flag } }
+		set_global_flag = ORDL_evac_init_flag
+		SOV = {
+			clr_country_flag = SOV_evac_region_S1_done
+			clr_country_flag = SOV_evac_region_S1_lost
+			clr_country_flag = SOV_evac_region_S2_done
+			clr_country_flag = SOV_evac_region_S2_lost
+			clr_country_flag = SOV_evac_region_S3_done
+			clr_country_flag = SOV_evac_region_S3_lost
+			clr_country_flag = SOV_evac_region_S4_done
+			clr_country_flag = SOV_evac_region_S4_lost
+			clr_country_flag = SOV_evac_region_S5_done
+			clr_country_flag = SOV_evac_region_S5_lost
+			clr_country_flag = SOV_evac_region_S6_done
+			clr_country_flag = SOV_evac_region_S6_lost
+			clr_country_flag = SOV_evac_region_S7_done
+			clr_country_flag = SOV_evac_region_S7_lost
+			clr_country_flag = SOV_evac_region_S1_active
+			clr_country_flag = SOV_evac_region_S2_active
+			clr_country_flag = SOV_evac_region_S3_active
+			clr_country_flag = SOV_evac_region_S4_active
+			clr_country_flag = SOV_evac_region_S5_active
+			clr_country_flag = SOV_evac_region_S6_active
+			clr_country_flag = SOV_evac_region_S7_active
+			set_variable = { SOV_evac_region_S1_days = 0 }
+			set_variable = { SOV_evac_region_S2_days = 0 }
+			set_variable = { SOV_evac_region_S3_days = 0 }
+			set_variable = { SOV_evac_region_S4_days = 0 }
+			set_variable = { SOV_evac_region_S5_days = 0 }
+			set_variable = { SOV_evac_region_S6_days = 0 }
+			set_variable = { SOV_evac_region_S7_days = 0 }
+			set_variable = { SOV_evac_regions_done = 0 }
+			set_variable = { SOV_evac_regions_active = 0 }
+			set_variable = { SOV_evac_rotor = 0 }
+			set_variable = { SOV_evac_transit_civ = 0 }
+			set_variable = { SOV_evac_transit_mil = 0 }
+		}
+		set_variable = { global.ordl_evac_out_af = 0 }
+		set_variable = { global.ordl_evac_out_ic = 0 }
+		set_variable = { global.ordl_evac_lost_af = 0 }
+		set_variable = { global.ordl_evac_lost_ic = 0 }
+		set_variable = { global.ordl_evac_pp = 0 }
+		set_variable = { global.ordl_evac_trains = 0 }
+		set_variable = { global.ordl_evac_arrived = 0 }
+		set_variable = { global.ordl_evac_S1_out = 0 }
+		set_variable = { global.ordl_evac_S1_lost = 0 }
+		set_variable = { global.ordl_evac_S2_out = 0 }
+		set_variable = { global.ordl_evac_S2_lost = 0 }
+		set_variable = { global.ordl_evac_S3_out = 0 }
+		set_variable = { global.ordl_evac_S3_lost = 0 }
+		set_variable = { global.ordl_evac_S4_out = 0 }
+		set_variable = { global.ordl_evac_S4_lost = 0 }
+		set_variable = { global.ordl_evac_S5_out = 0 }
+		set_variable = { global.ordl_evac_S5_lost = 0 }
+		set_variable = { global.ordl_evac_S6_out = 0 }
+		set_variable = { global.ordl_evac_S6_lost = 0 }
+		set_variable = { global.ordl_evac_S7_out = 0 }
+		set_variable = { global.ordl_evac_S7_lost = 0 }
+		set_variable = { global.ordl_evac_out_11 = 0 }
+		set_variable = { global.ordl_evac_lost_11 = 0 }
+		set_variable = { global.ordl_evac_out_12 = 0 }
+		set_variable = { global.ordl_evac_lost_12 = 0 }
+		set_variable = { global.ordl_evac_out_13 = 0 }
+		set_variable = { global.ordl_evac_lost_13 = 0 }
+		set_variable = { global.ordl_evac_out_78 = 0 }
+		set_variable = { global.ordl_evac_lost_78 = 0 }
+		set_variable = { global.ordl_evac_out_89 = 0 }
+		set_variable = { global.ordl_evac_lost_89 = 0 }
+		set_variable = { global.ordl_evac_out_91 = 0 }
+		set_variable = { global.ordl_evac_lost_91 = 0 }
+		set_variable = { global.ordl_evac_out_93 = 0 }
+		set_variable = { global.ordl_evac_lost_93 = 0 }
+		set_variable = { global.ordl_evac_out_94 = 0 }
+		set_variable = { global.ordl_evac_lost_94 = 0 }
+		set_variable = { global.ordl_evac_out_95 = 0 }
+		set_variable = { global.ordl_evac_lost_95 = 0 }
+		set_variable = { global.ordl_evac_out_96 = 0 }
+		set_variable = { global.ordl_evac_lost_96 = 0 }
+		set_variable = { global.ordl_evac_out_97 = 0 }
+		set_variable = { global.ordl_evac_lost_97 = 0 }
+		set_variable = { global.ordl_evac_out_137 = 0 }
+		set_variable = { global.ordl_evac_lost_137 = 0 }
+		set_variable = { global.ordl_evac_out_188 = 0 }
+		set_variable = { global.ordl_evac_lost_188 = 0 }
+		set_variable = { global.ordl_evac_out_189 = 0 }
+		set_variable = { global.ordl_evac_lost_189 = 0 }
+		set_variable = { global.ordl_evac_out_190 = 0 }
+		set_variable = { global.ordl_evac_lost_190 = 0 }
+		set_variable = { global.ordl_evac_out_191 = 0 }
+		set_variable = { global.ordl_evac_lost_191 = 0 }
+		set_variable = { global.ordl_evac_out_192 = 0 }
+		set_variable = { global.ordl_evac_lost_192 = 0 }
+		set_variable = { global.ordl_evac_out_193 = 0 }
+		set_variable = { global.ordl_evac_lost_193 = 0 }
+		set_variable = { global.ordl_evac_out_194 = 0 }
+		set_variable = { global.ordl_evac_lost_194 = 0 }
+		set_variable = { global.ordl_evac_out_195 = 0 }
+		set_variable = { global.ordl_evac_lost_195 = 0 }
+		set_variable = { global.ordl_evac_out_196 = 0 }
+		set_variable = { global.ordl_evac_lost_196 = 0 }
+		set_variable = { global.ordl_evac_out_197 = 0 }
+		set_variable = { global.ordl_evac_lost_197 = 0 }
+		set_variable = { global.ordl_evac_out_198 = 0 }
+		set_variable = { global.ordl_evac_lost_198 = 0 }
+		set_variable = { global.ordl_evac_out_199 = 0 }
+		set_variable = { global.ordl_evac_lost_199 = 0 }
+		set_variable = { global.ordl_evac_out_200 = 0 }
+		set_variable = { global.ordl_evac_lost_200 = 0 }
+		set_variable = { global.ordl_evac_out_201 = 0 }
+		set_variable = { global.ordl_evac_lost_201 = 0 }
+		set_variable = { global.ordl_evac_out_202 = 0 }
+		set_variable = { global.ordl_evac_lost_202 = 0 }
+		set_variable = { global.ordl_evac_out_203 = 0 }
+		set_variable = { global.ordl_evac_lost_203 = 0 }
+		set_variable = { global.ordl_evac_out_204 = 0 }
+		set_variable = { global.ordl_evac_lost_204 = 0 }
+		set_variable = { global.ordl_evac_out_205 = 0 }
+		set_variable = { global.ordl_evac_lost_205 = 0 }
+		set_variable = { global.ordl_evac_out_265 = 0 }
+		set_variable = { global.ordl_evac_lost_265 = 0 }
+		set_variable = { global.ordl_evac_out_825 = 0 }
+		set_variable = { global.ordl_evac_lost_825 = 0 }
+		set_variable = { global.ordl_evac_out_206 = 0 }
+		set_variable = { global.ordl_evac_lost_206 = 0 }
+		set_variable = { global.ordl_evac_out_207 = 0 }
+		set_variable = { global.ordl_evac_lost_207 = 0 }
+		set_variable = { global.ordl_evac_out_208 = 0 }
+		set_variable = { global.ordl_evac_lost_208 = 0 }
+		set_variable = { global.ordl_evac_out_209 = 0 }
+		set_variable = { global.ordl_evac_lost_209 = 0 }
+		set_variable = { global.ordl_evac_out_210 = 0 }
+		set_variable = { global.ordl_evac_lost_210 = 0 }
+		set_variable = { global.ordl_evac_out_213 = 0 }
+		set_variable = { global.ordl_evac_lost_213 = 0 }
+		set_variable = { global.ordl_evac_out_217 = 0 }
+		set_variable = { global.ordl_evac_lost_217 = 0 }
+		set_variable = { global.ordl_evac_out_218 = 0 }
+		set_variable = { global.ordl_evac_lost_218 = 0 }
+		set_variable = { global.ordl_evac_out_219 = 0 }
+		set_variable = { global.ordl_evac_lost_219 = 0 }
+		set_variable = { global.ordl_evac_out_220 = 0 }
+		set_variable = { global.ordl_evac_lost_220 = 0 }
+		set_variable = { global.ordl_evac_out_221 = 0 }
+		set_variable = { global.ordl_evac_lost_221 = 0 }
+		set_variable = { global.ordl_evac_out_222 = 0 }
+		set_variable = { global.ordl_evac_lost_222 = 0 }
+		set_variable = { global.ordl_evac_out_223 = 0 }
+		set_variable = { global.ordl_evac_lost_223 = 0 }
+		set_variable = { global.ordl_evac_out_224 = 0 }
+		set_variable = { global.ordl_evac_lost_224 = 0 }
+		set_variable = { global.ordl_evac_out_225 = 0 }
+		set_variable = { global.ordl_evac_lost_225 = 0 }
+		set_variable = { global.ordl_evac_out_226 = 0 }
+		set_variable = { global.ordl_evac_lost_226 = 0 }
+		set_variable = { global.ordl_evac_out_227 = 0 }
+		set_variable = { global.ordl_evac_lost_227 = 0 }
+		set_variable = { global.ordl_evac_out_228 = 0 }
+		set_variable = { global.ordl_evac_lost_228 = 0 }
+		set_variable = { global.ordl_evac_out_229 = 0 }
+		set_variable = { global.ordl_evac_lost_229 = 0 }
+		set_variable = { global.ordl_evac_out_230 = 0 }
+		set_variable = { global.ordl_evac_lost_230 = 0 }
+		set_variable = { global.ordl_evac_out_231 = 0 }
+		set_variable = { global.ordl_evac_lost_231 = 0 }
+		set_variable = { global.ordl_evac_out_232 = 0 }
+		set_variable = { global.ordl_evac_lost_232 = 0 }
+		set_variable = { global.ordl_evac_out_233 = 0 }
+		set_variable = { global.ordl_evac_lost_233 = 0 }
+		set_variable = { global.ordl_evac_out_234 = 0 }
+		set_variable = { global.ordl_evac_lost_234 = 0 }
+		set_variable = { global.ordl_evac_out_235 = 0 }
+		set_variable = { global.ordl_evac_lost_235 = 0 }
+		set_variable = { global.ordl_evac_out_236 = 0 }
+		set_variable = { global.ordl_evac_lost_236 = 0 }
+		set_variable = { global.ordl_evac_out_237 = 0 }
+		set_variable = { global.ordl_evac_lost_237 = 0 }
+		set_variable = { global.ordl_evac_out_238 = 0 }
+		set_variable = { global.ordl_evac_out_239 = 0 }
+		set_variable = { global.ordl_evac_lost_238 = 0 }
+		set_variable = { global.ordl_evac_lost_239 = 0 }
+		set_variable = { global.ordl_evac_out_240 = 0 }
+		set_variable = { global.ordl_evac_lost_240 = 0 }
+		set_variable = { global.ordl_evac_out_241 = 0 }
+		set_variable = { global.ordl_evac_lost_241 = 0 }
+		set_variable = { global.ordl_evac_out_242 = 0 }
+		set_variable = { global.ordl_evac_lost_242 = 0 }
+		set_variable = { global.ordl_evac_out_243 = 0 }
+		set_variable = { global.ordl_evac_lost_243 = 0 }
+		set_variable = { global.ordl_evac_out_244 = 0 }
+		set_variable = { global.ordl_evac_lost_244 = 0 }
+		set_variable = { global.ordl_evac_out_245 = 0 }
+		set_variable = { global.ordl_evac_lost_245 = 0 }
+		set_variable = { global.ordl_evac_out_246 = 0 }
+		set_variable = { global.ordl_evac_lost_246 = 0 }
+		set_variable = { global.ordl_evac_out_247 = 0 }
+		set_variable = { global.ordl_evac_lost_247 = 0 }
+		set_variable = { global.ordl_evac_out_248 = 0 }
+		set_variable = { global.ordl_evac_lost_248 = 0 }
+		set_variable = { global.ordl_evac_out_252 = 0 }
+		set_variable = { global.ordl_evac_lost_252 = 0 }
+		set_variable = { global.ordl_evac_out_253 = 0 }
+		set_variable = { global.ordl_evac_lost_253 = 0 }
+		set_variable = { global.ordl_evac_out_254 = 0 }
+		set_variable = { global.ordl_evac_lost_254 = 0 }
+		set_variable = { global.ordl_evac_out_255 = 0 }
+		set_variable = { global.ordl_evac_lost_255 = 0 }
+		set_variable = { global.ordl_evac_out_257 = 0 }
+		set_variable = { global.ordl_evac_lost_257 = 0 }
+		set_variable = { global.ordl_evac_out_258 = 0 }
+		set_variable = { global.ordl_evac_lost_258 = 0 }
+		set_variable = { global.ordl_evac_out_259 = 0 }
+		set_variable = { global.ordl_evac_lost_259 = 0 }
+		set_variable = { global.ordl_evac_out_260 = 0 }
+		set_variable = { global.ordl_evac_lost_260 = 0 }
+		set_variable = { global.ordl_evac_out_262 = 0 }
+		set_variable = { global.ordl_evac_lost_262 = 0 }
+		set_variable = { global.ordl_evac_out_263 = 0 }
+		set_variable = { global.ordl_evac_lost_263 = 0 }
+		set_variable = { global.ordl_evac_out_264 = 0 }
+		set_variable = { global.ordl_evac_lost_264 = 0 }
+		set_variable = { global.ordl_evac_out_351 = 0 }
+		set_variable = { global.ordl_evac_lost_351 = 0 }
+		set_variable = { global.ordl_evac_out_397 = 0 }
+		set_variable = { global.ordl_evac_lost_397 = 0 }
+		set_variable = { global.ordl_evac_out_780 = 0 }
+		set_variable = { global.ordl_evac_lost_780 = 0 }
+		set_variable = { global.ordl_evac_out_804 = 0 }
+		set_variable = { global.ordl_evac_lost_804 = 0 }
+		set_variable = { global.ordl_evac_out_805 = 0 }
+		set_variable = { global.ordl_evac_lost_805 = 0 }
+		set_variable = { global.ordl_evac_out_806 = 0 }
+		set_variable = { global.ordl_evac_lost_806 = 0 }
+		set_variable = { global.ordl_evac_out_807 = 0 }
+		set_variable = { global.ordl_evac_lost_807 = 0 }
+		set_variable = { global.ordl_evac_out_808 = 0 }
+		set_variable = { global.ordl_evac_lost_808 = 0 }
+		set_variable = { global.ordl_evac_out_809 = 0 }
+		set_variable = { global.ordl_evac_lost_809 = 0 }
+		set_variable = { global.ordl_evac_out_810 = 0 }
+		set_variable = { global.ordl_evac_lost_810 = 0 }
+		set_variable = { global.ordl_evac_out_811 = 0 }
+		set_variable = { global.ordl_evac_lost_811 = 0 }
+		set_variable = { global.ordl_evac_out_817 = 0 }
+		set_variable = { global.ordl_evac_lost_817 = 0 }
+		set_variable = { global.ordl_evac_out_821 = 0 }
+		set_variable = { global.ordl_evac_lost_821 = 0 }
+		set_variable = { global.ordl_evac_out_822 = 0 }
+		set_variable = { global.ordl_evac_lost_822 = 0 }
+		set_variable = { global.ordl_evac_out_823 = 0 }
+		set_variable = { global.ordl_evac_lost_823 = 0 }
+		set_variable = { global.ordl_evac_out_824 = 0 }
+		set_variable = { global.ordl_evac_lost_824 = 0 }
+		set_variable = { global.ordl_evac_out_830 = 0 }
+		set_variable = { global.ordl_evac_lost_830 = 0 }
+		set_variable = { global.ordl_evac_out_875 = 0 }
+		set_variable = { global.ordl_evac_lost_875 = 0 }
+		set_variable = { global.ordl_evac_out_876 = 0 }
+		set_variable = { global.ordl_evac_lost_876 = 0 }
+	}
+	SOV = {
+		every_state = {
+			limit = { OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264 state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 239 state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 state = 265 state = 825}}
+			if = {
+				limit = { OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 } }
+				if = { limit = { has_state_flag = SOV_evac_lost_flag } SOV = { set_country_flag = SOV_evac_region_S1_lost } }
+				else_if = { limit = { has_state_flag = SOV_evac_done_flag } SOV = { set_country_flag = SOV_evac_region_S1_done } }
+			}
+			if = {
+				limit = { OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 } }
+				if = { limit = { has_state_flag = SOV_evac_lost_flag } SOV = { set_country_flag = SOV_evac_region_S2_lost } }
+				else_if = { limit = { has_state_flag = SOV_evac_done_flag } SOV = { set_country_flag = SOV_evac_region_S2_done } }
+			}
+			if = {
+				limit = { OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 } }
+				if = { limit = { has_state_flag = SOV_evac_lost_flag } SOV = { set_country_flag = SOV_evac_region_S3_lost } }
+				else_if = { limit = { has_state_flag = SOV_evac_done_flag } SOV = { set_country_flag = SOV_evac_region_S3_done } }
+			}
+			if = {
+				limit = { OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 } }
+				if = { limit = { has_state_flag = SOV_evac_lost_flag } SOV = { set_country_flag = SOV_evac_region_S4_lost } }
+				else_if = { limit = { has_state_flag = SOV_evac_done_flag } SOV = { set_country_flag = SOV_evac_region_S4_done } }
+			}
+			if = {
+				limit = { OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264}}
+				if = { limit = { has_state_flag = SOV_evac_lost_flag } SOV = { set_country_flag = SOV_evac_region_S5_lost } }
+				else_if = { limit = { has_state_flag = SOV_evac_done_flag } SOV = { set_country_flag = SOV_evac_region_S5_done } }
+			}
+			if = {
+				limit = { OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 } }
+				if = { limit = { has_state_flag = SOV_evac_lost_flag } SOV = { set_country_flag = SOV_evac_region_S6_lost } }
+				else_if = { limit = { has_state_flag = SOV_evac_done_flag } SOV = { set_country_flag = SOV_evac_region_S6_done } }
+			}
+			if = {
+				limit = { OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 } }
+				if = { limit = { has_state_flag = SOV_evac_lost_flag } SOV = { set_country_flag = SOV_evac_region_S7_lost } }
+				else_if = { limit = { has_state_flag = SOV_evac_done_flag } SOV = { set_country_flag = SOV_evac_region_S7_done } }
+			}
+		}
+	}
+}
+
+# AI fallback: one regional evacuation per affordable region, once per month.
+ORDL_evac_ai_effect = {
+	if = {
+		limit = {
+			is_ai = yes
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+		}
+		ORDL_evac_region_S1_click = yes
+		ORDL_evac_region_S2_click = yes
+		ORDL_evac_region_S3_click = yes
+		ORDL_evac_region_S4_click = yes
+	}
+}
+
+# scope = the state being evacuated, ROOT = SOV; PP is charged by the wrapper
+ORDL_evac_apply_state_effect = {
+	if = {
+		limit = {
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			controller = { original_tag = SOV }
+		}
+		set_variable = { ROOT.SOV_evac_left_af = arms_factory_level }
+		set_variable = { ROOT.SOV_evac_left_ic = industrial_complex_level }
+		if = {
+			limit = { NOT = { OR = { arms_factory > 0 industrial_complex > 0 } } }
+			set_state_flag = SOV_evac_done_flag
+		}
+		else = {
+			if = {
+				limit = {
+					ROOT = {
+						check_variable = { SOV_evac_paid > 0 }
+					}
+				}
+
+				add_to_variable = { global.ordl_evac_out_af = arms_factory_level }
+				add_to_variable = { global.ordl_evac_out_ic = industrial_complex_level }
+				if = { limit = { state = 11 }
+					add_to_variable = { global.ordl_evac_out_11 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_11 = industrial_complex_level }
+				}
+				if = { limit = { state = 12 }
+					add_to_variable = { global.ordl_evac_out_12 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_12 = industrial_complex_level }
+				}
+				if = { limit = { state = 13 }
+					add_to_variable = { global.ordl_evac_out_13 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_13 = industrial_complex_level }
+				}
+				if = { limit = { state = 78 }
+					add_to_variable = { global.ordl_evac_out_78 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_78 = industrial_complex_level }
+				}
+				if = { limit = { state = 89 }
+					add_to_variable = { global.ordl_evac_out_89 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_89 = industrial_complex_level }
+				}
+				if = { limit = { state = 91 }
+					add_to_variable = { global.ordl_evac_out_91 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_91 = industrial_complex_level }
+				}
+				if = { limit = { state = 93 }
+					add_to_variable = { global.ordl_evac_out_93 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_93 = industrial_complex_level }
+				}
+				if = { limit = { state = 94 }
+					add_to_variable = { global.ordl_evac_out_94 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_94 = industrial_complex_level }
+				}
+				if = { limit = { state = 95 }
+					add_to_variable = { global.ordl_evac_out_95 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_95 = industrial_complex_level }
+				}
+				if = { limit = { state = 96 }
+					add_to_variable = { global.ordl_evac_out_96 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_96 = industrial_complex_level }
+				}
+				if = { limit = { state = 97 }
+					add_to_variable = { global.ordl_evac_out_97 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_97 = industrial_complex_level }
+				}
+				if = { limit = { state = 137 }
+					add_to_variable = { global.ordl_evac_out_137 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_137 = industrial_complex_level }
+				}
+				if = { limit = { state = 188 }
+					add_to_variable = { global.ordl_evac_out_188 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_188 = industrial_complex_level }
+				}
+				if = { limit = { state = 189 }
+					add_to_variable = { global.ordl_evac_out_189 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_189 = industrial_complex_level }
+				}
+				if = { limit = { state = 190 }
+					add_to_variable = { global.ordl_evac_out_190 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_190 = industrial_complex_level }
+				}
+				if = { limit = { state = 191 }
+					add_to_variable = { global.ordl_evac_out_191 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_191 = industrial_complex_level }
+				}
+				if = { limit = { state = 192 }
+					add_to_variable = { global.ordl_evac_out_192 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_192 = industrial_complex_level }
+				}
+				if = { limit = { state = 193 }
+					add_to_variable = { global.ordl_evac_out_193 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_193 = industrial_complex_level }
+				}
+				if = { limit = { state = 194 }
+					add_to_variable = { global.ordl_evac_out_194 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_194 = industrial_complex_level }
+				}
+				if = { limit = { state = 195 }
+					add_to_variable = { global.ordl_evac_out_195 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_195 = industrial_complex_level }
+				}
+				if = { limit = { state = 196 }
+					add_to_variable = { global.ordl_evac_out_196 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_196 = industrial_complex_level }
+				}
+				if = { limit = { state = 197 }
+					add_to_variable = { global.ordl_evac_out_197 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_197 = industrial_complex_level }
+				}
+				if = { limit = { state = 198 }
+					add_to_variable = { global.ordl_evac_out_198 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_198 = industrial_complex_level }
+				}
+				if = { limit = { state = 199 }
+					add_to_variable = { global.ordl_evac_out_199 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_199 = industrial_complex_level }
+				}
+				if = { limit = { state = 200 }
+					add_to_variable = { global.ordl_evac_out_200 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_200 = industrial_complex_level }
+				}
+				if = { limit = { state = 201 }
+					add_to_variable = { global.ordl_evac_out_201 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_201 = industrial_complex_level }
+				}
+				if = { limit = { state = 202 }
+					add_to_variable = { global.ordl_evac_out_202 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_202 = industrial_complex_level }
+				}
+				if = { limit = { state = 203 }
+					add_to_variable = { global.ordl_evac_out_203 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_203 = industrial_complex_level }
+				}
+				if = { limit = { state = 204 }
+					add_to_variable = { global.ordl_evac_out_204 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_204 = industrial_complex_level }
+				}
+				if = { limit = { state = 205 }
+					add_to_variable = { global.ordl_evac_out_205 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_205 = industrial_complex_level }
+				}
+				if = { limit = { state = 265 }
+					add_to_variable = { global.ordl_evac_out_265 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_265 = industrial_complex_level }
+				}
+				if = { limit = { state = 825 }
+					add_to_variable = { global.ordl_evac_out_825 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_825 = industrial_complex_level }
+				}
+				if = { limit = { state = 206 }
+					add_to_variable = { global.ordl_evac_out_206 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_206 = industrial_complex_level }
+				}
+				if = { limit = { state = 207 }
+					add_to_variable = { global.ordl_evac_out_207 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_207 = industrial_complex_level }
+				}
+				if = { limit = { state = 208 }
+					add_to_variable = { global.ordl_evac_out_208 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_208 = industrial_complex_level }
+				}
+				if = { limit = { state = 209 }
+					add_to_variable = { global.ordl_evac_out_209 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_209 = industrial_complex_level }
+				}
+				if = { limit = { state = 210 }
+					add_to_variable = { global.ordl_evac_out_210 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_210 = industrial_complex_level }
+				}
+				if = { limit = { state = 213 }
+					add_to_variable = { global.ordl_evac_out_213 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_213 = industrial_complex_level }
+				}
+				if = { limit = { state = 217 }
+					add_to_variable = { global.ordl_evac_out_217 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_217 = industrial_complex_level }
+				}
+				if = { limit = { state = 218 }
+					add_to_variable = { global.ordl_evac_out_218 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_218 = industrial_complex_level }
+				}
+				if = { limit = { state = 219 }
+					add_to_variable = { global.ordl_evac_out_219 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_219 = industrial_complex_level }
+				}
+				if = { limit = { state = 220 }
+					add_to_variable = { global.ordl_evac_out_220 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_220 = industrial_complex_level }
+				}
+				if = { limit = { state = 221 }
+					add_to_variable = { global.ordl_evac_out_221 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_221 = industrial_complex_level }
+				}
+				if = { limit = { state = 222 }
+					add_to_variable = { global.ordl_evac_out_222 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_222 = industrial_complex_level }
+				}
+				if = { limit = { state = 223 }
+					add_to_variable = { global.ordl_evac_out_223 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_223 = industrial_complex_level }
+				}
+				if = { limit = { state = 224 }
+					add_to_variable = { global.ordl_evac_out_224 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_224 = industrial_complex_level }
+				}
+				if = { limit = { state = 225 }
+					add_to_variable = { global.ordl_evac_out_225 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_225 = industrial_complex_level }
+				}
+				if = { limit = { state = 226 }
+					add_to_variable = { global.ordl_evac_out_226 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_226 = industrial_complex_level }
+				}
+				if = { limit = { state = 227 }
+					add_to_variable = { global.ordl_evac_out_227 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_227 = industrial_complex_level }
+				}
+				if = { limit = { state = 228 }
+					add_to_variable = { global.ordl_evac_out_228 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_228 = industrial_complex_level }
+				}
+				if = { limit = { state = 229 }
+					add_to_variable = { global.ordl_evac_out_229 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_229 = industrial_complex_level }
+				}
+				if = { limit = { state = 230 }
+					add_to_variable = { global.ordl_evac_out_230 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_230 = industrial_complex_level }
+				}
+				if = { limit = { state = 231 }
+					add_to_variable = { global.ordl_evac_out_231 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_231 = industrial_complex_level }
+				}
+				if = { limit = { state = 232 }
+					add_to_variable = { global.ordl_evac_out_232 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_232 = industrial_complex_level }
+				}
+				if = { limit = { state = 233 }
+					add_to_variable = { global.ordl_evac_out_233 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_233 = industrial_complex_level }
+				}
+				if = { limit = { state = 234 }
+					add_to_variable = { global.ordl_evac_out_234 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_234 = industrial_complex_level }
+				}
+				if = { limit = { state = 235 }
+					add_to_variable = { global.ordl_evac_out_235 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_235 = industrial_complex_level }
+				}
+				if = { limit = { state = 236 }
+					add_to_variable = { global.ordl_evac_out_236 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_236 = industrial_complex_level }
+				}
+				if = { limit = { state = 237 }
+					add_to_variable = { global.ordl_evac_out_237 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_237 = industrial_complex_level }
+				}
+				if = { limit = { state = 238 }
+					add_to_variable = { global.ordl_evac_out_238 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_238 = industrial_complex_level }
+				}
+if = { limit = { state = 239 }
+					add_to_variable = { global.ordl_evac_out_239 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_239 = industrial_complex_level }
+				}
+				if = { limit = { state = 240 }
+					add_to_variable = { global.ordl_evac_out_240 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_240 = industrial_complex_level }
+				}
+				if = { limit = { state = 241 }
+					add_to_variable = { global.ordl_evac_out_241 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_241 = industrial_complex_level }
+				}
+				if = { limit = { state = 242 }
+					add_to_variable = { global.ordl_evac_out_242 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_242 = industrial_complex_level }
+				}
+				if = { limit = { state = 243 }
+					add_to_variable = { global.ordl_evac_out_243 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_243 = industrial_complex_level }
+				}
+				if = { limit = { state = 244 }
+					add_to_variable = { global.ordl_evac_out_244 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_244 = industrial_complex_level }
+				}
+				if = { limit = { state = 245 }
+					add_to_variable = { global.ordl_evac_out_245 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_245 = industrial_complex_level }
+				}
+				if = { limit = { state = 246 }
+					add_to_variable = { global.ordl_evac_out_246 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_246 = industrial_complex_level }
+				}
+				if = { limit = { state = 247 }
+					add_to_variable = { global.ordl_evac_out_247 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_247 = industrial_complex_level }
+				}
+				if = { limit = { state = 248 }
+					add_to_variable = { global.ordl_evac_out_248 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_248 = industrial_complex_level }
+				}
+				if = { limit = { state = 252 }
+					add_to_variable = { global.ordl_evac_out_252 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_252 = industrial_complex_level }
+				}
+				if = { limit = { state = 253 }
+					add_to_variable = { global.ordl_evac_out_253 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_253 = industrial_complex_level }
+				}
+				if = { limit = { state = 254 }
+					add_to_variable = { global.ordl_evac_out_254 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_254 = industrial_complex_level }
+				}
+				if = { limit = { state = 255 }
+					add_to_variable = { global.ordl_evac_out_255 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_255 = industrial_complex_level }
+				}
+				if = { limit = { state = 257 }
+					add_to_variable = { global.ordl_evac_out_257 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_257 = industrial_complex_level }
+				}
+				if = { limit = { state = 258 }
+					add_to_variable = { global.ordl_evac_out_258 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_258 = industrial_complex_level }
+				}
+				if = { limit = { state = 259 }
+					add_to_variable = { global.ordl_evac_out_259 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_259 = industrial_complex_level }
+				}
+				if = { limit = { state = 260 }
+					add_to_variable = { global.ordl_evac_out_260 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_260 = industrial_complex_level }
+				}
+				if = { limit = { state = 262 }
+					add_to_variable = { global.ordl_evac_out_262 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_262 = industrial_complex_level }
+				}
+				if = { limit = { state = 263 }
+					add_to_variable = { global.ordl_evac_out_263 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_263 = industrial_complex_level }
+				}
+				if = { limit = { state = 264 }
+					add_to_variable = { global.ordl_evac_out_264 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_264 = industrial_complex_level }
+				}
+				if = { limit = { state = 351 }
+					add_to_variable = { global.ordl_evac_out_351 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_351 = industrial_complex_level }
+				}
+				if = { limit = { state = 397 }
+					add_to_variable = { global.ordl_evac_out_397 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_397 = industrial_complex_level }
+				}
+				if = { limit = { state = 780 }
+					add_to_variable = { global.ordl_evac_out_780 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_780 = industrial_complex_level }
+				}
+				if = { limit = { state = 804 }
+					add_to_variable = { global.ordl_evac_out_804 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_804 = industrial_complex_level }
+				}
+				if = { limit = { state = 805 }
+					add_to_variable = { global.ordl_evac_out_805 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_805 = industrial_complex_level }
+				}
+				if = { limit = { state = 806 }
+					add_to_variable = { global.ordl_evac_out_806 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_806 = industrial_complex_level }
+				}
+				if = { limit = { state = 807 }
+					add_to_variable = { global.ordl_evac_out_807 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_807 = industrial_complex_level }
+				}
+				if = { limit = { state = 808 }
+					add_to_variable = { global.ordl_evac_out_808 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_808 = industrial_complex_level }
+				}
+				if = { limit = { state = 809 }
+					add_to_variable = { global.ordl_evac_out_809 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_809 = industrial_complex_level }
+				}
+				if = { limit = { state = 810 }
+					add_to_variable = { global.ordl_evac_out_810 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_810 = industrial_complex_level }
+				}
+				if = { limit = { state = 811 }
+					add_to_variable = { global.ordl_evac_out_811 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_811 = industrial_complex_level }
+				}
+				if = { limit = { state = 817 }
+					add_to_variable = { global.ordl_evac_out_817 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_817 = industrial_complex_level }
+				}
+				if = { limit = { state = 821 }
+					add_to_variable = { global.ordl_evac_out_821 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_821 = industrial_complex_level }
+				}
+				if = { limit = { state = 822 }
+					add_to_variable = { global.ordl_evac_out_822 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_822 = industrial_complex_level }
+				}
+				if = { limit = { state = 823 }
+					add_to_variable = { global.ordl_evac_out_823 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_823 = industrial_complex_level }
+				}
+				if = { limit = { state = 824 }
+					add_to_variable = { global.ordl_evac_out_824 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_824 = industrial_complex_level }
+				}
+				if = { limit = { state = 830 }
+					add_to_variable = { global.ordl_evac_out_830 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_830 = industrial_complex_level }
+				}
+				if = { limit = { state = 875 }
+					add_to_variable = { global.ordl_evac_out_875 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_875 = industrial_complex_level }
+				}
+				if = { limit = { state = 876 }
+					add_to_variable = { global.ordl_evac_out_876 = arms_factory_level }
+					add_to_variable = { global.ordl_evac_out_876 = industrial_complex_level }
+				}
+				if = { limit = { OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 } }
+					add_to_variable = { global.ordl_evac_S1_out = arms_factory_level }
+					add_to_variable = { global.ordl_evac_S1_out = industrial_complex_level }
+				}
+				if = { limit = { OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 } }
+					add_to_variable = { global.ordl_evac_S2_out = arms_factory_level }
+					add_to_variable = { global.ordl_evac_S2_out = industrial_complex_level }
+				}
+				if = { limit = { OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 } }
+					add_to_variable = { global.ordl_evac_S3_out = arms_factory_level }
+					add_to_variable = { global.ordl_evac_S3_out = industrial_complex_level }
+				}
+				if = { limit = { OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 } }
+					add_to_variable = { global.ordl_evac_S4_out = arms_factory_level }
+					add_to_variable = { global.ordl_evac_S4_out = industrial_complex_level }
+				}
+				if = { limit = { OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264}}
+					add_to_variable = { global.ordl_evac_S5_out = arms_factory_level }
+					add_to_variable = { global.ordl_evac_S5_out = industrial_complex_level }
+				}
+				if = { limit = { OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 } }
+					add_to_variable = { global.ordl_evac_S6_out = arms_factory_level }
+					add_to_variable = { global.ordl_evac_S6_out = industrial_complex_level }
+				}
+				if = { limit = { OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 } }
+					add_to_variable = { global.ordl_evac_S7_out = arms_factory_level }
+					add_to_variable = { global.ordl_evac_S7_out = industrial_complex_level }
+				}
+				while_loop_effect = {
+					limit = { arms_factory > 0 }
+					remove_building = { type = arms_factory level = 1 }
+				}
+				while_loop_effect = {
+					limit = { industrial_complex > 0 }
+					remove_building = { type = industrial_complex level = 1 }
+				}
+				set_state_flag = SOV_evac_done_flag
+				ROOT = {
+					while_loop_effect = {
+						limit = { check_variable = { SOV_evac_left_af > 0 } }
+						ORDL_evac_place_af = yes
+						subtract_from_variable = { SOV_evac_left_af = 1 }
+						add_to_variable = { global.ordl_evac_arrived = 1 }
+					}
+					while_loop_effect = {
+						limit = { check_variable = { SOV_evac_left_ic > 0 } }
+						ORDL_evac_place_ic = yes
+						subtract_from_variable = { SOV_evac_left_ic = 1 }
+						add_to_variable = { global.ordl_evac_arrived = 1 }
+					}
+				}
+			}
+		}
+
+}
+}
+
+# Evacuated factories are placed round-robin over the Ural and Siberian
+# destinations, so a long evacuation spreads out instead of stacking in one state.
+ORDL_evac_place_af = {
+	if = { limit = { check_variable = { SOV_evac_rotor = 0 } }
+		if = { limit = { 648 = { is_fully_controlled_by = ROOT } }
+			648 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 1 } }
+		if = { limit = { 649 = { is_fully_controlled_by = ROOT } }
+			649 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 2 } }
+		if = { limit = { 398 = { is_fully_controlled_by = ROOT } }
+			398 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 3 } }
+		if = { limit = { 399 = { is_fully_controlled_by = ROOT } }
+			399 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 4 } }
+		if = { limit = { 650 = { is_fully_controlled_by = ROOT } }
+			650 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 5 } }
+		if = { limit = { 573 = { is_fully_controlled_by = ROOT } }
+			573 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 6 } }
+		if = { limit = { 572 = { is_fully_controlled_by = ROOT } }
+			572 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 7 } }
+		if = { limit = { 582 = { is_fully_controlled_by = ROOT } }
+			582 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 8 } }
+		if = { limit = { 574 = { is_fully_controlled_by = ROOT } }
+			574 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 9 } }
+		if = { limit = { 575 = { is_fully_controlled_by = ROOT } }
+			575 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 10 } }
+		if = { limit = { 571 = { is_fully_controlled_by = ROOT } }
+			571 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 11 } }
+		if = { limit = { 570 = { is_fully_controlled_by = ROOT } }
+			570 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 12 } }
+		if = { limit = { 569 = { is_fully_controlled_by = ROOT } }
+			569 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 13 } }
+		if = { limit = { 578 = { is_fully_controlled_by = ROOT } }
+			578 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 14 } }
+		if = { limit = { 40 = { is_fully_controlled_by = ROOT } }
+			40 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = arms_factory level = 1 } }
+	}
+	add_to_variable = { SOV_evac_rotor = 1 }
+	if = { limit = { check_variable = { SOV_evac_rotor > 14 } }
+		set_variable = { SOV_evac_rotor = 0 }
+	}
+}
+
+ORDL_evac_place_ic = {
+	if = { limit = { check_variable = { SOV_evac_rotor = 0 } }
+		if = { limit = { 648 = { is_fully_controlled_by = ROOT } }
+			648 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 1 } }
+		if = { limit = { 649 = { is_fully_controlled_by = ROOT } }
+			649 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 2 } }
+		if = { limit = { 398 = { is_fully_controlled_by = ROOT } }
+			398 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 3 } }
+		if = { limit = { 399 = { is_fully_controlled_by = ROOT } }
+			399 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 4 } }
+		if = { limit = { 650 = { is_fully_controlled_by = ROOT } }
+			650 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 5 } }
+		if = { limit = { 573 = { is_fully_controlled_by = ROOT } }
+			573 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 6 } }
+		if = { limit = { 572 = { is_fully_controlled_by = ROOT } }
+			572 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 7 } }
+		if = { limit = { 582 = { is_fully_controlled_by = ROOT } }
+			582 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 8 } }
+		if = { limit = { 574 = { is_fully_controlled_by = ROOT } }
+			574 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 9 } }
+		if = { limit = { 575 = { is_fully_controlled_by = ROOT } }
+			575 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 10 } }
+		if = { limit = { 571 = { is_fully_controlled_by = ROOT } }
+			571 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 11 } }
+		if = { limit = { 570 = { is_fully_controlled_by = ROOT } }
+			570 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 12 } }
+		if = { limit = { 569 = { is_fully_controlled_by = ROOT } }
+			569 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 13 } }
+		if = { limit = { 578 = { is_fully_controlled_by = ROOT } }
+			578 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	if = { limit = { check_variable = { SOV_evac_rotor = 14 } }
+		if = { limit = { 40 = { is_fully_controlled_by = ROOT } }
+			40 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		else = { add_offsite_building = { type = industrial_complex level = 1 } }
+	}
+	add_to_variable = { SOV_evac_rotor = 1 }
+	if = { limit = { check_variable = { SOV_evac_rotor > 14 } }
+		set_variable = { SOV_evac_rotor = 0 }
+	}
+}
+
+ORDL_evac_region_S1_click = {
+	if = {
+		limit = {
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+			NOT = { has_country_flag = SOV_evac_region_S1_active }
+			NOT = { has_country_flag = SOV_evac_region_S1_done }
+			NOT = { has_country_flag = SOV_evac_region_S1_lost }
+			check_variable = { SOV_evac_regions_active < 2 }
+			any_state = {
+				OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 }
+				is_fully_controlled_by = SOV
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+		}
+		ROOT = {
+			add_political_power = -35
+			add_equipment_to_stockpile = { type = train_equipment amount = -20 producer = SOV }
+			add_to_variable = { global.ordl_evac_pp = 35 }
+			add_to_variable = { global.ordl_evac_trains = 20 }
+			set_variable = { SOV_evac_region_S1_days = 30 }
+			set_variable = { SOV_evac_paid = 1 }
+			set_country_flag = SOV_evac_region_S1_active
+			add_to_variable = { SOV_evac_regions_active = 1 }
+			set_country_flag = SOV_evac_region_S1_running
+			set_variable = { SOV_evac_region_S1_civ = 0 }
+			set_variable = { SOV_evac_region_S1_mil = 0 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+						state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+					}
+					controller = { original_tag = SOV }
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+				add_to_variable = { ROOT.SOV_evac_region_S1_civ = industrial_complex_level }
+				add_to_variable = { ROOT.SOV_evac_region_S1_mil = arms_factory_level }
+			}
+			add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S1_civ }
+			add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S1_mil }
+		}
+	}
+}
+ORDL_evac_region_S1_finish = {
+	clr_country_flag = SOV_evac_region_S1_active
+	clr_country_flag = SOV_evac_region_S1_running
+	subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S1_civ }
+	subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S1_mil }
+	set_variable = { SOV_evac_region_S1_civ = 0 }
+	set_variable = { SOV_evac_region_S1_mil = 0 }
+	set_variable = { SOV_evac_region_S1_days = 0 }
+
+	every_state = {
+		limit = {
+			OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 }
+			controller = { original_tag = SOV }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_apply_state_effect = yes
+		set_state_flag = SOV_evac_done_flag
+	}
+	every_state = {
+		limit = {
+			OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 }
+			NOT = { controller = { original_tag = SOV } }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_register_loss_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = SOV_evac_region_S1_lost } }
+		set_country_flag = SOV_evac_region_S1_done
+		ORDL_evac_news_effect = yes
+	}
+
+	ORDL_evac_recalculate_counts = yes
+}
+
+
+
+ORDL_evac_region_S2_click = {
+	if = {
+		limit = {
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+			NOT = { has_country_flag = SOV_evac_region_S2_active }
+			NOT = { has_country_flag = SOV_evac_region_S2_done }
+			NOT = { has_country_flag = SOV_evac_region_S2_lost }
+			check_variable = { SOV_evac_regions_active < 2 }
+			any_state = {
+				OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 }
+				is_fully_controlled_by = SOV
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+		}
+		ROOT = {
+			add_political_power = -35
+			add_equipment_to_stockpile = { type = train_equipment amount = -20 producer = SOV }
+			add_to_variable = { global.ordl_evac_pp = 35 }
+			add_to_variable = { global.ordl_evac_trains = 20 }
+			set_variable = { SOV_evac_region_S2_days = 30 }
+			set_variable = { SOV_evac_paid = 1 }
+			set_country_flag = SOV_evac_region_S2_active
+			add_to_variable = { SOV_evac_regions_active = 1 }
+			set_country_flag = SOV_evac_region_S2_running
+			set_variable = { SOV_evac_region_S2_civ = 0 }
+			set_variable = { SOV_evac_region_S2_mil = 0 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+					}
+					controller = { original_tag = SOV }
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+				add_to_variable = { ROOT.SOV_evac_region_S2_civ = industrial_complex_level }
+				add_to_variable = { ROOT.SOV_evac_region_S2_mil = arms_factory_level }
+			}
+			add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S2_civ }
+			add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S2_mil }
+		}
+	}
+}
+ORDL_evac_region_S2_finish = {
+	clr_country_flag = SOV_evac_region_S2_active
+	clr_country_flag = SOV_evac_region_S2_running
+	subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S2_civ }
+	subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S2_mil }
+	set_variable = { SOV_evac_region_S2_civ = 0 }
+	set_variable = { SOV_evac_region_S2_mil = 0 }
+	set_variable = { SOV_evac_region_S2_days = 0 }
+
+	every_state = {
+		limit = {
+			OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 }
+			controller = { original_tag = SOV }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_apply_state_effect = yes
+		set_state_flag = SOV_evac_done_flag
+	}
+	every_state = {
+		limit = {
+			OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 }
+			NOT = { controller = { original_tag = SOV } }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_register_loss_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = SOV_evac_region_S2_lost } }
+		set_country_flag = SOV_evac_region_S2_done
+		ORDL_evac_news_effect = yes
+	}
+
+	ORDL_evac_recalculate_counts = yes
+}
+
+
+
+ORDL_evac_region_S3_click = {
+	if = {
+		limit = {
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+			NOT = { has_country_flag = SOV_evac_region_S3_active }
+			NOT = { has_country_flag = SOV_evac_region_S3_done }
+			NOT = { has_country_flag = SOV_evac_region_S3_lost }
+			check_variable = { SOV_evac_regions_active < 2 }
+			any_state = {
+				OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 }
+				is_fully_controlled_by = SOV
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+		}
+		ROOT = {
+			add_political_power = -35
+			add_equipment_to_stockpile = { type = train_equipment amount = -20 producer = SOV }
+			add_to_variable = { global.ordl_evac_pp = 35 }
+			add_to_variable = { global.ordl_evac_trains = 20 }
+			set_variable = { SOV_evac_region_S3_days = 45 }
+			set_variable = { SOV_evac_paid = 1 }
+			set_country_flag = SOV_evac_region_S3_active
+			add_to_variable = { SOV_evac_regions_active = 1 }
+			set_country_flag = SOV_evac_region_S3_running
+			set_variable = { SOV_evac_region_S3_civ = 0 }
+			set_variable = { SOV_evac_region_S3_mil = 0 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198
+					}
+					controller = { original_tag = SOV }
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+				add_to_variable = { ROOT.SOV_evac_region_S3_civ = industrial_complex_level }
+				add_to_variable = { ROOT.SOV_evac_region_S3_mil = arms_factory_level }
+			}
+			add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S3_civ }
+			add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S3_mil }
+		}
+	}
+}
+ORDL_evac_region_S3_finish = {
+	clr_country_flag = SOV_evac_region_S3_active
+	clr_country_flag = SOV_evac_region_S3_running
+	subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S3_civ }
+	subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S3_mil }
+	set_variable = { SOV_evac_region_S3_civ = 0 }
+	set_variable = { SOV_evac_region_S3_mil = 0 }
+	set_variable = { SOV_evac_region_S3_days = 0 }
+
+	every_state = {
+		limit = {
+			OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 }
+			controller = { original_tag = SOV }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_apply_state_effect = yes
+		set_state_flag = SOV_evac_done_flag
+	}
+	every_state = {
+		limit = {
+			OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 }
+			NOT = { controller = { original_tag = SOV } }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_register_loss_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = SOV_evac_region_S3_lost } }
+		set_country_flag = SOV_evac_region_S3_done
+		ORDL_evac_news_effect = yes
+	}
+
+	ORDL_evac_recalculate_counts = yes
+}
+
+
+
+ORDL_evac_region_S4_click = {
+	if = {
+		limit = {
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+			NOT = { has_country_flag = SOV_evac_region_S4_active }
+			NOT = { has_country_flag = SOV_evac_region_S4_done }
+			NOT = { has_country_flag = SOV_evac_region_S4_lost }
+			check_variable = { SOV_evac_regions_active < 2 }
+			any_state = {
+				OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 }
+				is_fully_controlled_by = SOV
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+		}
+		ROOT = {
+			add_political_power = -35
+			add_equipment_to_stockpile = { type = train_equipment amount = -20 producer = SOV }
+			add_to_variable = { global.ordl_evac_pp = 35 }
+			add_to_variable = { global.ordl_evac_trains = 20 }
+			set_variable = { SOV_evac_region_S4_days = 45 }
+			set_variable = { SOV_evac_paid = 1 }
+			set_country_flag = SOV_evac_region_S4_active
+			add_to_variable = { SOV_evac_regions_active = 1 }
+			set_country_flag = SOV_evac_region_S4_running
+			set_variable = { SOV_evac_region_S4_civ = 0 }
+			set_variable = { SOV_evac_region_S4_mil = 0 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+					}
+					controller = { original_tag = SOV }
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+				add_to_variable = { ROOT.SOV_evac_region_S4_civ = industrial_complex_level }
+				add_to_variable = { ROOT.SOV_evac_region_S4_mil = arms_factory_level }
+			}
+			add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S4_civ }
+			add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S4_mil }
+		}
+	}
+}
+ORDL_evac_region_S4_finish = {
+	clr_country_flag = SOV_evac_region_S4_active
+	clr_country_flag = SOV_evac_region_S4_running
+	subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S4_civ }
+	subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S4_mil }
+	set_variable = { SOV_evac_region_S4_civ = 0 }
+	set_variable = { SOV_evac_region_S4_mil = 0 }
+	set_variable = { SOV_evac_region_S4_days = 0 }
+
+	every_state = {
+		limit = {
+			OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 }
+			controller = { original_tag = SOV }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_apply_state_effect = yes
+		set_state_flag = SOV_evac_done_flag
+	}
+	every_state = {
+		limit = {
+			OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 }
+			NOT = { controller = { original_tag = SOV } }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_register_loss_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = SOV_evac_region_S4_lost } }
+		set_country_flag = SOV_evac_region_S4_done
+		ORDL_evac_news_effect = yes
+	}
+
+	ORDL_evac_recalculate_counts = yes
+}
+
+
+
+ORDL_evac_region_S5_click = {
+	if = {
+		limit = {
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+			has_country_flag = SOV_evac_second_wave_unlocked
+			NOT = { has_country_flag = SOV_evac_region_S5_active }
+			NOT = { has_country_flag = SOV_evac_region_S5_done }
+			NOT = { has_country_flag = SOV_evac_region_S5_lost }
+			check_variable = { SOV_evac_regions_active < 2 }
+			any_state = {
+				OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264}
+				is_fully_controlled_by = SOV
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+		}
+		ROOT = {
+			add_political_power = -35
+			add_equipment_to_stockpile = { type = train_equipment amount = -20 producer = SOV }
+			add_to_variable = { global.ordl_evac_pp = 35 }
+			add_to_variable = { global.ordl_evac_trains = 20 }
+			set_variable = { SOV_evac_region_S5_days = 60 }
+			set_variable = { SOV_evac_paid = 1 }
+			set_country_flag = SOV_evac_region_S5_active
+			add_to_variable = { SOV_evac_regions_active = 1 }
+			set_country_flag = SOV_evac_region_S5_running
+			set_variable = { SOV_evac_region_S5_civ = 0 }
+			set_variable = { SOV_evac_region_S5_mil = 0 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263
+						state = 264
+					}
+					controller = { original_tag = SOV }
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+				add_to_variable = { ROOT.SOV_evac_region_S5_civ = industrial_complex_level }
+				add_to_variable = { ROOT.SOV_evac_region_S5_mil = arms_factory_level }
+			}
+			add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S5_civ }
+			add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S5_mil }
+		}
+	}
+}
+ORDL_evac_region_S5_finish = {
+	clr_country_flag = SOV_evac_region_S5_active
+	clr_country_flag = SOV_evac_region_S5_running
+	subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S5_civ }
+	subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S5_mil }
+	set_variable = { SOV_evac_region_S5_civ = 0 }
+	set_variable = { SOV_evac_region_S5_mil = 0 }
+	set_variable = { SOV_evac_region_S5_days = 0 }
+
+	every_state = {
+		limit = {
+			OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264 }
+			controller = { original_tag = SOV }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_apply_state_effect = yes
+		set_state_flag = SOV_evac_done_flag
+	}
+	every_state = {
+		limit = {
+			OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264 }
+			NOT = { controller = { original_tag = SOV } }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_register_loss_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = SOV_evac_region_S5_lost } }
+		set_country_flag = SOV_evac_region_S5_done
+		ORDL_evac_news_effect = yes
+	}
+
+	ORDL_evac_recalculate_counts = yes
+}
+
+
+
+ORDL_evac_region_S6_click = {
+	if = {
+		limit = {
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+			has_country_flag = SOV_evac_second_wave_unlocked
+			NOT = { has_country_flag = SOV_evac_region_S6_active }
+			NOT = { has_country_flag = SOV_evac_region_S6_done }
+			NOT = { has_country_flag = SOV_evac_region_S6_lost }
+			check_variable = { SOV_evac_regions_active < 2 }
+			any_state = {
+				OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 }
+				is_fully_controlled_by = SOV
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+		}
+		ROOT = {
+			add_political_power = -35
+			add_equipment_to_stockpile = { type = train_equipment amount = -20 producer = SOV }
+			add_to_variable = { global.ordl_evac_pp = 35 }
+			add_to_variable = { global.ordl_evac_trains = 20 }
+			set_variable = { SOV_evac_region_S6_days = 60 }
+			set_variable = { SOV_evac_paid = 1 }
+			set_country_flag = SOV_evac_region_S6_active
+			add_to_variable = { SOV_evac_regions_active = 1 }
+			set_country_flag = SOV_evac_region_S6_running
+			set_variable = { SOV_evac_region_S6_civ = 0 }
+			set_variable = { SOV_evac_region_S6_mil = 0 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246
+						state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246
+						state = 260 state = 239
+					}
+					controller = { original_tag = SOV }
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+				add_to_variable = { ROOT.SOV_evac_region_S6_civ = industrial_complex_level }
+				add_to_variable = { ROOT.SOV_evac_region_S6_mil = arms_factory_level }
+			}
+			add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S6_civ }
+			add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S6_mil }
+		}
+	}
+}
+ORDL_evac_region_S6_finish = {
+	clr_country_flag = SOV_evac_region_S6_active
+	clr_country_flag = SOV_evac_region_S6_running
+	subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S6_civ }
+	subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S6_mil }
+	set_variable = { SOV_evac_region_S6_civ = 0 }
+	set_variable = { SOV_evac_region_S6_mil = 0 }
+	set_variable = { SOV_evac_region_S6_days = 0 }
+
+	every_state = {
+		limit = {
+			OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 }
+			controller = { original_tag = SOV }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_apply_state_effect = yes
+		set_state_flag = SOV_evac_done_flag
+	}
+	every_state = {
+		limit = {
+			OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 }
+			NOT = { controller = { original_tag = SOV } }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_register_loss_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = SOV_evac_region_S6_lost } }
+		set_country_flag = SOV_evac_region_S6_done
+		ORDL_evac_news_effect = yes
+	}
+
+	ORDL_evac_recalculate_counts = yes
+}
+
+
+
+ORDL_evac_region_S7_click = {
+	if = {
+		limit = {
+			has_completed_focus = SOV_move_industry_to_the_urals
+			has_political_power > 34
+			has_equipment = { train_equipment > 19 }
+			has_country_flag = SOV_evac_second_wave_unlocked
+			NOT = { has_country_flag = SOV_evac_region_S7_active }
+			NOT = { has_country_flag = SOV_evac_region_S7_done }
+			NOT = { has_country_flag = SOV_evac_region_S7_lost }
+			check_variable = { SOV_evac_regions_active < 2 }
+			any_state = {
+				OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 }
+				is_fully_controlled_by = SOV
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+		}
+		ROOT = {
+			add_political_power = -35
+			add_equipment_to_stockpile = { type = train_equipment amount = -20 producer = SOV }
+			add_to_variable = { global.ordl_evac_pp = 35 }
+			add_to_variable = { global.ordl_evac_trains = 20 }
+			set_variable = { SOV_evac_region_S7_days = 60 }
+			set_variable = { SOV_evac_paid = 1 }
+			set_country_flag = SOV_evac_region_S7_active
+			add_to_variable = { SOV_evac_regions_active = 1 }
+			set_country_flag = SOV_evac_region_S7_running
+			set_variable = { SOV_evac_region_S7_civ = 0 }
+			set_variable = { SOV_evac_region_S7_mil = 0 }
+			every_state = {
+				limit = {
+					OR = {
+						state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233
+						state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823
+						state = 824
+					}
+					controller = { original_tag = SOV }
+					NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+				}
+				add_to_variable = { ROOT.SOV_evac_region_S7_civ = industrial_complex_level }
+				add_to_variable = { ROOT.SOV_evac_region_S7_mil = arms_factory_level }
+			}
+			add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S7_civ }
+			add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S7_mil }
+		}
+	}
+}
+ORDL_evac_region_S7_finish = {
+	clr_country_flag = SOV_evac_region_S7_active
+	clr_country_flag = SOV_evac_region_S7_running
+	subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S7_civ }
+	subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S7_mil }
+	set_variable = { SOV_evac_region_S7_civ = 0 }
+	set_variable = { SOV_evac_region_S7_mil = 0 }
+	set_variable = { SOV_evac_region_S7_days = 0 }
+
+	every_state = {
+		limit = {
+			OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 }
+			controller = { original_tag = SOV }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_apply_state_effect = yes
+		set_state_flag = SOV_evac_done_flag
+	}
+	every_state = {
+		limit = {
+			OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 }
+			NOT = { controller = { original_tag = SOV } }
+			NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+		}
+		ORDL_evac_register_loss_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = SOV_evac_region_S7_lost } }
+		set_country_flag = SOV_evac_region_S7_done
+		ORDL_evac_news_effect = yes
+	}
+
+	ORDL_evac_recalculate_counts = yes
+}
+
+
+
+# Daily evacuation timers: S1/S2 30 days, S3/S4 45, S5-S7 60.
+# Fired once per completed region; news_event has fire_only_once, so the world
+# hears about the evacuation exactly once, with the running totals.
+ORDL_evac_news_effect = {
+	news_event = {
+		id = ordl_evac.1
+		days = 0
+	}
+}
+
+ORDL_evac_recalculate_counts = {
+	set_variable = { SOV_evac_regions_done = 0 }
+	set_variable = { SOV_evac_regions_active = 0 }
+	if = {
+		limit = {
+			has_country_flag = SOV_evac_region_S1_done
+			NOT = { has_country_flag = SOV_evac_region_S1_lost }
+		}
+		add_to_variable = { SOV_evac_regions_done = 1 }
+	}
+	if = {
+		limit = {
+			has_country_flag = SOV_evac_region_S2_done
+			NOT = { has_country_flag = SOV_evac_region_S2_lost }
+		}
+		add_to_variable = { SOV_evac_regions_done = 1 }
+	}
+	if = {
+		limit = {
+			has_country_flag = SOV_evac_region_S3_done
+			NOT = { has_country_flag = SOV_evac_region_S3_lost }
+		}
+		add_to_variable = { SOV_evac_regions_done = 1 }
+	}
+	if = {
+		limit = {
+			has_country_flag = SOV_evac_region_S4_done
+			NOT = { has_country_flag = SOV_evac_region_S4_lost }
+		}
+		add_to_variable = { SOV_evac_regions_done = 1 }
+	}
+	if = {
+		limit = {
+			has_country_flag = SOV_evac_region_S5_done
+			NOT = { has_country_flag = SOV_evac_region_S5_lost }
+		}
+		add_to_variable = { SOV_evac_regions_done = 1 }
+	}
+	if = {
+		limit = {
+			has_country_flag = SOV_evac_region_S6_done
+			NOT = { has_country_flag = SOV_evac_region_S6_lost }
+		}
+		add_to_variable = { SOV_evac_regions_done = 1 }
+	}
+	if = {
+		limit = {
+			has_country_flag = SOV_evac_region_S7_done
+			NOT = { has_country_flag = SOV_evac_region_S7_lost }
+		}
+		add_to_variable = { SOV_evac_regions_done = 1 }
+	}
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S1_active }
+		add_to_variable = { SOV_evac_regions_active = 1 }
+	}
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S2_active }
+		add_to_variable = { SOV_evac_regions_active = 1 }
+	}
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S3_active }
+		add_to_variable = { SOV_evac_regions_active = 1 }
+	}
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S4_active }
+		add_to_variable = { SOV_evac_regions_active = 1 }
+	}
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S5_active }
+		add_to_variable = { SOV_evac_regions_active = 1 }
+	}
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S6_active }
+		add_to_variable = { SOV_evac_regions_active = 1 }
+	}
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S7_active }
+		add_to_variable = { SOV_evac_regions_active = 1 }
+	}
+}
+
+ORDL_evac_daily_effect = {
+	if = {
+		limit = { tag = SOV }
+		# Safety sweep: any listed state SOV no longer controls is lost (black),
+		# including captures by the Axis or Finland that happened before this mod
+		# was enabled or inside a loaded save where on_state_control_changed never fired.
+		# Rebuilt from the region flags every day so the header cannot drift or stay at 0.
+		set_variable = { SOV_evac_regions_done = 0 }
+		set_variable = { SOV_evac_regions_active = 0 }
+		if = {
+			limit = {
+				has_country_flag = SOV_evac_region_S1_done
+				NOT = { has_country_flag = SOV_evac_region_S1_lost }
+			}
+			add_to_variable = { SOV_evac_regions_done = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SOV_evac_region_S2_done
+				NOT = { has_country_flag = SOV_evac_region_S2_lost }
+			}
+			add_to_variable = { SOV_evac_regions_done = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SOV_evac_region_S3_done
+				NOT = { has_country_flag = SOV_evac_region_S3_lost }
+			}
+			add_to_variable = { SOV_evac_regions_done = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SOV_evac_region_S4_done
+				NOT = { has_country_flag = SOV_evac_region_S4_lost }
+			}
+			add_to_variable = { SOV_evac_regions_done = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SOV_evac_region_S5_done
+				NOT = { has_country_flag = SOV_evac_region_S5_lost }
+			}
+			add_to_variable = { SOV_evac_regions_done = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SOV_evac_region_S6_done
+				NOT = { has_country_flag = SOV_evac_region_S6_lost }
+			}
+			add_to_variable = { SOV_evac_regions_done = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SOV_evac_region_S7_done
+				NOT = { has_country_flag = SOV_evac_region_S7_lost }
+			}
+			add_to_variable = { SOV_evac_regions_done = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S1_active }
+			add_to_variable = { SOV_evac_regions_active = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S2_active }
+			add_to_variable = { SOV_evac_regions_active = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S3_active }
+			add_to_variable = { SOV_evac_regions_active = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S4_active }
+			add_to_variable = { SOV_evac_regions_active = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S5_active }
+			add_to_variable = { SOV_evac_regions_active = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S6_active }
+			add_to_variable = { SOV_evac_regions_active = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S7_active }
+			add_to_variable = { SOV_evac_regions_active = 1 }
+		}
+		every_state = {
+			limit = {
+				OR = {
+				state = 11 state = 12 state = 13 state = 78 state = 89 state = 91 state = 93 state = 94 state = 95 state = 96
+				state = 97 state = 137 state = 188 state = 189 state = 190 state = 191 state = 192 state = 193 state = 194 state = 195
+				state = 196 state = 197 state = 198 state = 199 state = 200 state = 201 state = 202 state = 203 state = 204 state = 205
+				state = 206 state = 207 state = 208 state = 209 state = 210 state = 217 state = 218 state = 219 state = 220 state = 221
+				state = 222 state = 223 state = 224 state = 225 state = 226 state = 227 state = 228 state = 229 state = 230 state = 231
+				state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 239 state = 240 state = 241
+				state = 242 state = 243 state = 244 state = 245 state = 246 state = 247 state = 248 state = 252 state = 253 state = 254
+				state = 255 state = 257 state = 258 state = 259 state = 260 state = 263 state = 264 state = 780 state = 804 state = 805
+				state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 state = 817 state = 822 state = 823 state = 824 state = 265 state = 825
+				state = 830
+				}
+				owner = { original_tag = SOV }
+				controller = { NOT = { original_tag = SOV } }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			ORDL_evac_register_loss_effect = yes
+		}
+		if = {
+			limit = { check_variable = { SOV_evac_cooldown > 0 } }
+			subtract_from_variable = { SOV_evac_cooldown = 1 }
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S1_active }
+			if = {
+				limit = { check_variable = { SOV_evac_region_S1_days > 1 } }
+				subtract_from_variable = { SOV_evac_region_S1_days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_decision = SOV_evac_decision_S1 }
+					check_variable = { SOV_evac_region_S1_days < 2 }
+				}
+				ORDL_evac_region_S1_finish = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S2_active }
+			if = {
+				limit = { check_variable = { SOV_evac_region_S2_days > 1 } }
+				subtract_from_variable = { SOV_evac_region_S2_days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_decision = SOV_evac_decision_S2 }
+					check_variable = { SOV_evac_region_S2_days < 2 }
+				}
+				ORDL_evac_region_S2_finish = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S3_active }
+			if = {
+				limit = { check_variable = { SOV_evac_region_S3_days > 1 } }
+				subtract_from_variable = { SOV_evac_region_S3_days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_decision = SOV_evac_decision_S3 }
+					check_variable = { SOV_evac_region_S3_days < 2 }
+				}
+				ORDL_evac_region_S3_finish = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S4_active }
+			if = {
+				limit = { check_variable = { SOV_evac_region_S4_days > 1 } }
+				subtract_from_variable = { SOV_evac_region_S4_days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_decision = SOV_evac_decision_S4 }
+					check_variable = { SOV_evac_region_S4_days < 2 }
+				}
+				ORDL_evac_region_S4_finish = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S5_active }
+			if = {
+				limit = { check_variable = { SOV_evac_region_S5_days > 1 } }
+				subtract_from_variable = { SOV_evac_region_S5_days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_decision = SOV_evac_decision_S5 }
+					check_variable = { SOV_evac_region_S5_days < 2 }
+				}
+				ORDL_evac_region_S5_finish = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S6_active }
+			if = {
+				limit = { check_variable = { SOV_evac_region_S6_days > 1 } }
+				subtract_from_variable = { SOV_evac_region_S6_days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_decision = SOV_evac_decision_S6 }
+					check_variable = { SOV_evac_region_S6_days < 2 }
+				}
+				ORDL_evac_region_S6_finish = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = SOV_evac_region_S7_active }
+			if = {
+				limit = { check_variable = { SOV_evac_region_S7_days > 1 } }
+				subtract_from_variable = { SOV_evac_region_S7_days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_decision = SOV_evac_decision_S7 }
+					check_variable = { SOV_evac_region_S7_days < 2 }
+				}
+				ORDL_evac_region_S7_finish = yes
+			}
+		}
+	}
+}
+
+ORDL_evac_register_loss_effect = {
+	if = {
+		limit = { NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } } }
+		ORDL_evac_init_effect = yes
+		set_state_flag = SOV_evac_lost_flag
+		if = { limit = { OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 } }
+			if = {
+				limit = { NOT = { any_state = { OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 } NOT = { has_state_flag = SOV_evac_lost_flag } } } }
+				SOV = {
+					clr_country_flag = SOV_evac_region_S1_done
+					set_country_flag = SOV_evac_region_S1_lost
+					ORDL_evac_abort_S1 = yes
+				}
+			}
+			SOV = { ORDL_evac_recount_S1 = yes }
+		}
+		if = { limit = { OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 } }
+			if = {
+				limit = { NOT = { any_state = { OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 } NOT = { has_state_flag = SOV_evac_lost_flag } } } }
+				SOV = {
+					clr_country_flag = SOV_evac_region_S2_done
+					set_country_flag = SOV_evac_region_S2_lost
+					ORDL_evac_abort_S2 = yes
+				}
+			}
+			SOV = { ORDL_evac_recount_S2 = yes }
+		}
+		if = { limit = { OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 } }
+			if = {
+				limit = { NOT = { any_state = { OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 } NOT = { has_state_flag = SOV_evac_lost_flag } } } }
+				SOV = {
+					clr_country_flag = SOV_evac_region_S3_done
+					set_country_flag = SOV_evac_region_S3_lost
+					ORDL_evac_abort_S3 = yes
+				}
+			}
+			SOV = { ORDL_evac_recount_S3 = yes }
+		}
+		if = { limit = { OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 } }
+			if = {
+				limit = { NOT = { any_state = { OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 } NOT = { has_state_flag = SOV_evac_lost_flag } } } }
+				SOV = {
+					clr_country_flag = SOV_evac_region_S4_done
+					set_country_flag = SOV_evac_region_S4_lost
+					ORDL_evac_abort_S4 = yes
+				}
+			}
+			SOV = { ORDL_evac_recount_S4 = yes }
+		}
+		if = { limit = { OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264 } }
+			if = {
+				limit = { NOT = { any_state = { OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264 } NOT = { has_state_flag = SOV_evac_lost_flag } } } }
+				SOV = {
+					clr_country_flag = SOV_evac_region_S5_done
+					set_country_flag = SOV_evac_region_S5_lost
+					ORDL_evac_abort_S5 = yes
+				}
+			}
+			SOV = { ORDL_evac_recount_S5 = yes }
+		}
+		if = { limit = { OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 } }
+			if = {
+				limit = { NOT = { any_state = { OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 } NOT = { has_state_flag = SOV_evac_lost_flag } } } }
+				SOV = {
+					clr_country_flag = SOV_evac_region_S6_done
+					set_country_flag = SOV_evac_region_S6_lost
+					ORDL_evac_abort_S6 = yes
+				}
+			}
+			SOV = { ORDL_evac_recount_S6 = yes }
+		}
+		if = { limit = { OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 } }
+			if = {
+				limit = { NOT = { any_state = { OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 } NOT = { has_state_flag = SOV_evac_lost_flag } } } }
+				SOV = {
+					clr_country_flag = SOV_evac_region_S7_done
+					set_country_flag = SOV_evac_region_S7_lost
+					ORDL_evac_abort_S7 = yes
+				}
+			}
+			SOV = { ORDL_evac_recount_S7 = yes }
+		}
+		add_to_variable = { global.ordl_evac_lost_af = arms_factory_level }
+		add_to_variable = { global.ordl_evac_lost_ic = industrial_complex_level }
+		if = { limit = { state = 11 }
+			add_to_variable = { global.ordl_evac_lost_11 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_11 = industrial_complex_level }
+		}
+		if = { limit = { state = 12 }
+			add_to_variable = { global.ordl_evac_lost_12 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_12 = industrial_complex_level }
+		}
+		if = { limit = { state = 13 }
+			add_to_variable = { global.ordl_evac_lost_13 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_13 = industrial_complex_level }
+		}
+		if = { limit = { state = 78 }
+			add_to_variable = { global.ordl_evac_lost_78 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_78 = industrial_complex_level }
+		}
+		if = { limit = { state = 89 }
+			add_to_variable = { global.ordl_evac_lost_89 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_89 = industrial_complex_level }
+		}
+		if = { limit = { state = 91 }
+			add_to_variable = { global.ordl_evac_lost_91 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_91 = industrial_complex_level }
+		}
+		if = { limit = { state = 93 }
+			add_to_variable = { global.ordl_evac_lost_93 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_93 = industrial_complex_level }
+		}
+		if = { limit = { state = 94 }
+			add_to_variable = { global.ordl_evac_lost_94 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_94 = industrial_complex_level }
+		}
+		if = { limit = { state = 95 }
+			add_to_variable = { global.ordl_evac_lost_95 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_95 = industrial_complex_level }
+		}
+		if = { limit = { state = 96 }
+			add_to_variable = { global.ordl_evac_lost_96 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_96 = industrial_complex_level }
+		}
+		if = { limit = { state = 97 }
+			add_to_variable = { global.ordl_evac_lost_97 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_97 = industrial_complex_level }
+		}
+		if = { limit = { state = 137 }
+			add_to_variable = { global.ordl_evac_lost_137 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_137 = industrial_complex_level }
+		}
+		if = { limit = { state = 188 }
+			add_to_variable = { global.ordl_evac_lost_188 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_188 = industrial_complex_level }
+		}
+		if = { limit = { state = 189 }
+			add_to_variable = { global.ordl_evac_lost_189 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_189 = industrial_complex_level }
+		}
+		if = { limit = { state = 190 }
+			add_to_variable = { global.ordl_evac_lost_190 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_190 = industrial_complex_level }
+		}
+		if = { limit = { state = 191 }
+			add_to_variable = { global.ordl_evac_lost_191 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_191 = industrial_complex_level }
+		}
+		if = { limit = { state = 192 }
+			add_to_variable = { global.ordl_evac_lost_192 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_192 = industrial_complex_level }
+		}
+		if = { limit = { state = 193 }
+			add_to_variable = { global.ordl_evac_lost_193 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_193 = industrial_complex_level }
+		}
+		if = { limit = { state = 194 }
+			add_to_variable = { global.ordl_evac_lost_194 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_194 = industrial_complex_level }
+		}
+		if = { limit = { state = 195 }
+			add_to_variable = { global.ordl_evac_lost_195 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_195 = industrial_complex_level }
+		}
+		if = { limit = { state = 196 }
+			add_to_variable = { global.ordl_evac_lost_196 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_196 = industrial_complex_level }
+		}
+		if = { limit = { state = 197 }
+			add_to_variable = { global.ordl_evac_lost_197 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_197 = industrial_complex_level }
+		}
+		if = { limit = { state = 198 }
+			add_to_variable = { global.ordl_evac_lost_198 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_198 = industrial_complex_level }
+		}
+		if = { limit = { state = 199 }
+			add_to_variable = { global.ordl_evac_lost_199 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_199 = industrial_complex_level }
+		}
+		if = { limit = { state = 200 }
+			add_to_variable = { global.ordl_evac_lost_200 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_200 = industrial_complex_level }
+		}
+		if = { limit = { state = 201 }
+			add_to_variable = { global.ordl_evac_lost_201 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_201 = industrial_complex_level }
+		}
+		if = { limit = { state = 202 }
+			add_to_variable = { global.ordl_evac_lost_202 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_202 = industrial_complex_level }
+		}
+		if = { limit = { state = 203 }
+			add_to_variable = { global.ordl_evac_lost_203 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_203 = industrial_complex_level }
+		}
+		if = { limit = { state = 204 }
+			add_to_variable = { global.ordl_evac_lost_204 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_204 = industrial_complex_level }
+		}
+		if = { limit = { state = 205 }
+			add_to_variable = { global.ordl_evac_lost_205 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_205 = industrial_complex_level }
+		}
+		if = { limit = { state = 265 }
+			add_to_variable = { global.ordl_evac_lost_265 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_265 = industrial_complex_level }
+		}
+		if = { limit = { state = 825 }
+			add_to_variable = { global.ordl_evac_lost_825 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_825 = industrial_complex_level }
+		}
+		if = { limit = { state = 206 }
+			add_to_variable = { global.ordl_evac_lost_206 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_206 = industrial_complex_level }
+		}
+		if = { limit = { state = 207 }
+			add_to_variable = { global.ordl_evac_lost_207 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_207 = industrial_complex_level }
+		}
+		if = { limit = { state = 208 }
+			add_to_variable = { global.ordl_evac_lost_208 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_208 = industrial_complex_level }
+		}
+		if = { limit = { state = 209 }
+			add_to_variable = { global.ordl_evac_lost_209 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_209 = industrial_complex_level }
+		}
+		if = { limit = { state = 210 }
+			add_to_variable = { global.ordl_evac_lost_210 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_210 = industrial_complex_level }
+		}
+		if = { limit = { state = 213 }
+			add_to_variable = { global.ordl_evac_lost_213 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_213 = industrial_complex_level }
+		}
+		if = { limit = { state = 217 }
+			add_to_variable = { global.ordl_evac_lost_217 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_217 = industrial_complex_level }
+		}
+		if = { limit = { state = 218 }
+			add_to_variable = { global.ordl_evac_lost_218 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_218 = industrial_complex_level }
+		}
+		if = { limit = { state = 219 }
+			add_to_variable = { global.ordl_evac_lost_219 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_219 = industrial_complex_level }
+		}
+		if = { limit = { state = 220 }
+			add_to_variable = { global.ordl_evac_lost_220 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_220 = industrial_complex_level }
+		}
+		if = { limit = { state = 221 }
+			add_to_variable = { global.ordl_evac_lost_221 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_221 = industrial_complex_level }
+		}
+		if = { limit = { state = 222 }
+			add_to_variable = { global.ordl_evac_lost_222 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_222 = industrial_complex_level }
+		}
+		if = { limit = { state = 223 }
+			add_to_variable = { global.ordl_evac_lost_223 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_223 = industrial_complex_level }
+		}
+		if = { limit = { state = 224 }
+			add_to_variable = { global.ordl_evac_lost_224 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_224 = industrial_complex_level }
+		}
+		if = { limit = { state = 225 }
+			add_to_variable = { global.ordl_evac_lost_225 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_225 = industrial_complex_level }
+		}
+		if = { limit = { state = 226 }
+			add_to_variable = { global.ordl_evac_lost_226 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_226 = industrial_complex_level }
+		}
+		if = { limit = { state = 227 }
+			add_to_variable = { global.ordl_evac_lost_227 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_227 = industrial_complex_level }
+		}
+		if = { limit = { state = 228 }
+			add_to_variable = { global.ordl_evac_lost_228 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_228 = industrial_complex_level }
+		}
+		if = { limit = { state = 229 }
+			add_to_variable = { global.ordl_evac_lost_229 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_229 = industrial_complex_level }
+		}
+		if = { limit = { state = 230 }
+			add_to_variable = { global.ordl_evac_lost_230 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_230 = industrial_complex_level }
+		}
+		if = { limit = { state = 231 }
+			add_to_variable = { global.ordl_evac_lost_231 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_231 = industrial_complex_level }
+		}
+		if = { limit = { state = 232 }
+			add_to_variable = { global.ordl_evac_lost_232 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_232 = industrial_complex_level }
+		}
+		if = { limit = { state = 233 }
+			add_to_variable = { global.ordl_evac_lost_233 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_233 = industrial_complex_level }
+		}
+		if = { limit = { state = 234 }
+			add_to_variable = { global.ordl_evac_lost_234 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_234 = industrial_complex_level }
+		}
+		if = { limit = { state = 235 }
+			add_to_variable = { global.ordl_evac_lost_235 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_235 = industrial_complex_level }
+		}
+		if = { limit = { state = 236 }
+			add_to_variable = { global.ordl_evac_lost_236 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_236 = industrial_complex_level }
+		}
+		if = { limit = { state = 237 }
+			add_to_variable = { global.ordl_evac_lost_237 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_237 = industrial_complex_level }
+		}
+		if = { limit = { state = 238 }
+			add_to_variable = { global.ordl_evac_lost_238 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_238 = industrial_complex_level }
+		}
+if = { limit = { state = 239 }
+			add_to_variable = { global.ordl_evac_lost_239 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_239 = industrial_complex_level }
+		}
+		if = { limit = { state = 240 }
+			add_to_variable = { global.ordl_evac_lost_240 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_240 = industrial_complex_level }
+		}
+		if = { limit = { state = 241 }
+			add_to_variable = { global.ordl_evac_lost_241 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_241 = industrial_complex_level }
+		}
+		if = { limit = { state = 242 }
+			add_to_variable = { global.ordl_evac_lost_242 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_242 = industrial_complex_level }
+		}
+		if = { limit = { state = 243 }
+			add_to_variable = { global.ordl_evac_lost_243 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_243 = industrial_complex_level }
+		}
+		if = { limit = { state = 244 }
+			add_to_variable = { global.ordl_evac_lost_244 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_244 = industrial_complex_level }
+		}
+		if = { limit = { state = 245 }
+			add_to_variable = { global.ordl_evac_lost_245 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_245 = industrial_complex_level }
+		}
+		if = { limit = { state = 246 }
+			add_to_variable = { global.ordl_evac_lost_246 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_246 = industrial_complex_level }
+		}
+		if = { limit = { state = 247 }
+			add_to_variable = { global.ordl_evac_lost_247 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_247 = industrial_complex_level }
+		}
+		if = { limit = { state = 248 }
+			add_to_variable = { global.ordl_evac_lost_248 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_248 = industrial_complex_level }
+		}
+		if = { limit = { state = 252 }
+			add_to_variable = { global.ordl_evac_lost_252 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_252 = industrial_complex_level }
+		}
+		if = { limit = { state = 253 }
+			add_to_variable = { global.ordl_evac_lost_253 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_253 = industrial_complex_level }
+		}
+		if = { limit = { state = 254 }
+			add_to_variable = { global.ordl_evac_lost_254 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_254 = industrial_complex_level }
+		}
+		if = { limit = { state = 255 }
+			add_to_variable = { global.ordl_evac_lost_255 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_255 = industrial_complex_level }
+		}
+		if = { limit = { state = 257 }
+			add_to_variable = { global.ordl_evac_lost_257 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_257 = industrial_complex_level }
+		}
+		if = { limit = { state = 258 }
+			add_to_variable = { global.ordl_evac_lost_258 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_258 = industrial_complex_level }
+		}
+		if = { limit = { state = 259 }
+			add_to_variable = { global.ordl_evac_lost_259 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_259 = industrial_complex_level }
+		}
+		if = { limit = { state = 260 }
+			add_to_variable = { global.ordl_evac_lost_260 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_260 = industrial_complex_level }
+		}
+		if = { limit = { state = 262 }
+			add_to_variable = { global.ordl_evac_lost_262 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_262 = industrial_complex_level }
+		}
+		if = { limit = { state = 263 }
+			add_to_variable = { global.ordl_evac_lost_263 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_263 = industrial_complex_level }
+		}
+		if = { limit = { state = 264 }
+			add_to_variable = { global.ordl_evac_lost_264 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_264 = industrial_complex_level }
+		}
+		if = { limit = { state = 351 }
+			add_to_variable = { global.ordl_evac_lost_351 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_351 = industrial_complex_level }
+		}
+		if = { limit = { state = 397 }
+			add_to_variable = { global.ordl_evac_lost_397 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_397 = industrial_complex_level }
+		}
+		if = { limit = { state = 780 }
+			add_to_variable = { global.ordl_evac_lost_780 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_780 = industrial_complex_level }
+		}
+		if = { limit = { state = 804 }
+			add_to_variable = { global.ordl_evac_lost_804 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_804 = industrial_complex_level }
+		}
+		if = { limit = { state = 805 }
+			add_to_variable = { global.ordl_evac_lost_805 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_805 = industrial_complex_level }
+		}
+		if = { limit = { state = 806 }
+			add_to_variable = { global.ordl_evac_lost_806 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_806 = industrial_complex_level }
+		}
+		if = { limit = { state = 807 }
+			add_to_variable = { global.ordl_evac_lost_807 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_807 = industrial_complex_level }
+		}
+		if = { limit = { state = 808 }
+			add_to_variable = { global.ordl_evac_lost_808 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_808 = industrial_complex_level }
+		}
+		if = { limit = { state = 809 }
+			add_to_variable = { global.ordl_evac_lost_809 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_809 = industrial_complex_level }
+		}
+		if = { limit = { state = 810 }
+			add_to_variable = { global.ordl_evac_lost_810 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_810 = industrial_complex_level }
+		}
+		if = { limit = { state = 811 }
+			add_to_variable = { global.ordl_evac_lost_811 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_811 = industrial_complex_level }
+		}
+		if = { limit = { state = 817 }
+			add_to_variable = { global.ordl_evac_lost_817 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_817 = industrial_complex_level }
+		}
+		if = { limit = { state = 821 }
+			add_to_variable = { global.ordl_evac_lost_821 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_821 = industrial_complex_level }
+		}
+		if = { limit = { state = 822 }
+			add_to_variable = { global.ordl_evac_lost_822 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_822 = industrial_complex_level }
+		}
+		if = { limit = { state = 823 }
+			add_to_variable = { global.ordl_evac_lost_823 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_823 = industrial_complex_level }
+		}
+		if = { limit = { state = 824 }
+			add_to_variable = { global.ordl_evac_lost_824 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_824 = industrial_complex_level }
+		}
+		if = { limit = { state = 830 }
+			add_to_variable = { global.ordl_evac_lost_830 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_830 = industrial_complex_level }
+		}
+		if = { limit = { state = 875 }
+			add_to_variable = { global.ordl_evac_lost_875 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_875 = industrial_complex_level }
+		}
+		if = { limit = { state = 876 }
+			add_to_variable = { global.ordl_evac_lost_876 = arms_factory_level }
+			add_to_variable = { global.ordl_evac_lost_876 = industrial_complex_level }
+		}
+		if = { limit = { OR = { state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811 } }
+			add_to_variable = { global.ordl_evac_S1_lost = arms_factory_level }
+			add_to_variable = { global.ordl_evac_S1_lost = industrial_complex_level }
+		}
+		if = { limit = { OR = { state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241 } }
+			add_to_variable = { global.ordl_evac_S2_lost = arms_factory_level }
+			add_to_variable = { global.ordl_evac_S2_lost = industrial_complex_level }
+		}
+		if = { limit = { OR = { state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198 } }
+			add_to_variable = { global.ordl_evac_S3_lost = arms_factory_level }
+			add_to_variable = { global.ordl_evac_S3_lost = industrial_complex_level }
+		}
+		if = { limit = { OR = { state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830 } }
+			add_to_variable = { global.ordl_evac_S4_lost = arms_factory_level }
+			add_to_variable = { global.ordl_evac_S4_lost = industrial_complex_level }
+		}
+		if = { limit = { OR = { state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263 state = 264}}
+			add_to_variable = { global.ordl_evac_S5_lost = arms_factory_level }
+			add_to_variable = { global.ordl_evac_S5_lost = industrial_complex_level }
+		}
+		if = { limit = { OR = { state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246 } }
+			add_to_variable = { global.ordl_evac_S6_lost = arms_factory_level }
+			add_to_variable = { global.ordl_evac_S6_lost = industrial_complex_level }
+		}
+		if = { limit = { OR = { state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233 state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823 state = 824 } }
+			add_to_variable = { global.ordl_evac_S7_lost = arms_factory_level }
+			add_to_variable = { global.ordl_evac_S7_lost = industrial_complex_level }
+		}
+	}
+}
+
+ORDL_evac_recount_S1 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S1_active }
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S1_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S1_mil }
+		set_variable = { SOV_evac_region_S1_civ = 0 }
+		set_variable = { SOV_evac_region_S1_mil = 0 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+					state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780 state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+				}
+				controller = { original_tag = SOV }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			add_to_variable = { ROOT.SOV_evac_region_S1_civ = industrial_complex_level }
+			add_to_variable = { ROOT.SOV_evac_region_S1_mil = arms_factory_level }
+		}
+		add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S1_civ }
+		add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S1_mil }
+	}
+}
+
+ORDL_evac_abort_S1 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S1_active }
+		clr_country_flag = SOV_evac_region_S1_active
+		if = {
+			limit = { check_variable = { SOV_evac_regions_active > 0 } }
+			subtract_from_variable = { SOV_evac_regions_active = 1 }
+		}
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S1_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S1_mil }
+		set_variable = { SOV_evac_region_S1_civ = 0 }
+		set_variable = { SOV_evac_region_S1_mil = 0 }
+	}
+	clr_country_flag = SOV_evac_region_S1_running
+}
+
+ORDL_evac_recount_S2 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S2_active }
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S2_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S2_mil }
+		set_variable = { SOV_evac_region_S2_civ = 0 }
+		set_variable = { SOV_evac_region_S2_mil = 0 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+				}
+				controller = { original_tag = SOV }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			add_to_variable = { ROOT.SOV_evac_region_S2_civ = industrial_complex_level }
+			add_to_variable = { ROOT.SOV_evac_region_S2_mil = arms_factory_level }
+		}
+		add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S2_civ }
+		add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S2_mil }
+	}
+}
+
+ORDL_evac_abort_S2 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S2_active }
+		clr_country_flag = SOV_evac_region_S2_active
+		if = {
+			limit = { check_variable = { SOV_evac_regions_active > 0 } }
+			subtract_from_variable = { SOV_evac_regions_active = 1 }
+		}
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S2_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S2_mil }
+		set_variable = { SOV_evac_region_S2_civ = 0 }
+		set_variable = { SOV_evac_region_S2_mil = 0 }
+	}
+	clr_country_flag = SOV_evac_region_S2_running
+}
+
+ORDL_evac_recount_S3 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S3_active }
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S3_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S3_mil }
+		set_variable = { SOV_evac_region_S3_civ = 0 }
+		set_variable = { SOV_evac_region_S3_mil = 0 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 89 state = 91 state = 93 state = 193 state = 199 state = 201 state = 202 state = 203 state = 198
+				}
+				controller = { original_tag = SOV }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			add_to_variable = { ROOT.SOV_evac_region_S3_civ = industrial_complex_level }
+			add_to_variable = { ROOT.SOV_evac_region_S3_mil = arms_factory_level }
+		}
+		add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S3_civ }
+		add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S3_mil }
+	}
+}
+
+ORDL_evac_abort_S3 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S3_active }
+		clr_country_flag = SOV_evac_region_S3_active
+		if = {
+			limit = { check_variable = { SOV_evac_regions_active > 0 } }
+			subtract_from_variable = { SOV_evac_regions_active = 1 }
+		}
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S3_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S3_mil }
+		set_variable = { SOV_evac_region_S3_civ = 0 }
+		set_variable = { SOV_evac_region_S3_mil = 0 }
+	}
+	clr_country_flag = SOV_evac_region_S3_running
+}
+
+ORDL_evac_recount_S4 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S4_active }
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S4_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S4_mil }
+		set_variable = { SOV_evac_region_S4_civ = 0 }
+		set_variable = { SOV_evac_region_S4_mil = 0 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+				}
+				controller = { original_tag = SOV }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			add_to_variable = { ROOT.SOV_evac_region_S4_civ = industrial_complex_level }
+			add_to_variable = { ROOT.SOV_evac_region_S4_mil = arms_factory_level }
+		}
+		add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S4_civ }
+		add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S4_mil }
+	}
+}
+
+ORDL_evac_abort_S4 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S4_active }
+		clr_country_flag = SOV_evac_region_S4_active
+		if = {
+			limit = { check_variable = { SOV_evac_regions_active > 0 } }
+			subtract_from_variable = { SOV_evac_regions_active = 1 }
+		}
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S4_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S4_mil }
+		set_variable = { SOV_evac_region_S4_civ = 0 }
+		set_variable = { SOV_evac_region_S4_mil = 0 }
+	}
+	clr_country_flag = SOV_evac_region_S4_running
+}
+
+ORDL_evac_recount_S5 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S5_active }
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S5_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S5_mil }
+		set_variable = { SOV_evac_region_S5_civ = 0 }
+		set_variable = { SOV_evac_region_S5_mil = 0 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 195 state = 208 state = 209 state = 210 state = 244 state = 247 state = 248 state = 263
+					state = 264
+				}
+				controller = { original_tag = SOV }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			add_to_variable = { ROOT.SOV_evac_region_S5_civ = industrial_complex_level }
+			add_to_variable = { ROOT.SOV_evac_region_S5_mil = arms_factory_level }
+		}
+		add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S5_civ }
+		add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S5_mil }
+	}
+}
+
+ORDL_evac_abort_S5 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S5_active }
+		clr_country_flag = SOV_evac_region_S5_active
+		if = {
+			limit = { check_variable = { SOV_evac_regions_active > 0 } }
+			subtract_from_variable = { SOV_evac_regions_active = 1 }
+		}
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S5_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S5_mil }
+		set_variable = { SOV_evac_region_S5_civ = 0 }
+		set_variable = { SOV_evac_region_S5_mil = 0 }
+	}
+	clr_country_flag = SOV_evac_region_S5_running
+}
+
+ORDL_evac_recount_S6 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S6_active }
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S6_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S6_mil }
+		set_variable = { SOV_evac_region_S6_civ = 0 }
+		set_variable = { SOV_evac_region_S6_mil = 0 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246
+					state = 205 state = 219 state = 220 state = 221 state = 222 state = 223 state = 224 state = 225 state = 239 state = 240 state = 242 state = 243 state = 252 state = 253 state = 254 state = 255 state = 257 state = 258 state = 259 state = 260 state = 265 state = 825 state = 246
+					state = 260 state = 239
+				}
+				controller = { original_tag = SOV }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			add_to_variable = { ROOT.SOV_evac_region_S6_civ = industrial_complex_level }
+			add_to_variable = { ROOT.SOV_evac_region_S6_mil = arms_factory_level }
+		}
+		add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S6_civ }
+		add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S6_mil }
+	}
+}
+
+ORDL_evac_abort_S6 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S6_active }
+		clr_country_flag = SOV_evac_region_S6_active
+		if = {
+			limit = { check_variable = { SOV_evac_regions_active > 0 } }
+			subtract_from_variable = { SOV_evac_regions_active = 1 }
+		}
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S6_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S6_mil }
+		set_variable = { SOV_evac_region_S6_civ = 0 }
+		set_variable = { SOV_evac_region_S6_mil = 0 }
+	}
+	clr_country_flag = SOV_evac_region_S6_running
+}
+
+ORDL_evac_recount_S7 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S7_active }
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S7_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S7_mil }
+		set_variable = { SOV_evac_region_S7_civ = 0 }
+		set_variable = { SOV_evac_region_S7_mil = 0 }
+		every_state = {
+			limit = {
+				OR = {
+					state = 217 state = 218 state = 227 state = 228 state = 229 state = 230 state = 231 state = 232 state = 233
+					state = 234 state = 235 state = 236 state = 237 state = 238 state = 245 state = 817 state = 822 state = 823
+					state = 824
+				}
+				controller = { original_tag = SOV }
+				NOT = { OR = { has_state_flag = SOV_evac_done_flag has_state_flag = SOV_evac_lost_flag } }
+			}
+			add_to_variable = { ROOT.SOV_evac_region_S7_civ = industrial_complex_level }
+			add_to_variable = { ROOT.SOV_evac_region_S7_mil = arms_factory_level }
+		}
+		add_to_variable = { SOV_evac_transit_civ = SOV_evac_region_S7_civ }
+		add_to_variable = { SOV_evac_transit_mil = SOV_evac_region_S7_mil }
+	}
+}
+
+ORDL_evac_abort_S7 = {
+	if = {
+		limit = { has_country_flag = SOV_evac_region_S7_active }
+		clr_country_flag = SOV_evac_region_S7_active
+		if = {
+			limit = { check_variable = { SOV_evac_regions_active > 0 } }
+			subtract_from_variable = { SOV_evac_regions_active = 1 }
+		}
+		subtract_from_variable = { SOV_evac_transit_civ = SOV_evac_region_S7_civ }
+		subtract_from_variable = { SOV_evac_transit_mil = SOV_evac_region_S7_mil }
+		set_variable = { SOV_evac_region_S7_civ = 0 }
+		set_variable = { SOV_evac_region_S7_mil = 0 }
+	}
+	clr_country_flag = SOV_evac_region_S7_running
+}

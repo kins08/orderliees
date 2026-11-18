@@ -1,0 +1,16 @@
+ideas = {
+	country = {
+		FRA_german_losses_buff = {
+			picture = FRA_german_losses_buff
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+		}
+	}
+}

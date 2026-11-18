@@ -1,0 +1,40 @@
+capital = 9
+
+recruit_character = CZE_edvard_benesh
+
+
+set_technology = {
+	marines = 1
+	paratroopers = 1
+	rangers_tech = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	fuel_silos = 1
+	basic_train = 1
+	tech_engineers = 1
+	interwar_antitank = 1
+}
+
+set_research_slots = 0
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.5.19"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 100
+}
+
+add_ideas = {
+	ordl_quarantine_minor
+	free_trade
+}

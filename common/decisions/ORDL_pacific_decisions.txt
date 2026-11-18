@@ -1,0 +1,50 @@
+pacific_battle_debug_category = {
+
+	# Test activation (only visible in debug mode)
+	pacific_battle_test_activate = {
+		icon = generic_prepare_civil_war
+		allowed = { always = yes }
+		available = { NOT = { has_global_flag = pacific_battle_active } }
+		visible = {
+			is_debug = yes
+			NOT = { has_global_flag = pacific_battle_active }
+		}
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = PACIFIC_TEST_ACTIVATE_TT
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_game_rule = { rule = pacific_balance_mode option = non_factor } }
+					}
+					clr_global_flag = pacific_non_factor_mode
+					set_global_flag = pacific_factor_mode
+				}
+				init_pacific_battle_mechanic = yes
+			}
+		}
+	}
+
+	# Test recalculation (only visible in debug mode)
+	pacific_battle_recalculate_manual = {
+		icon = generic_operation
+		allowed = { always = yes }
+		available = { always = yes }
+		visible = {
+			is_debug = yes
+			has_global_flag = pacific_battle_active
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 1
+
+		complete_effect = {
+			custom_effect_tooltip = PACIFIC_RECALCULATE_MANUAL_TT
+			hidden_effect = {
+				recalculate_pacific_balance = yes
+			}
+		}
+	}
+}

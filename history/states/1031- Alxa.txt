@@ -1,0 +1,22 @@
+state={
+	id=1031
+	name="STATE_1031"
+	manpower = 1
+	state_category = wasteland
+	resources = {
+	}
+	history={
+		
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			4783 1
+		}
+	}
+	provinces={
+		4783 7727 7803 8102 10770 10899
+	}
+	buildings_max_level_factor = 1.000
+	local_supplies=0.0
+}

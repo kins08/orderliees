@@ -1,0 +1,52 @@
+units = {
+	fleet = {
+		name = "Baltiyskiy Flot"
+		naval_base = 3151
+		task_force = {
+			name = "Baltiyskiy Flot - Strike Force"
+			location = 3151
+			ship = { name = "Marat" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = SOV version_name = "Marat Class" } } }
+			ship = { name = "Oktyabrskaya Revolutsiya" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = SOV version_name = "Marat Class" } } }
+			ship = { name = "Marti" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+			ship = { name = "Krasni Kavkaz" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+			ship = { name = "Krasny Krym" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+			ship = { name = "Aurora" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+			ship = { name = "Pamiat Merkuriya" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+		}
+		task_force = {
+			name = "Baltiyskiy Flot - Escort Group (ASW)"
+			location = 3151
+			ship = { name = "Dzerzhinskiy" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Nezamozhnik" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Petrovskiy" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Shaumyan" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Izyaslav" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Kalinin" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Engels" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+		}
+	}
+	fleet = {
+		name = "Chernomorskiy Flot"
+		naval_base = 3686
+		task_force = {
+			name = "Chernomorskiy Flot - Strike Force"
+			location = 3686
+			ship = { name = "Parizhskaya Kommuna" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = SOV version_name = "Marat Class" } } }
+			ship = { name = "Chervona Ukraina" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+			ship = { name = "Komintern" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+			ship = { name = "Komintern II" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+		}
+		task_force = {
+			name = "Chernomorskiy Flot - Escort Group (ASW)"
+			location = 3686
+			ship = { name = "Yakov Sverdlov" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Frunze" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Lenin" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Voykov" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Rykov" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Karl Libknekht" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Bug" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+			ship = { name = "Uritskiy" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = SOV version_name = "Gnevnyy Class" } } }
+		}
+	}
+}
