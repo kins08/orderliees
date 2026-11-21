@@ -42,6 +42,15 @@ on_actions = {
 				FRA_unlock_colonial_construction = yes
 			}
 
+			# Snapshot half of mainland industry on 1939-09-01 to clone on capitulation
+			if = {
+				limit = {
+					date > 1939.8.31
+					NOT = { has_country_flag = FRA_mainland_half_clone_snapshot_done }
+				}
+				FRA_snapshot_mainland_half_industry = yes
+			}
+
 			# War start initialization
 			if = {
 				limit = {
@@ -79,6 +88,7 @@ on_actions = {
 						set_variable = { FRA_days_since_capitulation = 0 }
 					}
 					FRA_enable_free_france_african_construction = yes
+					FRA_spawn_cloned_mainland_industry = yes
 				}
 			}
 		}

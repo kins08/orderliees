@@ -664,6 +664,13 @@ FRA_resistance_daily_update = {
 			set_country_flag = FRA_african_construction_enabled
 			FRA_enable_free_france_african_construction = yes
 		}
+		if = {
+			limit = {
+				has_capitulated = yes
+				NOT = { has_country_flag = FRA_mainland_half_clone_spawned }
+			}
+			FRA_spawn_cloned_mainland_industry = yes
+		}
 		# Clear mainland combat debuff
 		set_variable = { FRA_exhaustion_attack_var = 0 }
 		set_variable = { FRA_exhaustion_defense_var = 0 }
@@ -728,6 +735,244 @@ FRA_resistance_daily_update = {
 				set_variable = { FRA_free_france_conscription_var = 0 }
 				set_variable = { FRA_free_france_ic_var = 0 }
 				set_variable = { FRA_free_france_eff_var = 0 }
+			}
+		}
+	}
+}
+
+FRA_snapshot_mainland_half_industry = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = FRA_mainland_half_clone_snapshot_done }
+		}
+		set_country_flag = FRA_mainland_half_clone_snapshot_done
+		set_variable = { FRA_cloned_mil_count = 0 }
+		set_variable = { FRA_cloned_civ_count = 0 }
+
+		every_owned_state = {
+			limit = {
+				is_core_of = FRA
+				is_on_continent = europe
+			}
+			set_temp_variable = { s_mil = arms_factory_level }
+			set_temp_variable = { s_civ = industrial_complex_level }
+			PREV = {
+				add_to_variable = { FRA_cloned_mil_count = s_mil }
+				add_to_variable = { FRA_cloned_civ_count = s_civ }
+			}
+		}
+
+		divide_variable = { FRA_cloned_mil_count = 2 }
+		if = {
+			limit = { check_variable = { var = FRA_cloned_mil_count value = 0 compare = greater_than } }
+			subtract_from_variable = { FRA_cloned_mil_count = 0.001 }
+			round_variable = FRA_cloned_mil_count
+		}
+		clamp_variable = { var = FRA_cloned_mil_count min = 0 }
+
+		divide_variable = { FRA_cloned_civ_count = 2 }
+		if = {
+			limit = { check_variable = { var = FRA_cloned_civ_count value = 0 compare = greater_than } }
+			subtract_from_variable = { FRA_cloned_civ_count = 0.001 }
+			round_variable = FRA_cloned_civ_count
+		}
+		clamp_variable = { var = FRA_cloned_civ_count min = 0 }
+	}
+}
+
+FRA_spawn_cloned_mainland_industry = {
+	if = {
+		limit = {
+			has_country_flag = FRA_mainland_half_clone_snapshot_done
+			NOT = { has_country_flag = FRA_mainland_half_clone_spawned }
+		}
+		set_country_flag = FRA_mainland_half_clone_spawned
+
+		set_temp_variable = { temp_mil_to_spawn = FRA_cloned_mil_count }
+		while_loop_effect = {
+			limit = { check_variable = { var = temp_mil_to_spawn value = 0 compare = greater_than } }
+			subtract_from_temp_variable = { temp_mil_to_spawn = 1 }
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						is_controlled_by = GER
+						impassable = no
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						is_controlled_by = GER
+						impassable = no
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						NOT = { is_controlled_by = FRA }
+						impassable = no
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						NOT = { is_controlled_by = FRA }
+						impassable = no
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						impassable = no
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		set_temp_variable = { temp_civ_to_spawn = FRA_cloned_civ_count }
+		while_loop_effect = {
+			limit = { check_variable = { var = temp_civ_to_spawn value = 0 compare = greater_than } }
+			subtract_from_temp_variable = { temp_civ_to_spawn = 1 }
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						is_controlled_by = GER
+						impassable = no
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						is_controlled_by = GER
+						impassable = no
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_state = {
+						is_core_of = FRA
+						is_on_continent = europe
+						NOT = { is_controlled_by = FRA }
+						impassable = no
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						NOT = { is_controlled_by = FRA }
+						impassable = no
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_state = {
+					limit = {
+						is_core_of = FRA
+						is_on_continent = europe
+						impassable = no
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
