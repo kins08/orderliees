@@ -100,6 +100,7 @@ guiTypes = {
 				name = "france_metropole_map"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_map_france_metropole"
+				scale = 0.5
 			}
 
 			# Port 1: Brest
@@ -107,18 +108,21 @@ guiTypes = {
 				name = "port_brest_base"
 				position = { x = 170 y = 61 }
 				spriteType = "GFX_fra_port_marker_base"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BREST_TT"
 			}
 			iconType = {
 				name = "port_brest_active_mil"
 				position = { x = 167 y = 58 }
 				spriteType = "GFX_fra_port_marker_mil"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BREST_TT"
 			}
 			iconType = {
 				name = "port_brest_active_civ"
 				position = { x = 167 y = 58 }
 				spriteType = "GFX_fra_port_marker_civ"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BREST_TT"
 			}
 
@@ -127,18 +131,21 @@ guiTypes = {
 				name = "port_bordeaux_base"
 				position = { x = 202 y = 110 }
 				spriteType = "GFX_fra_port_marker_base"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
 			}
 			iconType = {
 				name = "port_bordeaux_active_mil"
 				position = { x = 199 y = 107 }
 				spriteType = "GFX_fra_port_marker_mil"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
 			}
 			iconType = {
 				name = "port_bordeaux_active_civ"
 				position = { x = 199 y = 107 }
 				spriteType = "GFX_fra_port_marker_civ"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
 			}
 
@@ -147,18 +154,21 @@ guiTypes = {
 				name = "port_marseille_base"
 				position = { x = 256 y = 139 }
 				spriteType = "GFX_fra_port_marker_base"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
 			}
 			iconType = {
 				name = "port_marseille_active_mil"
 				position = { x = 253 y = 136 }
 				spriteType = "GFX_fra_port_marker_mil"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
 			}
 			iconType = {
 				name = "port_marseille_active_civ"
 				position = { x = 253 y = 136 }
 				spriteType = "GFX_fra_port_marker_civ"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
 			}
 
@@ -194,11 +204,13 @@ guiTypes = {
 				name = "card_aof_normal"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_aof"
+				scale = 0.5
 			}
 			iconType = {
 				name = "card_aof_active"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_aof_active"
+				scale = 0.5
 			}
 
 			instantTextBoxType = {
@@ -251,11 +263,13 @@ guiTypes = {
 				name = "card_aef_normal"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_aef"
+				scale = 0.5
 			}
 			iconType = {
 				name = "card_aef_active"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_aef_active"
+				scale = 0.5
 			}
 
 			instantTextBoxType = {
@@ -308,11 +322,13 @@ guiTypes = {
 				name = "card_madagascar_normal"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_madagascar"
+				scale = 0.5
 			}
 			iconType = {
 				name = "card_madagascar_active"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_madagascar_active"
+				scale = 0.5
 			}
 
 			instantTextBoxType = {
@@ -365,11 +381,13 @@ guiTypes = {
 				name = "card_guiana_normal"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_guiana"
+				scale = 0.5
 			}
 			iconType = {
 				name = "card_guiana_active"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_card_guiana_active"
+				scale = 0.5
 			}
 
 			instantTextBoxType = {
@@ -418,6 +436,14 @@ guiTypes = {
 			position = { x = 5 y = 535 }
 			size = { width = 490 height = 72 }
 
+			iconType = {
+				name = "losses_tray"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_losses_tray"
+				scale = 0.5
+				alwaystransparent = yes
+			}
+
 			instantTextBoxType = {
 				name = "losses_section_title"
 				position = { x = 0 y = 0 }
@@ -438,12 +464,14 @@ guiTypes = {
 					name = "tier_1_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_1_TT"
 				}
 				iconType = {
 					name = "tier_1_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_1_TT"
 				}
 				instantTextBoxType = {
@@ -485,12 +513,14 @@ guiTypes = {
 					name = "tier_2_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_2_TT"
 				}
 				iconType = {
 					name = "tier_2_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_2_TT"
 				}
 				instantTextBoxType = {
@@ -532,12 +562,14 @@ guiTypes = {
 					name = "tier_3_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_3_TT"
 				}
 				iconType = {
 					name = "tier_3_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_3_TT"
 				}
 				instantTextBoxType = {
@@ -579,12 +611,14 @@ guiTypes = {
 					name = "tier_4_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_4_TT"
 				}
 				iconType = {
 					name = "tier_4_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_4_TT"
 				}
 				instantTextBoxType = {
@@ -626,12 +660,14 @@ guiTypes = {
 					name = "tier_5_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_5_TT"
 				}
 				iconType = {
 					name = "tier_5_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_5_TT"
 				}
 				instantTextBoxType = {
@@ -763,6 +799,7 @@ guiTypes = {
 				name = "spectator_france_metropole_map"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_fra_map_france_metropole"
+				scale = 0.5
 			}
 
 			# Port 1: Brest
@@ -770,18 +807,21 @@ guiTypes = {
 				name = "spectator_port_brest_base"
 				position = { x = 170 y = 61 }
 				spriteType = "GFX_fra_port_marker_base"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BREST_TT"
 			}
 			iconType = {
 				name = "spectator_port_brest_active_mil"
 				position = { x = 167 y = 58 }
 				spriteType = "GFX_fra_port_marker_mil"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BREST_TT"
 			}
 			iconType = {
 				name = "spectator_port_brest_active_civ"
 				position = { x = 167 y = 58 }
 				spriteType = "GFX_fra_port_marker_civ"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BREST_TT"
 			}
 
@@ -790,18 +830,21 @@ guiTypes = {
 				name = "spectator_port_bordeaux_base"
 				position = { x = 202 y = 110 }
 				spriteType = "GFX_fra_port_marker_base"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
 			}
 			iconType = {
 				name = "spectator_port_bordeaux_active_mil"
 				position = { x = 199 y = 107 }
 				spriteType = "GFX_fra_port_marker_mil"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
 			}
 			iconType = {
 				name = "spectator_port_bordeaux_active_civ"
 				position = { x = 199 y = 107 }
 				spriteType = "GFX_fra_port_marker_civ"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_BORDEAUX_TT"
 			}
 
@@ -810,18 +853,21 @@ guiTypes = {
 				name = "spectator_port_marseille_base"
 				position = { x = 256 y = 139 }
 				spriteType = "GFX_fra_port_marker_base"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
 			}
 			iconType = {
 				name = "spectator_port_marseille_active_mil"
 				position = { x = 253 y = 136 }
 				spriteType = "GFX_fra_port_marker_mil"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
 			}
 			iconType = {
 				name = "spectator_port_marseille_active_civ"
 				position = { x = 253 y = 136 }
 				spriteType = "GFX_fra_port_marker_civ"
+				scale = 0.5
 				pdx_tooltip = "FRA_PORT_MARSEILLE_TT"
 			}
 
@@ -851,6 +897,14 @@ guiTypes = {
 			position = { x = 5 y = 280 }
 			size = { width = 490 height = 72 }
 
+			iconType = {
+				name = "spectator_losses_tray"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_fra_losses_tray"
+				scale = 0.5
+				alwaystransparent = yes
+			}
+
 			instantTextBoxType = {
 				name = "spectator_losses_section_title"
 				position = { x = 0 y = 0 }
@@ -871,12 +925,14 @@ guiTypes = {
 					name = "spectator_tier_1_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_1_TT"
 				}
 				iconType = {
 					name = "spectator_tier_1_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_1_TT"
 				}
 				instantTextBoxType = {
@@ -918,12 +974,14 @@ guiTypes = {
 					name = "spectator_tier_2_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_2_TT"
 				}
 				iconType = {
 					name = "spectator_tier_2_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_2_TT"
 				}
 				instantTextBoxType = {
@@ -965,12 +1023,14 @@ guiTypes = {
 					name = "spectator_tier_3_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_3_TT"
 				}
 				iconType = {
 					name = "spectator_tier_3_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_3_TT"
 				}
 				instantTextBoxType = {
@@ -1012,12 +1072,14 @@ guiTypes = {
 					name = "spectator_tier_4_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_4_TT"
 				}
 				iconType = {
 					name = "spectator_tier_4_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_4_TT"
 				}
 				instantTextBoxType = {
@@ -1059,12 +1121,14 @@ guiTypes = {
 					name = "spectator_tier_5_inactive"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_inactive"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_5_TT"
 				}
 				iconType = {
 					name = "spectator_tier_5_active"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_fra_tier_active"
+					scale = 0.5
 					pdx_tooltip = "FRA_TIER_5_TT"
 				}
 				instantTextBoxType = {

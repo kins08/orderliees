@@ -82,6 +82,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_fra_losses_tray"
+		texturefile = "gfx/interface/fra_evacuation/losses_tray.png"
+	}
+
+	spriteType = {
 		name = "GFX_fra_tier_inactive"
 		texturefile = "gfx/interface/fra_evacuation/tier_inactive.png"
 	}
