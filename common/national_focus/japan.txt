@@ -5174,13 +5174,6 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = JAP_kempeitai_idea_lar
-				IF = {
-					limit = {
-						has_intelligence_agency = no
-					}
-					custom_effect_tooltip = generic_skip_one_line_tt
-					create_intelligence_agency = yes
-				}
 			}
 			ELSE = {
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -5413,7 +5406,6 @@ focus_tree = {
 					limit = {
 						is_core_of = KOR
 					}
-					add_compliance = 25
 					add_extra_state_shared_building_slots = 1
 				}
 			}
@@ -5570,7 +5562,6 @@ focus_tree = {
 					limit = {
 						is_core_of = MAN
 					}
-					add_compliance = 25
 					add_extra_state_shared_building_slots = 1
 				}
 			}
@@ -6762,9 +6753,6 @@ focus_tree = {
 				
 			add_country_leader_trait = JAP_embodying_empress_jingu
 			
-			hidden_effect = {
-				#mark_focus_tree_layout_dirty = yes
-			}
 
 		}
 	}
@@ -7466,7 +7454,6 @@ focus_tree = {
 					has_dlc = "La Resistance"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-				JAP_create_ignatius_lincoln_operative = yes
 			}
 			
 		}
@@ -7841,9 +7828,6 @@ focus_tree = {
 				
 			}
 			
-			hidden_effect = {
-
-			}
 			
 		}
 	}
@@ -11582,7 +11566,6 @@ focus_tree = {
 					has_dlc = "La Resistance"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-				JAP_create_john_farnsworth_operative = yes
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -12150,7 +12133,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				JAP_create_patrick_heenan_operative = yes
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -14737,7 +14719,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				JAP_create_yoshio_kodama_operative = yes
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -17136,31 +17117,7 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				IF = {
-					limit = {
-						has_intelligence_agency = no
-					}
-					custom_effect_tooltip = generic_skip_one_line_tt
-					create_intelligence_agency = yes
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				JAP_add_or_modify_communist_party_modifier = yes
-
-				add_to_variable = { JAP_communist_party_operative_slot = 1 tooltip = operative_slot_tt }
-				add_to_variable = { JAP_communist_party_enemy_operative_detection_chance_factor = 0.15 tooltip = enemy_operative_detection_chance_factor_tt }
-				add_to_variable = { JAP_communist_party_enemy_operative_intel_extraction_rate = 0.15 tooltip = enemy_operative_intel_extraction_rate_tt }
-				add_to_variable = { JAP_communist_party_enemy_operative_capture_chance_factor = 0.15 tooltip = enemy_operative_capture_chance_factor_tt }
-			}
-			ELSE = {
-				add_ideas = JAP_learn_from_the_nkvd_lar
-			}
-
+			add_ideas = JAP_learn_from_the_nkvd_lar
 		}
 
 	}
@@ -17505,9 +17462,6 @@ focus_tree = {
 
 			add_ideas = JAP_modern_ikko_ikki_idea
 			
-			hidden_effect = {
-				
-			}
 
 		}
 

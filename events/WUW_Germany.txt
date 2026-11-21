@@ -4599,7 +4599,6 @@ country_event = { #Germany integrates us
 				limit = {
 					is_core_of = ROOT
 				}
-				add_compliance = 50
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -4610,7 +4609,6 @@ country_event = { #Germany integrates us
 					limit = {
 						is_core_of = ROOT
 					}
-					add_compliance = 50
 					add_extra_state_shared_building_slots = 1
 				}
 			}
@@ -6514,7 +6512,6 @@ country_event = {
 					state = 72
 				}
 			}
-			add_compliance = 60
 		}
 
 		custom_effect_tooltip =  generic_skip_one_line_tt
@@ -6529,7 +6526,6 @@ country_event = {
 					state = 73
 				}
 			}
-			add_compliance = 15
 		}
 
 		custom_effect_tooltip =  generic_skip_one_line_tt
@@ -8843,9 +8839,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKB = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -8869,9 +8862,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKB = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -8898,9 +8888,6 @@ country_event = {
 
 		hidden_effect = {
 			RKN = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -8924,9 +8911,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKN = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -8953,9 +8937,6 @@ country_event = {
 
 		hidden_effect = {
 			RKG = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -8979,9 +8960,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKG = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9008,9 +8986,6 @@ country_event = {
 
 		hidden_effect = {
 			RKU = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9032,9 +9007,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKU = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9061,9 +9033,6 @@ country_event = {
 
 		hidden_effect = {
 			RKO = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9087,9 +9056,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKO = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9116,9 +9082,6 @@ country_event = {
 
 		hidden_effect = {
 			RKK = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9140,9 +9103,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKK = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9261,9 +9221,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKT = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9314,9 +9271,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKT = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9380,9 +9334,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKM = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9416,9 +9367,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKM = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9463,7 +9411,6 @@ country_event = {
 		
 		825 = {
 			transfer_state_to = RKM
-			add_compliance = 45	
 		}
 
 	}
@@ -9481,7 +9428,6 @@ country_event = {
 		
 		825 = {
 			transfer_state_to = RKT
-			add_compliance = 45	
 		}
 
 	}
@@ -9519,7 +9465,6 @@ country_event = {
 
 		251 = {
 			transfer_state_to = RKL
-			add_compliance = 30
 		}
 
 		custom_effect_tooltip = GER_reichskommissariat_ural_effect_tt
@@ -9540,7 +9485,6 @@ country_event = {
 					}
 				}
 				transfer_state_to = RKL
-				add_compliance = 25
 			}
 			every_state = {	
 				limit = {
@@ -9561,7 +9505,6 @@ country_event = {
 				add_contested_owner = RKL
 				set_state_controller_to = RKL
 				add_claim_by = RKL
-				add_compliance = 25
 			}
 
 			RKL = {
@@ -9889,9 +9832,6 @@ country_event = {
 
 		hidden_effect = {
 			GEN = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9915,9 +9855,6 @@ country_event = {
 		}
 		hidden_effect = {
 			GEN = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -9965,9 +9902,6 @@ country_event = {
 
 		hidden_effect = {
 			RKH = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10003,9 +9937,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKH = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10032,9 +9963,6 @@ country_event = {
 
 		hidden_effect = {
 			RKI = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10063,9 +9991,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKI = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10168,9 +10093,6 @@ country_event = {
 
 		hidden_effect = {
 			RKC = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10227,9 +10149,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKC = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10322,9 +10241,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RGB = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10373,9 +10289,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RGB = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10669,9 +10582,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKA = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10708,9 +10618,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RKA = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10738,9 +10645,6 @@ country_event = {
 
 		hidden_effect = {
 			RKV = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10768,9 +10672,6 @@ country_event = {
 
 		hidden_effect = {
 			RKV = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10822,9 +10723,6 @@ country_event = {
 
 		hidden_effect = {
 			RAN = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10876,9 +10774,6 @@ country_event = {
 
 		hidden_effect = {
 			RCO = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -10914,9 +10809,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RCO = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11065,9 +10957,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RUS = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11141,9 +11030,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RUS = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11363,9 +11249,6 @@ country_event = {
 
 		hidden_effect = {
 			RAR = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11460,9 +11343,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RHD = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11511,9 +11391,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RHD = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11611,9 +11488,6 @@ country_event = {
 		}
 		hidden_effect = {
 			ROA = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11664,9 +11538,6 @@ country_event = {
 		}
 		hidden_effect = {
 			ROA = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11761,9 +11632,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RAA = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -11812,9 +11680,6 @@ country_event = {
 		}
 		hidden_effect = {
 			RAA = {
-				every_controlled_state = {
-					set_compliance = 25
-				}
 			}
 		}
 	}
@@ -13150,7 +13015,6 @@ country_event = {
 					state = 108 # Morava
 				}
 			}
-			add_resistance = -10		
 		}
 
 	}
@@ -13183,7 +13047,6 @@ country_event = {
 				level = 1
 				instant_build = yes
 			}	
-			add_resistance = 10
 		}
 
 	}
@@ -18817,7 +18680,6 @@ country_event = { #FROM accepts tighter federation
 			limit = {
 				is_core_of = FROM
 			}
-			add_compliance = 50
 			add_extra_state_shared_building_slots = 1
 		}
 	}
@@ -22082,9 +21944,6 @@ country_event = {
 			country_event = { id = GER_inner_circle_todt.02 days = @inner_circle_time_tier_3 }
 			set_variable = { GER_wonder_weapons_focus_advisor = 1 }
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH TODT's FOCUS BRANCH - Cannot start new focus"
-		}
 	}
 }
 
@@ -22141,9 +22000,6 @@ country_event = {
 				originator_name = GER_fritz_todt
 			}
 			clr_country_flag = GER_wunderwaffe_in_progress_flag
-		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH TODT's FOCUS BRANCH - Cannot complete focus"
 		}
 	}
 }
@@ -22205,9 +22061,6 @@ country_event = {
 			set_variable = { GER_wonder_weapons_focus_advisor = 2 }
 
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH SPEER's FOCUS BRANCH - Cannot start new focus"
-		}
 	}
 }
 
@@ -22265,9 +22118,6 @@ country_event = {
 			}
 			clr_country_flag = GER_wunderwaffe_in_progress_flag
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH SPEER's FOCUS BRANCH - Cannot complete focus"
-		}
 	}
 }
 
@@ -22324,9 +22174,6 @@ country_event = {
 			set_country_flag = { flag = GER_integration_of_puppet_economies_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
 			country_event = { id = GER_inner_circle_goring.02 days = @inner_circle_time_tier_3 }
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH GÖRING's FOCUS BRANCH - Cannot start new focus"
-		}
 	}
 }
 
@@ -22382,9 +22229,6 @@ country_event = {
 				originator_name = GER_hermann_goring
 			}
 			clr_country_flag = GER_integration_of_puppet_economies_in_progress_flag
-		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH GÖRING's FOCUS BRANCH - Cannot complete focus"
 		}
 	}
 }
@@ -22530,9 +22374,6 @@ country_event = {
 				country_event = { id = GER_inner_circle_himmler.02 days = @inner_circle_time_tier_2 }
 			}
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH HIMMLER's FOCUS BRANCH - Cannot start new focus"
-		}
 	}
 }
 
@@ -22613,9 +22454,6 @@ country_event = {
 			}
 			clr_country_flag = GER_hegemony_of_the_ss_in_progress_flag
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH HIMMLER's FOCUS BRANCH - Cannot complete focus"
-		}
 	}
 }
 
@@ -22668,9 +22506,6 @@ country_event = {
 			activate_shine_on_focus = GER_propaganda_master
 			set_country_flag = { flag = GER_propaganda_master_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
 			country_event = { id = GER_inner_circle_goebbels.02 days = @inner_circle_time_tier_3 }
-		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot start new focus"
 		}
 	}
 }
@@ -22728,9 +22563,6 @@ country_event = {
 			}
 			clr_country_flag = GER_propaganda_master_in_progress_flag
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH GOEBBELS's FOCUS BRANCH - Cannot complete focus"
-		}
 	}
 }
 
@@ -22786,9 +22618,6 @@ country_event = {
 			set_country_flag = { flag = GER_total_control_over_domestic_affairs_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
 			country_event = { id = GER_inner_circle_hess.02 days = @inner_circle_time_tier_3 }
 			set_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 6 }
-		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH HESS's FOCUS BRANCH - Cannot start new focus"
 		}
 	}
 }
@@ -22848,9 +22677,6 @@ country_event = {
 			}
 			clr_country_flag = GER_total_control_over_domestic_affairs_in_progress_flag
 		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH HESS's FOCUS BRANCH - Cannot complete focus"
-		}
 	}
 }
 
@@ -22906,9 +22732,6 @@ country_event = {
 			set_country_flag = { flag = GER_total_control_over_domestic_affairs_in_progress_flag days = @inner_circle_time_tier_3_flag value = 1 }
 			country_event = { id = GER_inner_circle_bormann.02 days = @inner_circle_time_tier_3 }
 			set_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 7 }
-		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH BORMANN's FOCUS BRANCH - Cannot start new focus"
 		}
 	}
 }
@@ -22967,9 +22790,6 @@ country_event = {
 				originator_name = GER_martin_bormann
 			}
 			clr_country_flag = GER_total_control_over_domestic_affairs_in_progress_flag
-		}
-		else = { #Debug logs
-			#log = "SOMETHING WENT WRONG WITH BORMANN's FOCUS BRANCH - Cannot complete focus"
 		}
 	}
 }

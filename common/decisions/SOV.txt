@@ -739,9 +739,6 @@ SOV_paranoia_system = {
 				}
 				remove_ideas = SOV_purged_junior_navy_officers_1
 			}
-			else = {
-				#log = "I CANNOT REMOVE A NS THAT DOESN'T EXIST!"
-			}
 		}
 	}
 
@@ -4239,9 +4236,6 @@ SOV_propaganda_campaigns = {
 
 		modifier = {
 			stability_weekly = 0.01
-			compliance_growth = 0.05
-			resistance_decay = 0.05
-			resistance_damage_to_garrison = 0.15
 			consumer_goods_factor = 0.10
 		}
 

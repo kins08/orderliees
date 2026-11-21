@@ -2464,14 +2464,6 @@ focus_tree = {
 			}
 			set_rule = { can_create_factions = yes }
 			create_faction = FRA_communist_faction
-			create_operative_leader = {
-				name = "Jacques Duclos"
-				GFX = GFX_portrait_jacques_duclos
-				traits = { operative_infiltrator operative_natural_orator }
-				bypass_recruitment = no
-				available_to_spy_master = yes
-				nationalities = { FRA }
-			}
 		}
 	}
 
@@ -3248,19 +3240,6 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = FRA_expanded_citizenship
 				add_idea = FRA_france_undividable
-			}
-			every_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					NOT = {
-						is_core_of = ROOT
-					}
-					NOT = {
-						is_on_continent = europe
-					}
-					has_resistance = yes
-				}
-				add_compliance = 10
 			}
 		}
 	}

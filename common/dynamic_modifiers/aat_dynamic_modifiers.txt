@@ -149,9 +149,6 @@ NOR_prep_his_dmod_3 = {
 NOR_prep_resistance_dmod = {
 	enable = { always = yes }
 	icon =  GFX_modifiers_generic_resistance
-	resistance_activity = 0.2
-	resistance_growth = 0.15
-	resistance_decay = -0.2
 }
 
 NOR_defend_state_dmod = { #Added when deploying Level 1 Prep 
@@ -371,8 +368,6 @@ NOR_oppressed_civilians_dmod = {
 
 		icon = GFX_idea_generic_oppression
 
-		resistance_growth = -0.15
-		resistance_target = -0.1
 		stability_factor = 0.2
 		consumer_goods_factor = 0.1	
 		conscription_factor = NOR.NOR_oppressed_civilians_dmod_recruitable_population_factor #0.15
@@ -707,7 +702,6 @@ DEN_political_edicts_dynamic_modifier = {
 	
 	drift_defence_factor = DEN_political_edicts_drift_defence_factor #0
 	conscription_factor = DEN_political_edicts_conscription_factor #0
-	operative_slot = DEN_political_edicts_operative_slot #0
 }
 
 DEN_occupation_laws_dynamic_modifier = {
@@ -739,9 +733,6 @@ DEN_resistance_dynamic_modifier = { #Make sure to change all effects for both ve
 	naval_damage_factor = DEN_resistance_naval_damage
 	naval_defense_factor = DEN_resistance_naval_defense
 	naval_enemy_fleet_size_ratio_penalty_factor = DEN_resistance_enemy_fleet_size_ratio_penalty
-	resistance_target_on_our_occupied_states = DEN_resistance_target_on_our_occupied_states
-	compliance_growth_on_our_occupied_states = DEN_resistance_compliance_growth_on_our_occupied_states
-	resistance_damage_to_garrison_on_our_occupied_states = DEN_resistance_damage_to_garrison_on_our_occupied_states
 }
 
 DEN_resistance_dynamic_modifier_improved = { #Make sure to change all effects for both versions
@@ -760,9 +751,6 @@ DEN_resistance_dynamic_modifier_improved = { #Make sure to change all effects fo
 	naval_damage_factor = DEN_resistance_naval_damage
 	naval_defense_factor = DEN_resistance_naval_defense
 	naval_enemy_fleet_size_ratio_penalty_factor = DEN_resistance_enemy_fleet_size_ratio_penalty
-	resistance_target_on_our_occupied_states = DEN_resistance_target_on_our_occupied_states
-	compliance_growth_on_our_occupied_states = DEN_resistance_compliance_growth_on_our_occupied_states
-	resistance_damage_to_garrison_on_our_occupied_states = DEN_resistance_damage_to_garrison_on_our_occupied_states
 }
 
 DEN_haeren_dynamic_modifier = { #Make sure to change all effects for all 3 versions
@@ -1010,7 +998,6 @@ DEN_pan_scandinavianism_modifier = {
 	production_speed_arms_factory_factor = 0.1
 	dig_in_speed_factor = 0.1
 	max_dig_in_factor = 0.1
-	compliance_growth = 0.1
 }
 
 
@@ -1180,11 +1167,6 @@ FIN_weapon_caches_modifier = { #Gets removed via on_action
 	enable = { always = yes }
 	icon = GFX_modifiers_FIN_weapon_caches
 
-	starting_compliance = -0.5
-	resistance_decay = -0.5
-	resistance_target = 0.15
-	resistance_damage_to_garrison = 0.35
-	resistance_garrison_penetration_chance = 0.25
 	local_non_core_supply_impact_factor = 0.25
 }
 
@@ -1213,7 +1195,6 @@ FIN_confederation_of_finno_russian_republics_dm = {
 		}
 	}
 
-	compliance_gain = 0.25
 }
 
 

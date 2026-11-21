@@ -124,7 +124,6 @@ leader_traits = {
 		sprite = 13
 			
 		communism_drift = 0.1
-		resistance_growth = -0.15
 		political_power_factor = 0.1
 		
 		ai_will_do = {
@@ -204,7 +203,6 @@ leader_traits = {
 		communism_drift = 0.05
 		stability_factor = 0.1
 		production_factory_max_efficiency_factor = 0.05
-		compliance_growth = 0.02
 		
 		ai_will_do = {
 			factor = 0
@@ -228,7 +226,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 			
-		resistance_growth = -0.05
 		command_power_gain_mult = 0.15
 		army_core_attack_factor = 0.05
 		army_core_defence_factor = 0.1
@@ -242,7 +239,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 			
-		resistance_growth = -0.05
 		command_power_gain_mult = 0.25
 		army_core_attack_factor = 0.05
 		army_core_defence_factor = 0.1
@@ -389,7 +385,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 			
-		resistance_target = -0.1
 		stability_factor = 0.05
 		political_power_factor = 0.1
 		
@@ -403,7 +398,6 @@ leader_traits = {
 		sprite = 13
 			
 		drift_defence_factor = 0.25
-		compliance_growth = 0.02
 		stability_factor = 0.1
 		
 		ai_will_do = {
@@ -657,8 +651,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 			
-		resistance_growth = -0.1
-		compliance_growth = 0.05
 		industrial_capacity_factory = 0.06
 		
 		ai_will_do = {
@@ -709,7 +701,6 @@ leader_traits = {
 			
 		opinion_gain_monthly_factor = 0.1
 		trade_opinion_factor = 0.1
-		resistance_damage_to_garrison = -0.05
 		enemy_justify_war_goal_time = 0.2
 		
 		ai_will_do = {
@@ -943,7 +934,6 @@ leader_traits = {
 
 		local_resources_factor = 0.2
 		opinion_gain_monthly_factor = 0.05
-		resistance_damage_to_garrison = -0.05
 		trade_opinion_factor = -0.05
 		consumer_goods_factor = -0.05
 
@@ -954,7 +944,6 @@ leader_traits = {
 		random = no
 
 		drift_defence_factor = 0.25
-		resistance_growth_on_our_occupied_states = 0.3
 		communism_drift = 0.03
 		political_power_factor = 0.1
 		stability_factor = 0.05
@@ -996,7 +985,6 @@ leader_traits = {
 		sprite = 13
 		random = no
 		surrender_limit = 0.2
-		resistance_target = -0.05
 		conscription_factor = 0.1
 		war_support_factor = 0.05
 
@@ -1121,7 +1109,6 @@ leader_traits = {
 		random = no
 		sprite = 13
 			
-		resistance_growth = -0.10
 		political_power_factor = 0.15
 		army_core_defence_factor = 0.10
 		army_core_attack_factor = 0.05

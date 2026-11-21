@@ -28,8 +28,6 @@ RAJ_GOE_independence_movement = {
 		}
 		target_trigger = {			
 			FROM = {
-				has_resistance = yes
-				resistance > 0
 				is_in_array = { RAJ.owned_states_at_game_start = THIS }
 				is_controlled_by = RAJ
 			}
@@ -44,7 +42,6 @@ RAJ_GOE_independence_movement = {
 		}
 		complete_effect = {
 			FROM = {
-				add_resistance = -60
 			}
 			ROOT = {
 				add_autonomy_ratio = { 
@@ -82,7 +79,6 @@ RAJ_GOE_independence_movement = {
 		target_array = RAJ.owned_states_at_game_start
 		target_trigger = {			
 			FROM = {
-				has_resistance = yes
 				is_controlled_by = ROOT
 			}
 		}
@@ -94,14 +90,12 @@ RAJ_GOE_independence_movement = {
 			base = 0
 			modifier = {
 				FROM = {
-					resistance < 67
 				}
 				add = 200
 			}
 
 			modifier = {
 				FROM = {
-					resistance < 87
 				}
 				add = 100
 			}
@@ -109,8 +103,6 @@ RAJ_GOE_independence_movement = {
 		}
 		complete_effect = {
 			FROM = {
-				add_resistance = 60
-				add_compliance = -10
 			}
 			ROOT = {
 				army_experience = 5
@@ -185,8 +177,6 @@ RAJ_GOE_independence_movement = {
 			base = 0 
 			modifier = {
 				all_owned_state = {
-					has_resistance = yes
-					resistance > 87
 				}
 				add = 800
 			}
@@ -207,12 +197,6 @@ RAJ_GOE_independence_movement = {
 				remove_core_of = ROOT 
 				set_state_flag = pre_bose_core
 				add_core_of = DIP
-				force_enable_resistance = { 
-					clear = no #if yes, will clear previously disabled resistance
-					occupier = ROOT
-					occupied = DIP
-				}
-				start_resistance = yes
 				
 
 			}  
@@ -429,8 +413,6 @@ RAJ_GOE_india_indivisible_cat = {
 		
 		available = {
 			FROM = { 
-				compliance > 40
-				resistance < 15
 			}
 		}
 		
@@ -474,7 +456,6 @@ RAJ_GOE_india_indivisible_cat = {
 		available = {
 			FROM = { 
 				is_owned_and_controlled_by = ROOT 
-				compliance > 60
 			}
 			has_completed_focus = RAJ_trade_federation_of_india
 		}

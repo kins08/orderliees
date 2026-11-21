@@ -652,7 +652,6 @@ types = {
 
 		# Can prepare
 		available = {
-			16 = { resistance > 25 }
 		}
 		launchable = {
 
@@ -743,9 +742,7 @@ types = {
 				victim_effects = {
 					var:target_state = {
 						custom_effect_tooltip = operation_jericho_failure_tt
-						add_resistance = -10
 					}
-					16 = { add_resistance = -10 }
 
 				}
 				actor_effects = {
@@ -764,9 +761,7 @@ types = {
 				victim_effects = {
 					var:target_state = {
 						custom_effect_tooltip = operation_jericho_limited_success_tt
-						add_resistance = 10
 					}
-					16 = { add_resistance = 5 }
 
 				}
 				actor_effects = {
@@ -785,9 +780,7 @@ types = {
 				victim_effects = {
 					var:target_state = {
 						custom_effect_tooltip = operation_jericho_success_tt
-						add_resistance = 20
 					}
-					16 = { add_resistance = 10 }
 
 				}
 				actor_effects = {
@@ -806,9 +799,7 @@ types = {
 			    victim_effects = {
 					var:target_state = {
 						custom_effect_tooltip = operation_jericho_critical_success_tt
-						add_resistance = 40
 					}
-					16 = { add_resistance = 20 }
 
 				}
 				actor_effects = {

@@ -513,8 +513,6 @@ check_painful_memory = {
             array = RAJ.owned_states_at_game_start
             if = {
                 limit = {
-                    resistance > 59
-                    resistance < 85
                     NOT = { 
                         has_state_flag = {
                             flag = painful_memory_cooldown
@@ -528,7 +526,6 @@ check_painful_memory = {
             }
             else_if = {
                 limit = {
-                    resistance > 85
                     NOT = { 
                         has_state_flag = {
                             flag = painful_memory_cooldown
@@ -939,9 +936,6 @@ bose_civil_war_capital_check = {
         if = {
             limit = {  NOT = { state = 988 } } #Aden
             if = {
-                limit = {
-                    resistance < 65
-                }
                 set_variable = { exit_bose = 1 }
                 RAJ = { set_country_flag = bose_opponent_has_valid_capital }
             }

@@ -1603,7 +1603,6 @@ country_event = { #Warn once about garrison not being set
 		name = GOE_RAJ.37.a
         every_owned_state = {
             limit = { 
-            	has_resistance = yes
             	occupation_law = no_garrison 
             	
             }
@@ -1623,11 +1622,9 @@ country_event = { #No more warning
 
         every_owned_state = {
         	limit = {
-        		has_resistance = yes
         		occupation_law = no_garrison 
         	}
             set_occupation_law = local_police_force_garrison
-            set_resistance = 0
 
         }
         add_stability = -0.1
@@ -2066,7 +2063,6 @@ country_event = {
 				array = RAJ.owned_states_at_game_start 
 				limit = { 
 					is_controlled_by = ROOT 
-					has_resistance = yes
 				}
 
 				set_variable = { RAJ.unrest_target_state = THIS }
@@ -2141,14 +2137,12 @@ country_event = {
 				is_ai = yes	
 			}
 			var:RAJ.unrest_target_state = { 
-				add_resistance = 15 
 				custom_effect_tooltip = currentStateResistance
 			}
 
 		}
 		else = {
 			var:RAJ.unrest_target_state = { 
-				add_resistance = 65 
 				custom_effect_tooltip = currentStateResistance
 			}
 		}
@@ -2207,20 +2201,16 @@ country_event = {
 				is_ai = yes	
 			}
 			var:RAJ.unrest_target_state = { 
-				add_resistance = 5 
 				custom_effect_tooltip = currentStateResistance
 				custom_effect_tooltip = newline_tt
-				add_compliance = -10
 				custom_effect_tooltip = currentStateCompliance
 			}
 
 		}
 		else = {
 			var:RAJ.unrest_target_state = { 
-				add_resistance = 20 
 				custom_effect_tooltip = currentStateResistance
 				custom_effect_tooltip = newline_tt
-				add_compliance = -35
 				custom_effect_tooltip = currentStateCompliance
 			}
 		}
@@ -2359,20 +2349,16 @@ country_event = {
 				is_ai = yes
 			}
 			var:RAJ.unrest_target_state = {
-				add_resistance = 5
 				custom_effect_tooltip = currentStateResistance
 				custom_effect_tooltip = newline_tt
-				add_compliance = -5
 				custom_effect_tooltip = currentStateCompliance
 			}
 		}
 		else = {
 
 			var:RAJ.unrest_target_state = {
-				add_resistance = 25
 				custom_effect_tooltip = currentStateResistance
 				custom_effect_tooltip = newline_tt
-				add_compliance = -25
 				custom_effect_tooltip = currentStateCompliance
 			}
 		}
@@ -2380,8 +2366,6 @@ country_event = {
 
 		trigger = {
 			var:RAJ.unrest_target_state = {
-				compliance > 20
-				resistance < 80
 			}
 		}
 		clear_variable = RAJ.unrest_target_state
@@ -2419,11 +2403,8 @@ country_event = {
 					value = THIS
 				}
 
-				has_resistance = yes
 			}
 
-			add_compliance = -5
-			add_resistance = 5
 			
 		}
 
@@ -5340,7 +5321,6 @@ country_event = {
 		if = {
 			limit = {
 				var:global.famine_state = {
-					has_resistance = yes
 				}
 			}
 
@@ -5348,10 +5328,6 @@ country_event = {
 				limit = {
 					is_ai = yes
 				}
-				var:global.famine_state = { add_resistance = 5 }
-			}
-			else = {
-				var:global.famine_state = { add_resistance = 30 }
 			}
 			
 		}
@@ -5422,12 +5398,6 @@ country_event = {
 				
 				if = {
 					limit = { has_resistance = no }
-					start_resistance = yes
-					force_enable_resistance = { 
-						clear = no
-						occupier = ROOT
-						occupied = DIP
-					}
 				}
 				
 			}
@@ -5521,16 +5491,6 @@ country_event = {
 									remove_core_of = ROOT
 								}
 								add_core_of = DIP
-								if = {
-									limit = {
-										has_resistance = no
-									}
-									start_resistance = yes
-									force_enable_resistance = {
-										occupier = ROOT
-										occupied = DIP
-									}
-								}
 							}
 
 						}
@@ -6194,9 +6154,6 @@ country_event = {
 		RAJ = {  
 			transfer_state = event_target:RAJ_i_want_to_buy_this_land 
 			country_event = { id = GOE_RAJ_eic.9 hours = 2 }
-
-		}
-		hidden_effect = {
 
 		}
 

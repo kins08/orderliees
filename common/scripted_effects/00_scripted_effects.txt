@@ -857,7 +857,6 @@ remove_from_allowed_party = {
 
 #expectes a temp variable country_to_initiate which should contain original_tag to instantiate as a collabration government
 instantiate_collaboration_government = {
-	custom_effect_tooltip = compliance_80_effect_tooltip
 	hidden_effect = {
 		set_variable = { collaboration_formed@var:country_to_initiate = 1 }
 

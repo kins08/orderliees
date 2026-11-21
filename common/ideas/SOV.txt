@@ -1014,7 +1014,6 @@ ideas = {
 			picture = CZE_planning_bonus
 
 			modifier = {
-				intel_network_gain_factor = 0.25
 				decryption_factor = 0.1
 			}
 		}
@@ -1180,8 +1179,6 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
-				intelligence_agency_defense = 0.5
 			}
 		}
 
@@ -1198,7 +1195,6 @@ ideas = {
 
 			modifier = {
 				foreign_subversive_activites = -0.15
-				resistance_growth_on_our_occupied_states = 0.15
 			}
 		}
 
@@ -1219,9 +1215,6 @@ ideas = {
 
 			modifier = {
 				subversive_activites_upkeep = -0.5
-				operative_slot = 1
-				root_out_resistance_effectiveness_factor = 0.1
-				resistance_damage_to_garrison = -0.05
 			}
 		}
 
@@ -1473,7 +1466,6 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
 			}
 		}
 
@@ -1512,7 +1504,6 @@ ideas = {
 				# operation_boost_resistance_outcome = 0.15
 				# operation_make_resistance_contacts_outcome = 0.15
 				target_sabotage_factor = 0.15
-				resistance_damage_to_garrison_on_our_occupied_states = 0.1
 			}
 		}
 
@@ -1533,7 +1524,6 @@ ideas = {
 
 			modifier = {
 				subversive_activites_upkeep = -0.15
-				resistance_damage_to_garrison_on_our_occupied_states = 0.1
 			}
 		}
 
@@ -2906,7 +2896,6 @@ ideas = {
 			}
 
 			modifier = {
-				intelligence_agency_defense = 0.10
 				army_core_defence_factor = 0.05
 				attack_bonus_against_cores = 0.05
 			}
@@ -2929,8 +2918,6 @@ ideas = {
 			modifier = {
 				communism_drift = 0.1
 				political_power_factor = 0.1
-				intel_network_gain_factor = 0.15
-				compliance_growth = 0.15
 			}
 		}
 

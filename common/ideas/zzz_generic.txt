@@ -214,7 +214,6 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
 				communism_acceptance = -15
 			}
 		}
@@ -724,7 +723,6 @@ ideas = {
 	
 			modifier = {
 				conscription = 0.02
-				resistance_damage_to_garrison = -0.1 
 			}
 		}
 	
@@ -1300,8 +1298,6 @@ ideas = {
 			picture = chi_war_of_resistance3
 			
 			modifier = {
-				resistance_growth_on_our_occupied_states = 0.1 
-				resistance_damage_to_garrison_on_our_occupied_states = 0.25 
 			}
 		}	
 		MTG_naval_treaty_adherent = {

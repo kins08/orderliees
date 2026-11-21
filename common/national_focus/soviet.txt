@@ -5376,7 +5376,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_PROPAGANDA}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_operative_slot  = 1 }
 			custom_effect_tooltip = SOV_organization_of_the_partisans_ns_tt
 
 			if = {
@@ -5394,15 +5393,6 @@ focus_tree = {
 				if = {
 					limit = {
 						has_government = communism
-					}
-					create_operative_leader = {
-						name = SOV_dimitry_medvedev
-						GFX = GFX_Portrait_dmitry_medvedev
-						female = yes
-						traits = { operative_demolition_expert operative_commando }
-						bypass_recruitment = no
-						available_to_spy_master = yes
-						nationalities = { SOV }
 					}
 				}
 

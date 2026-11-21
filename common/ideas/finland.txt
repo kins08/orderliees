@@ -439,9 +439,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				resistance_decay_on_our_occupied_states = -0.20
-				resistance_target_on_our_occupied_states = 0.1
-				resistance_damage_to_garrison_on_our_occupied_states = 0.1
 				# target_sabotage_cost = -0.15
 				target_sabotage_factor = 0.1
 			}
@@ -461,10 +458,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				resistance_decay_on_our_occupied_states = -0.20
-				resistance_target_on_our_occupied_states = 0.1
-				resistance_damage_to_garrison_on_our_occupied_states = 0.1
-				boost_resistance_factor = 0.1
 			}
 		}
 
@@ -843,11 +836,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				operative_slot = 2
-				root_out_resistance_effectiveness_factor = 0.25
 				drift_defence_factor = 0.25
-				intelligence_agency_defense = 0.5
-				agency_upgrade_time = -0.3
 			}
 		}
 
@@ -955,11 +944,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				operative_slot = 1
 				civilian_intel_factor = 0.15
-				intel_network_gain_factor = 0.15
 				political_power_factor = 0.1
-				decryption_power = 25
 			}
 		}
 
@@ -1006,7 +992,6 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.15
 				stability_factor = 0.1
-				resistance_target = -0.15
 				research_speed_factor = 0.1
 			}
 		}
@@ -1365,9 +1350,6 @@ ideas = {
 				drift_defence_factor = 0.5
 				war_support_factor = 0.05
 				
-				operative_slot = 1
-				agency_upgrade_time = -0.2
-				intelligence_agency_defense = 0.15
 			}
 		}
 

@@ -39,7 +39,6 @@ leader_traits = {
 
 	feminist_minister = {
 		sprite = 5
-		compliance_gain = 0.02
 		democratic_drift = 0.05
 
 		ai_will_do = {
@@ -105,7 +104,6 @@ leader_traits = {
 		sprite = 5
 		non_core_manpower = 0.025
 		party_popularity_stability_factor = 0.02
-		compliance_growth = 0.1
 
 		ai_will_do = {
 			factor = 2
@@ -243,7 +241,6 @@ leader_traits = {
 
 	hindu_nationalist ={
 		sprite = 5
-		resistance_target = -0.05
 		annex_cost_factor = -0.25
 		justify_war_goal_time = -0.33
 		army_core_attack_factor = 0.15
@@ -282,7 +279,6 @@ leader_traits = {
 		sprite = 13
 		war_support_factor = 0.05
 		political_power_gain = 0.05
-		resistance_target_on_our_occupied_states = 0.15
 		
 	}
 
@@ -356,7 +352,6 @@ leader_traits = {
 
 	ruthless_tycoon = {
 		sprite = 13
-		resistance_target = 0.05
 		resource_trade_cost_bonus_per_factory = 1
 		local_resources_factor = 0.1
 		production_speed_buildings_factor = 0.05
@@ -396,9 +391,6 @@ leader_traits = {
 	}
 
 	seasoned_administrator = {
-		resistance_activity = -0.2
-		resistance_damage_to_garrison = -0.35
-		resistance_garrison_penetration_chance = -0.25
 	}
 
 	aloof_authority = {
@@ -451,18 +443,15 @@ leader_traits = {
 	}
 
 	minority_leader = {
-		compliance_growth = -0.08
 	}
 
 	authoritarian = {
 		fascism_drift = 0.1
 		neutrality_drift = 0.05
 		production_speed_arms_factory_factor = 0.1
-		compliance_gain = -0.01
 	}
 
 	under_democratic_guise = {
-		resistance_target = -0.06
 		command_power_gain_mult = 0.15
 		democratic_drift = 0.01
 		communism_drift = 0.02
@@ -486,7 +475,6 @@ leader_traits = {
 
 	RAJ_GOE_the_reformer_maharaja = {
 		stability_factor = 0.1
-		resistance_growth_on_our_occupied_states = 0.1
 		sprite = 13
 	}
 
@@ -522,7 +510,6 @@ leader_traits = {
 
 	RAJ_GOE_anti_socialist = {
 		communism_drift = -0.04
-		enemy_operative_capture_chance_factor = 0.05
 		army_intel_factor = 0.1
 		sprite = 13
 	}
@@ -617,7 +604,6 @@ leader_traits = {
 		sprite = 13
 		drift_defence_factor = 0.1
 		research_speed_factor = 0.03
-		enemy_operative_capture_chance_factor = 0.05
 		civilian_intel_to_others = -15
 		army_intel_to_others = -15
 		airforce_intel_to_others = -15
@@ -710,7 +696,6 @@ leader_traits = {
 
 	red_tiger_of_bengal = {
 		sprite = 13
-		resistance_damage_to_garrison_on_our_occupied_states = 0.15
 		army_core_defence_factor = 0.1
 		army_core_attack_factor = 0.08
 		communism_drift = 0.02

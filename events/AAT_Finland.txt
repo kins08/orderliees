@@ -1432,7 +1432,6 @@ country_event = {
 				ROOT = {
 					transfer_state = PREV
 				}
-				add_compliance = 50
 			}
 		}
 	}
@@ -1849,7 +1848,6 @@ country_event = {
 			for_each_scope_loop = {
 				array = FROM.FIN_states_requested_by_finland_array			
 				ROOT = { transfer_state = PREV }
-				add_compliance = 30
 			}
 		}
 	}

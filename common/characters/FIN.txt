@@ -1329,36 +1329,6 @@ characters = {
 				small = GFX_portrait_FIN_esko_riekki_small
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FIN_esko_riekki
-			allowed = {
-				original_tag = FIN
-				has_dlc = "La Resistance"
-			}
-			available = {
-				has_intelligence_agency = yes
-				if = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-					}
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-					}
-				}
-			}
-			traits = {
-				head_of_intelligence #Watchdog of White Finland?
-			}
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 0.5
-					FIN_is_historical_ai = yes
-				}
-			}
-		}
 	}
 
 	FIN_vilho_annala = {
@@ -1896,25 +1866,6 @@ characters = {
 		portraits = {
 			civilian = {
 				small = GFX_portrait_FIN_otto_brusiin_small
-			}
-		}
-		advisor = {
-			slot = political_advisor #
-			idea_token = FIN_otto_brusiin
-			allowed = {
-				original_tag = FIN
-				has_dlc = "Arms Against Tyranny"
-				has_dlc = "La Resistance"
-			}
-			available = {
-				has_intelligence_agency = yes
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-			traits = {
-				head_of_intelligence 
 			}
 		}
 	}

@@ -2299,8 +2299,6 @@ JAP_trigger_communist_civil_war = {
     	    }
     	    282 = { # Just teleport all units in Tokyo 
     	    	teleport_armies = {
-    	    	    limit = {
-    	    	    }
     	    	    to_state_array = owned_controlled_states
     	    	}
     	    }
@@ -2584,7 +2582,6 @@ JAP_set_up_asian_resistance_states = {
 							is_on_continent = australia 
 							is_on_continent = middle_east 
 						}
-						has_resistance = yes
 						NOT = { # no point adding if already in there
 							is_in_array = {
 								array = JAP.asian_colonial_states_array

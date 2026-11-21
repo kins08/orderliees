@@ -26,7 +26,6 @@ ideas = {
 				guarantee_tension = 0.75
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
-				agency_upgrade_time = 1.0
 				factory_energy_consumption = -0.3
 				trade_cost_for_target_factor = 0.5
 				
@@ -77,7 +76,6 @@ ideas = {
 				guarantee_tension = 0.75
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
-				agency_upgrade_time = 1.0
 				factory_energy_consumption = -0.25
 			}
 
@@ -126,7 +124,6 @@ ideas = {
 				guarantee_tension = 0.75
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
-				agency_upgrade_time = 1.0
 				factory_energy_consumption = -0.2
 			}
 
@@ -175,7 +172,6 @@ ideas = {
 				guarantee_tension = 0.75
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
-				agency_upgrade_time = 1.0
 				factory_energy_consumption = -0.2
 			}
 
@@ -224,7 +220,6 @@ ideas = {
 				guarantee_tension = 0.75
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
-				agency_upgrade_time = 0.8
 				factory_energy_consumption = -0.2
 			}
 
@@ -273,7 +268,6 @@ ideas = {
 				guarantee_tension = 0.75
 				max_fuel_factor = -0.3
 				fuel_gain_factor = -0.4
-				agency_upgrade_time = 0.5
 				factory_energy_consumption = -0.2
 			}
 
@@ -322,7 +316,6 @@ ideas = {
 				guarantee_tension = 0.5
 				max_fuel_factor = -0.3
 				fuel_gain_factor = -0.4
-				agency_upgrade_time = 0.5
 				factory_energy_consumption = -0.2
 			}
 
@@ -370,7 +363,6 @@ ideas = {
 				guarantee_tension = 0.5
 				max_fuel_factor = -0.35
 				fuel_gain_factor = -0.5
-				agency_upgrade_time = 0.8
 				factory_energy_consumption = -0.3
 			}
 			allowed_to_remove = {

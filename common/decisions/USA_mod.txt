@@ -1056,7 +1056,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = MEX
 				}
-				set_compliance = 50
 			}
         }
 	}
@@ -1087,7 +1086,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = GUA
 				}
-				set_compliance = 50
 			}
 			annex_country = {
 				target = HON
@@ -1096,7 +1094,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = HON
 				}
-				set_compliance = 50
 			}
 			annex_country = {
 				target = ELS
@@ -1105,7 +1102,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = ELS
 				}
-				set_compliance = 50
 			}
 			annex_country = {
 				target = NIC
@@ -1114,7 +1110,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = NIC
 				}
-				set_compliance = 50
 			}
 			annex_country = {
 				target = COS
@@ -1123,7 +1118,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = COS
 				}
-				set_compliance = 50
 			}
 			annex_country = {
 				target = PAN
@@ -1132,7 +1126,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = PAN
 				}
-				set_compliance = 50
 			}
         }
 	}
@@ -1160,7 +1153,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = CUB
 				}
-				set_compliance = 50
 			}
 			annex_country = {
 				target = HAI
@@ -1169,7 +1161,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = HAI
 				}
-				set_compliance = 50
 			}
 			annex_country = {
 				target = DOM
@@ -1178,7 +1169,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = DOM
 				}
-				set_compliance = 50
 			}
         }
 	}
@@ -1226,7 +1216,6 @@ USA_com_polux_decision_cat = {
 				limit = {
 					is_core_of = CAN
 				}
-				set_compliance = 50
 			}
         }
 	}

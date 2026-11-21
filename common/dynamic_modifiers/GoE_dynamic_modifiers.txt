@@ -127,7 +127,6 @@ AFG_nufus_modifier = {
 AFG_border_resistance_modifier = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_resistance	
-	resistance_growth = 0.2
 
 }
 
@@ -209,8 +208,6 @@ AFG_arranged_expansion_modifier = {
 idea_RAJ_independence_movement = { #STATE MODIFIER
 	enable = { is_subject = yes }
 	icon = GFX_idea_RAJ_independence_movement
-	resistance_activity = RAJ_resistance_activity_independence_movement
-	resistance_target  = RAJ_resistance_target_independence_movement
 	autonomy_gain = RAJ_autonomy_gain_independence_movement
 	communism_drift = RAJ_communism_drift_independence_movement
 
@@ -252,7 +249,6 @@ idea_RAJ_agrarian_society = {
 #Added on states if invaded
 idea_RAJ_resistant_to_occupation = {
 	icon = GFX_modifiers_FIN_weapon_caches
-	compliance_growth = -0.25
 	local_manpower = -0.33
 	remove_trigger = {	
 		CONTROLLER = { is_raj_or_raj_inheritor = yes } 	
@@ -352,7 +348,6 @@ idea_RAJ_five_year_plan = {
 	industry_air_damage_factor = RAJ_fyp_industry_air_damage_factor
 	global_building_slots_factor = RAJ_fyp_global_building_slots_factor
 	industrial_capacity_factory = RAJ_fyp_industrial_capacity_factory
-	compliance_growth = RAJ_fyp_compliance_growth
 	supply_consumption_factor = RAJ_fyp_supply_consumption_factor
 }
 
@@ -371,8 +366,6 @@ RAJ_a_loyal_government = {
 	consumer_goods_factor = RAJ_a_loyal_government_consumer_goods_factor #-0.1
 	political_advisor_cost_factor = RAJ_a_loyal_government_political_advisor_cost_factor  #-0.5
 	party_popularity_stability_factor = RAJ_a_loyal_government_party_popularity_stability_factor #0.1
-	resistance_target = RAJ_a_loyal_government_resistance_target
-	resistance_damage_to_garrison = RAJ_a_loyal_government_resistance_damage_to_garrison
 	extra_trade_to_overlord_factor = RAJ_a_loyal_government_extra_trade_to_overlord_factor
 	conscription_factor = RAJ_a_loyal_government_conscription_factor
 	research_speed_factor = RAJ_a_loyal_government_research_speed_factor
@@ -547,8 +540,6 @@ PER_technological_modifier = {
 idea_RAJ_famine_state = {
 	icon = GFX_modifiers_RAJ_famine_state
 	army_speed_factor = -0.5
-	resistance_target = 1
-	compliance_growth = -1
 	army_core_defence_factor = -0.25
 }
 
@@ -590,8 +581,6 @@ idea_RAJ_aden_treaty_port = {
 		}
 	}
 	icon = GFX_modifiers_RAJ_aden_treaty_port	
-	compliance_gain = 0.1
-	resistance_target = -0.15
 }
 
 idea_RAJ_eic_taxes = {
@@ -643,7 +632,6 @@ KUR_resistance_modifier = {
 		}
 	}
 
-	resistance_growth = 0.2
 	local_supplies = -0.15
 	local_manpower = -0.3
 	local_resources_factor = -0.5
@@ -674,11 +662,6 @@ PER_promoting_resistance_here = {
 			}
 		}
 	}
-	resistance_damage_to_garrison = 0.15
-	resistance_activity = 0.2
-	resistance_growth = 0.5
-	resistance_target = 0.8
-	compliance_growth = -0.1
 }
 
 PER_opposition_cell = {
@@ -948,7 +931,6 @@ SSB_saadabad_pact = {
 	army_defence_against_major_factor = SSB_army_defence_against_major_factor
 	army_defence_against_minor_factor = SSB_army_defence_against_minor_factor
 	conscription_factor = SSB_conscription_factor
-	intelligence_agency_defense = SSB_intelligence_agency_defense
 	production_factory_efficiency_gain_factor = SSB_production_factory_efficiency_gain_factor
 	production_factory_max_efficiency_factor = SSB_production_factory_max_efficiency_factor
 
@@ -962,7 +944,6 @@ SSB_saadabad_pact = {
 	annex_cost_factor = SSB_annex_cost_factor
 	political_power_factor = SSB_political_power_factor
 
-	agency_upgrade_time = SSB_agency_upgrade_time
 }
 idea_RAJ_rural_development = {
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense

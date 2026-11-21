@@ -116,11 +116,11 @@
  FRA_core_conquered_state_desc:0 "Conquered territories historically belong to the House of Bourbon and must be officially recognized as an integral part of our empire. We shall assert our dynastic rights over [FROM.GetName], ensuring full integration into the French state apparatus. This will solidify our influence and lay an enduring foundation for future generations."
  FRA_new_bourbon_era_tt:0 "Unlocks decisions to §YIntegrate Conquered Territories§!, asserting the §HDynastic Rights of the Bourbons§! over §BEuropean lands§! and turning them into §Gcore states§! of the §2French Empire§!."
  FRA_back_to_benelux_tt:0 "It is time to right the wrongs of the past and return the §BLow Countries§! to direct Paris control, making the Benelux core. §YIntegration of conquered territories§! will erase borders hindering the grandeur of the §2French Empire§!."
- FRA_claims_on_catalonia_tt:0 "The Pyrenees shall no longer divide our lands. We will establish §BFrench supremacy§! on the peninsula, turning Catalonia into a §Gcore territory§! of the great §2Empire§!, while in non-cored lands £compliance_gain_texticon£§40.25%§! of Spaniards will submit to our rule daily."
- FRA_attack_switzerland_tt:0 "The Alps must serve as the shield of France rather than a haven for our enemies. §BSwiss mountain passes§! will fall under the Grande Armée's control, with £compliance_gain_texticon£§40.25%§! daily compliance gain securing the §2Empire's§! strategic dominion."
+ FRA_claims_on_catalonia_tt:0 "The Pyrenees shall no longer divide our lands. We will establish §BFrench supremacy§! on the peninsula, turning Catalonia into a §Gcore territory§! of the great §2Empire§!."
+ FRA_attack_switzerland_tt:0 "The Alps must serve as the shield of France rather than a haven for our enemies. §BSwiss mountain passes§! will fall under the Grande Armée's control, securing the §2Empire's§! strategic dominion."
  FRA_back_to_italy_tt:0 "Piedmont is the key to Northern Italy. We will assert §BFrench historical rights§! over the region, turning it into a §Gcore territory§!."
- FRA_fraspain3_tt:0 "France will restore its primacy over the Benelux, subjugating it and reforming local administration. Daily £compliance_gain_texticon£§40.25%§! compliance will be gained under our rule."
- FRA_fraspain2_tt:0 "Portugal has historically been within the sphere of the Iberian crown. It is time to complete the integration of the peninsula under unified Bourbon authority. We will press legitimate dynastic claims to annex Portuguese territories, gaining £compliance_gain_texticon£§40.25%§! daily compliance."
+ FRA_fraspain3_tt:0 "France will restore its primacy over the Benelux, subjugating it and reforming local administration."
+ FRA_fraspain2_tt:0 "Portugal has historically been within the sphere of the Iberian crown. It is time to complete the integration of the peninsula under unified Bourbon authority. We will press legitimate dynastic claims to annex Portuguese territories."
 
 
 
@@ -203,7 +203,7 @@
  STATE_1050:0 "Siwa"
  STATE_1051:0 "Ajdabiya"
  SOV_war_economy_mod:0 "State Defense Committee (GKO)"
- FRA_annex_benelux_fduc:0 "Gain §Y50% compliance§! across the Benelux nations"
+ FRA_annex_benelux_fduc:0 "Establish control over the Benelux nations"
  ROM_mod:0 "Preservation of Greater Romania"
  ROM_mod_tt:0 "Modify §Y$ROM_mod$§! to:"
  ROM_alligns_with_ger:0 "Armored Development Pact with Germany"

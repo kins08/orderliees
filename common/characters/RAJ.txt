@@ -2753,20 +2753,6 @@ RAJ_GOE_william_rhodes_davis= {
 	}
 
 	RAJ_intel_generic = {
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_intel_generic 
- 			allowed  = {
-				original_tag  = RAJ
-				has_dlc = "La Resistance"
-			}
-			available = {
-				#has_completed_focus = 
-			}
-			traits  = {
-				head_of_intelligence 
-			}
-		}
 		# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		#name=AFG_turbaz_khan
 		portraits={

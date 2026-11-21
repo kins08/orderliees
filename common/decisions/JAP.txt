@@ -1059,7 +1059,6 @@ foreign_politics = {
 		available = {
 			#NOT = { has_country_flag = JAP_coring_KOR_state_in_progress_flag }
 			FROM = {
-				compliance > 40
 			}
 		}
 
@@ -1137,7 +1136,6 @@ foreign_politics = {
 		available = {
 			#NOT = { has_country_flag = JAP_coring_MAN_state_in_progress_flag }
 			FROM = {
-				compliance > 40
 			}
 		}
 
@@ -1816,7 +1814,6 @@ JAP_the_red_sun_over_asia_decisions = {
 				NOT = { has_state_flag = JAP_coring_this_asian_state_in_progress_flag }
 			}
 			FROM = {
-				compliance > 45
 			}
 		}
 
@@ -8167,7 +8164,6 @@ JAP_the_propaganda_department_decisions = {
 				NOT = { has_state_flag = JAP_coring_this_asian_state_in_progress_flag }
 			}
 			FROM = {
-				compliance > 50
 			}
 		}
 
@@ -11401,7 +11397,6 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 				NOT = { has_state_flag = JAP_coring_this_asian_state_in_progress_flag }
 			}
 			FROM = {
-				compliance > 50
 			}
 		}
 
@@ -11527,8 +11522,6 @@ JAP_anti_colonialism_category = {
 		remove_effect = {
 			clr_country_flag = JAP_independence_support_progress_flag
 			FROM = {
-				add_compliance = -35
-				add_resistance = 15  
 				add_dynamic_modifier = {
 					modifier = JAP_state_supporting_resistance_modifier
 					scope = THIS.owner 
@@ -11550,76 +11543,6 @@ JAP_anti_colonialism_category = {
 					has_war = no 
 					command_power > 74
 				}
-			}
-			modifier = {
-				factor = 2
-				has_government = communism
-			}
-		}
-	}
-
-	JAP_arm_resistance_decision = {
-		icon = GFX_decision_generic_prepare_civil_war
-		target_array = JAP.asian_colonial_states_array 
-		target_root_trigger = { original_tag = JAP } 
-		target_trigger = {
-			FROM = {
-				has_dynamic_modifier = {
-					modifier = JAP_state_supporting_resistance_modifier
-					scope = THIS.owner 
-				}
-			} 
-			FROM = { NOT = { is_core_of = THIS.owner } } # Hide it if no longer a colony 
-		}
-		state_target = yes
-		on_map_mode = map_only
-		fire_only_once = yes 
-		available = {
-			NOT = { FROM.owner = { is_in_faction_with = ROOT } }
-			NOT = { has_country_flag = JAP_arm_resistance_flag }
-			FROM.owner = { controls_state = FROM } 
-		}
-		visible = {
-			
-
-		}
-		days_remove = 7
-		custom_cost_trigger = {
-			has_equipment = { infantry_equipment > 999 }
-		}
-		custom_cost_text = decision_cost_ie_1000
-		modifier = {
-	
-		}
-		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -1000
-			}
-			set_country_flag = JAP_arm_resistance_flag	
-		}
-		remove_effect = {
-			clr_country_flag = JAP_arm_resistance_flag
-			FROM = {
-				add_resistance = 40
-			}
-		}
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 25
-				has_war = no 
-				has_equipment = { infantry_equipment > 999 }
-			}
-			modifier = {
-				add = 50
-				has_war = no 
-				has_equipment = { infantry_equipment > 2999 }
-			}
-			modifier = {
-				add = 50
-				has_war = no 
-				has_equipment = { infantry_equipment > 4999 }
 			}
 			modifier = {
 				factor = 2
