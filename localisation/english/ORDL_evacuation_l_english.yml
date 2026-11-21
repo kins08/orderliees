@@ -699,7 +699,7 @@
 
  ORDL_EVAC_NOW_S1:0 "§HBaltic States§!: loading, §Y[?SOV_evac_region_S1_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S1:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia. Factories in states captured before that are lost."
+ ORDL_EVAC_DEC_TT_S1:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S2:0 "Belarus"
 
@@ -713,7 +713,7 @@
 
  ORDL_EVAC_NOW_S2:0 "§HBelarus§!: loading, §Y[?SOV_evac_region_S2_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S2:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia. Factories in states captured before that are lost."
+ ORDL_EVAC_DEC_TT_S2:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S3:0 "N. Ukraine"
 
@@ -727,7 +727,7 @@
 
  ORDL_EVAC_NOW_S3:0 "§HNorthern Ukraine§!: loading, §Y[?SOV_evac_region_S3_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S3:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia. Factories in states captured before that are lost."
+ ORDL_EVAC_DEC_TT_S3:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S4:0 "S. Ukraine"
 
@@ -741,7 +741,7 @@
 
  ORDL_EVAC_NOW_S4:0 "§HSouthern Ukraine§!: loading, §Y[?SOV_evac_region_S4_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S4:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia. Factories in states captured before that are lost."
+ ORDL_EVAC_DEC_TT_S4:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S5:0 "Northwest"
 
@@ -755,7 +755,7 @@
 
  ORDL_EVAC_NOW_S5:0 "§HNorthwest§!: loading, §Y[?SOV_evac_region_S5_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S5:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia. Factories in states captured before that are lost."
+ ORDL_EVAC_DEC_TT_S5:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S6:0 "Center"
 
@@ -769,7 +769,7 @@
 
  ORDL_EVAC_NOW_S6:0 "§HCenter§!: loading, §Y[?SOV_evac_region_S6_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S6:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia. Factories in states captured before that are lost."
+ ORDL_EVAC_DEC_TT_S6:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S7:0 "S. Caucasus"
 
@@ -783,7 +783,7 @@
 
  ORDL_EVAC_NOW_S7:0 "§HSouth Caucasus§!: loading, §Y[?SOV_evac_region_S7_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S7:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia. Factories in states captured before that are lost."
+ ORDL_EVAC_DEC_TT_S7:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  SOV_evac_second_echelon:0 "Second Echelon"
 
