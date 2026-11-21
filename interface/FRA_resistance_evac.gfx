@@ -82,6 +82,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_fra_losses_tray"
+		texturefile = "gfx/interface/fra_evacuation/losses_tray.png"
+	}
+
+	spriteType = {
 		name = "GFX_fra_tier_inactive"
 		texturefile = "gfx/interface/fra_evacuation/tier_inactive.png"
 	}
@@ -89,6 +94,56 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_fra_tier_active"
 		texturefile = "gfx/interface/fra_evacuation/tier_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_1_inactive"
+		texturefile = "gfx/interface/fra_evacuation/tier_1_inactive.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_1_active"
+		texturefile = "gfx/interface/fra_evacuation/tier_1_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_2_inactive"
+		texturefile = "gfx/interface/fra_evacuation/tier_2_inactive.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_2_active"
+		texturefile = "gfx/interface/fra_evacuation/tier_2_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_3_inactive"
+		texturefile = "gfx/interface/fra_evacuation/tier_3_inactive.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_3_active"
+		texturefile = "gfx/interface/fra_evacuation/tier_3_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_4_inactive"
+		texturefile = "gfx/interface/fra_evacuation/tier_4_inactive.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_4_active"
+		texturefile = "gfx/interface/fra_evacuation/tier_4_active.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_5_inactive"
+		texturefile = "gfx/interface/fra_evacuation/tier_5_inactive.png"
+	}
+
+	spriteType = {
+		name = "GFX_fra_tier_5_active"
+		texturefile = "gfx/interface/fra_evacuation/tier_5_active.png"
 	}
 
 	spriteType = {
