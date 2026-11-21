@@ -13,6 +13,16 @@ GER_slot_evacuation_category = {
 				}
 				count > 4
 			}
+			any_controlled_state = {
+				OR = {
+					state = 5 state = 53 state = 60 state = 61 state = 62 state = 63
+					state = 66 state = 67 state = 68 state = 72 state = 85 state = 86
+					state = 87 state = 88 state = 92 state = 98 state = 152 state = 153
+					state = 758 state = 759 state = 803 state = 968 state = 972
+				}
+				infrastructure > 2
+				infrastructure < 4
+			}
 		}
 
 		complete_effect = {
@@ -103,6 +113,16 @@ GER_slot_evacuation_category = {
 				}
 				count > 4
 			}
+			any_controlled_state = {
+				OR = {
+					state = 5 state = 53 state = 60 state = 61 state = 62 state = 63
+					state = 66 state = 67 state = 68 state = 72 state = 85 state = 86
+					state = 87 state = 88 state = 92 state = 98 state = 152 state = 153
+					state = 758 state = 759 state = 803 state = 968 state = 972
+				}
+				infrastructure > 2
+				infrastructure < 4
+			}
 		}
 
 		complete_effect = {
@@ -187,6 +207,16 @@ GER_slot_evacuation_category = {
 				}
 				count > 4
 			}
+			any_controlled_state = {
+				OR = {
+					state = 5 state = 53 state = 60 state = 61 state = 62 state = 63
+					state = 66 state = 67 state = 68 state = 72 state = 85 state = 86
+					state = 87 state = 88 state = 92 state = 98 state = 152 state = 153
+					state = 758 state = 759 state = 803 state = 968 state = 972
+				}
+				infrastructure > 2
+				infrastructure < 4
+			}
 		}
 
 		complete_effect = {
@@ -270,6 +300,16 @@ GER_slot_evacuation_category = {
 					state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
 				}
 				count > 4
+			}
+			any_controlled_state = {
+				OR = {
+					state = 5 state = 53 state = 60 state = 61 state = 62 state = 63
+					state = 66 state = 67 state = 68 state = 72 state = 85 state = 86
+					state = 87 state = 88 state = 92 state = 98 state = 152 state = 153
+					state = 758 state = 759 state = 803 state = 968 state = 972
+				}
+				infrastructure > 2
+				infrastructure < 4
 			}
 		}
 
