@@ -255,43 +255,35 @@ scripted_gui = {
 			plaque_S7_done_visible = { has_country_flag = SOV_evac_region_S7_done NOT = { has_country_flag = SOV_evac_region_S7_lost } }
 			plaque_S7_lost_visible = { has_country_flag = SOV_evac_region_S7_lost }
 			lbl_S1_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S1_active has_country_flag = SOV_evac_region_S1_done has_country_flag = SOV_evac_region_S1_lost } } }
-			lbl_S1_act_visible = { has_country_flag = SOV_evac_region_S1_active }
-			lbl_S1_done_visible = { has_country_flag = SOV_evac_region_S1_done }
+			lbl_S1_act_visible = { has_country_flag = SOV_evac_region_S1_active NOT = { has_country_flag = SOV_evac_region_S1_lost } }
+			lbl_S1_done_visible = { has_country_flag = SOV_evac_region_S1_done NOT = { has_country_flag = SOV_evac_region_S1_lost } }
 			lbl_S1_lost_visible = { has_country_flag = SOV_evac_region_S1_lost }
 			lbl_S2_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S2_active has_country_flag = SOV_evac_region_S2_done has_country_flag = SOV_evac_region_S2_lost } } }
-			lbl_S2_act_visible = { has_country_flag = SOV_evac_region_S2_active }
-			lbl_S2_done_visible = { has_country_flag = SOV_evac_region_S2_done }
+			lbl_S2_act_visible = { has_country_flag = SOV_evac_region_S2_active NOT = { has_country_flag = SOV_evac_region_S2_lost } }
+			lbl_S2_done_visible = { has_country_flag = SOV_evac_region_S2_done NOT = { has_country_flag = SOV_evac_region_S2_lost } }
 			lbl_S2_lost_visible = { has_country_flag = SOV_evac_region_S2_lost }
 			lbl_S3_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S3_active has_country_flag = SOV_evac_region_S3_done has_country_flag = SOV_evac_region_S3_lost } } }
-			lbl_S3_act_visible = { has_country_flag = SOV_evac_region_S3_active }
-			lbl_S3_done_visible = { has_country_flag = SOV_evac_region_S3_done }
+			lbl_S3_act_visible = { has_country_flag = SOV_evac_region_S3_active NOT = { has_country_flag = SOV_evac_region_S3_lost } }
+			lbl_S3_done_visible = { has_country_flag = SOV_evac_region_S3_done NOT = { has_country_flag = SOV_evac_region_S3_lost } }
 			lbl_S3_lost_visible = { has_country_flag = SOV_evac_region_S3_lost }
 			lbl_S4_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S4_active has_country_flag = SOV_evac_region_S4_done has_country_flag = SOV_evac_region_S4_lost } } }
-			lbl_S4_act_visible = { has_country_flag = SOV_evac_region_S4_active }
-			lbl_S4_done_visible = { has_country_flag = SOV_evac_region_S4_done }
+			lbl_S4_act_visible = { has_country_flag = SOV_evac_region_S4_active NOT = { has_country_flag = SOV_evac_region_S4_lost } }
+			lbl_S4_done_visible = { has_country_flag = SOV_evac_region_S4_done NOT = { has_country_flag = SOV_evac_region_S4_lost } }
 			lbl_S4_lost_visible = { has_country_flag = SOV_evac_region_S4_lost }
 			lbl_S5_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S5_active has_country_flag = SOV_evac_region_S5_done has_country_flag = SOV_evac_region_S5_lost } } }
-			lbl_S5_act_visible = { has_country_flag = SOV_evac_region_S5_active }
-			lbl_S5_done_visible = { has_country_flag = SOV_evac_region_S5_done }
+			lbl_S5_act_visible = { has_country_flag = SOV_evac_region_S5_active NOT = { has_country_flag = SOV_evac_region_S5_lost } }
+			lbl_S5_done_visible = { has_country_flag = SOV_evac_region_S5_done NOT = { has_country_flag = SOV_evac_region_S5_lost } }
 			lbl_S5_lost_visible = { has_country_flag = SOV_evac_region_S5_lost }
 			lbl_S6_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S6_active has_country_flag = SOV_evac_region_S6_done has_country_flag = SOV_evac_region_S6_lost } } }
-			lbl_S6_act_visible = { has_country_flag = SOV_evac_region_S6_active }
-			lbl_S6_done_visible = { has_country_flag = SOV_evac_region_S6_done }
+			lbl_S6_act_visible = { has_country_flag = SOV_evac_region_S6_active NOT = { has_country_flag = SOV_evac_region_S6_lost } }
+			lbl_S6_done_visible = { has_country_flag = SOV_evac_region_S6_done NOT = { has_country_flag = SOV_evac_region_S6_lost } }
 			lbl_S6_lost_visible = { has_country_flag = SOV_evac_region_S6_lost }
 			lbl_S7_idle_visible = { NOT = { OR = { has_country_flag = SOV_evac_region_S7_active has_country_flag = SOV_evac_region_S7_done has_country_flag = SOV_evac_region_S7_lost } } }
-			lbl_S7_act_visible = { has_country_flag = SOV_evac_region_S7_active }
-			lbl_S7_done_visible = { has_country_flag = SOV_evac_region_S7_done }
+			lbl_S7_act_visible = { has_country_flag = SOV_evac_region_S7_active NOT = { has_country_flag = SOV_evac_region_S7_lost } }
+			lbl_S7_done_visible = { has_country_flag = SOV_evac_region_S7_done NOT = { has_country_flag = SOV_evac_region_S7_lost } }
 			lbl_S7_lost_visible = { has_country_flag = SOV_evac_region_S7_lost }
 			# line 0 doubles as the fallback, so the header still renders when the
 			# counter was never created (a save from an older build)
-			evac_done_0_visible = { NOT = { check_variable = { SOV_evac_regions_done > 0 } } }
-			evac_done_1_visible = { check_variable = { SOV_evac_regions_done = 1 } }
-			evac_done_2_visible = { check_variable = { SOV_evac_regions_done = 2 } }
-			evac_done_3_visible = { check_variable = { SOV_evac_regions_done = 3 } }
-			evac_done_4_visible = { check_variable = { SOV_evac_regions_done = 4 } }
-			evac_done_5_visible = { check_variable = { SOV_evac_regions_done = 5 } }
-			evac_done_6_visible = { check_variable = { SOV_evac_regions_done = 6 } }
-			evac_done_7_visible = { check_variable = { SOV_evac_regions_done = 7 } }
 																						}
 	}
 }

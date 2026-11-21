@@ -316,6 +316,9 @@ ORDL_evac_ai_effect = {
 		ORDL_evac_region_S2_click = yes
 		ORDL_evac_region_S3_click = yes
 		ORDL_evac_region_S4_click = yes
+		ORDL_evac_region_S5_click = yes
+		ORDL_evac_region_S6_click = yes
+		ORDL_evac_region_S7_click = yes
 	}
 }
 

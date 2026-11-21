@@ -36,17 +36,17 @@ guiTypes = {
 
 				name = "evac_title"
 
-				position = { x = 10 y = 4 }
+				position = { x = 0 y = 4 }
 
 				font = "hoi_18mbs"
 
 				text = "ORDL_EVAC_HEADER"
 
-				maxWidth = 400
+				maxWidth = 500
 
 				maxHeight = 20
 
-				format = left
+				format = centre
 
 			}
 
@@ -54,17 +54,17 @@ guiTypes = {
 
 				name = "evac_stat_out"
 
-				position = { x = 10 y = 26 }
+				position = { x = 0 y = 26 }
 
 				font = "hoi_16mbs"
 
 				text = "ORDL_EVAC_STAT_OUT"
 
-				maxWidth = 480
+				maxWidth = 500
 
 				maxHeight = 16
 
-				format = left
+				format = centre
 
 			}
 
@@ -72,17 +72,17 @@ guiTypes = {
 
 				name = "evac_stat_lost"
 
-				position = { x = 10 y = 44 }
+				position = { x = 0 y = 44 }
 
 				font = "hoi_16mbs"
 
 				text = "ORDL_EVAC_STAT_LOST"
 
-				maxWidth = 480
+				maxWidth = 500
 
 				maxHeight = 16
 
-				format = left
+				format = centre
 
 			}
 
@@ -90,163 +90,27 @@ guiTypes = {
 
 				name = "evac_stat_transit"
 
-				position = { x = 10 y = 62 }
+				position = { x = 0 y = 62 }
 
 				font = "hoi_16mbs"
 
 				text = "ORDL_EVAC_STAT_TRANSIT"
 
-				maxWidth = 330
+				maxWidth = 500
 
 				maxHeight = 16
 
-				format = left
+				format = centre
 
 			}
 
-			instantTextBoxType = {
 
-				name = "evac_done_0"
 
-				position = { x = 324 y = 62 }
 
-				font = "hoi_16mbs"
 
-				text = "ORDL_EVAC_DONE_0"
 
-				maxWidth = 154
 
-				maxHeight = 16
 
-				format = right
-
-			}
-
-			instantTextBoxType = {
-
-				name = "evac_done_1"
-
-				position = { x = 324 y = 62 }
-
-				font = "hoi_16mbs"
-
-				text = "ORDL_EVAC_DONE_1"
-
-				maxWidth = 154
-
-				maxHeight = 16
-
-				format = right
-
-			}
-
-			instantTextBoxType = {
-
-				name = "evac_done_2"
-
-				position = { x = 324 y = 62 }
-
-				font = "hoi_16mbs"
-
-				text = "ORDL_EVAC_DONE_2"
-
-				maxWidth = 154
-
-				maxHeight = 16
-
-				format = right
-
-			}
-
-			instantTextBoxType = {
-
-				name = "evac_done_3"
-
-				position = { x = 324 y = 62 }
-
-				font = "hoi_16mbs"
-
-				text = "ORDL_EVAC_DONE_3"
-
-				maxWidth = 154
-
-				maxHeight = 16
-
-				format = right
-
-			}
-
-			instantTextBoxType = {
-
-				name = "evac_done_4"
-
-				position = { x = 324 y = 62 }
-
-				font = "hoi_16mbs"
-
-				text = "ORDL_EVAC_DONE_4"
-
-				maxWidth = 154
-
-				maxHeight = 16
-
-				format = right
-
-			}
-
-			instantTextBoxType = {
-
-				name = "evac_done_5"
-
-				position = { x = 324 y = 62 }
-
-				font = "hoi_16mbs"
-
-				text = "ORDL_EVAC_DONE_5"
-
-				maxWidth = 154
-
-				maxHeight = 16
-
-				format = right
-
-			}
-
-			instantTextBoxType = {
-
-				name = "evac_done_6"
-
-				position = { x = 324 y = 62 }
-
-				font = "hoi_16mbs"
-
-				text = "ORDL_EVAC_DONE_6"
-
-				maxWidth = 154
-
-				maxHeight = 16
-
-				format = right
-
-			}
-
-			instantTextBoxType = {
-
-				name = "evac_done_7"
-
-				position = { x = 324 y = 62 }
-
-				font = "hoi_16mbs"
-
-				text = "ORDL_EVAC_DONE_7"
-
-				maxWidth = 154
-
-				maxHeight = 16
-
-				format = right
-
-			}
 
 
 
@@ -1551,7 +1415,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "btn_tag_S1"
-			position = { x = 65 y = 157 }
+			position = { x = 36 y = 157 }
 			size = { x = 180 y = 24 }
 			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
 			pdx_tooltip = "ORDL_EVAC_REGION_TT_S1"
@@ -1559,47 +1423,47 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "lbl_S1_idle"
-			position = { x = 81 y = 157 }
+			position = { x = 36 y = 157 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S1_IDLE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S1_act"
-			position = { x = 81 y = 157 }
+			position = { x = 36 y = 157 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S1_ACT"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S1_done"
-			position = { x = 81 y = 157 }
+			position = { x = 36 y = 157 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S1_DONE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S1_lost"
-			position = { x = 81 y = 157 }
+			position = { x = 36 y = 157 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S1_LOST"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "btn_tag_S2"
-			position = { x = 97 y = 214 }
+			position = { x = 58 y = 214 }
 			size = { x = 180 y = 24 }
 			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
 			pdx_tooltip = "ORDL_EVAC_REGION_TT_S2"
@@ -1607,47 +1471,47 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "lbl_S2_idle"
-			position = { x = 113 y = 214 }
+			position = { x = 58 y = 214 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S2_IDLE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S2_act"
-			position = { x = 113 y = 214 }
+			position = { x = 58 y = 214 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S2_ACT"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S2_done"
-			position = { x = 113 y = 214 }
+			position = { x = 58 y = 214 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S2_DONE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S2_lost"
-			position = { x = 113 y = 214 }
+			position = { x = 58 y = 214 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S2_LOST"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "btn_tag_S3"
-			position = { x = 76 y = 280 }
+			position = { x = 72 y = 280 }
 			size = { x = 180 y = 24 }
 			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
 			pdx_tooltip = "ORDL_EVAC_REGION_TT_S3"
@@ -1655,47 +1519,47 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "lbl_S3_idle"
-			position = { x = 92 y = 280 }
+			position = { x = 72 y = 280 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S3_IDLE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S3_act"
-			position = { x = 92 y = 280 }
+			position = { x = 72 y = 280 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S3_ACT"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S3_done"
-			position = { x = 92 y = 280 }
+			position = { x = 72 y = 280 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S3_DONE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S3_lost"
-			position = { x = 92 y = 280 }
+			position = { x = 72 y = 280 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S3_LOST"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "btn_tag_S4"
-			position = { x = 119 y = 330 }
+			position = { x = 106 y = 330 }
 			size = { x = 180 y = 24 }
 			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
 			pdx_tooltip = "ORDL_EVAC_REGION_TT_S4"
@@ -1703,47 +1567,47 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "lbl_S4_idle"
-			position = { x = 135 y = 330 }
+			position = { x = 106 y = 330 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S4_IDLE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S4_act"
-			position = { x = 135 y = 330 }
+			position = { x = 106 y = 330 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S4_ACT"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S4_done"
-			position = { x = 135 y = 330 }
+			position = { x = 106 y = 330 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S4_DONE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S4_lost"
-			position = { x = 135 y = 330 }
+			position = { x = 106 y = 330 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S4_LOST"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "btn_tag_S5"
-			position = { x = 158 y = 111 }
+			position = { x = 137 y = 111 }
 			size = { x = 180 y = 24 }
 			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
 			pdx_tooltip = "ORDL_EVAC_REGION_TT_S5"
@@ -1751,47 +1615,47 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "lbl_S5_idle"
-			position = { x = 174 y = 111 }
+			position = { x = 137 y = 111 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S5_IDLE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S5_act"
-			position = { x = 174 y = 111 }
+			position = { x = 137 y = 111 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S5_ACT"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S5_done"
-			position = { x = 174 y = 111 }
+			position = { x = 137 y = 111 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S5_DONE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S5_lost"
-			position = { x = 174 y = 111 }
+			position = { x = 137 y = 111 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S5_LOST"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "btn_tag_S6"
-			position = { x = 257 y = 221 }
+			position = { x = 206 y = 221 }
 			size = { x = 180 y = 24 }
 			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
 			pdx_tooltip = "ORDL_EVAC_REGION_TT_S6"
@@ -1799,47 +1663,47 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "lbl_S6_idle"
-			position = { x = 273 y = 221 }
+			position = { x = 206 y = 221 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S6_IDLE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S6_act"
-			position = { x = 273 y = 221 }
+			position = { x = 206 y = 221 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S6_ACT"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S6_done"
-			position = { x = 273 y = 221 }
+			position = { x = 206 y = 221 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S6_DONE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S6_lost"
-			position = { x = 273 y = 221 }
+			position = { x = 206 y = 221 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S6_LOST"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "btn_tag_S7"
-			position = { x = 303 y = 340 }
+			position = { x = 274 y = 340 }
 			size = { x = 180 y = 24 }
 			quadTextureSprite = "GFX_ORDL_evac_blank_btn"
 			pdx_tooltip = "ORDL_EVAC_REGION_TT_S7"
@@ -1847,42 +1711,42 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "lbl_S7_idle"
-			position = { x = 319 y = 340 }
+			position = { x = 274 y = 340 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S7_IDLE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S7_act"
-			position = { x = 319 y = 340 }
+			position = { x = 274 y = 340 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S7_ACT"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S7_done"
-			position = { x = 319 y = 340 }
+			position = { x = 274 y = 340 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S7_DONE"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
 			name = "lbl_S7_lost"
-			position = { x = 319 y = 340 }
+			position = { x = 274 y = 340 }
 			font = "hoi_18mbs"
 			text = "ORDL_EVAC_LBL_S7_LOST"
-			maxWidth = 200
-			maxHeight = 24
-			format = left
+			maxWidth = 180
+			maxHeight = 44
+			format = centre
 			alwaystransparent = yes
 		}
 		containerWindowType = {
@@ -2091,7 +1955,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "region_box_S5"
-			position = { x = 4 y = 566 }
+			position = { x = 66 y = 566 }
 			size = { width = 120 height = 22 }
 			background = {
 				name = "plaque_S5"
@@ -2142,7 +2006,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "region_box_S6"
-			position = { x = 128 y = 566 }
+			position = { x = 190 y = 566 }
 			size = { width = 120 height = 22 }
 			background = {
 				name = "plaque_S6"
@@ -2193,7 +2057,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "region_box_S7"
-			position = { x = 252 y = 566 }
+			position = { x = 314 y = 566 }
 			size = { width = 120 height = 22 }
 			background = {
 				name = "plaque_S7"
@@ -2249,7 +2113,7 @@ guiTypes = {
 			text = "ORDL_EVAC_ACTIVE_1"
 			maxWidth = 484
 			maxHeight = 16
-			format = left
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
@@ -2259,7 +2123,7 @@ guiTypes = {
 			text = "ORDL_EVAC_ACTIVE_2"
 			maxWidth = 484
 			maxHeight = 16
-			format = left
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
@@ -2269,7 +2133,7 @@ guiTypes = {
 			text = "ORDL_EVAC_STATUS_LINE"
 			maxWidth = 484
 			maxHeight = 16
-			format = left
+			format = centre
 			alwaystransparent = yes
 		}
 		instantTextBoxType = {
@@ -2279,7 +2143,7 @@ guiTypes = {
 			text = "ORDL_EVAC_LEGEND"
 			maxWidth = 484
 			maxHeight = 16
-			format = left
+			format = centre
 			alwaystransparent = yes
 		}
 	}
