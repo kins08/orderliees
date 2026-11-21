@@ -573,10 +573,6 @@ country_event = {
 									has_done_agency_upgrade = upgrade_army_department
 									OR = {
 										has_done_agency_upgrade = upgrade_anti_partisan
-										NOT = {
-											any_controlled_state = {
-											}
-										}
 									}
 									has_done_agency_upgrade = upgrade_passive_defense
 								}
@@ -2384,16 +2380,10 @@ unit_leader_event = {
 							factor = 0
 							OR = {
 								has_done_agency_upgrade = upgrade_anti_partisan
-								NOT = {
-									any_controlled_state = {
-									}
-								}
 							}
 						}
 						modifier = {
 							factor = 5
-							any_controlled_state = {
-							}
 						}
 
 						set_country_flag = { flag = ITA_missiolini_upgrade_agency_goal_flag value = 4 }
@@ -2409,10 +2399,6 @@ unit_leader_event = {
 							has_done_agency_upgrade = upgrade_army_department
 							OR = {
 								has_done_agency_upgrade = upgrade_anti_partisan
-								NOT = {
-									any_controlled_state = {
-									}
-								}
 							}
 						}
 

@@ -345,17 +345,6 @@ focus_tree = {
 				BUL = { remove_opinion_modifier = { target = PREV modifier = BUL_industrial_investments_in_bulgaria } }
 			}		
 
-			every_country = {
-				limit = {
-					BUL_country_can_influence_bulgaria = yes
-					has_country_flag = BUL_industrial_investments_in_bulgaria_flag
-					NOT = { has_war_with = ROOT }
-					NOT = { is_subject_of = ROOT }
-				}
-				country_event = { id = bftb_bulgaria_nationalization.1 hours = 12 random_hours = 12 }
-			}
-			custom_effect_tooltip = BUL_nationalization_warning_tt
-
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = BUL_petrol_ad
 			show_ideas_tooltip = BUL_ira
@@ -1531,12 +1520,6 @@ focus_tree = {
 					if = {
 						limit = {
 							has_dlc = "La Resistance"
-						}
-						every_operative = {
-							limit = {
-								has_trait = trait_BUL_tsar_loyalist
-							}
-							retire = yes
 						}
 					}
 				}
@@ -2913,12 +2896,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				has_intelligence_agency = yes
-			}
 		}
 		
 		completion_reward = {
@@ -3707,12 +3684,6 @@ focus_tree = {
 					if = {
 						limit = {
 							has_dlc = "La Resistance"
-						}
-						every_operative = {
-							limit = {
-								has_trait = trait_BUL_tsar_loyalist
-							}
-							retire = yes
 						}
 					}
 				}
@@ -6631,12 +6602,6 @@ focus_tree = {
 					if = {
 						limit = {
 							has_dlc = "La Resistance"
-						}
-						every_operative = {
-							limit = {
-								has_trait = trait_BUL_tsar_loyalist
-							}
-							retire = yes
 						}
 					}
 				}

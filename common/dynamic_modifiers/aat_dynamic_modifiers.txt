@@ -702,7 +702,6 @@ DEN_political_edicts_dynamic_modifier = {
 	
 	drift_defence_factor = DEN_political_edicts_drift_defence_factor #0
 	conscription_factor = DEN_political_edicts_conscription_factor #0
-	operative_slot = DEN_political_edicts_operative_slot #0
 }
 
 DEN_occupation_laws_dynamic_modifier = {

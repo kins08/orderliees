@@ -739,9 +739,6 @@ SOV_paranoia_system = {
 				}
 				remove_ideas = SOV_purged_junior_navy_officers_1
 			}
-			else = {
-				#log = "I CANNOT REMOVE A NS THAT DOESN'T EXIST!"
-			}
 		}
 	}
 

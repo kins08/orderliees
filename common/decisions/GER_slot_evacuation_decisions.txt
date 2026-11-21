@@ -1,0 +1,345 @@
+GER_slot_evacuation_category = {
+
+	GER_evac_slots_S1 = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes
+
+		available = {
+			any_controlled_state = {
+				OR = {
+					state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780
+					state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+				}
+				count > 4
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_evac_slots_S1_tt
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780
+							state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+						}
+					}
+					clr_state_flag = GER_slot_taken_tmp
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780
+							state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780
+							state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780
+							state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780
+							state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 11 state = 12 state = 13 state = 188 state = 189 state = 190 state = 191 state = 780
+							state = 804 state = 805 state = 806 state = 807 state = 808 state = 809 state = 810 state = 811
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+			}
+			GER_add_evacuated_slots_to_central_60_infra = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	GER_evac_slots_S2 = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes
+
+		available = {
+			any_controlled_state = {
+				OR = {
+					state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+				}
+				count > 4
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_evac_slots_S2_tt
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+						}
+					}
+					clr_state_flag = GER_slot_taken_tmp
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 94 state = 95 state = 96 state = 97 state = 194 state = 204 state = 206 state = 207 state = 241
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+			}
+			GER_add_evacuated_slots_to_central_60_infra = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	GER_evac_slots_S3 = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes
+
+		available = {
+			any_controlled_state = {
+				OR = {
+					state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203
+				}
+				count > 4
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_evac_slots_S3_tt
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203
+						}
+					}
+					clr_state_flag = GER_slot_taken_tmp
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 89 state = 91 state = 93 state = 193 state = 198 state = 199 state = 201 state = 202 state = 203
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+			}
+			GER_add_evacuated_slots_to_central_60_infra = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	GER_evac_slots_S4 = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes
+
+		available = {
+			any_controlled_state = {
+				OR = {
+					state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+				}
+				count > 4
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_evac_slots_S4_tt
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+						}
+					}
+					clr_state_flag = GER_slot_taken_tmp
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+				random_controlled_state = {
+					limit = {
+						OR = {
+							state = 78 state = 137 state = 192 state = 196 state = 197 state = 200 state = 226 state = 830
+						}
+						NOT = { has_state_flag = GER_slot_taken_tmp }
+					}
+					set_state_flag = GER_slot_taken_tmp
+					add_extra_state_shared_building_slots = -1
+				}
+			}
+			GER_add_evacuated_slots_to_central_60_infra = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}

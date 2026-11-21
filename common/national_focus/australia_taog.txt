@@ -2660,24 +2660,6 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
-				limit = { has_dlc = "La Resistance" }
-
-				IF = {
-					limit = { has_intelligence_agency = no }
-
-					create_intelligence_agency = {
-						name = "Central Bureau"
-						icon = GFX_intelligence_agency_logo_generic_5
-					}
-				}
-				ELSE = {
-					gain_random_agency_upgrade = yes
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				AST_add_or_modify_war_is_coming_spirit = yes
-				add_to_variable = { AST_war_is_coming_operative_slot = 1 tooltip = operative_slot_tt }
-			}
 
 			ELSE = {
 				add_ideas = {
@@ -3584,24 +3566,6 @@ focus_tree = {
 			add_to_variable = { AST_australia_first_war_support_factor = 0.05 tooltip = war_support_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = { has_dlc = "La Resistance" }
-
-				IF = {
-					limit = { has_intelligence_agency = no }
-
-					create_intelligence_agency = {
-						name = "The Investigation Branch"
-						icon = GFX_intelligence_agency_logo_AST_investigation_branch
-					}
-				}
-				ELSE = {
-					gain_random_agency_upgrade = yes
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = AST_australia_first_spirit_tt
-				add_to_variable = { AST_australia_first_operative_slot = 1 tooltip = operative_slot_tt }
-			}
 
 			ELSE = {
 				add_ideas = {
@@ -6095,17 +6059,6 @@ focus_tree = {
 			IF = {
 				limit = { has_dlc = "La Resistance" }
 
-				IF = {
-					limit = { has_intelligence_agency = no }
-
-					create_intelligence_agency = {
-						name = "The Investigation Branch"
-						icon = GFX_intelligence_agency_logo_AST_investigation_branch
-					}
-				}
-				ELSE = {
-					gain_random_agency_upgrade = yes
-				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = {
 					SWI_expanded_spy_network_idea

@@ -948,7 +948,6 @@ ideas = {
 			removal_cost = -1			
 
 			modifier = {
-				operation_infiltrate_outcome = 0.25
 			}
 		}
 
@@ -1149,7 +1148,6 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.2
 				ai_badass_factor = 0.03 # cares for 3% of normal threat
-				ai_desired_divisions_factor = 0.5 
 			}
 		}
 

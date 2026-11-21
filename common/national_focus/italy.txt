@@ -4305,8 +4305,6 @@ focus_tree = {
 					category = cat_torpedoes
 				}
 			}
-			else = {
-			}
 		}
 	}
 

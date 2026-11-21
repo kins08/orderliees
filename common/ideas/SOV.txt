@@ -1014,7 +1014,6 @@ ideas = {
 			picture = CZE_planning_bonus
 
 			modifier = {
-				intel_network_gain_factor = 0.25
 				decryption_factor = 0.1
 			}
 		}
@@ -1180,8 +1179,6 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
-				intelligence_agency_defense = 0.5
 			}
 		}
 
@@ -1218,7 +1215,6 @@ ideas = {
 
 			modifier = {
 				subversive_activites_upkeep = -0.5
-				operative_slot = 1
 			}
 		}
 
@@ -1470,7 +1466,6 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
 			}
 		}
 
@@ -2901,7 +2896,6 @@ ideas = {
 			}
 
 			modifier = {
-				intelligence_agency_defense = 0.10
 				army_core_defence_factor = 0.05
 				attack_bonus_against_cores = 0.05
 			}
@@ -2924,7 +2918,6 @@ ideas = {
 			modifier = {
 				communism_drift = 0.1
 				political_power_factor = 0.1
-				intel_network_gain_factor = 0.15
 			}
 		}
 

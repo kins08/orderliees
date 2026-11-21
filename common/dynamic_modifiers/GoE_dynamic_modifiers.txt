@@ -931,7 +931,6 @@ SSB_saadabad_pact = {
 	army_defence_against_major_factor = SSB_army_defence_against_major_factor
 	army_defence_against_minor_factor = SSB_army_defence_against_minor_factor
 	conscription_factor = SSB_conscription_factor
-	intelligence_agency_defense = SSB_intelligence_agency_defense
 	production_factory_efficiency_gain_factor = SSB_production_factory_efficiency_gain_factor
 	production_factory_max_efficiency_factor = SSB_production_factory_max_efficiency_factor
 
@@ -945,7 +944,6 @@ SSB_saadabad_pact = {
 	annex_cost_factor = SSB_annex_cost_factor
 	political_power_factor = SSB_political_power_factor
 
-	agency_upgrade_time = SSB_agency_upgrade_time
 }
 idea_RAJ_rural_development = {
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense

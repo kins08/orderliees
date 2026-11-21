@@ -936,8 +936,6 @@ bose_civil_war_capital_check = {
         if = {
             limit = {  NOT = { state = 988 } } #Aden
             if = {
-                limit = {
-                }
                 set_variable = { exit_bose = 1 }
                 RAJ = { set_country_flag = bose_opponent_has_valid_capital }
             }

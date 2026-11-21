@@ -361,7 +361,6 @@ ideas = {
 				justify_war_goal_time = -0.2
 				research_speed_factor = -0.05
 				production_speed_industrial_complex_factor = -0.1
-				ai_desired_divisions_factor = 0.25
 			}
 		}
 
@@ -1443,11 +1442,6 @@ ideas = {
 			}
 			
 			modifier = {
-				operative_slot = 1
-				enemy_operative_detection_chance_factor = 0.1
-				enemy_operative_intel_extraction_rate = 0.05
-				enemy_operative_capture_chance_factor = 0.05
-				intelligence_agency_defense = 0.05
 				drift_defence_factor = 0.15
 			}
 
@@ -1494,11 +1488,6 @@ ideas = {
 			}
 			
 			modifier = {
-				operative_slot = 1
-				enemy_operative_detection_chance_factor = 0.15
-				enemy_operative_intel_extraction_rate = 0.1
-				enemy_operative_capture_chance_factor = 0.05
-				intelligence_agency_defense = 0.1
 				drift_defence_factor = 0.2
 				stability_factor = 0.05
 			}
@@ -2380,10 +2369,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				enemy_operative_capture_chance_factor = 0.15
-				enemy_operative_detection_chance_factor = 0.1
-				intelligence_agency_defense = 0.1
-				enemy_operative_intel_extraction_rate = 0.1
 			}
 
 			cancel = {
@@ -2875,11 +2860,6 @@ ideas = {
 			}
 			
 			modifier = {
-				operative_slot = 1
-				enemy_operative_detection_chance_factor = 0.1
-				enemy_operative_intel_extraction_rate = 0.05
-				enemy_operative_capture_chance_factor = 0.05
-				intelligence_agency_defense = 0.05
 			}
 
 		}

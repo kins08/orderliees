@@ -100,9 +100,6 @@ ITA_missiolinis_manage_next_mission = {
 
 
 	}
-	else = { #RANDOM MISSIOLINIS TIME
-
-	}
 }
 
 ITA_missiolinis_initialize_new_mission_effect = { #Sets flags and everything necessary to keep track of ongoing missions, last time a mission was issued, etc.
@@ -240,10 +237,6 @@ ITA_missiolini_pacify_ethiopia_success_effect = {
 		}
 		add_dynamic_modifier = { modifier = ITA_pacified_italian_east_africa_modifier days = 730 }
 
-		if = {
-			limit = {
-			}
-		}
 	}
 }
 

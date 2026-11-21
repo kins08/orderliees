@@ -4526,8 +4526,6 @@ BUL_macedonian_revolutionary_organizations = {
 					if = {
 						limit = { state = 106 }
 					}
-					else = {
-					}
 					if = {
 						limit = {
 							controller = { 

@@ -439,7 +439,7 @@ IF = {
 		set_stability = 0.75
 	}
 }
-set_war_support = 0.3
+set_war_support = 0.31
 
 
 # SETUP THE 1939 SCENARIO

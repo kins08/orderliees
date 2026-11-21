@@ -3108,16 +3108,6 @@ focus_tree = {
 					}
 				}
 			}
-			else = {
-				# mio:GER_porsche_organization = {
-					# add_mio_size = 1
-					# add_mio_funds_gain_factor = 0.25
-					# add_mio_research_bonus = 0.05
-
-					#unlock_mio_trait_tooltip = 
-					#unlock_mio_trait_tooltip = 
-				# }
-			}
 		}
 	}
 	
@@ -4166,16 +4156,6 @@ focus_tree = {
 						}
 					}
 				}
-			}
-			else = {
-				# mio:GER_focke_wulf_organization = {
-					# add_mio_size = 1
-					# add_mio_funds_gain_factor = 0.25
-					# add_mio_research_bonus = 0.05
-
-					#unlock_mio_trait_tooltip = 
-					#unlock_mio_trait_tooltip = 
-				# }
 			}
 		}
 	}
@@ -6694,11 +6674,6 @@ focus_tree = {
 					has_dlc = "La Resistance"
 				}
 				GER_add_or_modify_military_intelligence_service = yes
-				add_to_variable = { 
-					GER_military_intelligence_service_operative_slot = 1
-					tooltip = operative_slot_tt
-				}
-				GER_create_operative_otto_skorzeny = yes
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -7691,10 +7666,6 @@ focus_tree = {
 				add_to_variable = { 
 					GER_military_intelligence_service_decryption_power = 0.15
 					tooltip = decryption_factor_tt
-				}
-				add_to_variable = { 
-					GER_military_intelligence_service_intel_network_gain_factor = 0.1
-					tooltip = intel_network_gain_factor_tt
 				}
 			}
 			else = {
@@ -9971,14 +9942,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				add_to_variable = { 
-					GER_military_intelligence_service_intelligence_agency_defense = 0.15
-					tooltip = intelligence_agency_defense_tt
-				}
-				add_to_variable = { 
-					GER_military_intelligence_service_agency_upgrade_time = -0.2
-					tooltip = agency_upgrade_time_tt
-				}
 			}
 			else = {
 				add_to_variable = { 
@@ -10045,7 +10008,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				GER_create_operative_eleysa_bazna = yes
 			}
 		}
 	}
@@ -10107,7 +10069,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				GER_create_operative_eleysa_bazna = yes
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -10841,7 +10802,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				GER_create_operative_savitri_devi = yes
 			}
 		}
 	}

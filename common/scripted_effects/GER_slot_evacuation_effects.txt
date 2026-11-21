@@ -1,0 +1,42 @@
+GER_add_evacuated_slots_to_central_60_infra = {
+	if = {
+		limit = {
+			any_controlled_state = {
+				OR = {
+					state = 5 state = 53 state = 60 state = 61 state = 62 state = 63
+					state = 66 state = 67 state = 68 state = 72 state = 85 state = 86
+					state = 87 state = 88 state = 92 state = 98 state = 152 state = 153
+					state = 758 state = 759 state = 803 state = 968 state = 972
+				}
+				infrastructure > 2
+				infrastructure < 4
+			}
+		}
+		random_controlled_state = {
+			limit = {
+				OR = {
+					state = 5 state = 53 state = 60 state = 61 state = 62 state = 63
+					state = 66 state = 67 state = 68 state = 72 state = 85 state = 86
+					state = 87 state = 88 state = 92 state = 98 state = 152 state = 153
+					state = 758 state = 759 state = 803 state = 968 state = 972
+				}
+				infrastructure > 2
+				infrastructure < 4
+			}
+			add_extra_state_shared_building_slots = 5
+		}
+	}
+	else = {
+		random_controlled_state = {
+			limit = {
+				OR = {
+					state = 5 state = 53 state = 60 state = 61 state = 62 state = 63
+					state = 66 state = 67 state = 68 state = 72 state = 85 state = 86
+					state = 87 state = 88 state = 92 state = 98 state = 152 state = 153
+					state = 758 state = 759 state = 803 state = 968 state = 972
+				}
+			}
+			add_extra_state_shared_building_slots = 5
+		}
+	}
+}

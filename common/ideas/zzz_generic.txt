@@ -214,7 +214,6 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
 				communism_acceptance = -15
 			}
 		}

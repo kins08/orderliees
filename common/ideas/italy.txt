@@ -896,7 +896,6 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 1
 			}
 		}
 
@@ -937,9 +936,6 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 2
-				enemy_operative_detection_chance_factor = 0.1
-				enemy_operative_intel_extraction_rate = 0.05
 			}
 		}
 
@@ -959,11 +955,6 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 3
-				enemy_operative_detection_chance_factor = 0.1
-				enemy_operative_intel_extraction_rate = 0.1
-				enemy_operative_capture_chance_factor = 0.1
-				intelligence_agency_defense = 0.1
 			}
 		}
 
@@ -1760,7 +1751,6 @@ ideas = {
 			}
 
 			modifier = {
-				enemy_operative_detection_chance_factor = 0.1
 			}
 		}
 
@@ -1782,7 +1772,6 @@ ideas = {
 			}
 
 			modifier = {
-				enemy_operative_detection_chance_factor = 0.15
 			}
 		}
 
@@ -1914,7 +1903,6 @@ ideas = {
 			}
 					
 			modifier = {
-				operative_slot = 1
 				# operation_make_resistance_contacts_outcome = 0.15
 				# operation_boost_resistance_outcome = 0.15
 				target_sabotage_factor = 0.1
@@ -1931,7 +1919,6 @@ ideas = {
 			}
 					
 			modifier = {
-				intelligence_agency_defense = 0.1
 			}
 		}
 
@@ -2054,7 +2041,6 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.05
 				stability_factor = 0.1
-				operative_slot = 1
 			}
 		}
 
@@ -2166,8 +2152,6 @@ ideas = {
 				political_power_factor = 0.05
 				neutrality_drift = 0.01
 				stability_factor = 0.05
-				operative_slot = 1
-				intel_network_gain_factor = 0.1
 			}
 		}
 
@@ -2214,8 +2198,6 @@ ideas = {
 				political_power_factor = 0.1
 				neutrality_drift = 0.02
 				stability_factor = 0.08
-				operative_slot = 1
-				intel_network_gain_factor = 0.1
 			}
 		}
 
@@ -2261,8 +2243,6 @@ ideas = {
 				political_power_factor = 0.15
 				neutrality_drift = 0.02
 				stability_factor = 0.08
-				operative_slot = 1
-				intel_network_gain_factor = 0.1
 				puppet_cost_factor = -0.1
 			}
 		}
@@ -2311,8 +2291,6 @@ ideas = {
 				political_power_factor = 0.15
 				neutrality_drift = 0.02
 				stability_factor = 0.08
-				operative_slot = 1
-				intel_network_gain_factor = 0.1
 				puppet_cost_factor = -0.1
 				industrial_capacity_factory = 0.1
 				army_attack_factor = 0.05
@@ -2365,8 +2343,6 @@ ideas = {
 				political_power_factor = 0.2
 				neutrality_drift = 0.05
 				stability_factor = 0.1
-				operative_slot = 2
-				intel_network_gain_factor = 0.1
 				puppet_cost_factor = -0.1
 				industrial_capacity_factory = 0.1
 				army_attack_factor = 0.05
@@ -2494,7 +2470,6 @@ ideas = {
 			modifier = {
 				weekly_manpower = 400
 				communism_drift = 0.01
-				operative_slot = 1
 			}
 		}
 
@@ -2956,8 +2931,6 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
-				intel_from_operatives_factor = 0.15
 			}
 		}
 
@@ -2975,8 +2948,6 @@ ideas = {
 			}
 	
 			modifier = {
-				operative_slot = 1
-				intel_from_operatives_factor = 0.15
 			}
 		}
 
@@ -2995,8 +2966,6 @@ ideas = {
 			}
 	
 			modifier = {
-				operative_slot = 2
-				intel_from_operatives_factor = 0.2
 			}
 		}
 

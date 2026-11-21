@@ -836,10 +836,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				operative_slot = 2
 				drift_defence_factor = 0.25
-				intelligence_agency_defense = 0.5
-				agency_upgrade_time = -0.3
 			}
 		}
 
@@ -947,11 +944,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				operative_slot = 1
 				civilian_intel_factor = 0.15
-				intel_network_gain_factor = 0.15
 				political_power_factor = 0.1
-				decryption_power = 25
 			}
 		}
 
@@ -1356,9 +1350,6 @@ ideas = {
 				drift_defence_factor = 0.5
 				war_support_factor = 0.05
 				
-				operative_slot = 1
-				agency_upgrade_time = -0.2
-				intelligence_agency_defense = 0.15
 			}
 		}
 

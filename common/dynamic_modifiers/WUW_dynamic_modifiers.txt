@@ -796,12 +796,7 @@ GER_military_intelligence_service_modifier = { #Spy Stuff
 	consumer_goods_factor = GER_military_intelligence_service_consumer_goods_factor
 
 	# LaR
-	operative_slot = GER_military_intelligence_service_operative_slot
-	agency_upgrade_time = GER_military_intelligence_service_agency_upgrade_time
-	intelligence_agency_defense = GER_military_intelligence_service_intelligence_agency_defense
 	boost_ideology_mission_factor = GER_military_intelligence_service_boost_ideology_mission_factor
-	decryption_power_factor = GER_military_intelligence_service_decryption_power
-	intel_network_gain_factor = GER_military_intelligence_service_intel_network_gain_factor
 
 	# NO LaR
 	encryption_factor = GER_military_intelligence_service_encryption_factor
@@ -831,7 +826,6 @@ GER_communist_intel_modifier = {
 	drift_defence_factor = GER_communist_intel_drift_defence_factor
 	communism_drift = GER_communist_intel_communism_drift
 	subversive_activites_upkeep = GER_communist_intel_subversive_activities_upkeep
-	intel_network_gain_factor = GER_communist_intel_intel_network_gain
 	decryption_factor = GER_communist_intel_decryption_factor
 	encryption_factor = GER_communist_intel_encryption_factor
 }
@@ -848,11 +842,8 @@ GER_stasi_modifier = {
 
 	drift_defence_factor = GER_communist_intel_drift_defence_factor
 	communism_drift = GER_communist_intel_communism_drift
-	operative_slot = GER_communist_intel_operative_slot
 	stability_factor = GER_communist_intel_stability_factor 
-	operation_cost = GER_communist_intel_operation_cost
 	subversive_activites_upkeep = GER_communist_intel_subversive_activities_upkeep
-	intel_network_gain_factor = GER_communist_intel_intel_network_gain
 	decryption_factor = GER_communist_intel_decryption_factor
 	encryption_factor = GER_communist_intel_encryption_factor
 }

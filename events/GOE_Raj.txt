@@ -5329,8 +5329,6 @@ country_event = {
 					is_ai = yes
 				}
 			}
-			else = {
-			}
 			
 		}
 		
@@ -5493,10 +5491,6 @@ country_event = {
 									remove_core_of = ROOT
 								}
 								add_core_of = DIP
-								if = {
-									limit = {
-									}
-								}
 							}
 
 						}
@@ -6160,9 +6154,6 @@ country_event = {
 		RAJ = {  
 			transfer_state = event_target:RAJ_i_want_to_buy_this_land 
 			country_event = { id = GOE_RAJ_eic.9 hours = 2 }
-
-		}
-		hidden_effect = {
 
 		}
 

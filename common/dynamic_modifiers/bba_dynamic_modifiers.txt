@@ -322,7 +322,6 @@ ETH_state_supporting_resistance_modifier = {
 
 ETH_operative_modifier = {
 	enable = { always = yes}
-	operative_slot = 1
 }
 
 african_union_central_bank_modifier = {

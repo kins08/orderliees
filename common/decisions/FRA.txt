@@ -647,11 +647,6 @@ economy_decisions = {
 					# add_mio_funds_gain_factor = 0.05
 					
 				# }
-				hidden_effect = {
-					# mio:FRA_bloch_organization = {
-						# set_mio_icon = GFX_idea_FRA_sncao
-					# }
-				}
 
 			}
 		}

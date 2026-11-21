@@ -2299,8 +2299,6 @@ JAP_trigger_communist_civil_war = {
     	    }
     	    282 = { # Just teleport all units in Tokyo 
     	    	teleport_armies = {
-    	    	    limit = {
-    	    	    }
     	    	    to_state_array = owned_controlled_states
     	    	}
     	    }

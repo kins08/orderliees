@@ -3903,14 +3903,6 @@ leader_traits = {
 
 		cost = 400
 		gain_xp_leader = {
-			OR = {
-# operative_leader_operation = operation_rescue_operative
-# operative_leader_operation = operation_infiltrate_civilian
-# operative_leader_operation = operation_infiltrate_armed_forces_army
-# operative_leader_operation = operation_infiltrate_armed_forces_navy
-# operative_leader_operation = operation_infiltrate_armed_forces_airforce
-# operative_leader_operation = operation_make_resistance_contacts
-			}
 		}
 
 		modifier = { 
@@ -4053,11 +4045,6 @@ leader_traits = {
 
 		cost = 400
 		gain_xp_leader = {
-			OR = {
-# operative_leader_operation = operation_targeted_sabotage_industry
-# operative_leader_operation = operation_targeted_sabotage_infrastructure
-# operative_leader_operation = operation_targeted_sabotage_resources
-			}
 		}
 
 		modifier = {
