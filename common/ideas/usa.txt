@@ -949,7 +949,6 @@ ideas = {
 
 			modifier = {
 				operation_infiltrate_outcome = 0.25
-				boost_resistance_factor = 0.25
 			}
 		}
 

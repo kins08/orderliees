@@ -3134,17 +3134,6 @@ focus_tree = {
 				}
 				clear_array = ROOT.countries_with_baltic_territory_array
 
-				every_controlled_state = {
-					limit = {
-						OR = {
-							is_core_of = EST
-							is_core_of = LAT
-							is_core_of = LIT
-						}
-						has_resistance = yes
-					}
-					add_compliance = 30
-				}
 			}
 		}
 	}
@@ -3259,26 +3248,6 @@ focus_tree = {
 				}
 			}
 
-			if = {
-				limit = {
-					any_controlled_state = {
-						has_resistance = yes
-					}
-				}
-				every_controlled_state = {
-					limit = {
-						has_resistance = yes
-					}
-					add_resistance_target = {
-						amount = -15
-						occupier = ROOT 
-						tooltip = FIN_red_finland_resistance_target_tt
-					}
-				}
-			}
-			else = {
-				custom_effect_tooltip = FIN_red_finland_resistance_tt
-			}
 
 			set_division_template_cap = {
 				division_template = "Punakaarti"
@@ -3997,22 +3966,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = FIN_socialist_welfare
 
-			custom_effect_tooltip = FIN_socialist_welfare_compliance_tt
-			if = {
-				limit = {
-					any_controlled_state = {
-						has_resistance = yes
-					}
-				}
-				custom_effect_tooltip = generic_current_effects
-				every_controlled_state = {
-					limit = {
-						has_resistance = yes
-					}
-					add_compliance = 15
-				}
-			}
-
 			if = {
 				limit = {
 					has_country_leader = {
@@ -4255,52 +4208,6 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 
-			if = {
-				limit = {
-					any_controlled_state = {
-						OR = {
-							state = 663
-							state = 914
-							state = 144
-							state = 920
-							state = 921
-							state = 213
-							state = 215
-							state = 216
-							state = 808
-							state = 809
-							state = 807
-							state = 13
-							state = 191
-						}
-						has_resistance = yes
-					}
-				}
-				every_controlled_state = {
-					limit = {
-						OR = {
-							state = 663
-							state = 914
-							state = 144
-							state = 920
-							state = 921
-							state = 213
-							state = 215
-							state = 216
-							state = 808
-							state = 809
-							state = 807
-							state = 13
-							state = 191
-						}
-						has_resistance = yes
-					}
-					add_compliance = 50
-				}
-			}
-			else = {
-				custom_effect_tooltip = FIN_proclaim_greater_finland_compliance_tt
-			}
 
 			if = {
 				limit = {
@@ -8891,19 +8798,6 @@ focus_tree = {
 				}
 				clear_array = ROOT.countries_with_nordic_territory_array
 
-				every_controlled_state = {
-					limit = {
-						OR = {
-							#No need to add SMI here
-							is_core_of = ICE
-							is_core_of = SWE
-							is_core_of = NOR
-							is_core_of = DEN
-						}
-						has_resistance = yes
-					}
-					add_compliance = 30
-				}
 			}
 		}
 	}

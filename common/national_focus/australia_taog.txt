@@ -2363,22 +2363,16 @@ focus_tree = {
             975 = { #New Guineas
             	is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 
 			733 = { #Bismarck
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 
 			1044 = { #Bougainville
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 
 			1047 = { #Interior Papua
@@ -2389,8 +2383,6 @@ focus_tree = {
 			523 = { #Papua
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 		}
 
@@ -5176,22 +5168,16 @@ focus_tree = {
 			975 = { #New Guineas
             	is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 
 			733 = { #Bismarck
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 
 			1044 = { #Bougainville
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 
 			1047 = { #Interior Papua
@@ -5202,8 +5188,6 @@ focus_tree = {
 			523 = { #Papua
 				is_owned_by = ROOT
 				is_controlled_by = ROOT
-				compliance > 70
-				resistance < 10
 			}
 
 		}

@@ -5867,13 +5867,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            every_owned_state = {
-                limit = {
-                    is_controlled_by = ROOT
-                    has_resistance = yes
-                }
-                add_resistance = 15
-            }
             add_timed_idea = {
                 idea = idea_RAJ_cost_underrun
                 days = 480
@@ -7490,8 +7483,6 @@ focus_tree = {
         completion_reward = {
             custom_effect_tooltip = idea_RAJ_independence_movement_tt
             add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.1 tooltip = autonomy_gain_tt }
-            add_to_variable = { RAJ_resistance_activity_independence_movement = 0.1 tooltip =  resistance_activity_tt }
-            add_to_variable = { RAJ_resistance_target_independence_movement = 0.1 tooltip =  resistance_target_tt }
         }
     }
 
@@ -7744,8 +7735,6 @@ focus_tree = {
 
             custom_effect_tooltip = idea_RAJ_independence_movement_tt
             add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.03 tooltip = autonomy_gain_tt }
-            add_to_variable = { RAJ_resistance_activity_independence_movement = 0.1 tooltip =  resistance_activity_tt }
-            add_to_variable = { RAJ_resistance_target_independence_movement = 0.1 tooltip =  resistance_target_tt }
             custom_effect_tooltip = generic_skip_one_line_tt
             try_build_civ_in_core_otherwise_build_in_controlled = yes
             
@@ -7816,8 +7805,6 @@ focus_tree = {
         completion_reward = {
             custom_effect_tooltip = idea_RAJ_independence_movement_tt
             add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.02 tooltip = autonomy_gain_tt }
-            add_to_variable = { RAJ_resistance_activity_independence_movement = 0.15 tooltip =  resistance_activity_tt }
-            add_to_variable = { RAJ_resistance_target_independence_movement = 0.15 tooltip =  resistance_target_tt }
             custom_effect_tooltip = generic_skip_one_line_tt
             custom_effect_tooltip = available_political_advisor
             show_ideas_tooltip = RAJ_bhimrao_ramji_ambedkar
@@ -8167,13 +8154,11 @@ focus_tree = {
             every_controlled_state = {
                 random_select_amount = 3
                 limit = {
-                    has_resistance = yes
                     is_in_array = {
                         array = ROOT.owned_states_at_game_start
                         value = THIS
                     }
                 }
-                add_resistance = 15
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
                     type = industrial_complex
@@ -8953,15 +8938,6 @@ focus_tree = {
                     mark_focus_tree_layout_dirty = yes
                 }
 
-                every_owned_state = {
-                    if = {
-                        limit = { 
-                            has_resistance = yes
-                            occupation_law = no_garrison 
-                        }
-                        set_occupation_law = local_police_force_garrison
-                    }
-                }
                 set_country_flag = RAJ_hide_no_garrison
                 country_event = {
                     id = GOE_RAJ.36
@@ -9012,8 +8988,6 @@ focus_tree = {
 
                 custom_effect_tooltip = idea_RAJ_independence_movement_tt
                 add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.1 tooltip = autonomy_gain_tt }
-                add_to_variable = { RAJ_resistance_activity_independence_movement = 0.1 tooltip =  resistance_activity_tt }
-                add_to_variable = { RAJ_resistance_target_independence_movement = 0.1 tooltip =  resistance_target_tt }
             }
 
             unlock_decision_tooltip = {
@@ -9806,7 +9780,6 @@ focus_tree = {
             effect_tooltip = {
                 add_to_variable = { RAJ_fyp_supply_consumption_factor2 = -0.05 tooltip = supply_consumption_factor_tt }
                 add_to_variable = { RAJ_fyp_stability_factor2 = 0.05 tooltip = stability_factor_tt }
-                add_to_variable = { RAJ_fyp_compliance_growth2 = 0.05 tooltip = compliance_growth_tt }
             }
         }
     }
@@ -9925,7 +9898,6 @@ focus_tree = {
                 }
                 add_to_variable = { RAJ_fyp_supply_consumption_factor = -0.05 tooltip = supply_consumption_factor_tt }
                 add_to_variable = { RAJ_fyp_stability_factor = 0.05 tooltip = stability_factor_tt }
-                add_to_variable = { RAJ_fyp_compliance_growth = 0.05 tooltip = compliance_growth_tt }
             }
             else = {
                 custom_effect_tooltip = RAJ_five_year_plan_tt
@@ -10547,9 +10519,6 @@ focus_tree = {
             multiply_variable = { RAJ_fyp_industrial_capacity_factory_mult = 1.3 }
             set_variable = { RAJ_fyp_industrial_capacity_factory = RAJ_fyp_industrial_capacity_factory_mult }
 
-            set_variable = { RAJ_fyp_compliance_growth_mult = RAJ_fyp_compliance_growth }
-            multiply_variable = { RAJ_fyp_compliance_growth_mult = 1.3 }
-            set_variable = { RAJ_fyp_compliance_growth = RAJ_fyp_compliance_growth_mult }
 
             set_variable = { RAJ_fyp_supply_consumption_factor_mult = RAJ_fyp_supply_consumption_factor }
             multiply_variable = { RAJ_fyp_supply_consumption_factor_mult = 1.3 }
@@ -10933,7 +10902,6 @@ focus_tree = {
 
             custom_effect_tooltip = RAJ_five_year_plan_modify_tt 
             add_to_variable = { RAJ_fyp_stability_factor = 0.05 tooltip = stability_factor_tt }
-            add_to_variable = { RAJ_fyp_compliance_growth = 0.05 tooltip = compliance_growth_tt }
 
             custom_effect_tooltip = newline_tt
 
@@ -11061,7 +11029,6 @@ focus_tree = {
             add_to_variable = { RAJ_fyp_line_change_production_efficiency_factor = 0.1 tooltip = line_change_production_efficiency_factor_tt }
             add_to_variable = { RAJ_fyp_production_factory_start_efficiency_factor = 0.05  tooltip = production_factory_start_efficiency_factor_tt }
             add_to_variable = { RAJ_fyp_industrial_capacity_factory = -0.05 tooltip = industrial_capacity_factory_tt }
-            add_to_variable = { RAJ_fyp_compliance_growth = 0.1 tooltip = compliance_growth_tt }
 
            # add_to_variable = { RAJ_fyp_industry_air_damage_factor = -0.1  tooltip = industry_air_damage_factor_tt }             
         }
@@ -11772,7 +11739,6 @@ focus_tree = {
 
         available = {
             any_controlled_state = {
-                resistance > 65
                 is_in_array = {
                     array = RAJ.owned_states_at_game_start
                     value = THIS
@@ -11853,7 +11819,6 @@ focus_tree = {
                 ruling_party = neutrality
                 size = 1 # (0-1) Size modifier of the revolt. Affects stockpile, army, air and navy as well
                 states = all
-                states_filter = { resistance < 65 }
                 keep_all_characters = yes
                 keep_political_party_members = yes
 
@@ -11996,8 +11961,6 @@ focus_tree = {
 
                     if = {
                         limit = {
-                            has_resistance = yes
-                            resistance > 85 
                         }
 
                         ROOT = {
@@ -12011,13 +11974,9 @@ focus_tree = {
                             allow_spawning_on_enemy_provs = yes 
                             count = 3
                         }
-                        set_resistance = 0
                     }
                     else_if = {
                         limit = { 
-                            has_resistance = yes
-                            resistance > 65 
-                            resistance < 85
                         }
 
                         ROOT = { 
@@ -12031,7 +11990,6 @@ focus_tree = {
                             allow_spawning_on_enemy_provs = yes 
                             count = 1
                         }
-                        set_resistance = 0
                     }
                     else_if = {
                         limit = {
@@ -12072,11 +12030,6 @@ focus_tree = {
 
                     if = {
                         limit = { has_state_flag = pre_bose_core }
-                        force_disable_resistance = { 
-                            clear = no #if yes, will clear previously disabled resistance
-                            occupier = RAJ
-                            occupied = DIP
-                        }
                         remove_core_of = DIP 
                         add_core_of = RAJ
                     }
@@ -14591,12 +14544,6 @@ focus_tree = {
                 popularity = 0.1
             }
 
-            every_controlled_state = {
-                limit = {
-                    has_resistance = yes
-                }
-                add_compliance = 30
-            }
 
         }
     }
@@ -14630,12 +14577,6 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
         completion_reward = {
             add_war_support = 0.1
-            every_controlled_state = {
-                limit = {
-                    has_resistance = yes
-                }
-                add_resistance = -30
-            }
         }
     }
 
@@ -14974,19 +14915,6 @@ focus_tree = {
                 idea = idea_RAJ_power_sharing_agreement
                 days = 1460
             } 
-            every_controlled_state = {
-                limit = {
-                    is_in_array = {
-                        array = RAJ.owned_states_at_game_start
-                        value = THIS
-                    }
-                    has_resistance = yes
-
-                }
-
-                add_compliance = -50
-                add_resistance = -30
-            }
         }
     }
 
@@ -17311,7 +17239,6 @@ focus = {
 					array = ROOT.owned_states_at_game_start
 					value = THIS
 				}
-				has_resistance = yes #To target princely states
 				free_building_slots = {
 					building = arms_factory
 					size > 0
@@ -17340,8 +17267,6 @@ focus = {
 
 	completion_reward = {
 		custom_effect_tooltip = RAJ_modify_a_loyal_government_tt
-		add_to_variable = { RAJ_a_loyal_government_resistance_target = -0.1 tooltip = resistance_target_tt }
-		add_to_variable = { RAJ_a_loyal_government_resistance_damage_to_garrison = -0.25 tooltip = resistance_damage_to_garrison_tt }
 		add_to_variable = { RAJ_a_loyal_government_political_power_factor = -0.15 tooltip = political_power_factor_tt }
 
 		custom_effect_tooltip = generic_skip_one_line_tt

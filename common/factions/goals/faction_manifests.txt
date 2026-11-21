@@ -912,7 +912,6 @@ faction_manifest_baltic_security = {
 				min = @manifest_fulfilled_value
 	
 				modifier = {
-					compliance_growth = 0.10
 				}			
 			}
 		}
@@ -939,7 +938,6 @@ faction_manifest_nordic_defence = {
 				min = @manifest_fulfilled_value
 	
 				modifier = {
-					compliance_growth = 0.10
 				}			
 			}
 		}
@@ -994,7 +992,6 @@ faction_manifest_pax_romana = {
 			manifest_fulfilled = {
 				min = @manifest_fulfilled_value
 				modifier = { 
-					compliance_growth = 0.10 #Peace!
 				}
 			}
 		}

@@ -640,7 +640,6 @@ ITA_missiolinis = {
 				limit = {
 					all_of_scopes = {
 						array = ITA_initial_ethiopian_states
-						compliance > 60
 					}
 				}
 				log = "Success"

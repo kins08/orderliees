@@ -1041,7 +1041,6 @@ FRA_intervention_in_overseas_territories = {
 								state = 662
 							}
 						}
-						add_compliance = 5
 					}
 				}
 				80 = {
@@ -1112,7 +1111,6 @@ FRA_intervention_in_overseas_territories = {
 								state = 553
 							}
 						}
-						add_compliance = 5
 					}
 				}
 				70 = {}
@@ -1343,7 +1341,6 @@ FRA_intervention_in_overseas_territories = {
 								state = 1043 
 							}
 						}
-						add_compliance = 5
 					}
 				}
 				80 = {}
@@ -1574,7 +1571,6 @@ FRA_intervention_in_overseas_territories = {
 								state = 770
 							}
 						}
-						add_compliance = 5
 					}
 				}
 				75 = {}
@@ -1808,7 +1804,6 @@ FRA_intervention_in_overseas_territories = {
 								state = 772
 							}
 						}
-						add_compliance = 5
 					}
 				}
 				75 = {}
@@ -2039,7 +2034,6 @@ FRA_intervention_in_overseas_territories = {
 					VIC = { country_event = LaR_france_vichy_notification_events.6 }
 					transfer_state = 543
 					543 = {
-						add_compliance = 5
 					}
 				}
 				70 = {}
@@ -2112,10 +2106,6 @@ FRA_decolonization = {
 						is_core_of = SYR
 					}
 				}
-				add_resistance_target = {
-					amount = 10
-					tooltip = FRA_promised_independence_tt
-				}
 			}
 		}
 	}
@@ -2152,10 +2142,6 @@ FRA_decolonization = {
 						is_core_of = VIN
 					}
 				}
-				add_resistance_target = {
-					amount = 10
-					tooltip = FRA_promised_independence_tt
-				}
 			}
 		}
 	}
@@ -2177,10 +2163,6 @@ FRA_decolonization = {
 
 		timeout_effect = {
 			543 = {
-				add_resistance_target = {
-					amount = 10
-					tooltip = FRA_promised_independence_tt
-				}
 			}
 		}
 	}
@@ -2218,10 +2200,6 @@ FRA_decolonization = {
 						is_core_of = MOR
 						is_core_of = TUN
 					}
-				}
-				add_resistance_target = {
-					amount = 10
-					tooltip = FRA_promised_independence_tt
 				}
 			}
 		}
@@ -2274,10 +2252,6 @@ FRA_decolonization = {
 						is_core_of = MRT
 					}
 				}
-				add_resistance_target = {
-					amount = 10
-					tooltip = FRA_promised_independence_tt
-				}
 			}
 		}
 	}
@@ -2316,10 +2290,6 @@ FRA_decolonization = {
 						is_core_of = CMR
 						is_core_of = CHA
 					}
-				}
-				add_resistance_target = {
-					amount = 10
-					tooltip = FRA_promised_independence_tt
 				}
 			}
 		}

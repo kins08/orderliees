@@ -339,8 +339,6 @@ GER_seize_gold_reserves_cat = {
 							is_fully_controlled_by = ROOT
 							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
 						}
-						add_compliance = -5
-						add_resistance = 10
 						set_state_flag = GER_seize_gold_reserves_state_flag
 						# add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
 					}
@@ -353,8 +351,6 @@ GER_seize_gold_reserves_cat = {
 							is_fully_controlled_by = ROOT
 							NOT = { has_state_flag = GER_seize_gold_reserves_state_flag }
 						}
-						add_compliance = -5
-						add_resistance = 10
 						set_state_flag = GER_seize_gold_reserves_state_flag
 						# add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
 					}
@@ -442,8 +438,6 @@ GER_seize_gold_reserves_cat = {
 				add_to_temp_variable = { occupied_state_num_factory = industrial_complex_level }
 				add_to_temp_variable = { occupied_state_num_factory = building_level@dockyard }
 
-				add_resistance = 10
-				add_compliance = -5
 				set_state_flag = GER_seize_gold_reserves_state_flag
 				# add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
 				

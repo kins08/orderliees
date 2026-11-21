@@ -1173,24 +1173,12 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				if = {
-					limit = {
-						has_resistance = yes
-					}
-					add_compliance = 5
-				}
 			}
 			452 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
-				}
-				if = {
-					limit = {
-						has_resistance = yes
-					}
-					add_compliance = 5
 				}
 			}
 
@@ -1211,12 +1199,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
 				}
 			}
 			if = {
@@ -1231,12 +1213,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
 				}
 			}
 			if = {
@@ -1250,12 +1226,6 @@ focus_tree = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
 					}
 				}
 			}
@@ -1273,12 +1243,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
 				}
 			}
 			if = {
@@ -1292,12 +1256,6 @@ focus_tree = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
 					}
 				}
 			}
@@ -1314,12 +1272,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
 				}
 			}
 			if = {
@@ -1333,12 +1285,6 @@ focus_tree = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
 					}
 				}
 			}
@@ -1356,12 +1302,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
 				}
 			}
 			if = {
@@ -1375,12 +1315,6 @@ focus_tree = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
 					}
 				}
 			}
@@ -1398,12 +1332,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
 				}
 			}
 			if = {
@@ -1418,12 +1346,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
 				}
 			}
 			if = {
@@ -1437,12 +1359,6 @@ focus_tree = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
 					}
 				}
 			}
