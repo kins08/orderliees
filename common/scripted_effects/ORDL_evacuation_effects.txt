@@ -316,6 +316,9 @@ ORDL_evac_ai_effect = {
 		ORDL_evac_region_S2_click = yes
 		ORDL_evac_region_S3_click = yes
 		ORDL_evac_region_S4_click = yes
+		ORDL_evac_region_S5_click = yes
+		ORDL_evac_region_S6_click = yes
+		ORDL_evac_region_S7_click = yes
 	}
 }
 
@@ -770,13 +773,17 @@ if = { limit = { state = 239 }
 					add_to_variable = { global.ordl_evac_S7_out = arms_factory_level }
 					add_to_variable = { global.ordl_evac_S7_out = industrial_complex_level }
 				}
+				# The slot leaves with the factory: each one gets a new slot in the
+				# Urals, so keeping the old slot would let the region be rebuilt for free.
 				while_loop_effect = {
 					limit = { arms_factory > 0 }
 					remove_building = { type = arms_factory level = 1 }
+					add_extra_state_shared_building_slots = -1
 				}
 				while_loop_effect = {
 					limit = { industrial_complex > 0 }
 					remove_building = { type = industrial_complex level = 1 }
+					add_extra_state_shared_building_slots = -1
 				}
 				set_state_flag = SOV_evac_done_flag
 				ROOT = {

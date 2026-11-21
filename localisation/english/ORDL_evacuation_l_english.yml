@@ -14,21 +14,13 @@
 
 
 
- ORDL_EVAC_DONE_0:0 "§GDone§!: 0 / 7"
 
- ORDL_EVAC_DONE_1:0 "§GDone§!: 1 / 7"
 
- ORDL_EVAC_DONE_2:0 "§GDone§!: 2 / 7"
 
- ORDL_EVAC_DONE_3:0 "§GDone§!: 3 / 7"
 
- ORDL_EVAC_DONE_4:0 "§GDone§!: 4 / 7"
 
- ORDL_EVAC_DONE_5:0 "§GDone§!: 5 / 7"
 
- ORDL_EVAC_DONE_6:0 "§GDone§!: 6 / 7"
 
- ORDL_EVAC_DONE_7:0 "§GDone§!: 7 / 7"
 
  ORDL_EVAC_STAT_OUT:0 "§GEvacuated§!: [?global.ordl_evac_out_ic|0] civ. · [?global.ordl_evac_out_af|0] mil. factories"
 
@@ -38,11 +30,11 @@
 
 
 
- ORDL_EVAC_STAT_TRANSIT:0 "§YIn transit§!: [?SOV_evac_transit_civ|0] civ. · [?SOV_evac_transit_mil|0] mil."
+ ORDL_EVAC_STAT_TRANSIT:0 "§YIn transit§!: [?SOV_evac_transit_civ|0] civ. · [?SOV_evac_transit_mil|0] mil. · §GDone§!: [?SOV_evac_regions_done|0] / 7"
 
 
 
- ORDL_EVAC_COST:0 "Train: §Y35§! power and §Y20§! trains · dispatched from map or decision"
+ ORDL_EVAC_COST:0 "Echelon: §Y35§! political power and §Y20§! trains · §Y30–60§! days"
 
 
 
@@ -82,147 +74,147 @@
 
 
 
- ORDL_EVAC_TT_11:0 "§H[11.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_11|0]   §RLost§!: [?global.ordl_evac_lost_11|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_11:0 "§H[11.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_11|0]   §RLost§!: [?global.ordl_evac_lost_11|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_12:0 "§H[12.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_12|0]   §RLost§!: [?global.ordl_evac_lost_12|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_12:0 "§H[12.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_12|0]   §RLost§!: [?global.ordl_evac_lost_12|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_13:0 "§H[13.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_13|0]   §RLost§!: [?global.ordl_evac_lost_13|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_13:0 "§H[13.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_13|0]   §RLost§!: [?global.ordl_evac_lost_13|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_78:0 "§H[78.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_78|0]   §RLost§!: [?global.ordl_evac_lost_78|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_78:0 "§H[78.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_78|0]   §RLost§!: [?global.ordl_evac_lost_78|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_89:0 "§H[89.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_89|0]   §RLost§!: [?global.ordl_evac_lost_89|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_89:0 "§H[89.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_89|0]   §RLost§!: [?global.ordl_evac_lost_89|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_91:0 "§H[91.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_91|0]   §RLost§!: [?global.ordl_evac_lost_91|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_91:0 "§H[91.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_91|0]   §RLost§!: [?global.ordl_evac_lost_91|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_93:0 "§H[93.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_93|0]   §RLost§!: [?global.ordl_evac_lost_93|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_93:0 "§H[93.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_93|0]   §RLost§!: [?global.ordl_evac_lost_93|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_94:0 "§H[94.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_94|0]   §RLost§!: [?global.ordl_evac_lost_94|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_94:0 "§H[94.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_94|0]   §RLost§!: [?global.ordl_evac_lost_94|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_95:0 "§H[95.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_95|0]   §RLost§!: [?global.ordl_evac_lost_95|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_95:0 "§H[95.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_95|0]   §RLost§!: [?global.ordl_evac_lost_95|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_96:0 "§H[96.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_96|0]   §RLost§!: [?global.ordl_evac_lost_96|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_96:0 "§H[96.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_96|0]   §RLost§!: [?global.ordl_evac_lost_96|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_97:0 "§H[97.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_97|0]   §RLost§!: [?global.ordl_evac_lost_97|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_97:0 "§H[97.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_97|0]   §RLost§!: [?global.ordl_evac_lost_97|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_137:0 "§H[137.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_137|0]   §RLost§!: [?global.ordl_evac_lost_137|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_137:0 "§H[137.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_137|0]   §RLost§!: [?global.ordl_evac_lost_137|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_188:0 "§H[188.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_188|0]   §RLost§!: [?global.ordl_evac_lost_188|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_188:0 "§H[188.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_188|0]   §RLost§!: [?global.ordl_evac_lost_188|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_189:0 "§H[189.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_189|0]   §RLost§!: [?global.ordl_evac_lost_189|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_189:0 "§H[189.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_189|0]   §RLost§!: [?global.ordl_evac_lost_189|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_190:0 "§H[190.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_190|0]   §RLost§!: [?global.ordl_evac_lost_190|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_190:0 "§H[190.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_190|0]   §RLost§!: [?global.ordl_evac_lost_190|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_191:0 "§H[191.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_191|0]   §RLost§!: [?global.ordl_evac_lost_191|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_191:0 "§H[191.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_191|0]   §RLost§!: [?global.ordl_evac_lost_191|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_192:0 "§H[192.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_192|0]   §RLost§!: [?global.ordl_evac_lost_192|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_192:0 "§H[192.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_192|0]   §RLost§!: [?global.ordl_evac_lost_192|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_193:0 "§H[193.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_193|0]   §RLost§!: [?global.ordl_evac_lost_193|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_193:0 "§H[193.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_193|0]   §RLost§!: [?global.ordl_evac_lost_193|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_194:0 "§H[194.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_194|0]   §RLost§!: [?global.ordl_evac_lost_194|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_194:0 "§H[194.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_194|0]   §RLost§!: [?global.ordl_evac_lost_194|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_195:0 "§H[195.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_195|0]   §RLost§!: [?global.ordl_evac_lost_195|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_195:0 "§H[195.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_195|0]   §RLost§!: [?global.ordl_evac_lost_195|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_196:0 "§H[196.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_196|0]   §RLost§!: [?global.ordl_evac_lost_196|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_196:0 "§H[196.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_196|0]   §RLost§!: [?global.ordl_evac_lost_196|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_197:0 "§H[197.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_197|0]   §RLost§!: [?global.ordl_evac_lost_197|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_197:0 "§H[197.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_197|0]   §RLost§!: [?global.ordl_evac_lost_197|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_198:0 "§H[198.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_198|0]   §RLost§!: [?global.ordl_evac_lost_198|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_198:0 "§H[198.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_198|0]   §RLost§!: [?global.ordl_evac_lost_198|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_199:0 "§H[199.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_199|0]   §RLost§!: [?global.ordl_evac_lost_199|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_199:0 "§H[199.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_199|0]   §RLost§!: [?global.ordl_evac_lost_199|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_200:0 "§H[200.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_200|0]   §RLost§!: [?global.ordl_evac_lost_200|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_200:0 "§H[200.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_200|0]   §RLost§!: [?global.ordl_evac_lost_200|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_201:0 "§H[201.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_201|0]   §RLost§!: [?global.ordl_evac_lost_201|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_201:0 "§H[201.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_201|0]   §RLost§!: [?global.ordl_evac_lost_201|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_202:0 "§H[202.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_202|0]   §RLost§!: [?global.ordl_evac_lost_202|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_202:0 "§H[202.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_202|0]   §RLost§!: [?global.ordl_evac_lost_202|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_203:0 "§H[203.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_203|0]   §RLost§!: [?global.ordl_evac_lost_203|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_203:0 "§H[203.GetName]§!\nSector: Northern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_203|0]   §RLost§!: [?global.ordl_evac_lost_203|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_204:0 "§H[204.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_204|0]   §RLost§!: [?global.ordl_evac_lost_204|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_204:0 "§H[204.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_204|0]   §RLost§!: [?global.ordl_evac_lost_204|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_205:0 "§H[205.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_205|0]   §RLost§!: [?global.ordl_evac_lost_205|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_205:0 "§H[205.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_205|0]   §RLost§!: [?global.ordl_evac_lost_205|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_206:0 "§H[206.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_206|0]   §RLost§!: [?global.ordl_evac_lost_206|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_206:0 "§H[206.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_206|0]   §RLost§!: [?global.ordl_evac_lost_206|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_207:0 "§H[207.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_207|0]   §RLost§!: [?global.ordl_evac_lost_207|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_207:0 "§H[207.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_207|0]   §RLost§!: [?global.ordl_evac_lost_207|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_208:0 "§H[208.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_208|0]   §RLost§!: [?global.ordl_evac_lost_208|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_208:0 "§H[208.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_208|0]   §RLost§!: [?global.ordl_evac_lost_208|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_209:0 "§H[209.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_209|0]   §RLost§!: [?global.ordl_evac_lost_209|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_209:0 "§H[209.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_209|0]   §RLost§!: [?global.ordl_evac_lost_209|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_210:0 "§H[210.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_210|0]   §RLost§!: [?global.ordl_evac_lost_210|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_210:0 "§H[210.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_210|0]   §RLost§!: [?global.ordl_evac_lost_210|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_213:0 "§H[213.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_213|0]   §RLost§!: [?global.ordl_evac_lost_213|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_213:0 "§H[213.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_213|0]   §RLost§!: [?global.ordl_evac_lost_213|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -230,131 +222,131 @@
 
 
 
- ORDL_EVAC_TT_217:0 "§H[217.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_217|0]   §RLost§!: [?global.ordl_evac_lost_217|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_217:0 "§H[217.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_217|0]   §RLost§!: [?global.ordl_evac_lost_217|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_218:0 "§H[218.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_218|0]   §RLost§!: [?global.ordl_evac_lost_218|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_218:0 "§H[218.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_218|0]   §RLost§!: [?global.ordl_evac_lost_218|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_219:0 "§H[219.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_219|0]   §RLost§!: [?global.ordl_evac_lost_219|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_219:0 "§H[219.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_219|0]   §RLost§!: [?global.ordl_evac_lost_219|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_220:0 "§H[220.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_220|0]   §RLost§!: [?global.ordl_evac_lost_220|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_220:0 "§H[220.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_220|0]   §RLost§!: [?global.ordl_evac_lost_220|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_221:0 "§H[221.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_221|0]   §RLost§!: [?global.ordl_evac_lost_221|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_221:0 "§H[221.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_221|0]   §RLost§!: [?global.ordl_evac_lost_221|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_222:0 "§H[222.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_222|0]   §RLost§!: [?global.ordl_evac_lost_222|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_222:0 "§H[222.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_222|0]   §RLost§!: [?global.ordl_evac_lost_222|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_223:0 "§H[223.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_223|0]   §RLost§!: [?global.ordl_evac_lost_223|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_223:0 "§H[223.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_223|0]   §RLost§!: [?global.ordl_evac_lost_223|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_224:0 "§H[224.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_224|0]   §RLost§!: [?global.ordl_evac_lost_224|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_224:0 "§H[224.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_224|0]   §RLost§!: [?global.ordl_evac_lost_224|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_225:0 "§H[225.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_225|0]   §RLost§!: [?global.ordl_evac_lost_225|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_225:0 "§H[225.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_225|0]   §RLost§!: [?global.ordl_evac_lost_225|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_226:0 "§H[226.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_226|0]   §RLost§!: [?global.ordl_evac_lost_226|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_226:0 "§H[226.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_226|0]   §RLost§!: [?global.ordl_evac_lost_226|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_227:0 "§H[227.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_227|0]   §RLost§!: [?global.ordl_evac_lost_227|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_227:0 "§H[227.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_227|0]   §RLost§!: [?global.ordl_evac_lost_227|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_228:0 "§H[228.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_228|0]   §RLost§!: [?global.ordl_evac_lost_228|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_228:0 "§H[228.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_228|0]   §RLost§!: [?global.ordl_evac_lost_228|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_229:0 "§H[229.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_229|0]   §RLost§!: [?global.ordl_evac_lost_229|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_229:0 "§H[229.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_229|0]   §RLost§!: [?global.ordl_evac_lost_229|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_230:0 "§H[230.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_230|0]   §RLost§!: [?global.ordl_evac_lost_230|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_230:0 "§H[230.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_230|0]   §RLost§!: [?global.ordl_evac_lost_230|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_231:0 "§H[231.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_231|0]   §RLost§!: [?global.ordl_evac_lost_231|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_231:0 "§H[231.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_231|0]   §RLost§!: [?global.ordl_evac_lost_231|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_232:0 "§H[232.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_232|0]   §RLost§!: [?global.ordl_evac_lost_232|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_232:0 "§H[232.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_232|0]   §RLost§!: [?global.ordl_evac_lost_232|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_233:0 "§H[233.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_233|0]   §RLost§!: [?global.ordl_evac_lost_233|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_233:0 "§H[233.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_233|0]   §RLost§!: [?global.ordl_evac_lost_233|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_234:0 "§H[234.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_234|0]   §RLost§!: [?global.ordl_evac_lost_234|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_234:0 "§H[234.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_234|0]   §RLost§!: [?global.ordl_evac_lost_234|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_235:0 "§H[235.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_235|0]   §RLost§!: [?global.ordl_evac_lost_235|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_235:0 "§H[235.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_235|0]   §RLost§!: [?global.ordl_evac_lost_235|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_236:0 "§H[236.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_236|0]   §RLost§!: [?global.ordl_evac_lost_236|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_236:0 "§H[236.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_236|0]   §RLost§!: [?global.ordl_evac_lost_236|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_237:0 "§H[237.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_237|0]   §RLost§!: [?global.ordl_evac_lost_237|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_237:0 "§H[237.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_237|0]   §RLost§!: [?global.ordl_evac_lost_237|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_238:0 "§H[238.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_238|0]   §RLost§!: [?global.ordl_evac_lost_238|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_238:0 "§H[238.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_238|0]   §RLost§!: [?global.ordl_evac_lost_238|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_239:0 "§H[239.GetName]§!\nSector: Centre\n§GEvacuated§!: [?global.ordl_evac_out_239|0]   §RLost§!: [?global.ordl_evac_lost_239|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_239:0 "§H[239.GetName]§!\nSector: Centre\n§GEvacuated§!: [?global.ordl_evac_out_239|0]   §RLost§!: [?global.ordl_evac_lost_239|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_240:0 "§H[240.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_240|0]   §RLost§!: [?global.ordl_evac_lost_240|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_240:0 "§H[240.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_240|0]   §RLost§!: [?global.ordl_evac_lost_240|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_241:0 "§H[241.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_241|0]   §RLost§!: [?global.ordl_evac_lost_241|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_241:0 "§H[241.GetName]§!\nSector: Belarus · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_241|0]   §RLost§!: [?global.ordl_evac_lost_241|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_242:0 "§H[242.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_242|0]   §RLost§!: [?global.ordl_evac_lost_242|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_242:0 "§H[242.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_242|0]   §RLost§!: [?global.ordl_evac_lost_242|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_243:0 "§H[243.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_243|0]   §RLost§!: [?global.ordl_evac_lost_243|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_243:0 "§H[243.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_243|0]   §RLost§!: [?global.ordl_evac_lost_243|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_244:0 "§H[244.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_244|0]   §RLost§!: [?global.ordl_evac_lost_244|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_244:0 "§H[244.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_244|0]   §RLost§!: [?global.ordl_evac_lost_244|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_245:0 "§H[245.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_245|0]   §RLost§!: [?global.ordl_evac_lost_245|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_245:0 "§H[245.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_245|0]   §RLost§!: [?global.ordl_evac_lost_245|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_246:0 "§H[246.GetName]§!\nSector: Center · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_246|0]   §RLost§!: [?global.ordl_evac_lost_246|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_246:0 "§H[246.GetName]§!\nSector: Center · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_246|0]   §RLost§!: [?global.ordl_evac_lost_246|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_247:0 "§H[247.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_247|0]   §RLost§!: [?global.ordl_evac_lost_247|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_247:0 "§H[247.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_247|0]   §RLost§!: [?global.ordl_evac_lost_247|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_248:0 "§H[248.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_248|0]   §RLost§!: [?global.ordl_evac_lost_248|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_248:0 "§H[248.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_248|0]   §RLost§!: [?global.ordl_evac_lost_248|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -362,19 +354,19 @@
 
 
 
- ORDL_EVAC_TT_252:0 "§H[252.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_252|0]   §RLost§!: [?global.ordl_evac_lost_252|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_252:0 "§H[252.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_252|0]   §RLost§!: [?global.ordl_evac_lost_252|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_253:0 "§H[253.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_253|0]   §RLost§!: [?global.ordl_evac_lost_253|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_253:0 "§H[253.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_253|0]   §RLost§!: [?global.ordl_evac_lost_253|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_254:0 "§H[254.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_254|0]   §RLost§!: [?global.ordl_evac_lost_254|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_254:0 "§H[254.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_254|0]   §RLost§!: [?global.ordl_evac_lost_254|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_255:0 "§H[255.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_255|0]   §RLost§!: [?global.ordl_evac_lost_255|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_255:0 "§H[255.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_255|0]   §RLost§!: [?global.ordl_evac_lost_255|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -382,31 +374,31 @@
 
 
 
- ORDL_EVAC_TT_257:0 "§H[257.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_257|0]   §RLost§!: [?global.ordl_evac_lost_257|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_257:0 "§H[257.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_257|0]   §RLost§!: [?global.ordl_evac_lost_257|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_258:0 "§H[258.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_258|0]   §RLost§!: [?global.ordl_evac_lost_258|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_258:0 "§H[258.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_258|0]   §RLost§!: [?global.ordl_evac_lost_258|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_259:0 "§H[259.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_259|0]   §RLost§!: [?global.ordl_evac_lost_259|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_259:0 "§H[259.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_259|0]   §RLost§!: [?global.ordl_evac_lost_259|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_260:0 "§H[260.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_260|0]   §RLost§!: [?global.ordl_evac_lost_260|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_260:0 "§H[260.GetName]§!\nSector: Moscow and Centre\n§GEvacuated§!: [?global.ordl_evac_out_260|0]   §RLost§!: [?global.ordl_evac_lost_260|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_262:0 "§H[262.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_262|0]   §RLost§!: [?global.ordl_evac_lost_262|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_262:0 "§H[262.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_262|0]   §RLost§!: [?global.ordl_evac_lost_262|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_263:0 "§H[263.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_263|0]   §RLost§!: [?global.ordl_evac_lost_263|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_263:0 "§H[263.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_263|0]   §RLost§!: [?global.ordl_evac_lost_263|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_264:0 "§H[264.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_264|0]   §RLost§!: [?global.ordl_evac_lost_264|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_264:0 "§H[264.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_264|0]   §RLost§!: [?global.ordl_evac_lost_264|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -414,11 +406,11 @@
 
 
 
- ORDL_EVAC_TT_351:0 "§H[351.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_351|0]   §RLost§!: [?global.ordl_evac_lost_351|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_351:0 "§H[351.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_351|0]   §RLost§!: [?global.ordl_evac_lost_351|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_397:0 "§H[397.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_397|0]   §RLost§!: [?global.ordl_evac_lost_397|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_397:0 "§H[397.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_397|0]   §RLost§!: [?global.ordl_evac_lost_397|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -474,43 +466,43 @@
 
 
 
- ORDL_EVAC_TT_780:0 "§H[780.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_780|0]   §RLost§!: [?global.ordl_evac_lost_780|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_780:0 "§H[780.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_780|0]   §RLost§!: [?global.ordl_evac_lost_780|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_804:0 "§H[804.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_804|0]   §RLost§!: [?global.ordl_evac_lost_804|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_804:0 "§H[804.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_804|0]   §RLost§!: [?global.ordl_evac_lost_804|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_805:0 "§H[805.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_805|0]   §RLost§!: [?global.ordl_evac_lost_805|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_805:0 "§H[805.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_805|0]   §RLost§!: [?global.ordl_evac_lost_805|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_806:0 "§H[806.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_806|0]   §RLost§!: [?global.ordl_evac_lost_806|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_806:0 "§H[806.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_806|0]   §RLost§!: [?global.ordl_evac_lost_806|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_807:0 "§H[807.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_807|0]   §RLost§!: [?global.ordl_evac_lost_807|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_807:0 "§H[807.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_807|0]   §RLost§!: [?global.ordl_evac_lost_807|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_808:0 "§H[808.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_808|0]   §RLost§!: [?global.ordl_evac_lost_808|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_808:0 "§H[808.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_808|0]   §RLost§!: [?global.ordl_evac_lost_808|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_809:0 "§H[809.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_809|0]   §RLost§!: [?global.ordl_evac_lost_809|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_809:0 "§H[809.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_809|0]   §RLost§!: [?global.ordl_evac_lost_809|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_810:0 "§H[810.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_810|0]   §RLost§!: [?global.ordl_evac_lost_810|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_810:0 "§H[810.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_810|0]   §RLost§!: [?global.ordl_evac_lost_810|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_811:0 "§H[811.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_811|0]   §RLost§!: [?global.ordl_evac_lost_811|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_811:0 "§H[811.GetName]§!\nSector: Baltic States · 30 days\n§GEvacuated§!: [?global.ordl_evac_out_811|0]   §RLost§!: [?global.ordl_evac_lost_811|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_817:0 "§H[817.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_817|0]   §RLost§!: [?global.ordl_evac_lost_817|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_817:0 "§H[817.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_817|0]   §RLost§!: [?global.ordl_evac_lost_817|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -518,19 +510,19 @@
 
 
 
- ORDL_EVAC_TT_821:0 "§H[821.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_821|0]   §RLost§!: [?global.ordl_evac_lost_821|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_821:0 "§H[821.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_821|0]   §RLost§!: [?global.ordl_evac_lost_821|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_822:0 "§H[822.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_822|0]   §RLost§!: [?global.ordl_evac_lost_822|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_822:0 "§H[822.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_822|0]   §RLost§!: [?global.ordl_evac_lost_822|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_823:0 "§H[823.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_823|0]   §RLost§!: [?global.ordl_evac_lost_823|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_823:0 "§H[823.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_823|0]   §RLost§!: [?global.ordl_evac_lost_823|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_824:0 "§H[824.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_824|0]   §RLost§!: [?global.ordl_evac_lost_824|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_824:0 "§H[824.GetName]§!\nSector: South and Caucasus\n§GEvacuated§!: [?global.ordl_evac_out_824|0]   §RLost§!: [?global.ordl_evac_lost_824|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -546,15 +538,15 @@
 
 
 
- ORDL_EVAC_TT_830:0 "§H[830.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_830|0]   §RLost§!: [?global.ordl_evac_lost_830|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_830:0 "§H[830.GetName]§!\nSector: Southern Ukraine · 45 days\n§GEvacuated§!: [?global.ordl_evac_out_830|0]   §RLost§!: [?global.ordl_evac_lost_830|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_875:0 "§H[875.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_875|0]   §RLost§!: [?global.ordl_evac_lost_875|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_875:0 "§H[875.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_875|0]   §RLost§!: [?global.ordl_evac_lost_875|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
- ORDL_EVAC_TT_876:0 "§H[876.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_876|0]   §RLost§!: [?global.ordl_evac_lost_876|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nRed pending, green evacuated, black lost§!"
+ ORDL_EVAC_TT_876:0 "§H[876.GetName]§!\nSector: North-West · 60 days\n§GEvacuated§!: [?global.ordl_evac_out_876|0]   §RLost§!: [?global.ordl_evac_lost_876|0]\n§YClick to evacuate region: 35 political power and 20 trains§!\nBlue waiting, gold loading, green evacuated, dark lost."
 
 
 
@@ -562,7 +554,7 @@
 
 
 
- ORDL_EVAC_REGION_TT_S1:0 "§HBaltic States§!\n§YEchelon§!: 1 · 30 days · costs 35 political power and 20 trains\n§GEvacuated§!: [?global.ordl_evac_S1_out|0]   §RLost§!: [?global.ordl_evac_S1_lost|0]\nClick to send the train. States captured on the way turn black and stay with the enemy.§!"
+ ORDL_EVAC_REGION_TT_S1:0 "§HBaltic States§!\n§YEchelon§!: first · §Y30§! days\n§YCost§!: §Y35§! political power and §Y20§! trains\n§GEvacuated§!: [?global.ordl_evac_S1_out|0]   §RLost§!: [?global.ordl_evac_S1_lost|0]\n\nClick to send the echelon. At most two regions at once.\nStates captured before loading ends are lost."
 
 
 
@@ -570,7 +562,7 @@
 
 
 
- ORDL_EVAC_REGION_TT_S2:0 "§HBelarus§!\n§YEchelon§!: 1 · 30 days · costs 35 political power and 20 trains\n§GEvacuated§!: [?global.ordl_evac_S2_out|0]   §RLost§!: [?global.ordl_evac_S2_lost|0]\nClick to send the train. States captured on the way turn black and stay with the enemy.§!"
+ ORDL_EVAC_REGION_TT_S2:0 "§HBelarus§!\n§YEchelon§!: first · §Y30§! days\n§YCost§!: §Y35§! political power and §Y20§! trains\n§GEvacuated§!: [?global.ordl_evac_S2_out|0]   §RLost§!: [?global.ordl_evac_S2_lost|0]\n\nClick to send the echelon. At most two regions at once.\nStates captured before loading ends are lost."
 
 
 
@@ -578,7 +570,7 @@
 
 
 
- ORDL_EVAC_REGION_TT_S3:0 "§HNorthern Ukraine§!\n§YEchelon§!: 1 · 45 days · costs 35 political power and 20 trains\n§GEvacuated§!: [?global.ordl_evac_S3_out|0]   §RLost§!: [?global.ordl_evac_S3_lost|0]\nClick to send the train. States captured on the way turn black and stay with the enemy.§!"
+ ORDL_EVAC_REGION_TT_S3:0 "§HNorthern Ukraine§!\n§YEchelon§!: first · §Y45§! days\n§YCost§!: §Y35§! political power and §Y20§! trains\n§GEvacuated§!: [?global.ordl_evac_S3_out|0]   §RLost§!: [?global.ordl_evac_S3_lost|0]\n\nClick to send the echelon. At most two regions at once.\nStates captured before loading ends are lost."
 
 
 
@@ -586,7 +578,7 @@
 
 
 
- ORDL_EVAC_REGION_TT_S4:0 "§HSouthern Ukraine§!\n§YEchelon§!: 1 · 45 days · costs 35 political power and 20 trains\n§GEvacuated§!: [?global.ordl_evac_S4_out|0]   §RLost§!: [?global.ordl_evac_S4_lost|0]\nClick to send the train. States captured on the way turn black and stay with the enemy.§!"
+ ORDL_EVAC_REGION_TT_S4:0 "§HSouthern Ukraine§!\n§YEchelon§!: first · §Y45§! days\n§YCost§!: §Y35§! political power and §Y20§! trains\n§GEvacuated§!: [?global.ordl_evac_S4_out|0]   §RLost§!: [?global.ordl_evac_S4_lost|0]\n\nClick to send the echelon. At most two regions at once.\nStates captured before loading ends are lost."
 
 
 
@@ -594,7 +586,7 @@
 
 
 
- ORDL_EVAC_REGION_TT_S5:0 "§HNorthwest§!\n§YEchelon§!: 2 · 60 days · costs 35 political power and 20 trains\n§GEvacuated§!: [?global.ordl_evac_S5_out|0]   §RLost§!: [?global.ordl_evac_S5_lost|0]\nClick to send the train. States captured on the way turn black and stay with the enemy.§!\n§ROpens with the “Second Echelon” focus.§!"
+ ORDL_EVAC_REGION_TT_S5:0 "§HNorthwest§!\n§YEchelon§!: second · §Y60§! days\n§YCost§!: §Y35§! political power and §Y20§! trains\n§GEvacuated§!: [?global.ordl_evac_S5_out|0]   §RLost§!: [?global.ordl_evac_S5_lost|0]\n\nClick to send the echelon. At most two regions at once.\nStates captured before loading ends are lost.\n§RRequires the “Desperate Measures” focus.§!"
 
 
 
@@ -602,7 +594,7 @@
 
 
 
- ORDL_EVAC_REGION_TT_S6:0 "§HCenter§!\n§YEchelon§!: 2 · 60 days · costs 35 political power and 20 trains\n§GEvacuated§!: [?global.ordl_evac_S6_out|0]   §RLost§!: [?global.ordl_evac_S6_lost|0]\nClick to send the train. States captured on the way turn black and stay with the enemy.§!\n§ROpens with the “Second Echelon” focus.§!"
+ ORDL_EVAC_REGION_TT_S6:0 "§HCenter§!\n§YEchelon§!: second · §Y60§! days\n§YCost§!: §Y35§! political power and §Y20§! trains\n§GEvacuated§!: [?global.ordl_evac_S6_out|0]   §RLost§!: [?global.ordl_evac_S6_lost|0]\n\nClick to send the echelon. At most two regions at once.\nStates captured before loading ends are lost.\n§RRequires the “Desperate Measures” focus.§!"
 
 
 
@@ -610,7 +602,7 @@
 
 
 
- ORDL_EVAC_REGION_TT_S7:0 "§HSouth Caucasus§!\n§YEchelon§!: 2 · 60 days · costs 35 political power and 20 trains\n§GEvacuated§!: [?global.ordl_evac_S7_out|0]   §RLost§!: [?global.ordl_evac_S7_lost|0]\nClick to send the train. States captured on the way turn black and stay with the enemy.§!\n§ROpens with the “Second Echelon” focus.§!"
+ ORDL_EVAC_REGION_TT_S7:0 "§HSouth Caucasus§!\n§YEchelon§!: second · §Y60§! days\n§YCost§!: §Y35§! political power and §Y20§! trains\n§GEvacuated§!: [?global.ordl_evac_S7_out|0]   §RLost§!: [?global.ordl_evac_S7_lost|0]\n\nClick to send the echelon. At most two regions at once.\nStates captured before loading ends are lost.\n§RRequires the “Desperate Measures” focus.§!"
 
 
 
@@ -678,19 +670,18 @@
 
 
 
- ORDL_EVAC_CD_ON:0 "§RTrain limit reached (2/2 underway) — wait for arrival§!"
+ ORDL_EVAC_CD_ON:0 "§RTwo echelons are already underway — wait for arrival§!"
 
  ORDL_EVAC_CD_OFF:0 "§GStaff available — ready to dispatch echelon ([?SOV_evac_regions_active|0]/2 in transit).§!"
 
- ORDL_EVAC_NOW_NONE:0 "No trains are en route. Click a region to start an evacuation."
+ ORDL_EVAC_NOW_NONE:0 "No echelons underway — click a region on the map"
 
- ORDL_EVAC_REQ_PP:0 "§RRequires more than 35 political power.§!"
+ ORDL_EVAC_REQ_PP:0 "§RRequires at least 35 political power.§!"
 
- ORDL_EVAC_REQ_TRAINS:0 "§RRequires more than 20 trains in stock.§!"
+ ORDL_EVAC_REQ_TRAINS:0 "§RRequires at least 20 trains in the stockpile.§!"
 
- ORDL_EVAC_REQ_CD:0 "§RStaff is busy with the previous train — [?SOV_evac_cooldown] days left.§!"
 
- ORDL_EVAC_REQ_IDLE:0 "§RThis region is already on its way.§!"
+ ORDL_EVAC_REQ_IDLE:0 "§RAn echelon from this region is already underway.§!"
 
  ORDL_EVAC_REQ_STATES:0 "§RNo state of this region is under our control anymore.§!"
 
@@ -698,101 +689,101 @@
 
  ORDL_EVAC_LBL_S1:0 "Baltic States"
 
- ORDL_EVAC_LBL_S1_ACT:0 "§YBaltic States§! · §R[?SOV_evac_region_S1_days|0]§! days"
+ ORDL_EVAC_LBL_S1_ACT:0 "§YBaltic States§!\n§W[?SOV_evac_region_S1_days|0] days§!"
 
  ORDL_EVAC_LBL_S1_DONE:0 "§YBaltic States§!"
 
- ORDL_EVAC_LBL_S1_LOST:0 "§YBaltic States§!"
+ ORDL_EVAC_LBL_S1_LOST:0 "§gBaltic States§!"
 
  ORDL_EVAC_LBL_S1_IDLE:0 "§YBaltic States§!"
 
- ORDL_EVAC_NOW_S1:0 "Evacuating: §HBaltic States§! · §Y[?SOV_evac_region_S1_days]§! days to go"
+ ORDL_EVAC_NOW_S1:0 "§HBaltic States§!: loading, §Y[?SOV_evac_region_S1_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S1:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days — the counter runs on the card itself, the decision cannot be taken twice.\n§YCooldown§!: 30 days while the staff is busy.\nFactories keep working until the timer ends and are moved only then. States captured before that are not evacuated and stay with the enemy.§!"
+ ORDL_EVAC_DEC_TT_S1:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S2:0 "Belarus"
 
- ORDL_EVAC_LBL_S2_ACT:0 "§YBelarus§! · §R[?SOV_evac_region_S2_days|0]§! days"
+ ORDL_EVAC_LBL_S2_ACT:0 "§YBelarus§!\n§W[?SOV_evac_region_S2_days|0] days§!"
 
  ORDL_EVAC_LBL_S2_DONE:0 "§YBelarus§!"
 
- ORDL_EVAC_LBL_S2_LOST:0 "§YBelarus§!"
+ ORDL_EVAC_LBL_S2_LOST:0 "§gBelarus§!"
 
  ORDL_EVAC_LBL_S2_IDLE:0 "§YBelarus§!"
 
- ORDL_EVAC_NOW_S2:0 "Evacuating: §HBelarus§! · §Y[?SOV_evac_region_S2_days]§! days to go"
+ ORDL_EVAC_NOW_S2:0 "§HBelarus§!: loading, §Y[?SOV_evac_region_S2_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S2:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days — the counter runs on the card itself, the decision cannot be taken twice.\n§YCooldown§!: 30 days while the staff is busy.\nFactories keep working until the timer ends and are moved only then. States captured before that are not evacuated and stay with the enemy.§!"
+ ORDL_EVAC_DEC_TT_S2:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 30 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
- ORDL_EVAC_LBL_S3:0 "Northern Ukraine"
+ ORDL_EVAC_LBL_S3:0 "N. Ukraine"
 
- ORDL_EVAC_LBL_S3_ACT:0 "§YNorthern Ukraine§! · §R[?SOV_evac_region_S3_days|0]§! days"
+ ORDL_EVAC_LBL_S3_ACT:0 "§YNorthern Ukraine§!\n§W[?SOV_evac_region_S3_days|0] days§!"
 
  ORDL_EVAC_LBL_S3_DONE:0 "§YNorthern Ukraine§!"
 
- ORDL_EVAC_LBL_S3_LOST:0 "§YNorthern Ukraine§!"
+ ORDL_EVAC_LBL_S3_LOST:0 "§gNorthern Ukraine§!"
 
  ORDL_EVAC_LBL_S3_IDLE:0 "§YNorthern Ukraine§!"
 
- ORDL_EVAC_NOW_S3:0 "Evacuating: §HNorthern Ukraine§! · §Y[?SOV_evac_region_S3_days]§! days to go"
+ ORDL_EVAC_NOW_S3:0 "§HNorthern Ukraine§!: loading, §Y[?SOV_evac_region_S3_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S3:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days — the counter runs on the card itself, the decision cannot be taken twice.\n§YCooldown§!: 30 days while the staff is busy.\nFactories keep working until the timer ends and are moved only then. States captured before that are not evacuated and stay with the enemy.§!"
+ ORDL_EVAC_DEC_TT_S3:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
- ORDL_EVAC_LBL_S4:0 "Southern Ukraine"
+ ORDL_EVAC_LBL_S4:0 "S. Ukraine"
 
- ORDL_EVAC_LBL_S4_ACT:0 "§YSouthern Ukraine§! · §R[?SOV_evac_region_S4_days|0]§! days"
+ ORDL_EVAC_LBL_S4_ACT:0 "§YSouthern Ukraine§!\n§W[?SOV_evac_region_S4_days|0] days§!"
 
  ORDL_EVAC_LBL_S4_DONE:0 "§YSouthern Ukraine§!"
 
- ORDL_EVAC_LBL_S4_LOST:0 "§YSouthern Ukraine§!"
+ ORDL_EVAC_LBL_S4_LOST:0 "§gSouthern Ukraine§!"
 
  ORDL_EVAC_LBL_S4_IDLE:0 "§YSouthern Ukraine§!"
 
- ORDL_EVAC_NOW_S4:0 "Evacuating: §HSouthern Ukraine§! · §Y[?SOV_evac_region_S4_days]§! days to go"
+ ORDL_EVAC_NOW_S4:0 "§HSouthern Ukraine§!: loading, §Y[?SOV_evac_region_S4_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S4:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days — the counter runs on the card itself, the decision cannot be taken twice.\n§YCooldown§!: 30 days while the staff is busy.\nFactories keep working until the timer ends and are moved only then. States captured before that are not evacuated and stay with the enemy.§!"
+ ORDL_EVAC_DEC_TT_S4:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 45 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S5:0 "Northwest"
 
- ORDL_EVAC_LBL_S5_ACT:0 "§YNorthwest§! · §R[?SOV_evac_region_S5_days|0]§! days"
+ ORDL_EVAC_LBL_S5_ACT:0 "§YNorthwest§!\n§W[?SOV_evac_region_S5_days|0] days§!"
 
  ORDL_EVAC_LBL_S5_DONE:0 "§YNorthwest§!"
 
- ORDL_EVAC_LBL_S5_LOST:0 "§YNorthwest§!"
+ ORDL_EVAC_LBL_S5_LOST:0 "§gNorthwest§!"
 
  ORDL_EVAC_LBL_S5_IDLE:0 "§YNorthwest§!"
 
- ORDL_EVAC_NOW_S5:0 "Evacuating: §HNorthwest§! · §Y[?SOV_evac_region_S5_days]§! days to go"
+ ORDL_EVAC_NOW_S5:0 "§HNorthwest§!: loading, §Y[?SOV_evac_region_S5_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S5:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days — the counter runs on the card itself, the decision cannot be taken twice.\n§YCooldown§!: 60 days while the staff is busy.\nFactories keep working until the timer ends and are moved only then. States captured before that are not evacuated and stay with the enemy.§!"
+ ORDL_EVAC_DEC_TT_S5:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  ORDL_EVAC_LBL_S6:0 "Center"
 
- ORDL_EVAC_LBL_S6_ACT:0 "§YCenter§! · §R[?SOV_evac_region_S6_days|0]§! days"
+ ORDL_EVAC_LBL_S6_ACT:0 "§YCenter§!\n§W[?SOV_evac_region_S6_days|0] days§!"
 
  ORDL_EVAC_LBL_S6_DONE:0 "§YCenter§!"
 
- ORDL_EVAC_LBL_S6_LOST:0 "§YCenter§!"
+ ORDL_EVAC_LBL_S6_LOST:0 "§gCenter§!"
 
  ORDL_EVAC_LBL_S6_IDLE:0 "§YCenter§!"
 
- ORDL_EVAC_NOW_S6:0 "Evacuating: §HCenter§! · §Y[?SOV_evac_region_S6_days]§! days to go"
+ ORDL_EVAC_NOW_S6:0 "§HCenter§!: loading, §Y[?SOV_evac_region_S6_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S6:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days — the counter runs on the card itself, the decision cannot be taken twice.\n§YCooldown§!: 60 days while the staff is busy.\nFactories keep working until the timer ends and are moved only then. States captured before that are not evacuated and stay with the enemy.§!"
+ ORDL_EVAC_DEC_TT_S6:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
- ORDL_EVAC_LBL_S7:0 "South Caucasus"
+ ORDL_EVAC_LBL_S7:0 "S. Caucasus"
 
- ORDL_EVAC_LBL_S7_ACT:0 "§YSouth Caucasus§! · §R[?SOV_evac_region_S7_days|0]§! days"
+ ORDL_EVAC_LBL_S7_ACT:0 "§YSouth Caucasus§!\n§W[?SOV_evac_region_S7_days|0] days§!"
 
  ORDL_EVAC_LBL_S7_DONE:0 "§YSouth Caucasus§!"
 
- ORDL_EVAC_LBL_S7_LOST:0 "§YSouth Caucasus§!"
+ ORDL_EVAC_LBL_S7_LOST:0 "§gSouth Caucasus§!"
 
  ORDL_EVAC_LBL_S7_IDLE:0 "§YSouth Caucasus§!"
 
- ORDL_EVAC_NOW_S7:0 "Evacuating: §HSouth Caucasus§! · §Y[?SOV_evac_region_S7_days]§! days to go"
+ ORDL_EVAC_NOW_S7:0 "§HSouth Caucasus§!: loading, §Y[?SOV_evac_region_S7_days|0]§! days left"
 
- ORDL_EVAC_DEC_TT_S7:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days — the counter runs on the card itself, the decision cannot be taken twice.\n§YCooldown§!: 60 days while the staff is busy.\nFactories keep working until the timer ends and are moved only then. States captured before that are not evacuated and stay with the enemy.§!"
+ ORDL_EVAC_DEC_TT_S7:0 "§YCost§!: 35 political power and 20 trains.\n§YDuration§!: 60 days.\nFactories keep working until loading ends and are then moved to the Urals and Siberia together with their building slots. Factories in states captured before that are lost."
 
  SOV_evac_second_echelon:0 "Second Echelon"
 
@@ -802,15 +793,15 @@
 
  ordl_evac.1.t:0 "Industry Moves East"
 
- ordl_evac.1.d:0 "The Evacuation Council reports: §Y[?global.ordl_evac_out_ic]§! civilian and §Y[?global.ordl_evac_out_af]§! military factories have been moved out of the front-line regions. The equipment is being unloaded in the Urals, the Volga region and Siberia — some shops are already producing under open sky.\n\n§R[?global.ordl_evac_lost_ic]§! civilian and §R[?global.ordl_evac_lost_af]§! military factories were left behind on ground held by the enemy.\n\nWhat was saved cannot be rebuilt in a day. But it exists, and the front will get shells and tanks from plants the enemy does not have."
+ ordl_evac.1.d:0 "The Evacuation Council reports: §Y[?global.ordl_evac_out_ic|0]§! civilian and §Y[?global.ordl_evac_out_af|0]§! military factories have been moved out of the front-line regions. The equipment is being unloaded in the Urals, the Volga region and Siberia — some shops are already producing under open sky.\n\n§R[?global.ordl_evac_lost_ic|0]§! civilian and §R[?global.ordl_evac_lost_af|0]§! military factories were left behind on ground held by the enemy.\n\nWhat was saved cannot be rebuilt in a day. But it exists, and the front will get shells and tanks from plants the enemy does not have."
 
 
 
  ordl_evac.1.a:0 "The industry is saved — the front will be supplied."
 
- ORDL_EVAC_FOCUS_TT:0 "§GOpens§!: the “Industrial Evacuation” decision category, the evacuation map and seven regional decisions.\nA train costs 35 political power and 20 trains. The move takes 30-60 days; factories keep working until it ends.§!"
+ ORDL_EVAC_FOCUS_TT:0 "§GOpens§!: the “Industrial Evacuation” decision category, the evacuation map and the regional decisions.\nAn echelon costs 35 political power and 20 trains. Loading takes 30–60 days; factories keep working until it ends."
 
- ORDL_EVAC_FOCUS2_TT:0 "§GOpens the second echelon§!: the Northwest, the Center and the South Caucasus.\n60 days to move, 60 days of staff cooldown. Same price: 35 political power and 20 trains.§!"
+ ORDL_EVAC_FOCUS2_TT:0 "§GOpens the second echelon§!: the Northwest, the Center and the South Caucasus.\n60 days to load. Same price: 35 political power and 20 trains."
 
  ORDL_EVAC_REQ_WARGER:0 "§RWar with Germany is required.§!"
 
@@ -819,10 +810,10 @@
  ORDL_EVAC_REQ_TWO:0 "§ROnly two regions can be underway at once.§!"
 
 
- ORDL_EVAC_LEGEND:0 "§GGreen§! — evacuated to east · Black — lost"
+ ORDL_EVAC_LEGEND:0 "§CBlue§! waiting · §YGold§! loading · §GGreen§! evacuated · §gDark§! lost"
  SOV_defense_of_moscow_forts:0 "Adds fortifications (level 5) to Moscow and surrounding area."
 
  ORDL_EVAC_BLANK:0 ""
-ORDL_EVAC_ACTIVE_1:0 "[ORDL_EVAC_ACTIVE_1]"
- ORDL_EVAC_ACTIVE_2:0 "[ORDL_EVAC_ACTIVE_2]"
- ORDL_EVAC_STATUS_LINE:0 "[ORDL_EVAC_STATUS_LINE]"
+ ORDL_EVAC_ACTIVE_1:0 "[GetEvacActive1]"
+ ORDL_EVAC_ACTIVE_2:0 "[GetEvacActive2]"
+ ORDL_EVAC_STATUS_LINE:0 "[GetEvacStatusLine]"

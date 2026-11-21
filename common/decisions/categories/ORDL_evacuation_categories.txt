@@ -2,6 +2,7 @@ SOV_evacuation = {
 	priority = 150
 
 	icon = GFX_decision_cat_icon_evacuation
+	picture = GFX_decision_cat_picture_evacuation
 
 	scripted_gui = ORDL_evacuation_decision_ui
 
