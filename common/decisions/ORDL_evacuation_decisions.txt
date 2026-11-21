@@ -34,7 +34,6 @@ SOV_evacuation_regions = {
 		}
 		remove_effect = {
 			set_variable = { SOV_evac_region_S1_days = 0 }
-			set_country_flag = SOV_evac_region_S1_done
 			clr_country_flag = SOV_evac_region_S1_active
 			clr_country_flag = SOV_evac_region_S1_running
 			ORDL_evac_region_S1_finish = yes
@@ -77,7 +76,6 @@ SOV_evacuation_regions = {
 		}
 		remove_effect = {
 			set_variable = { SOV_evac_region_S2_days = 0 }
-			set_country_flag = SOV_evac_region_S2_done
 			clr_country_flag = SOV_evac_region_S2_active
 			clr_country_flag = SOV_evac_region_S2_running
 			ORDL_evac_region_S2_finish = yes
@@ -120,7 +118,6 @@ SOV_evacuation_regions = {
 		}
 		remove_effect = {
 			set_variable = { SOV_evac_region_S3_days = 0 }
-			set_country_flag = SOV_evac_region_S3_done
 			clr_country_flag = SOV_evac_region_S3_active
 			clr_country_flag = SOV_evac_region_S3_running
 			ORDL_evac_region_S3_finish = yes
@@ -163,7 +160,6 @@ SOV_evacuation_regions = {
 		}
 		remove_effect = {
 			set_variable = { SOV_evac_region_S4_days = 0 }
-			set_country_flag = SOV_evac_region_S4_done
 			clr_country_flag = SOV_evac_region_S4_active
 			clr_country_flag = SOV_evac_region_S4_running
 			ORDL_evac_region_S4_finish = yes
@@ -207,7 +203,6 @@ SOV_evacuation_regions = {
 		}
 		remove_effect = {
 			set_variable = { SOV_evac_region_S5_days = 0 }
-			set_country_flag = SOV_evac_region_S5_done
 			clr_country_flag = SOV_evac_region_S5_active
 			clr_country_flag = SOV_evac_region_S5_running
 			ORDL_evac_region_S5_finish = yes
@@ -251,7 +246,6 @@ SOV_evacuation_regions = {
 		}
 		remove_effect = {
 			set_variable = { SOV_evac_region_S6_days = 0 }
-			set_country_flag = SOV_evac_region_S6_done
 			clr_country_flag = SOV_evac_region_S6_active
 			clr_country_flag = SOV_evac_region_S6_running
 			ORDL_evac_region_S6_finish = yes
@@ -295,7 +289,6 @@ SOV_evacuation_regions = {
 		}
 		remove_effect = {
 			set_variable = { SOV_evac_region_S7_days = 0 }
-			set_country_flag = SOV_evac_region_S7_done
 			clr_country_flag = SOV_evac_region_S7_active
 			clr_country_flag = SOV_evac_region_S7_running
 			ORDL_evac_region_S7_finish = yes

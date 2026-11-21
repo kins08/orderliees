@@ -1140,6 +1140,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/evacuation/regions/region_plaque.png"
 	}
 	spriteType = {
+		name = "GFX_ORDL_evac_plaque_idle"
+		texturefile = "gfx/interface/evacuation/regions/plaque_idle.png"
+	}
+	spriteType = {
+		name = "GFX_ORDL_evac_plaque_act"
+		texturefile = "gfx/interface/evacuation/regions/plaque_act.png"
+	}
+	spriteType = {
+		name = "GFX_ORDL_evac_plaque_done"
+		texturefile = "gfx/interface/evacuation/regions/plaque_done.png"
+	}
+	spriteType = {
+		name = "GFX_ORDL_evac_plaque_lost"
+		texturefile = "gfx/interface/evacuation/regions/plaque_lost.png"
+	}
+	spriteType = {
 		name = "GFX_evac_239_red"
 		texturefile = "gfx/interface/evacuation/evac_239_red.png"
 	}
@@ -1188,6 +1204,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/evacuation/regions/region_S1_lost.png"
 	}
 	spriteType = {
+		name = "GFX_evac_region_S1_act"
+		texturefile = "gfx/interface/evacuation/regions/region_S1_act.png"
+	}
+	spriteType = {
 		name = "GFX_evac_region_S2_red"
 		texturefile = "gfx/interface/evacuation/regions/region_S2_red.png"
 	}
@@ -1198,6 +1218,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evac_region_S2_lost"
 		texturefile = "gfx/interface/evacuation/regions/region_S2_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S2_act"
+		texturefile = "gfx/interface/evacuation/regions/region_S2_act.png"
 	}
 	spriteType = {
 		name = "GFX_evac_region_S3_red"
@@ -1212,6 +1236,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/evacuation/regions/region_S3_lost.png"
 	}
 	spriteType = {
+		name = "GFX_evac_region_S3_act"
+		texturefile = "gfx/interface/evacuation/regions/region_S3_act.png"
+	}
+	spriteType = {
 		name = "GFX_evac_region_S4_red"
 		texturefile = "gfx/interface/evacuation/regions/region_S4_red.png"
 	}
@@ -1222,6 +1250,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evac_region_S4_lost"
 		texturefile = "gfx/interface/evacuation/regions/region_S4_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S4_act"
+		texturefile = "gfx/interface/evacuation/regions/region_S4_act.png"
 	}
 	spriteType = {
 		name = "GFX_evac_region_S5_red"
@@ -1236,6 +1268,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/evacuation/regions/region_S5_lost.png"
 	}
 	spriteType = {
+		name = "GFX_evac_region_S5_act"
+		texturefile = "gfx/interface/evacuation/regions/region_S5_act.png"
+	}
+	spriteType = {
 		name = "GFX_evac_region_S6_red"
 		texturefile = "gfx/interface/evacuation/regions/region_S6_red.png"
 	}
@@ -1248,6 +1284,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/evacuation/regions/region_S6_lost.png"
 	}
 	spriteType = {
+		name = "GFX_evac_region_S6_act"
+		texturefile = "gfx/interface/evacuation/regions/region_S6_act.png"
+	}
+	spriteType = {
 		name = "GFX_evac_region_S7_red"
 		texturefile = "gfx/interface/evacuation/regions/region_S7_red.png"
 	}
@@ -1258,6 +1298,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evac_region_S7_lost"
 		texturefile = "gfx/interface/evacuation/regions/region_S7_lost.png"
+	}
+	spriteType = {
+		name = "GFX_evac_region_S7_act"
+		texturefile = "gfx/interface/evacuation/regions/region_S7_act.png"
 	}
 
 }
