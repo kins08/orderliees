@@ -278,6 +278,12 @@ guiTypes = {
 			scale = 0.25
 		}
 		iconType = {
+			name = "icon_region_S1_act"
+			position = { x = 60 y = 113 }
+			spriteType = "GFX_evac_region_S1_act"
+			scale = 0.25
+		}
+		iconType = {
 			name = "icon_region_S2_red"
 			position = { x = 69 y = 179 }
 			spriteType = "GFX_evac_region_S2_red"
@@ -293,6 +299,12 @@ guiTypes = {
 			name = "icon_region_S2_lost"
 			position = { x = 69 y = 179 }
 			spriteType = "GFX_evac_region_S2_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S2_act"
+			position = { x = 69 y = 179 }
+			spriteType = "GFX_evac_region_S2_act"
 			scale = 0.25
 		}
 		iconType = {
@@ -314,6 +326,12 @@ guiTypes = {
 			scale = 0.25
 		}
 		iconType = {
+			name = "icon_region_S3_act"
+			position = { x = 84 y = 253 }
+			spriteType = "GFX_evac_region_S3_act"
+			scale = 0.25
+		}
+		iconType = {
 			name = "icon_region_S4_red"
 			position = { x = 127 y = 302 }
 			spriteType = "GFX_evac_region_S4_red"
@@ -329,6 +347,12 @@ guiTypes = {
 			name = "icon_region_S4_lost"
 			position = { x = 127 y = 302 }
 			spriteType = "GFX_evac_region_S4_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S4_act"
+			position = { x = 127 y = 302 }
+			spriteType = "GFX_evac_region_S4_act"
 			scale = 0.25
 		}
 		iconType = {
@@ -350,6 +374,12 @@ guiTypes = {
 			scale = 0.25
 		}
 		iconType = {
+			name = "icon_region_S5_act"
+			position = { x = 144 y = 88 }
+			spriteType = "GFX_evac_region_S5_act"
+			scale = 0.25
+		}
+		iconType = {
 			name = "icon_region_S6_red"
 			position = { x = 187 y = 150 }
 			spriteType = "GFX_evac_region_S6_red"
@@ -368,6 +398,12 @@ guiTypes = {
 			scale = 0.25
 		}
 		iconType = {
+			name = "icon_region_S6_act"
+			position = { x = 187 y = 150 }
+			spriteType = "GFX_evac_region_S6_act"
+			scale = 0.25
+		}
+		iconType = {
 			name = "icon_region_S7_red"
 			position = { x = 261 y = 287 }
 			spriteType = "GFX_evac_region_S7_red"
@@ -383,6 +419,12 @@ guiTypes = {
 			name = "icon_region_S7_lost"
 			position = { x = 261 y = 287 }
 			spriteType = "GFX_evac_region_S7_lost"
+			scale = 0.25
+		}
+		iconType = {
+			name = "icon_region_S7_act"
+			position = { x = 261 y = 287 }
+			spriteType = "GFX_evac_region_S7_act"
 			scale = 0.25
 		}
 		iconType = {
@@ -1851,6 +1893,30 @@ guiTypes = {
 				name = "plaque_S1"
 				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
 			}
+			iconType = {
+				name = "plaque_S1_idle"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_idle"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S1_act"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_act"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S1_done"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_done"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S1_lost"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_lost"
+				scale = 0.5
+			}
 			buttonType = {
 				name = "btn_region_S1"
 				position = { x = 0 y = 0 }
@@ -1877,6 +1943,30 @@ guiTypes = {
 			background = {
 				name = "plaque_S2"
 				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			iconType = {
+				name = "plaque_S2_idle"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_idle"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S2_act"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_act"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S2_done"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_done"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S2_lost"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_lost"
+				scale = 0.5
 			}
 			buttonType = {
 				name = "btn_region_S2"
@@ -1905,6 +1995,30 @@ guiTypes = {
 				name = "plaque_S3"
 				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
 			}
+			iconType = {
+				name = "plaque_S3_idle"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_idle"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S3_act"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_act"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S3_done"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_done"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S3_lost"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_lost"
+				scale = 0.5
+			}
 			buttonType = {
 				name = "btn_region_S3"
 				position = { x = 0 y = 0 }
@@ -1931,6 +2045,30 @@ guiTypes = {
 			background = {
 				name = "plaque_S4"
 				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			iconType = {
+				name = "plaque_S4_idle"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_idle"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S4_act"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_act"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S4_done"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_done"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S4_lost"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_lost"
+				scale = 0.5
 			}
 			buttonType = {
 				name = "btn_region_S4"
@@ -1959,6 +2097,30 @@ guiTypes = {
 				name = "plaque_S5"
 				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
 			}
+			iconType = {
+				name = "plaque_S5_idle"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_idle"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S5_act"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_act"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S5_done"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_done"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S5_lost"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_lost"
+				scale = 0.5
+			}
 			buttonType = {
 				name = "btn_region_S5"
 				position = { x = 0 y = 0 }
@@ -1986,6 +2148,30 @@ guiTypes = {
 				name = "plaque_S6"
 				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
 			}
+			iconType = {
+				name = "plaque_S6_idle"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_idle"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S6_act"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_act"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S6_done"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_done"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S6_lost"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_lost"
+				scale = 0.5
+			}
 			buttonType = {
 				name = "btn_region_S6"
 				position = { x = 0 y = 0 }
@@ -2012,6 +2198,30 @@ guiTypes = {
 			background = {
 				name = "plaque_S7"
 				quadTextureSprite = "GFX_ORDL_evac_region_plaque"
+			}
+			iconType = {
+				name = "plaque_S7_idle"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_idle"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S7_act"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_act"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S7_done"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_done"
+				scale = 0.5
+			}
+			iconType = {
+				name = "plaque_S7_lost"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ORDL_evac_plaque_lost"
+				scale = 0.5
 			}
 			buttonType = {
 				name = "btn_region_S7"
