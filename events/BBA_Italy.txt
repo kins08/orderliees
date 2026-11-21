@@ -53,21 +53,18 @@ country_event = {
 					has_full_control_of_state = 550
 				}
 				transfer_state = 550
-				550 = { add_compliance = 50 }
 			}
 			if = { #SOMALILAND
 				limit = {
 					has_full_control_of_state = 559
 				}
 				transfer_state = 559
-				559 = { add_compliance = 50 }
 			}
 			if = { #JUBALAND
 				limit = {
 					has_full_control_of_state = 840
 				}
 				transfer_state = 840
-				840 = { add_compliance = 50 }
 			}
 			if = {
 				limit = {
@@ -77,7 +74,6 @@ country_event = {
 				}
 				#AFAR always goes to ETH if owned by ITA
 				transfer_state = 904 
-				904 = { add_compliance = 50 }
 			}
 			white_peace = FROM
 		}
@@ -146,7 +142,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 550
-				550 = { add_compliance = 50 }
 			}
 		}
 		if = { #SOMALILAND
@@ -155,7 +150,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 559
-				559 = { add_compliance = 50 }
 			}
 		}
 		if = { #JUBALAND
@@ -164,7 +158,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 840
-				840 = { add_compliance = 50 }
 			}
 		}
 		if = { #AFAR always goes to ETH if owned by ITA
@@ -173,7 +166,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 904 
-				904 = { add_compliance = 50 }
 			}
 		}
 		white_peace = FROM
@@ -235,7 +227,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 550
-				550 = { add_compliance = 50 }
 			}
 		}
 		if = { #SOMALILAND
@@ -244,7 +235,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 559
-				559 = { add_compliance = 50 }
 			}
 		}
 		if = { #JUBALAND
@@ -253,7 +243,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 840
-				840 = { add_compliance = 50 }
 			}
 		}
 		if = { #AFAR always goes to ETH if owned by ITA
@@ -262,7 +251,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 904 
-				904 = { add_compliance = 50 }
 			}
 		}
 		white_peace = FROM
@@ -307,7 +295,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 550
-				550 = { add_compliance = 50 }
 			}
 		}
 		if = { #SOMALILAND
@@ -316,7 +303,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 559
-				559 = { add_compliance = 50 }
 			}
 		}
 		if = { #JUBALAND
@@ -325,7 +311,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 840
-				840 = { add_compliance = 50 }
 			}
 		}
 		if = { #AFAR always goes to ETH if owned by ITA
@@ -334,7 +319,6 @@ country_event = {
 			}
 			FROM = {
 				transfer_state = 904 
-				904 = { add_compliance = 50 }
 			}
 		}
 		white_peace = FROM
@@ -591,7 +575,6 @@ country_event = {
 										has_done_agency_upgrade = upgrade_anti_partisan
 										NOT = {
 											any_controlled_state = {
-												has_resistance = yes
 											}
 										}
 									}
@@ -2403,7 +2386,6 @@ unit_leader_event = {
 								has_done_agency_upgrade = upgrade_anti_partisan
 								NOT = {
 									any_controlled_state = {
-										has_resistance = yes
 									}
 								}
 							}
@@ -2411,7 +2393,6 @@ unit_leader_event = {
 						modifier = {
 							factor = 5
 							any_controlled_state = {
-								resistance > 50
 							}
 						}
 
@@ -2430,7 +2411,6 @@ unit_leader_event = {
 								has_done_agency_upgrade = upgrade_anti_partisan
 								NOT = {
 									any_controlled_state = {
-										has_resistance = yes
 									}
 								}
 							}
@@ -8944,7 +8924,6 @@ country_event = {
 			transfer_state = 105
 		}
 		105 = {
-			add_compliance = 15
 		}
 	}
 }

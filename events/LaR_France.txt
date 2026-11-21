@@ -569,10 +569,6 @@ country_event = {
 					is_core_of = MOR
 				}
 			}
-			add_resistance_target = {
-				amount = 55
-				tooltip = LAR_fra_voted_independence_tt
-			}
 		}
 	}
 }
@@ -835,10 +831,6 @@ country_event = {
 					is_core_of = MRT
 				}
 			}
-			add_resistance_target = {
-				amount = 55
-				tooltip = LAR_fra_voted_independence_tt
-			}
 		}
 	}
 }
@@ -1002,10 +994,6 @@ country_event = {
 					is_core_of = GAB
 				}
 			}
-			add_resistance_target = {
-				amount = 55
-				tooltip = LAR_fra_voted_independence_tt
-			}
 		}
 	}
 }
@@ -1091,10 +1079,6 @@ country_event = {
 					is_core_of = LEB
 					is_core_of = SYR
 				}
-			}
-			add_resistance_target = {
-				amount = 55
-				tooltip = LAR_fra_voted_independence_tt
 			}
 		}
 	}
@@ -1207,10 +1191,6 @@ country_event = {
 					is_core_of = VIN
 					is_core_of = LAO
 				}
-			}
-			add_resistance_target = {
-				amount = 100 #Vietnam War, here we come!
-				tooltip = LAR_fra_voted_independence_tt
 			}
 		}
 	}

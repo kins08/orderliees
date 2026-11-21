@@ -28,9 +28,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.002
-				resistance_target = 1.15
-				compliance_growth = -1
-				resistance_growth = -0.25
 			}
 		}
 
@@ -136,7 +133,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_advisor_cost_factor = 0.15
-				resistance_target = -0.05
 				political_power_factor = 0.05
 			}
 		}
@@ -305,7 +301,6 @@ ideas = {
 			name = RAJ_timurid_bureaucracy 
 			modifier = {
 				non_core_manpower = 0.02
-				resistance_target = -0.05
 				stability_factor = 0.06
 				mobilization_speed = 0.15
 			}
@@ -534,10 +529,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				resistance_target = -0.05
-				resistance_activity = -0.3
-				resistance_growth = -0.15
-				resistance_damage_to_garrison = -0.25
 			}
 		}
 
@@ -563,10 +554,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				resistance_target = -0.05
-				resistance_activity = -0.3
-				resistance_growth = -0.15
-				resistance_damage_to_garrison = -0.25
 				send_volunteer_size = 6
 				send_volunteers_tension = -1
 				send_volunteer_divisions_required = -0.75 
@@ -582,10 +569,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				resistance_target = -0.05
-				resistance_activity = -0.3
-				resistance_growth = -0.15
-				resistance_damage_to_garrison = -0.25
 				send_volunteer_size = 6
 				send_volunteers_tension = -1
 				send_volunteer_divisions_required = -0.75
@@ -607,10 +590,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				resistance_target = -0.05
-				resistance_activity = -0.3
-				resistance_growth = -0.15
-				resistance_damage_to_garrison = -0.25
 				send_volunteer_size = 6
 				send_volunteers_tension = -1
 				send_volunteer_divisions_required = -0.75 
@@ -725,7 +704,6 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.20
 				stability_weekly = 0.002
-				compliance_gain = 0.03
 			}
 		}
 
@@ -817,8 +795,6 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.02
 				war_support_weekly = -0.02
-				compliance_growth = -0.15
-				resistance_target = 0.4
 
 			}
 		}
@@ -828,8 +804,6 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.005
 				war_support_weekly = -0.005
-				compliance_growth = -0.05
-				resistance_target = 0.1
 
 			}
 		}
@@ -837,7 +811,6 @@ ideas = {
 		idea_RAJ_partition_india_united = {
 			picture = RAJ_partition_india_united	
 			modifier = {
-				compliance_growth = -0.015
 				stability_weekly = -0.0025
 
 			}
@@ -926,10 +899,7 @@ ideas = {
 			}
 
 			modifier = {
-				resistance_target 				= -0.1
-				compliance_gain 				=  0.03
 				required_garrison_factor 		= -0.5
-				resistance_damage_to_garrison	= -0.5
 				local_resources 				= -0.35
 				local_factories 				= -0.35
 			}
@@ -944,10 +914,7 @@ ideas = {
 			}
 
 			modifier = {
-				resistance_target 				= 0.60
-				compliance_gain 				= -0.10
 				required_garrison_factor 		= 0.15
-				resistance_damage_to_garrison 	= -0.10
 				local_factories 				= 0.60
 				local_resources 				= 0.60
 			}
@@ -1024,7 +991,6 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.1
 				drift_defence_factor = 0.15
-				resistance_target = -0.05
 			}
 		}
 
@@ -1119,7 +1085,6 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.1
 				war_support_factor = -0.1
-				compliance_growth = -0.2
 				democratic_drift = 0.1
 
 			}
@@ -1449,7 +1414,6 @@ ideas = {
 				coordination_bonus = 0.02
 				land_reinforce_rate = 0.02
 				army_intel_to_others = -15
-				compliance_gain = 0.01
 
 			}
 		}
@@ -1552,7 +1516,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.001
-				resistance_damage_to_garrison = -1
 			}
 
 			cancel = {
@@ -1721,7 +1684,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.001
-				resistance_damage_to_garrison = -1
 				unit_mountaineers_design_cost_factor = -0.15
 			}
 			on_add = {
@@ -1788,7 +1750,6 @@ ideas = {
 				communism_drift = 0.15
 				communism_acceptance = 50
 				consumer_goods_factor = 0.001
-				resistance_damage_to_garrison = -1
 			}
 		}
 
@@ -2025,7 +1986,6 @@ ideas = {
 				enemy_operative_capture_chance_factor = 0.05
 				communism_drift = 0.03
 				agency_upgrade_time = -0.15
-				resistance_target = -0.05
 			}
 		}
 
@@ -2048,7 +2008,6 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.25
 				communism_drift = 0.03
-				resistance_target = -0.08
 			}
 		}
 
@@ -2210,7 +2169,6 @@ ideas = {
 				consumer_goods_factor = 0.001
 				fascism_drift = 0.05
 				fascism_acceptance = 50
-				resistance_damage_to_garrison = -1
 			}
 		}
 
@@ -2252,7 +2210,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.001
-				resistance_damage_to_garrison = -1
 				experience_gain_navy = 0.01
 			}
 		}

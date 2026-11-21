@@ -2715,7 +2715,6 @@ GER_set_up_colonial_resistance_states = {
 							is_on_continent = asia
 							is_core_of = EGY
 						}	
-						has_resistance = yes
 						NOT = { # no point adding if already in there
 							is_in_array = {
 								array = GER.african_colonial_states_array

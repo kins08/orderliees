@@ -317,11 +317,6 @@ ETH_arranged_expansion_modifier = {
 ETH_state_supporting_resistance_modifier = {
 	enable = { always = yes  }
 	icon = GFX_modifiers_bul_macedonian_revolutionaries
-	resistance_damage_to_garrison = 0.15
-	resistance_activity = 0.2
-	resistance_growth = 0.5
-	resistance_target = 0.8
-	compliance_growth = -0.1
 }
 ### African Union/Organization of Unity ###
 
@@ -1243,7 +1238,6 @@ ITA_libyan_railway_modifier = {
 	icon = GFX_modifiers_generic_railways
 
 	state_production_speed_rail_way_factor = 0.25
-	compliance_gain = 0.01
 }
 
 ITA_pacified_italian_east_africa_modifier = {
@@ -1252,7 +1246,6 @@ ITA_pacified_italian_east_africa_modifier = {
 
 	state_production_speed_rail_way_factor = 0.1
 	state_production_speed_infrastructure_factor = 0.1
-	resistance_decay = 0.1
 }
 
 ITA_fronte_militare_clandestino_modifier = { #In a RSI state
@@ -1264,14 +1257,10 @@ ITA_fronte_militare_clandestino_modifier = { #In a RSI state
 
 	#INITIAL (FRONTE MILITARE CLANDESTINO)
 	required_garrison_factor = 2.ITA_fronte_militare_clandestino_required_garrison_factor #0.15
-	resistance_growth_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_resistance_growth_on_our_occupied_states #0.1
 
 	#GAPPISTI
-	resistance_damage_to_garrison_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_resistance_damage_to_garrison_on_our_occupied_states #0.1
-	resistance_target_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_resistance_target_on_our_occupied_states #0.1
 
 	#PARTISAN REPUBLICS
-	compliance_growth_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_compliance_growth_on_our_occupied_states #-0.1
 }
 
 ITA_cooperatives_for_intensive_exploitation_dm = {
@@ -1291,7 +1280,6 @@ ITA_cooperatives_for_intensive_exploitation_dm = {
 	}
 	icon = GFX_modifiers_generic_supply
 
-	compliance_growth = 0.01
 	state_resources_factor = 0.2
 	local_supplies = 0.1
 }
@@ -1315,8 +1303,6 @@ ITA_anti_colonialism_sentiment = {
 	}
 	icon = GFX_modifiers_bul_macedonian_revolutionaries
 
-	resistance_target = 0.15
-	resistance_damage_to_garrison = 0.15
 	local_factory_sabotage = 0.15
 	local_resources = -0.15
 }
@@ -1394,8 +1380,6 @@ ITA_novus_ordo_modifier = {
 	icon = GFX_modifiers_generic_military_industry
 	local_non_core_manpower = 0.25
 	state_resources_factor = 0.15
-	compliance_growth = 0.1
-	resistance_decay = 0.05
 	state_production_speed_arms_factory_factor = 0.2
 	local_factories = 0.5
 }
@@ -1406,7 +1390,6 @@ ITA_expanded_corporatism_modifier = {
 	state_resources_factor = 0.1
 	local_factories = 0.2
 	local_supplies = 0.1
-	compliance_growth = 0.05
 }
 
 
@@ -1539,9 +1522,6 @@ SWI_heer_und_haus_mod = {
 	enable = { always = yes }
 	icon = GFX_modifiers_SWI_spiritual_resistance
 
-	resistance_activity =  0.3
-	resistance_growth = 0.2
-	resistance_decay = -0.3
 }
 
 SWI_Ortswehren_dynamic_mod = {

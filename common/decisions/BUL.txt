@@ -4522,16 +4522,11 @@ BUL_macedonian_revolutionary_organizations = {
 					add_core_of = BUL
 				}
 				remove_core_of = controller
-				start_resistance = BUL
 				hidden_effect = {
 					if = {
 						limit = { state = 106 }
-						set_compliance = 15
-						set_resistance = 15
 					}
 					else = {
-						set_compliance = 25
-						set_resistance = 10
 					}
 					if = {
 						limit = {
@@ -4566,7 +4561,6 @@ BUL_macedonian_revolutionary_organizations = {
 						}
 					}
 				}
-				custom_effect_tooltip = BUL_support_imro_supply_activists_resistance_tt
 			}
 			clr_country_flag = BUL_macedonian_affairs_ongoing_flag
 		}
@@ -8187,7 +8181,6 @@ BUL_bulgarian_administration_of_the_balkans = {
 
 		available = {
 			FROM = {
-				compliance > 30
 			}
 			has_equipment = {
 			    infantry_equipment > 499

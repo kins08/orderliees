@@ -2053,7 +2053,6 @@ country_event = {
 					is_controlled_by = ROOT
 				}
 				remove_core_of = controller
-				start_resistance = BUL
 			}
 		}
 		unlock_decision_tooltip = BUL_repress_imro_foreign

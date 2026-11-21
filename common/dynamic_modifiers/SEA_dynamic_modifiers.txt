@@ -569,12 +569,8 @@ JAP_intense_anti_guerilla_operation = { #STATE MODIFIER
 
 	local_factory_sabotage = -0.3
 	local_resources = 0.05
-	resistance_damage_to_garrison = -0.15
-	resistance_garrison_penetration_chance = -0.15
-	resistance_target = -0.25
 	local_manpower = -0.25
 	local_factories = -0.1
-	compliance_growth = -0.2
 
 }
 
@@ -597,8 +593,6 @@ KOR_resistance_against_colonial_rule_dm = { #STATE MODIFIER
 	local_resources = -0.05
 	local_factories = -0.05
 	state_production_speed_buildings_factor = -0.1
-	resistance_target = 0.1
-	compliance_growth = -0.02
 
 }
 
@@ -642,11 +636,6 @@ JAP_state_infiltrated_by_the_jcp = { #STATE MODIFIER
 JAP_state_supporting_resistance_modifier = {
 	enable = { always = yes  }
 	icon = GFX_modifiers_bul_macedonian_revolutionaries
-	resistance_damage_to_garrison = 0.15
-	resistance_activity = 0.2
-	resistance_growth = 0.5
-	resistance_target = 0.8
-	compliance_growth = -0.1
 }
 
 JAP_pro_japanese_sentiment_in_state = { #STATE MODIFIER
@@ -1324,8 +1313,6 @@ PRC_guerilla_cells_active_1 = {
 	}
 	custom_modifier_tooltip = PRC_guerilla_cells_active_1_tt
 
-	resistance_decay = -0.1
-	resistance_growth = 0.01
 	local_manpower = -0.1
 }
 
@@ -1352,9 +1339,6 @@ PRC_guerilla_cells_active_2 = {
 	}
 	custom_modifier_tooltip = PRC_guerilla_cells_active_2_tt
 
-	resistance_decay = -0.1
-	resistance_growth = 0.02
-	compliance_growth = -0.01
 	local_manpower = -0.2
 }
 
@@ -1614,7 +1598,6 @@ PHI_the_great_depression_dynamic_modifier = {
 	conscription_factor = PHI_the_great_depression_conscription_factor
 	monthly_population = PHI_the_great_depression_monthly_population
 	drift_defence_factor = PHI_the_great_depression_drift_defence_factor
-	compliance_growth = PHI_the_great_depression_compliance_growth
 	intelligence_agency_defense = PHI_the_great_depression_intelligence_agency_defense
 	production_speed_industrial_complex_factor = PHI_the_great_depression_production_speed_industrial_complex_factor
 	production_speed_infrastructure_factor = PHI_the_great_depression_production_speed_infrastructure_factor
@@ -1639,7 +1622,6 @@ PHI_shaken_economy_dynamic_modifier = {
 	conscription_factor = PHI_the_great_depression_conscription_factor
 	monthly_population = PHI_the_great_depression_monthly_population
 	drift_defence_factor = PHI_the_great_depression_drift_defence_factor
-	compliance_growth = PHI_the_great_depression_compliance_growth
 	intelligence_agency_defense = PHI_the_great_depression_intelligence_agency_defense
 	production_speed_industrial_complex_factor = PHI_the_great_depression_production_speed_industrial_complex_factor
 	production_speed_infrastructure_factor = PHI_the_great_depression_production_speed_infrastructure_factor
@@ -1664,7 +1646,6 @@ PHI_recovering_economy_dynamic_modifier = {
 	conscription_factor = PHI_the_great_depression_conscription_factor
 	monthly_population = PHI_the_great_depression_monthly_population
 	drift_defence_factor = PHI_the_great_depression_drift_defence_factor
-	compliance_growth = PHI_the_great_depression_compliance_growth
 	intelligence_agency_defense = PHI_the_great_depression_intelligence_agency_defense
 	production_speed_industrial_complex_factor = PHI_the_great_depression_production_speed_industrial_complex_factor
 	production_speed_infrastructure_factor = PHI_the_great_depression_production_speed_infrastructure_factor
@@ -1688,7 +1669,6 @@ PHI_economic_growth_dynamic_modifier = {
 	fuel_gain_factor = PHI_the_great_depression_fuel_gain_factor
 	conscription_factor = PHI_the_great_depression_conscription_factor
 	monthly_population = PHI_the_great_depression_monthly_population
-	compliance_growth = PHI_the_great_depression_compliance_growth
 	intelligence_agency_defense = PHI_the_great_depression_intelligence_agency_defense
 	production_speed_industrial_complex_factor = PHI_the_great_depression_production_speed_industrial_complex_factor
 	production_speed_infrastructure_factor = PHI_the_great_depression_production_speed_infrastructure_factor
@@ -1715,7 +1695,6 @@ PHI_pearl_of_the_orient_dynamic_modifier = {
 	fuel_gain_factor = PHI_the_great_depression_fuel_gain_factor
 	conscription_factor = PHI_the_great_depression_conscription_factor
 	monthly_population = PHI_the_great_depression_monthly_population
-	compliance_growth = PHI_the_great_depression_compliance_growth
 	intelligence_agency_defense = PHI_the_great_depression_intelligence_agency_defense
 	production_speed_industrial_complex_factor = PHI_the_great_depression_production_speed_industrial_complex_factor
 	production_speed_infrastructure_factor = PHI_the_great_depression_production_speed_infrastructure_factor
@@ -1864,8 +1843,6 @@ PHI_preemptive_strikes_dynamic_modifier = {
 	generate_wargoal_tension = PHI_preemptive_strikes_generate_wargoal_tension
 	industrial_capacity_dockyard = PHI_preemptive_strikes_industrial_capacity_dockyard
 	production_factory_start_efficiency_factor = PHI_preemptive_strikes_production_factory_start_efficiency_factor
-	compliance_growth = PHI_preemptive_strikes_compliance_growth
-	resistance_growth = PHI_preemptive_strikes_resistance_growth
 	non_core_manpower = PHI_preemptive_strikes_non_core_manpower
 	navy_org_factor = PHI_preemptive_strikes_navy_org_factor
 	navy_max_range_factor = PHI_preemptive_strikes_navy_max_range_factor
@@ -1882,7 +1859,6 @@ PHI_philippine_resistance_movement_dynamic_modifier = {
 	exiled_government_weekly_manpower = PHI_resistance_weekly_manpower	#starts at 100
 	communism_drift = PHI_resistance_communism_drift
 	terrain_trait_xp_gain_factor = PHI_resistance_terrain_trait_xp_gain_factor
-	resistance_target_on_our_occupied_states = PHI_resistance_resistance_target_on_our_occupied_states
 	weekly_casualties_war_support = PHI_resistance_weekly_casualties_war_support
 	legitimacy_gain_factor = PHI_resistance_legitimacy_gain_factor
 	exile_manpower_factor = PHI_resistance_exile_manpower_factor
@@ -1892,7 +1868,6 @@ PHI_philippine_resistance_movement_dynamic_modifier = {
 	cas_damage_reduction = PHI_resistance_cas_damage_reduction
 	conscription = PHI_resistance_conscription
 	army_org_factor = PHI_resistance_army_org_factor
-	resistance_damage_to_garrison_on_our_occupied_states = PHI_resistance_resistance_damage_to_garrison_on_our_occupied_states
 }
 
 PHI_strong_guerrilla_presence = { #STATE MODIFIER
@@ -1900,7 +1875,6 @@ PHI_strong_guerrilla_presence = { #STATE MODIFIER
 
 	icon = GFX_modifiers_SOV_invaders_must_die
 	
-	resistance_decay = -0.30
 	disable_strategic_redeployment = 1
 
 	remove_trigger = {

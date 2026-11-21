@@ -7785,36 +7785,6 @@ focus_tree = {
 					transfer_state = 966
 				}
 
-				109 = {
-					set_compliance = 100
-				}
-				104 = {
-					set_compliance = 100
-				}
-				800 = {
-					set_compliance = 100
-				}
-				105 = {
-					set_compliance = 100
-				}
-				798 = {
-					set_compliance = 100
-				}
-				966 = {
-					set_compliance = 100
-				}
-				102 = {
-					set_compliance = 100
-				}
-				760 = {
-					set_compliance = 100
-				}
-				107 = {
-					set_compliance = 100
-				}
-				108 = {
-					set_compliance = 100
-				}
 
 				BUL = {
 					transfer_state = 799
@@ -7880,24 +7850,6 @@ focus_tree = {
 					transfer_state = 164
 				}
 
-				185 = {
-					set_compliance = 100
-				}
-				47 = {
-					set_compliance = 100
-				}
-				186 = {
-					set_compliance = 100
-				}
-				182 = {
-					set_compliance = 100
-				}
-				164 = {
-					set_compliance = 100
-				}
-				187 = {
-					set_compliance = 100
-				}
 
 				BUL = {
 					transfer_state = 727
@@ -10026,10 +9978,6 @@ focus_tree = {
 				add_to_variable = { 
 					GER_military_intelligence_service_agency_upgrade_time = -0.2
 					tooltip = agency_upgrade_time_tt
-				}
-				add_to_variable = { 
-					GER_military_intelligence_root_out_resistance_effectiveness_factor = 0.2
-					tooltip = root_out_resistance_effectiveness_factor_tt
 				}
 			}
 			else = {

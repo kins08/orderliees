@@ -341,8 +341,6 @@ AUS_empire_restored = {
 	stability_factor = AUS_empire_restored_stability_factor
 	justify_war_goal_time = AUS_empire_restored_justify_war_goal_time
 	army_attack_factor = AUS_empire_restored_army_attack_factor
-	compliance_growth = AUS_empire_restored_compliance_growth
-	resistance_growth = AUS_empire_restored_resistance_growth
 }
 
 AUS_airforce = {
@@ -804,7 +802,6 @@ GER_military_intelligence_service_modifier = { #Spy Stuff
 	boost_ideology_mission_factor = GER_military_intelligence_service_boost_ideology_mission_factor
 	decryption_power_factor = GER_military_intelligence_service_decryption_power
 	intel_network_gain_factor = GER_military_intelligence_service_intel_network_gain_factor
-	root_out_resistance_effectiveness_factor = GER_military_intelligence_root_out_resistance_effectiveness_factor
 
 	# NO LaR
 	encryption_factor = GER_military_intelligence_service_encryption_factor
@@ -878,8 +875,6 @@ GER_politburo_modifier = {
 	conscription = GER_politburo_conscription
 	democratic_drift = GER_politburo_democratic_drift
 	political_power_factor = GER_politburo_political_power_factor
-	resistance_growth = GER_politburo_resistance_growth
-	compliance_growth = GER_politburo_compliance_growth
 	subjects_autonomy_gain = GER_politburo_subjects_autonomy_gain
 	mobilization_laws_cost_factor = GER_politburo_mobilization_laws_cost_factor
 	conscription_factor = GER_politburo_conscription_factor
@@ -1008,7 +1003,6 @@ GER_south_east_asian_construction_modifier = {
 
 	state_production_speed_infrastructure_factor = 0.1
 	state_production_speed_bunker_factor = 0.1
-	compliance_gain = -0.05
 }
 
 GER_south_east_asian_resources_modifier = {
@@ -1021,7 +1015,6 @@ GER_south_east_asian_resources_modifier = {
 
 	local_building_slots_factor = -0.2
 	state_resources_factor = 0.25
-	compliance_gain = -0.05
 }
 
 GER_sentinels_of_the_pacific_modifier = {
@@ -1078,11 +1071,6 @@ GER_proletariat_uprising_modifier = {
 GER_state_supporting_resistance_modifier = {
 	enable = { always = yes  }
 	icon = GFX_modifiers_bul_macedonian_revolutionaries
-	resistance_damage_to_garrison = 0.15
-	resistance_activity = 0.2
-	resistance_growth = 0.25
-	resistance_target = 0.8
-	compliance_growth = -0.1
 }
 
 
@@ -1353,9 +1341,7 @@ BEL_austrian_resistance_active_state_dynamic_modifier = {
 	enable = { always = yes }
 	icon = GFX_modifiers_SOV_factory_worker_militias
 
-	resistance_growth_on_our_occupied_states = 0.2
 	recruitable_population_factor = 0.1
-	resistance_damage_to_garrison_on_our_occupied_states = 0.2
 
 }
 
@@ -1364,9 +1350,6 @@ BEL_belgian_resistance_state_dynamic_modifier = {
 	enable = { always = yes }
 	icon = GFX_modifiers_SOV_factory_worker_militias
 
-	resistance_growth = BEL_belgian_resistance_resistance_growth
-	resistance_damage_to_garrison = BEL_belgian_resistance_resistance_damage_to_garrison
-	resistance_target = BEL_belgian_resistance_resistance_target
 
 }
 
@@ -1394,7 +1377,6 @@ COG_force_publique = {
 	army_core_defence_factor = BEL.COG_force_publique_army_core_defence_factor
 	equipment_capture_factor = BEL.COG_force_publique_equipment_capture_factor
 	supply_consumption_factor = BEL.COG_force_publique_supply_consumption_factor
-	resistance_target = BEL.COG_force_publique_resistance_target
 	autonomy_gain = BEL.COG_force_publique_autonomy_gain
 	conscription_factor = BEL.COG_force_publique_conscription_factor
 	army_core_attack_factor = BEL.COG_force_publique_army_core_attack_factor
@@ -1418,7 +1400,6 @@ COG_armee_nationale_congolaise_modifier = {
 	army_core_defence_factor = COG_armee_nationale_congolaise_modifier_army_core_defence_factor
 	equipment_capture_factor = COG_armee_nationale_congolaise_modifier_equipment_capture_factor
 	supply_consumption_factor = COG_armee_nationale_congolaise_modifier_supply_consumption_factor
-	resistance_target = COG_armee_nationale_congolaise_modifier_resistance_target
 	autonomy_gain = COG_armee_nationale_congolaise_modifier_autonomy_gain
 	conscription_factor = COG_armee_nationale_congolaise_modifier_conscription_factor
 	army_core_attack_factor = COG_armee_nationale_congolaise_modifier_army_core_attack_factor
@@ -1514,8 +1495,6 @@ COG_rwandan_separatism_modifier = {
 	}
 
 	production_speed_buildings_factor = -0.1
-	resistance_target = 0.1
-	compliance_growth = -0.01
 	local_manpower = -0.02
 }
 
@@ -1534,8 +1513,6 @@ COG_burundian_separatism_modifier = {
 	}
 
 	production_speed_buildings_factor = -0.1
-	resistance_target = 0.1
-	compliance_growth = -0.01
 	local_manpower = -0.02
 }
 
@@ -1555,7 +1532,6 @@ COG_kasai_separatism_modifier = {
 		} # ROOT refers to the state on which the modifier is added # ROOT refers to the state on which the modifier is added
 	}
 
-	compliance_growth = -0.02
 	local_manpower = -0.1
 }
 
@@ -1568,7 +1544,6 @@ COG_katanga_separatism_modifier = {
 		ROOT = { is_owned_and_controlled_by = KAT } # ROOT refers to the state on which the modifier is added
 	}
 
-	compliance_growth = -0.03
 	local_manpower = -0.1
 
 }
@@ -1621,11 +1596,6 @@ idea_COG_river_navy = { #STATE MODIFIER
 	}
 	icon = GFX_MODIFIER_NAVAL_INVASION_CAPACITY
 	army_core_defence_factor = 0.1
-	resistance_target = 0.5
-	resistance_growth_on_our_occupied_states = 0.25
-	resistance_activity = 1
-	resistance_damage_to_garrison_on_our_occupied_states = 0.5
-	resistance_garrison_penetration_chance = 1
 }
 
 COG_urban_area_investments_modifier = { #STATE MODIFIER
@@ -1666,11 +1636,6 @@ COG_the_echo_of_katanga_modifier = { #STATE MODIFIER
 COG_state_supporting_resistance_modifier = {
 	enable = { always = yes  }
 	icon = GFX_modifiers_bul_macedonian_revolutionaries
-	resistance_damage_to_garrison = 0.15
-	resistance_activity = 0.2
-	resistance_growth = 0.5
-	resistance_target = 0.8
-	compliance_growth = -0.1
 }
 
 GER_lokot_autonomy_modifier = { 
@@ -1683,7 +1648,6 @@ GER_lokot_autonomy_modifier = {
 	}
 
 	recruitable_population_factor = 0.1
-	resistance_target = -0.1
 	mobilization_speed = 0.05
 	local_resources = 0.15
 	local_supplies = 0.1

@@ -503,7 +503,6 @@ created_intelligence_agency = {
 
 # Modifiers enabled at state level when an operative is assigned to the root out resistance mission
 root_out_resistance_mission_modifier = {
-	resistance_target = -0.1
 }
 
 # modifiers active when an operative has the nationality of the nation it is performing a mission in.
@@ -527,7 +526,6 @@ FRA_host_the_german_exiles = {
 			has_government = communism
 		}
 	}
-	compliance_gain = 0.25
 }
 
 FRA_reorganized_departments = {
@@ -536,7 +534,6 @@ FRA_reorganized_departments = {
 			has_government = neutrality
 		}
 	}
-	compliance_gain = 0.25
 }
 
 GER_rescued_mussolini = {
@@ -545,7 +542,6 @@ GER_rescued_mussolini = {
 			has_government = fascism
 		}
 	}
-	compliance_gain = 0.5
 }
 
 FRA_carry_the_revolution_south = {
@@ -554,7 +550,6 @@ FRA_carry_the_revolution_south = {
 			has_government = communism
 		}
 	}
-	compliance_gain = 0.4
 }
 
 SOV_soviet_chinese_relations = {
